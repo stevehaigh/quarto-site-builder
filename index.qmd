@@ -1,5 +1,5 @@
 ---
-title: "Steve Haigh Haigh"
+title: "Steve Haigh"
 subtitle: "Biomedical Sciences M.Res · University of Reading"
 about:
   template: trestles
