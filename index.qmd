@@ -1,5 +1,5 @@
 ---
-title: "Steve"
+title: "Steve Haigh Haigh"
 subtitle: "Biomedical Sciences M.Res · University of Reading"
 about:
   template: trestles
@@ -10,10 +10,10 @@ about:
       href: https://github.com/stevehaigh
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/YOUR-HANDLE
+      href: https://linkedin.com/in/shaigh
     - icon: envelope
       text: Email
-      href: mailto:you@example.com
+      href: mailto:steve_a_haigh@hotmail.com
 ---
 
 Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the *wcEcoli* whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.
