@@ -37,21 +37,21 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Steve Haigh Haigh",
+    "title": "Steve Haigh",
     "section": "",
     "text": "Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
   },
   {
     "objectID": "index.html#currently-working-on",
     "href": "index.html#currently-working-on",
-    "title": "Steve Haigh Haigh",
+    "title": "Steve Haigh",
     "section": "Currently working on",
     "text": "Currently working on\n\nWhole-cell modelling of human platelet activation\nContainerised simulation pipelines and Dash-based exploration UIs\nBridging classical software engineering practice with computational biology workflows"
   },
   {
     "objectID": "index.html#elsewhere",
     "href": "index.html#elsewhere",
-    "title": "Steve Haigh Haigh",
+    "title": "Steve Haigh",
     "section": "Elsewhere",
     "text": "Elsewhere\nSee the Projects page for repos and decks, or the Blog for longer-form notes."
   },
