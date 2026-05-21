@@ -32,7 +32,7 @@
     "href": "about.html#contact",
     "title": "About",
     "section": "Contact",
-    "text": "Contact\nThe fastest route is email: you@example.com."
+    "text": "Contact\nThe fastest route is email: steve_a_haigh@hotmail.com."
   },
   {
     "objectID": "index.html",
@@ -60,14 +60,14 @@
     "href": "posts/welcome/index.html",
     "title": "Setting up this site",
     "section": "",
-    "text": "This is a placeholder post to show what a Quarto blog entry looks like. Delete it once you’ve published your own."
+    "text": "This is a placeholder post to show what a Quarto blog entry looks like."
   },
   {
     "objectID": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
     "href": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
     "title": "Setting up this site",
     "section": "What Quarto gives you out of the box",
-    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al.\n\n\n\nThat should give a sense of what a working blog post looks like. Write the next one in Markdown, push to GitHub, done."
+    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al."
   },
   {
     "objectID": "blog.html",

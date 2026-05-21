@@ -6,22 +6,22 @@
       version="2.0">
 <channel>
 <title>Steve</title>
-<link>https://example.com/blog.html</link>
-<atom:link href="https://example.com/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://haigh.bio/blog.html</link>
+<atom:link href="https://haigh.bio/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on biomedical research, computational modelling, and software.</description>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Setting up this site</title>
   <dc:creator>Steve </dc:creator>
-  <link>https://example.com/posts/welcome/</link>
+  <link>https://haigh.bio/posts/welcome/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>This is a placeholder post to show what a Quarto blog entry looks like. Delete it once you’ve published your own.</p>
+<p>This is a placeholder post to show what a Quarto blog entry looks like.</p>
 <section id="what-quarto-gives-you-out-of-the-box" class="level2">
 <h2 class="anchored" data-anchor-id="what-quarto-gives-you-out-of-the-box">What Quarto gives you out of the box</h2>
 <p>Code blocks with syntax highlighting:</p>
@@ -95,7 +95,6 @@ Note
 </tr>
 </tbody>
 </table>
-<p>That should give a sense of what a working blog post looks like. Write the next one in Markdown, push to GitHub, done.</p>
 
 
 </section>
@@ -103,9 +102,9 @@ Note
  ]]></description>
   <category>meta</category>
   <category>tooling</category>
-  <guid>https://example.com/posts/welcome/</guid>
+  <guid>https://haigh.bio/posts/welcome/</guid>
   <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://example.com/assets/placeholder.png" medium="image" type="image/png"/>
+  <media:content url="https://haigh.bio/assets/placeholder.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>
