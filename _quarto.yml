@@ -3,14 +3,13 @@ project:
   output-dir: _site
   resources:
     - "decks/**"
-    - "assets/**"
     - CNAME
 
 website:
-  title: "Steve"
+  title: "Steve Haigh"
   description: "Notes on biomedical research, computational modelling, and software."
-  site-url: https://haigh.bio  # change to your domain once you have one
-  repo-url: https://github.com/stevehaigh/quarto-site-builder  # change me
+  site-url: https://haigh.bio 
+  repo-url: https://github.com/Steve Haigh/quarto-site-builder 
   navbar:
     pinned: true
     right:
@@ -23,11 +22,11 @@ website:
       - href: about.qmd
         text: About
       - icon: github
-        href: https://github.com/stevehaigh  # change me
+        href: https://github.com/Steve Haigh  # change me
         aria-label: GitHub
   page-footer:
     border: true
-    left: "© 2026 Steve · Built with [Quarto](https://quarto.org)"
+    left: "© 2026 Steve Haigh · Built with [Quarto](https://quarto.org)"
     right:
       - icon: github
         href: https://github.com/stevehaigh  # change me
