@@ -1,0 +1,32 @@
+---
+title: "Projects & Decks"
+toc: true
+---
+
+## Code
+
+### Platelet whole-cell model
+
+Extending the *wcEcoli* framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.
+
+[![](https://img.shields.io/badge/GitHub-repo-181717?logo=github)](https://github.com/YOUR-USERNAME/platelet-wcm)
+
+### Other repos
+
+See [all repositories on GitHub](https://github.com/YOUR-USERNAME?tab=repositories).
+
+## Slide decks
+
+Drop `.pdf` (preferred) or `.pptx` files into the `decks/` directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.
+
+- [Example: Platelet modelling — work in progress](decks/example.pdf)
+- [Example: wcEcoli architecture walkthrough](decks/example.pdf)
+
+::: {.callout-tip}
+## Tip
+For PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don't preview in a browser. Or write future decks in [revealjs](https://quarto.org/docs/presentations/revealjs/) directly in Quarto.
+:::
+
+## Posters & writeups
+
+A good place to link supplementary material, conference posters, or dissertation chapters once they're ready.

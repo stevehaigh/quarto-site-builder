@@ -1,0 +1,20 @@
+/.quarto/
+/_site/
+/_freeze/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python (if you start using jupyter chunks)
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Environment
+.env

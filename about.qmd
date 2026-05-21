@@ -1,0 +1,22 @@
+---
+title: "About"
+---
+
+## Background
+
+Thirty years building software, currently retraining as a research scientist. My M.Res at the University of Reading focuses on the feasibility of constructing the first whole-cell computational model of a human platelet by extending the *wcEcoli* framework (Karr et al. 2012; Macklin et al. 2020).
+
+## Research interests
+
+- Whole-cell modelling and rule-based systems biology
+- Platelet activation, calcium signalling, and granule dynamics
+- Reproducible computational pipelines for wet-lab integration
+- Practical applications of LLMs to scientific software engineering
+
+## This site
+
+Built with [Quarto](https://quarto.org), hosted on GitHub Pages. Source is on [GitHub](https://github.com/YOUR-USERNAME/YOUR-REPO).
+
+## Contact
+
+The fastest route is email: [you@example.com](mailto:you@example.com).

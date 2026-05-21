@@ -1,0 +1,8 @@
+# Defaults applied to every post in this directory
+freeze: true
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false

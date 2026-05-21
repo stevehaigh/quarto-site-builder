@@ -1,0 +1,31 @@
+---
+title: "Steve"
+subtitle: "Biomedical Sciences M.Res · University of Reading"
+about:
+  template: trestles
+  # image: profile.jpg  # uncomment once you drop a square photo in the repo root
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/YOUR-USERNAME
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/YOUR-HANDLE
+    - icon: envelope
+      text: Email
+      href: mailto:you@example.com
+---
+
+Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the *wcEcoli* whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.
+
+This site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology.
+
+## Currently working on
+
+- Whole-cell modelling of human platelet activation
+- Containerised simulation pipelines and Dash-based exploration UIs
+- Bridging classical software engineering practice with computational biology workflows
+
+## Elsewhere
+
+See the [Projects](projects.qmd) page for repos and decks, or the [Blog](blog.qmd) for longer-form notes.
