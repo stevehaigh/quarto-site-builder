@@ -19,6 +19,8 @@ website:
         text: Blog
       - href: projects.qmd
         text: Projects & Decks
+      - href: personal.qmd
+        text: Personal
       - href: about.qmd
         text: About
       - icon: github
@@ -43,6 +45,7 @@ format:
     code-copy: true
     anchor-sections: true
     smooth-scroll: true
+    lightbox: auto  # click any image to view full-screen (needs `quarto add quarto-ext/lightbox`)
 
 execute:
   freeze: auto  # re-render only when source changes

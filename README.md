@@ -11,11 +11,15 @@ A [Quarto](https://quarto.org) website, deployed to GitHub Pages.
 ├── about.qmd            # about page
 ├── blog.qmd             # blog listing (auto-generated from posts/)
 ├── projects.qmd         # projects & decks page
+├── personal.qmd         # ceramics + photography galleries
 ├── posts/               # blog posts (one folder per post)
 │   ├── _metadata.yml    # defaults applied to every post
 │   └── welcome/
 │       └── index.qmd
 ├── decks/               # drop slide PDFs here
+├── img/                 # gallery images for personal.qmd
+│   ├── ceramics/        # square images, 3-col grid
+│   └── photo/           # 3:2 landscape, 2-col grid
 ├── styles.css           # site CSS tweaks
 └── .github/workflows/
     └── publish.yml      # auto-deploy on push to main
@@ -27,6 +31,11 @@ A [Quarto](https://quarto.org) website, deployed to GitHub Pages.
 
 1. Install Quarto: `brew install --cask quarto` (or download from [quarto.org](https://quarto.org/docs/get-started/))
 2. (Optional) For a better editor experience, use VS Code with the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto).
+3. Install the lightbox extension (powers click-to-zoom on the Personal page):
+   ```bash
+   quarto add quarto-ext/lightbox
+   ```
+   This creates an `_extensions/` directory which should be committed.
 
 ### Preview locally
 
@@ -109,3 +118,13 @@ Use `posts/welcome/index.qmd` as a template. Push to main, site rebuilds.
 2. Drop it in `decks/`.
 3. Add a link to it in `projects.qmd`.
 4. Commit and push.
+
+## Adding gallery images
+
+The `personal.qmd` page currently references placeholder SVGs in `img/ceramics/` and `img/photo/`. To add your own work:
+
+1. Drop your images into the relevant folder (`img/ceramics/` or `img/photo/`). See the `README.md` in each folder for size/format guidance.
+2. Update the image references in `personal.qmd` — change `placeholder-01.svg` to your filename (and remove placeholder files you no longer need).
+3. Commit and push.
+
+The lightbox extension (installed in one-time setup) gives each image click-to-zoom for free. Captions from the Markdown `![Caption](path)` syntax appear under the zoomed image.
