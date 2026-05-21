@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Thirty years building software, currently retraining as a research scientist. My M.Res at the University of Reading focuses on the feasibility of constructing the first whole-cell computational model of a human platelet by extending the wcEcoli framework (Karr et al. 2012; Macklin et al. 2020)."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "Thirty years building software, currently retraining as a research scientist. My M.Res at the University of Reading focuses on the feasibility of constructing the first whole-cell computational model of a human platelet by extending the wcEcoli framework (Karr et al. 2012; Macklin et al. 2020)."
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "About",
+    "section": "Research interests",
+    "text": "Research interests\n\nWhole-cell modelling and rule-based systems biology\nPlatelet activation, calcium signalling, and granule dynamics\nReproducible computational pipelines for wet-lab integration\nPractical applications of LLMs to scientific software engineering"
+  },
+  {
+    "objectID": "about.html#this-site",
+    "href": "about.html#this-site",
+    "title": "About",
+    "section": "This site",
+    "text": "This site\nBuilt with Quarto, hosted on GitHub Pages. Source is on GitHub."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nThe fastest route is email: you@example.com."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steve",
+    "section": "",
+    "text": "Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
+  },
+  {
+    "objectID": "index.html#currently-working-on",
+    "href": "index.html#currently-working-on",
+    "title": "Steve",
+    "section": "Currently working on",
+    "text": "Currently working on\n\nWhole-cell modelling of human platelet activation\nContainerised simulation pipelines and Dash-based exploration UIs\nBridging classical software engineering practice with computational biology workflows"
+  },
+  {
+    "objectID": "index.html#elsewhere",
+    "href": "index.html#elsewhere",
+    "title": "Steve",
+    "section": "Elsewhere",
+    "text": "Elsewhere\nSee the Projects page for repos and decks, or the Blog for longer-form notes."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Setting up this site",
+    "section": "",
+    "text": "This is a placeholder post to show what a Quarto blog entry looks like. Delete it once you’ve published your own."
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
+    "href": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
+    "title": "Setting up this site",
+    "section": "What Quarto gives you out of the box",
+    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al.\n\n\n\nThat should give a sense of what a working blog post looks like. Write the next one in Markdown, push to GitHub, done."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Setting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects & Decks",
+    "section": "",
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
+  },
+  {
+    "objectID": "projects.html#code",
+    "href": "projects.html#code",
+    "title": "Projects & Decks",
+    "section": "",
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
+  },
+  {
+    "objectID": "projects.html#slide-decks",
+    "href": "projects.html#slide-decks",
+    "title": "Projects & Decks",
+    "section": "Slide decks",
+    "text": "Slide decks\nDrop .pdf (preferred) or .pptx files into the decks/ directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.\n\nExample: Platelet modelling — work in progress\nExample: wcEcoli architecture walkthrough\n\n\n\n\n\n\n\nTipTip\n\n\n\nFor PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don’t preview in a browser. Or write future decks in revealjs directly in Quarto."
+  },
+  {
+    "objectID": "projects.html#posters-writeups",
+    "href": "projects.html#posters-writeups",
+    "title": "Projects & Decks",
+    "section": "Posters & writeups",
+    "text": "Posters & writeups\nA good place to link supplementary material, conference posters, or dissertation chapters once they’re ready."
+  }
+]

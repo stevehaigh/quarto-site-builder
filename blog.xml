@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Steve</title>
+<link>https://example.com/blog.html</link>
+<atom:link href="https://example.com/blog.xml" rel="self" type="application/rss+xml"/>
+<description>Notes on biomedical research, computational modelling, and software.</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Setting up this site</title>
+  <dc:creator>Steve </dc:creator>
+  <link>https://example.com/posts/welcome/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is a placeholder post to show what a Quarto blog entry looks like. Delete it once you’ve published your own.</p>
+<section id="what-quarto-gives-you-out-of-the-box" class="level2">
+<h2 class="anchored" data-anchor-id="what-quarto-gives-you-out-of-the-box">What Quarto gives you out of the box</h2>
+<p>Code blocks with syntax highlighting:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> hill(x, k, n):</span>
+<span id="cb1-4">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Hill function for cooperative binding."""</span></span>
+<span id="cb1-5">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (k<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>n <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> x<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>n)</span></code></pre></div></div>
+<p>Inline maths: <img src="https://latex.codecogs.com/png.latex?K_d%20=%20%5Cfrac%7B%5BA%5D%5BB%5D%7D%7B%5BAB%5D%7D">, and display maths:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac%7Bd%5BCa%5E%7B2+%7D%5D_i%7D%7Bdt%7D%20=%20J_%7BIP_3R%7D%20+%20J_%7Bleak%7D%20-%20J_%7BSERCA%7D%0A"></p>
+<p>Callouts:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can use BibTeX citations with <code>[@key]</code> syntax — Quarto reads a <code>references.bib</code> in the project root.</p>
+</div>
+</div>
+<p>Tables:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Marker</th>
+<th style="text-align: right;">Density (μM)</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P2Y₁</td>
+<td style="text-align: right;">0.3</td>
+<td>Hechler et al.</td>
+</tr>
+<tr class="even">
+<td>P2Y₁₂</td>
+<td style="text-align: right;">0.6</td>
+<td>Hardy et al.</td>
+</tr>
+<tr class="odd">
+<td>GPVI</td>
+<td style="text-align: right;">1.2</td>
+<td>Best et al.</td>
+</tr>
+</tbody>
+</table>
+<p>That should give a sense of what a working blog post looks like. Write the next one in Markdown, push to GitHub, done.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>meta</category>
+  <category>tooling</category>
+  <guid>https://example.com/posts/welcome/</guid>
+  <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://example.com/assets/placeholder.png" medium="image" type="image/png"/>
+</item>
+</channel>
+</rss>
