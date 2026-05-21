@@ -9,7 +9,7 @@ website:
   title: "Steve Haigh"
   description: "Notes on biomedical research, computational modelling, and software."
   site-url: https://haigh.bio 
-  repo-url: https://github.com/Steve Haigh/quarto-site-builder 
+  repo-url: https://github.com/stevehaigh/quarto-site-builder 
   navbar:
     pinned: true
     right:
@@ -22,7 +22,7 @@ website:
       - href: about.qmd
         text: About
       - icon: github
-        href: https://github.com/Steve Haigh  # change me
+        href: https://github.com/stevehaigh  # change me
         aria-label: GitHub
   page-footer:
     border: true
