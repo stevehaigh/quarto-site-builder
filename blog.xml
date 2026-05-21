@@ -5,7 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Steve</title>
+<title>Steve Haigh</title>
 <link>https://haigh.bio/blog.html</link>
 <atom:link href="https://haigh.bio/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on biomedical research, computational modelling, and software.</description>
