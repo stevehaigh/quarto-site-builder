@@ -1,5 +1,96 @@
 [
   {
+    "objectID": "personal.html",
+    "href": "personal.html",
+    "title": "Personal",
+    "section": "",
+    "text": "Outside the lab and the terminal, I spend time with clay and a camera. A small selection of work follows. All photographs are mine; ceramics are made and fired by me unless noted."
+  },
+  {
+    "objectID": "personal.html#ceramics",
+    "href": "personal.html#ceramics",
+    "title": "Personal",
+    "section": "Ceramics",
+    "text": "Ceramics\n\n\n\n\n\n\nStoneware vessel · 2025\n\n\n\n\n\n\n\nPorcelain bowl · 2024\n\n\n\n\n\n\n\nTea bowl, wood-fired · 2025\n\n\n\n\n\n\n\n\n\nFaceted jar · 2024\n\n\n\n\n\n\n\nSlip-decorated plate · 2025\n\n\n\n\n\n\n\nBottle form · 2025"
+  },
+  {
+    "objectID": "personal.html#photography",
+    "href": "personal.html#photography",
+    "title": "Personal",
+    "section": "Photography",
+    "text": "Photography\n\n\n\n\n\n\nMadonna di Campiglio, Dolomites · 2026\n\n\n\n\n\n\n\nReading riverside, late autumn · 2024\n\n\n\n\n\n\n\n\n\nEast Tyrol approach, dusk · 2025\n\n\n\n\n\n\n\nStudio, working light · 2025\n\n\n\n\n\n\n\n\n\n\n\nNoteNotes on the work\n\n\n\n\n\nI’m interested in the same thing across both media: surfaces that record process. With clay, that’s tool marks, finger pulls, the way a glaze breaks over an edge. With photography, it’s light catching texture — frost, fabric, weathered timber.\nBoth also reward patience in a way the rest of my work doesn’t."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects & Decks",
+    "section": "",
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
+  },
+  {
+    "objectID": "projects.html#code",
+    "href": "projects.html#code",
+    "title": "Projects & Decks",
+    "section": "",
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
+  },
+  {
+    "objectID": "projects.html#slide-decks",
+    "href": "projects.html#slide-decks",
+    "title": "Projects & Decks",
+    "section": "Slide decks",
+    "text": "Slide decks\nDrop .pdf (preferred) or .pptx files into the decks/ directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.\n\nExample: Platelet modelling — work in progress\nExample: wcEcoli architecture walkthrough\n\n\n\n\n\n\n\nTipTip\n\n\n\nFor PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don’t preview in a browser. Or write future decks in revealjs directly in Quarto."
+  },
+  {
+    "objectID": "projects.html#posters-writeups",
+    "href": "projects.html#posters-writeups",
+    "title": "Projects & Decks",
+    "section": "Posters & writeups",
+    "text": "Posters & writeups\nA good place to link supplementary material, conference posters, or dissertation chapters once they’re ready."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Setting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Setting up this site",
+    "section": "",
+    "text": "This is a placeholder post to show what a Quarto blog entry looks like."
+  },
+  {
+    "objectID": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
+    "href": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
+    "title": "Setting up this site",
+    "section": "What Quarto gives you out of the box",
+    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
+  },
+  {
+    "objectID": "index.html#currently-working-on",
+    "href": "index.html#currently-working-on",
+    "title": "Steve Haigh",
+    "section": "Currently working on",
+    "text": "Currently working on\n\nWhole-cell modelling of human platelet activation\nContainerised simulation pipelines and Dash-based exploration UIs\nBridging classical software engineering practice with computational biology workflows"
+  },
+  {
+    "objectID": "index.html#elsewhere",
+    "href": "index.html#elsewhere",
+    "title": "Steve Haigh",
+    "section": "Elsewhere",
+    "text": "Elsewhere\nSee the Projects page for repos and decks, or the Blog for longer-form notes."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -33,75 +124,5 @@
     "title": "About",
     "section": "Contact",
     "text": "Contact\nThe fastest route is email: steve_a_haigh@hotmail.com."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
-  },
-  {
-    "objectID": "index.html#currently-working-on",
-    "href": "index.html#currently-working-on",
-    "title": "Steve Haigh",
-    "section": "Currently working on",
-    "text": "Currently working on\n\nWhole-cell modelling of human platelet activation\nContainerised simulation pipelines and Dash-based exploration UIs\nBridging classical software engineering practice with computational biology workflows"
-  },
-  {
-    "objectID": "index.html#elsewhere",
-    "href": "index.html#elsewhere",
-    "title": "Steve Haigh",
-    "section": "Elsewhere",
-    "text": "Elsewhere\nSee the Projects page for repos and decks, or the Blog for longer-form notes."
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Setting up this site",
-    "section": "",
-    "text": "This is a placeholder post to show what a Quarto blog entry looks like."
-  },
-  {
-    "objectID": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
-    "href": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
-    "title": "Setting up this site",
-    "section": "What Quarto gives you out of the box",
-    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Setting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects & Decks",
-    "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
-  },
-  {
-    "objectID": "projects.html#code",
-    "href": "projects.html#code",
-    "title": "Projects & Decks",
-    "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\n\nSee all repositories on GitHub."
-  },
-  {
-    "objectID": "projects.html#slide-decks",
-    "href": "projects.html#slide-decks",
-    "title": "Projects & Decks",
-    "section": "Slide decks",
-    "text": "Slide decks\nDrop .pdf (preferred) or .pptx files into the decks/ directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.\n\nExample: Platelet modelling — work in progress\nExample: wcEcoli architecture walkthrough\n\n\n\n\n\n\n\nTipTip\n\n\n\nFor PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don’t preview in a browser. Or write future decks in revealjs directly in Quarto."
-  },
-  {
-    "objectID": "projects.html#posters-writeups",
-    "href": "projects.html#posters-writeups",
-    "title": "Projects & Decks",
-    "section": "Posters & writeups",
-    "text": "Posters & writeups\nA good place to link supplementary material, conference posters, or dissertation chapters once they’re ready."
   }
 ]
