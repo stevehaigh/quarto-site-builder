@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - "decks/**"
+    - CNAME
 
 website:
   title: "Steve"
