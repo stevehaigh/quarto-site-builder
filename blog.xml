@@ -104,7 +104,7 @@ Note
   <category>tooling</category>
   <guid>https://haigh.bio/posts/welcome/</guid>
   <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://haigh.bio/assets/placeholder.png" medium="image" type="image/png"/>
+  <media:content url="https://haigh.bio/assets/placeholder.svg" medium="image" type="image/svg+xml"/>
 </item>
 </channel>
 </rss>
