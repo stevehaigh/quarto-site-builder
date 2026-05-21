@@ -7,7 +7,7 @@ about:
   links:
     - icon: github
       text: GitHub
-      href: https://github.com/YOUR-USERNAME
+      href: https://github.com/stevehaigh
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/YOUR-HANDLE

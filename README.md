@@ -55,7 +55,7 @@ Output goes to `_site/`.
    git add .
    git commit -m "Initial scaffold"
    git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   git remote add origin https://github.com/stevehaigh/quarto-site-builder.git
    git push -u origin main
    ```
 3. Create an empty `gh-pages` branch (the workflow needs it to exist):
@@ -71,7 +71,7 @@ Output goes to `_site/`.
    - Branch: `gh-pages` / `/ (root)`
 5. Push to `main` — the Action in `.github/workflows/publish.yml` renders and publishes.
 
-Your site will be at `https://YOUR-USERNAME.github.io/YOUR-REPO/`.
+Your site will be at `https://stevehaigh.github.io/quarto-site-builder/`.
 
 ## Custom domain (Cloudflare)
 
@@ -85,14 +85,14 @@ Your site will be at `https://YOUR-USERNAME.github.io/YOUR-REPO/`.
      185.199.111.153
      ```
      (set proxy status to **DNS only** — grey cloud — to avoid HTTPS cert issues with GitHub Pages)
-   - For `www`, add a CNAME pointing to `YOUR-USERNAME.github.io`.
+   - For `www`, add a CNAME pointing to `stevehaigh.github.io`.
 3. In GitHub: **Settings → Pages → Custom domain**, enter your domain. GitHub will create a `CNAME` file in the `gh-pages` branch and provision an HTTPS cert (takes a few minutes).
 4. Tick **Enforce HTTPS** once the cert is issued.
 5. Update `site-url` in `_quarto.yml` to your new domain.
 
 ## Things to change before going live
 
-Search the repo for `YOUR-USERNAME`, `YOUR-REPO`, `you@example.com`, and `example.com` — those are the placeholders to replace.
+Search the repo for `stevehaigh`, `quarto-site-builder`, `you@example.com`, and `example.com` — those are the placeholders to replace.
 
 ## Adding a blog post
 

@@ -8,7 +8,7 @@ image: ../../assets/placeholder.png
 draft: false
 ---
 
-This is a placeholder post to show what a Quarto blog entry looks like. 
+This is a placeholder post to show what a Quarto blog entry looks like. Delete it once you've published your own.
 
 ## What Quarto gives you out of the box
 
@@ -41,3 +41,5 @@ Tables:
 | P2Y₁    |          0.3 | Hechler et al.     |
 | P2Y₁₂   |          0.6 | Hardy et al.       |
 | GPVI    |          1.2 | Best et al.        |
+
+That should give a sense of what a working blog post looks like. Write the next one in Markdown, push to GitHub, done.

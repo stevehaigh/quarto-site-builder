@@ -15,8 +15,8 @@ Thirty years building software, currently retraining as a research scientist. My
 
 ## This site
 
-Built with [Quarto](https://quarto.org), hosted on GitHub Pages. Source is on [GitHub](https://github.com/YOUR-USERNAME/YOUR-REPO).
+Built with [Quarto](https://quarto.org), hosted on GitHub Pages. Source is on [GitHub](https://github.com/stevehaigh/quarto-site-builder).
 
 ## Contact
 
-The fastest route is email: [you@example.com](mailto:you@example.com).
+The fastest route is email: [steve_a_haigh@hotmail.com](mailto:steve_a_haigh@hotmail.com).

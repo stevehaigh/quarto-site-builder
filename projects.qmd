@@ -9,11 +9,11 @@ toc: true
 
 Extending the *wcEcoli* framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.
 
-[![](https://img.shields.io/badge/GitHub-repo-181717?logo=github)](https://github.com/YOUR-USERNAME/platelet-wcm)
+[![](https://img.shields.io/badge/GitHub-repo-181717?logo=github)](https://github.com/stevehaigh/platelet-wcm)
 
 ### Other repos
 
-See [all repositories on GitHub](https://github.com/YOUR-USERNAME?tab=repositories).
+See [all repositories on GitHub](https://github.com/stevehaigh?tab=repositories).
 
 ## Slide decks
 

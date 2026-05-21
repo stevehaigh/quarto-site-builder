@@ -18,3 +18,5 @@ __pycache__/
 
 # Environment
 .env
+
+**/*.quarto_ipynb
