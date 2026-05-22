@@ -10,7 +10,31 @@
 <atom:link href="https://haigh.bio/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on biomedical research, computational modelling, and software.</description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 22 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Lab meeting: the platelet model, first showing</title>
+  <dc:creator>Steve Haigh</dc:creator>
+  <link>https://haigh.bio/posts/lab-meeting-2026-05-14/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.</p>
+<p>Slides are here:</p>
+<p><a href="../../decks/lab-meeting-2026-05-14/index.html"><strong>The feasibility of a whole-cell model of the human platelet</strong> →</a></p>
+<p>(PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.)</p>
+
+
+
+ ]]></description>
+  <category>platelet</category>
+  <category>modelling</category>
+  <category>lab</category>
+  <guid>https://haigh.bio/posts/lab-meeting-2026-05-14/</guid>
+  <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Setting up this site</title>
   <dc:creator>Steve Haigh</dc:creator>

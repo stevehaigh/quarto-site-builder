@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Steve Haigh">
+<meta name="dcterms.date" content="2026-05-22">
+<meta name="description" content="First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.">
 
-<title>Projects &amp; Decks – Steve Haigh</title>
+<title>Lab meeting: the platelet model, first showing – Steve Haigh</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +29,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -248,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Steve Haigh</span>
     </a>
   </div>
@@ -259,23 +262,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./personal.html"> 
+    <a class="nav-link" href="../../personal.html"> 
 <span class="menu-text">Personal</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -295,23 +298,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#code" id="toc-code" class="nav-link active" data-scroll-target="#code">Code</a>
-  <ul class="collapse">
-  <li><a href="#platelet-whole-cell-model" id="toc-platelet-whole-cell-model" class="nav-link" data-scroll-target="#platelet-whole-cell-model">Platelet whole-cell model</a></li>
-  <li><a href="#other-repos" id="toc-other-repos" class="nav-link" data-scroll-target="#other-repos">Other repos</a></li>
-  </ul></li>
-  <li><a href="#slide-decks" id="toc-slide-decks" class="nav-link" data-scroll-target="#slide-decks">Slide decks</a>
-  <ul class="collapse">
-  <li><a href="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet" id="toc-the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="nav-link" data-scroll-target="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</a></li>
-  </ul></li>
-  <li><a href="#posters-writeups" id="toc-posters-writeups" class="nav-link" data-scroll-target="#posters-writeups">Posters &amp; writeups</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -319,14 +307,36 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects &amp; Decks</h1>
-</div>
+<h1 class="title">Lab meeting: the platelet model, first showing</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">platelet</div>
+    <div class="quarto-category">modelling</div>
+    <div class="quarto-category">lab</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Steve Haigh </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 22, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -336,33 +346,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code">Code</h2>
-<section id="platelet-whole-cell-model" class="level3">
-<h3 class="anchored" data-anchor-id="platelet-whole-cell-model">Platelet whole-cell model</h3>
-<p>Extending the <em>wcEcoli</em> framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.</p>
-<p><a href="https://github.com/stevehaigh/platelet-wcm"><img src="https://img.shields.io/badge/GitHub-repo-181717?logo=github.png" class="img-fluid"></a></p>
-</section>
-<section id="other-repos" class="level3">
-<h3 class="anchored" data-anchor-id="other-repos">Other repos</h3>
-<p>See <a href="https://github.com/stevehaigh?tab=repositories">all repositories on GitHub</a>.</p>
-</section>
-</section>
-<section id="slide-decks" class="level2">
-<h2 class="anchored" data-anchor-id="slide-decks">Slide decks</h2>
-<p>Decks are written as Quarto Reveal.js (<code>.qmd</code>) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.</p>
-<section id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="level3">
-<h3 class="anchored" data-anchor-id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</h3>
-<p>Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.</p>
-<p><a href="decks/lab-meeting-2026-05-14/index.html" class="btn btn-primary btn-sm">View slides</a> <a href="decks/lab-meeting-2026-05-14/index.pdf" class="btn btn-outline-secondary btn-sm">PDF</a> <a href="decks/lab-meeting-2026-05-14/index.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
-</section>
-</section>
-<section id="posters-writeups" class="level2">
-<h2 class="anchored" data-anchor-id="posters-writeups">Posters &amp; writeups</h2>
-<p>A good place to link supplementary material, conference posters, or dissertation chapters once they’re ready.</p>
+<p>Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.</p>
+<p>Slides are here:</p>
+<p><a href="../../decks/lab-meeting-2026-05-14/index.html"><strong>The feasibility of a whole-cell model of the human platelet</strong> →</a></p>
+<p>(PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.)</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -796,7 +785,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml">
+    <a class="nav-link" href="../../blog.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -809,5 +798,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

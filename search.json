@@ -39,7 +39,7 @@
     "href": "projects.html#slide-decks",
     "title": "Projects & Decks",
     "section": "Slide decks",
-    "text": "Slide decks\nDrop .pdf (preferred) or .pptx files into the decks/ directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.\n\nExample: Platelet modelling — work in progress\nExample: wcEcoli architecture walkthrough\n\n\n\n\n\n\n\nTipTip\n\n\n\nFor PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don’t preview in a browser. Or write future decks in revealjs directly in Quarto."
+    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX"
   },
   {
     "objectID": "projects.html#posters-writeups",
@@ -53,7 +53,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Setting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
+    "text": "Lab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -68,6 +68,90 @@
     "title": "Setting up this site",
     "section": "What Quarto gives you out of the box",
     "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al."
+  },
+  {
+    "objectID": "posts/lab-meeting-2026-05-14/index.html",
+    "href": "posts/lab-meeting-2026-05-14/index.html",
+    "title": "Lab meeting: the platelet model, first showing",
+    "section": "",
+    "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#quick-recap",
+    "href": "decks/lab-meeting-2026-05-14/index.html#quick-recap",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Quick recap",
+    "text": "Quick recap\n\n\nWhat I evaluated\n\nAiming to build a computer model of the platelet.\nHas been done before in prokaryotes and yeast but not in other eukaryotic cells.\nLots of modelling done in platelets but not a whole-cell attempt.\nLots of options e.g., COPASI, V-Cell and others.\nLanded on wcEcoli project from Covert lab — capable of scaling to whole cell, code quality excellent, something I could work with and expand.\n\n\nWhat I did\n\nForked wcEcoli (i.e., took my own working copy).\nPruned all E. coli biology.\nUsed AI to build tests to verify I didn’t remove too much.\nRebuilt cell contents and processes from the platelet literature.\nKept the simulation engine, state partitioning, listener / analysis framework.\n~5,000 lines of working code I didn’t have to write.\nEmailed Prof. Covert — “sounds fun, good luck”.\n\n\n\nWhy not COPASI or V-Cell? — great single-pathway ODE tools, but no copy-number accounting across compartments.\nCheat sheet:\n\nCOPASI — open-source biochemical pathway simulator; great for single-pathway ODE work.\nV-Cell — UConn cell modelling platform; spatial PDE-capable, domain-specific.\nSBML — Systems Biology Markup Language; XML interchange format.\nBioModels — EBI repository of curated SBML models.\nwcEcoli — Covert Lab’s whole-cell E. coli model (Karr 2012 lineage; Macklin / Sun Science 2020)."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#method-to-build-a-calibrated-model",
+    "href": "decks/lab-meeting-2026-05-14/index.html#method-to-build-a-calibrated-model",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Method to build a calibrated model",
+    "text": "Method to build a calibrated model\nFor each mechanism, a five-step process:\n\nAnchor paper. E.g., Dolan & Diamond 2014 supplied the validation experiment (Fig. 4 Ca²⁺ transients ± extracellular Ca²⁺) and resting-state targets (100 nM cyt, 250 µM DTS).\nLiterature review for kinetics. Primary sources: deYoung–Keizer 1992 for IP₃R, Caride 2007 for PMCA, Hoover & Lewis 2011 for SOCE, Mazet 2020 for the PI cycle…\nSpecies enumeration. Every Ca²⁺-binding or -gating protein state, with a compartment tag (DTS, Cyt etc.). ~50 species for the calcium pathway.\nCopy numbers from Burkhart 2012 platelet proteomics.\nRate constants. Primary-source values, units normalised, every value carrying a citation comment in code.\n\nThen: does the resting state hold? Do the timescales line up? Do the unit tests still pass?\n\nEvery numerical value carries a primary-source citation comment in the code. This is the discipline that catches transcription errors (segues into slide 8).\nStep 5 is the key one. There are ~85 rate constants in this model; each is a small research project.\n\nCalibrated model — a model whose parameters are constrained by measurements rather than fitted to the validation experiment.\nAnchor paper — the single paper whose experiment you’ll validate against; defines targets upfront.\nIP₃R — inositol-1,4,5-trisphosphate receptor; Ca²⁺ release channel on the DTS.\nSERCA — sarco/endoplasmic-reticulum Ca²⁺ ATPase; pumps Ca²⁺ back into the DTS.\nPMCA — plasma-membrane Ca²⁺ ATPase; pumps Ca²⁺ out of the cell.\nSOCE — store-operated Ca²⁺ entry; STIM1 / Orai1 mechanism that refills depleted stores from extracellular Ca²⁺.\nDTS — dense tubular system; platelet equivalent of ER, the intracellular Ca²⁺ store.\nBurkhart 2012 — platelet proteomics dataset; absolute copy numbers for ~3,800 platelet proteins."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-start-with-the-data",
+    "href": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-start-with-the-data",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — start with the data",
+    "text": "Build code from source data — start with the data\nStart with the published data (usually PDF, sometimes CSV).\n\nJust a small excerpt."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-ai-extraction",
+    "href": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-ai-extraction",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — AI extraction",
+    "text": "Build code from source data — AI extraction\n\n\nAsk AI to extract — get it to tell you what it’s doing to sanity check (but it is very good at this).\n\nE.g. I asked: “Please read Dolan and Diamond 2014 and tell me what the first 5 lines of table 1 show.”\n\nSimply not feasible to do this by hand at large scale; AI could process 100s of papers in a day. The only challenge is verification, but this is also amenable to AI assistance.\n\n\n\n\n\n\n\n\nDivision of labour: AI does the rote PDF extraction; humans do the sanity check.\n\nHeadline claim: 100s of papers a day is reachable; the bottleneck is verification — and verification is also AI-amenable (see slide 8).\nAuthorship of the model — primary source / wcEcoli / me, in that order.\nPDF extraction — historically painful for tables and footnotes; modern multimodal LLMs are now reliable on well-formatted tables, less so on figures.\nSanity check — the human step: does the extracted value match the paper’s text? Do the units make sense?"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-ai-writes-the-code",
+    "href": "decks/lab-meeting-2026-05-14/index.html#build-code-from-source-data-ai-writes-the-code",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — AI writes the code",
+    "text": "Build code from source data — AI writes the code\n\n\nThen get AI to build the code, using the wcEcoli code as a template.\nThe code works well, the architecture is not perfect — needs some work to make it more usable for future expansion — but it’s an excellent start.\n\n\n\n\n\n\n\n\n“Building the code” means: scaffolding new process modules off the wcEcoli template, wiring rate constants into the existing solver, writing unit tests for invariants.\nWorks well, not perfect — will need refactoring before v.next.\n“Did the AI write code that worked first try?” → no, the back-and-forth is iterative; the AI is a fast scaffolder and a useful pair-programmer, not an oracle."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#what-did-i-build-so-far",
+    "href": "decks/lab-meeting-2026-05-14/index.html#what-did-i-build-so-far",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "What did I build? (so far)",
+    "text": "What did I build? (so far)\n\n\n\nAgonist — a signal molecule that activates a platelet (thrombin, ADP, TXA2).\nGPCR — G-protein-coupled receptor (PAR1 / PAR4 for thrombin; P2Y1 and P2Y12 for ADP).\nGαq — α-subunit of the heterotrimeric G-protein that activates PLCβ. Gᵢ (P2Y12) is the inhibitory counterpart.\nPLCβ — phospholipase Cβ; cleaves PIP₂ → IP₃ + DAG.\nIP₃ — inositol-1,4,5-trisphosphate; the second messenger that gates IP₃R.\nNCX / NCLX / MCU — Na⁺/Ca²⁺ exchanger (PM); Na⁺/Ca²⁺/Li⁺ exchanger (mitochondrial); mitochondrial Ca²⁺ uniporter.\nCaM — calmodulin; cytosolic Ca²⁺ sensor / buffer; activates PMCA at high Ca²⁺.\nCALR / BiP / HSP90B1 / CREC — major intra-DTS Ca²⁺-binding buffers.\nSTIM1 / Orai1 — DTS Ca²⁺ sensor + PM channel; the SOCE machinery.\nP2X1 — ATP-gated PM Ca²⁺ channel; ionotropic, not GPCR.\nSCS / OCS — surface-connected (open canalicular) system; the platelet’s invaginated extracellular surface.\nTXA2R — thromboxane A2 receptor; not yet in model.\nPKC — protein kinase C; not yet in model."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#spotting-errors-in-the-source",
+    "href": "decks/lab-meeting-2026-05-14/index.html#spotting-errors-in-the-source",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Spotting errors in the source",
+    "text": "Spotting errors in the source\nThe Purvis 2008 k₃ story.\n\nAsked AI to check values it had extracted.\nAI spotted that a value quoted in Purvis & Diamond 2008 (a well-known platelet modelling paper) was wrong — units were wrong and value was 100× too large.\nAI found the original study via the references and I verified for myself; AI was correct, there was a typo.\nVery strong use-case for AI — tracking values and assertions across papers. Also very useful for helping to review data: I got the AI to print values it had found, with reference to the primary source and the code, so I could easily review.\n\n\nResting-state targets — cytosolic Ca²⁺ in 90–110 nM; DTS Ca²⁺ in literature range (100–400 µM); IP₃ ≈ 50 nM.\nIP₃-stimulated transient — the calcium spike following IP₃ release from the GPCR cascade.\nGαq-active — fraction of Gαq protein in its GTP-bound, active conformation; an upstream proxy for receptor occupancy.\nUnit test — automated invariant check (e.g. mass balance, positivity, sub-state sum)."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#validation",
+    "href": "decks/lab-meeting-2026-05-14/index.html#validation",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Validation",
+    "text": "Validation\n\n\nCriteria\nCompared output to existing models. Success criteria:\n\nResting cytosolic Ca²⁺ within 100 ± 10 nM band\nResting DTS Ca²⁺ in the literature range\nIP₃-stimulated transient peak height in band\nTransient duration matches shape of previous model(s)\n\n\nModel state at 14 May\n\nResting cyt Ca²⁺: 104 nM ✓\nResting DTS Ca²⁺: 235 µM ✓\nResting IP₃: 50 nM ✓\nResting Gαq-active: 100 of 5000 ✓\n21 / 21 unit tests pass\nDriven by physiological agonists — 1 nM thrombin, 10 µM ADP. No hand-fitted IP₃ forcing."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#model-stimulated-with-adp-thrombin-cytosolic-ca²",
+    "href": "decks/lab-meeting-2026-05-14/index.html#model-stimulated-with-adp-thrombin-cytosolic-ca²",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺",
+    "text": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#model-stimulated-with-adp-thrombin-dts-ca²",
+    "href": "decks/lab-meeting-2026-05-14/index.html#model-stimulated-with-adp-thrombin-dts-ca²",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Model stimulated with ADP / thrombin — DTS Ca²⁺",
+    "text": "Model stimulated with ADP / thrombin — DTS Ca²⁺"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/index.html#where-it-goes-from-here",
+    "href": "decks/lab-meeting-2026-05-14/index.html#where-it-goes-from-here",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Where it goes from here",
+    "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
   },
   {
     "objectID": "index.html",

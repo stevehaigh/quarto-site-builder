@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://haigh.bio/personal.html</loc>
-    <lastmod>2026-05-22T09:07:26.848Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.987Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/projects.html</loc>
-    <lastmod>2026-05-22T09:07:26.848Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.988Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/blog.html</loc>
-    <lastmod>2026-05-22T09:07:26.847Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.947Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/posts/welcome/index.html</loc>
-    <lastmod>2026-05-22T09:07:26.848Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/posts/lab-meeting-2026-05-14/index.html</loc>
+    <lastmod>2026-05-22T14:48:13.987Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/decks/lab-meeting-2026-05-14/index.html</loc>
+    <lastmod>2026-05-22T14:48:13.985Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/index.html</loc>
-    <lastmod>2026-05-22T09:07:26.848Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.987Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/about.html</loc>
-    <lastmod>2026-05-22T09:07:26.847Z</lastmod>
+    <lastmod>2026-05-22T14:48:13.947Z</lastmod>
   </url>
 </urlset>
