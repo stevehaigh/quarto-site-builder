@@ -1,0 +1,16 @@
+---
+title: "Lab meeting: the platelet model, first showing"
+description: "First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work."
+author: "Steve Haigh"
+date: "2026-05-22"
+categories: [platelet, modelling, lab]
+draft: false
+---
+
+Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.
+
+Slides are here:
+
+[**The feasibility of a whole-cell model of the human platelet** →](../../decks/lab-meeting-2026-05-14/index.html)
+
+(PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).)

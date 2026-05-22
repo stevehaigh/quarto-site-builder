@@ -1,0 +1,32 @@
+/*-- scss:rules --*/
+
+/* Section breadcrumb shown above the slide title */
+.reveal .slides section[data-section]::before {
+  content: attr(data-section);
+  display: block;
+  font-size: 0.5em;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.1em;
+}
+
+/* Keep slide content clear of the footer */
+.reveal .slides > section {
+  padding-bottom: 3em;
+}
+
+/* Tighter type + spacing for content-heavy slides. Stack on top of `smaller: true`. */
+.reveal .slides section.tight,
+.reveal .slides section.tight li,
+.reveal .slides section.tight p {
+  font-size: 0.78em;
+  line-height: 1.25;
+}
+.reveal .slides section.tight ul,
+.reveal .slides section.tight ol {
+  margin-block: 0.4em;
+}
+.reveal .slides section.tight li {
+  margin-block: 0.15em;
+}

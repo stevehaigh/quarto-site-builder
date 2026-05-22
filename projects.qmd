@@ -17,15 +17,15 @@ See [all repositories on GitHub](https://github.com/stevehaigh?tab=repositories)
 
 ## Slide decks
 
-Drop `.pdf` (preferred) or `.pptx` files into the `decks/` directory in the repo and link them here. PDFs render cleanly in a browser; PowerPoints download.
+Decks are written as Quarto Reveal.js (`.qmd`) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.
 
-- [Example: Platelet modelling — work in progress](decks/example.pdf)
-- [Example: wcEcoli architecture walkthrough](decks/example.pdf)
+### The feasibility of a whole-cell model of the human platelet
 
-::: {.callout-tip}
-## Tip
-For PowerPoint, export to PDF before committing. PPTX files inflate repo size quickly and don't preview in a browser. Or write future decks in [revealjs](https://quarto.org/docs/presentations/revealjs/) directly in Quarto.
-:::
+Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.
+
+[View slides](decks/lab-meeting-2026-05-14/index.html){.btn .btn-primary .btn-sm}
+[PDF](decks/lab-meeting-2026-05-14/index.pdf){.btn .btn-outline-secondary .btn-sm}
+[PPTX](decks/lab-meeting-2026-05-14/index.pptx){.btn .btn-outline-secondary .btn-sm}
 
 ## Posters & writeups
 
