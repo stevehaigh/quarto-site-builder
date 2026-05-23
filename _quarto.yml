@@ -46,6 +46,10 @@ format:
     anchor-sections: true
     smooth-scroll: true
     lightbox: auto  # click any image to view full-screen (needs `quarto add quarto-ext/lightbox`)
+    include-in-header:
+      - text: |
+          <script data-goatcounter="https://stevehaigh.goatcounter.com/count"
+                  async src="//gc.zgo.at/count.js"></script>
 
 execute:
   freeze: auto  # re-render only when source changes
