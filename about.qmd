@@ -19,4 +19,4 @@ Built with [Quarto](https://quarto.org), hosted on GitHub Pages. Source is on [G
 
 ## Contact
 
-The fastest route is email: [steve_a_haigh@hotmail.com](mailto:steve_a_haigh@hotmail.com).
+The fastest route is email: [steve@haigh.bio](mailto:steve@haigh.bio).
