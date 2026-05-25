@@ -53,7 +53,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Lab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
+    "text": "The Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/lab-meeting-2026-05-14/index.html",
@@ -61,6 +61,55 @@
     "title": "Lab meeting: the platelet model, first showing",
     "section": "",
     "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html",
+    "href": "posts/the-story-so-far/index.html",
+    "title": "The Story So Far",
+    "section": "",
+    "text": "This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already"
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "href": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "title": "The Story So Far",
+    "section": "From Debugging Code to Debugging Cells: A Year of Switching Fields",
+    "text": "From Debugging Code to Debugging Cells: A Year of Switching Fields\nLast August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#why-biology-and-why-now",
+    "href": "posts/the-story-so-far/index.html#why-biology-and-why-now",
+    "title": "The Story So Far",
+    "section": "Why biology, and why now",
+    "text": "Why biology, and why now\nThe interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-serioulsy studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.\nAt some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "href": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "title": "The Story So Far",
+    "section": "The first six weeks: lectures, journal clubs, and introduction to a real lab",
+    "text": "The first six weeks: lectures, journal clubs, and introduction to a real lab\nThe course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.\nThen came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
+    "href": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
+    "title": "The Story So Far",
+    "section": "End of semester one: the unexpected hard part",
+    "text": "End of semester one: the unexpected hard part\nBy the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.\nThe biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.\nThe harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I really wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.\nAcademic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.\nSome things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.\nI’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end)."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
+    "href": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
+    "title": "The Story So Far",
+    "section": "The project: a whole-cell model of a platelet",
+    "text": "The project: a whole-cell model of a platelet\nThe research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.\nThe project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#what-comes-next",
+    "href": "posts/the-story-so-far/index.html#what-comes-next",
+    "title": "The Story So Far",
+    "section": "What comes next",
+    "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
   },
   {
     "objectID": "decks/lab-meeting-2026-05-14/index.html#quick-recap",
@@ -165,7 +214,7 @@
     "href": "index.html#latest-post",
     "title": "Steve Haigh",
     "section": "Latest post",
-    "text": "Latest post\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\nplatelet\nmodelling\nlab\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+    "text": "Latest post\n\n\n\n\n\nThe Story So Far\n\n\ncareer\nlab\nmres\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
   },
   {
     "objectID": "about.html",
