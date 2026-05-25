@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Steve Haigh</title>
+<title>Steve Haigh – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -32,14 +32,16 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -72,9 +74,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-latest-post .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-latest-post'] = new List('listing-latest-post', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -249,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Steve Haigh</span>
+    <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -300,13 +363,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
   <ul>
   <li><a href="#currently-working-on" id="toc-currently-working-on" class="nav-link active" data-scroll-target="#currently-working-on">Currently working on</a></li>
-  <li><a href="#elsewhere" id="toc-elsewhere" class="nav-link" data-scroll-target="#elsewhere">Elsewhere</a></li>
+  <li><a href="#now" id="toc-now" class="nav-link" data-scroll-target="#now">Now</a></li>
+  <li><a href="#latest-post" id="toc-latest-post" class="nav-link" data-scroll-target="#latest-post">Latest post</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <div class="quarto-about-trestles">
   <div class="about-entity">
+    <img src="img/profile.jpg" class="about-image
+  round " style="height: 14em; width: 14em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Steve Haigh</h1>
@@ -333,19 +399,60 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-contents"><main class="content" id="quarto-document-content">
 
 
+<p><em>Computational biology, viewed from a 30-year software career.</em></p>
 <p>Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the <em>wcEcoli</em> whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.</p>
 <p>This site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology.</p>
 <section id="currently-working-on" class="level2">
 <h2 data-anchor-id="currently-working-on">Currently working on</h2>
-<ul>
-<li>Whole-cell modelling of human platelet activation</li>
-<li>Containerised simulation pipelines and Dash-based exploration UIs</li>
-<li>Bridging classical software engineering practice with computational biology workflows</li>
-</ul>
+<div class="grid">
+<section id="whole-cell-modelling" class="level4 g-col-12 g-col-md-4">
+<h4 data-anchor-id="whole-cell-modelling">Whole-cell modelling</h4>
+<p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
 </section>
-<section id="elsewhere" class="level2">
-<h2 data-anchor-id="elsewhere">Elsewhere</h2>
-<p>See the <a href="./projects.html">Projects</a> page for repos and decks, or the <a href="./blog.html">Blog</a> for longer-form notes.</p>
+<section id="simulation-infrastructure" class="level4 g-col-12 g-col-md-4">
+<h4 data-anchor-id="simulation-infrastructure">Simulation infrastructure</h4>
+<p>Containerised pipelines and Dash-based UIs for exploring high-dimensional simulation output.</p>
+</section>
+<section id="engineering-biology" class="level4 g-col-12 g-col-md-4">
+<h4 data-anchor-id="engineering-biology">Engineering ↔︎ biology</h4>
+<p>Bringing software-engineering discipline to computational-biology workflows.</p>
+</section>
+</div>
+</section>
+<section id="now" class="level2">
+<h2 data-anchor-id="now">Now</h2>
+<p><em>Updated May 2026.</em> Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation exploration UI in Dash. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission.</p>
+</section>
+<section id="latest-post" class="level2">
+<h2 data-anchor-id="latest-post">Latest post</h2>
+<div id="listing-latest-post" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="cGxhdGVsZXQlMkNtb2RlbGxpbmclMkNsYWI=" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1779711247495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/lab-meeting-2026-05-14/index.html" class="no-external">Lab meeting: the platelet model, first showing</a>
+</h3>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
+<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
+</div>
+<div class="delink listing-description"><a href="./posts/lab-meeting-2026-05-14/index.html" class="no-external">
+<p>First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/lab-meeting-2026-05-14/index.html" class="no-external">
+<div class="listing-date">
+May 22, 2026
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+<p>See the <a href="./blog.html">Blog</a> for the full archive, or the <a href="./projects.html">Projects</a> page for repos and decks.</p>
 
 
 </section>

@@ -4,7 +4,7 @@
     "href": "personal.html",
     "title": "Personal",
     "section": "",
-    "text": "This page is just a placeholder with some dummy text, it’s moe about experimenting with Quarto layout than anyting else!"
+    "text": "This page is just a placeholder with some dummy text, it’s more about experimenting with Quarto layout than anything else!"
   },
   {
     "objectID": "personal.html#ceramics",
@@ -53,21 +53,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Lab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nSetting up this site\n\n\n\nmeta\n\ntooling\n\n\n\nA first post — Quarto + GitHub Pages + Cloudflare, low effort and free.\n\n\n\n\n\nMay 21, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Setting up this site",
-    "section": "",
-    "text": "This is a placeholder post to show what a Quarto blog entry looks like."
-  },
-  {
-    "objectID": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
-    "href": "posts/welcome/index.html#what-quarto-gives-you-out-of-the-box",
-    "title": "Setting up this site",
-    "section": "What Quarto gives you out of the box",
-    "text": "What Quarto gives you out of the box\nCode blocks with syntax highlighting:\nimport numpy as np\n\ndef hill(x, k, n):\n    \"\"\"Hill function for cooperative binding.\"\"\"\n    return x**n / (k**n + x**n)\nInline maths: \\(K_d = \\frac{[A][B]}{[AB]}\\), and display maths:\n\\[\n\\frac{d[Ca^{2+}]_i}{dt} = J_{IP_3R} + J_{leak} - J_{SERCA}\n\\]\nCallouts:\n\n\n\n\n\n\nNote\n\n\n\nYou can use BibTeX citations with [@key] syntax — Quarto reads a references.bib in the project root.\n\n\nTables:\n\n\n\nMarker\nDensity (μM)\nSource\n\n\n\n\nP2Y₁\n0.3\nHechler et al.\n\n\nP2Y₁₂\n0.6\nHardy et al.\n\n\nGPVI\n1.2\nBest et al."
+    "text": "Lab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/lab-meeting-2026-05-14/index.html",
@@ -158,21 +144,28 @@
     "href": "index.html",
     "title": "Steve Haigh",
     "section": "",
-    "text": "Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
+    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology."
   },
   {
     "objectID": "index.html#currently-working-on",
     "href": "index.html#currently-working-on",
     "title": "Steve Haigh",
     "section": "Currently working on",
-    "text": "Currently working on\n\nWhole-cell modelling of human platelet activation\nContainerised simulation pipelines and Dash-based exploration UIs\nBridging classical software engineering practice with computational biology workflows"
+    "text": "Currently working on\n\n\nWhole-cell modelling\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\nSimulation infrastructure\nContainerised pipelines and Dash-based UIs for exploring high-dimensional simulation output.\n\n\nEngineering ↔︎ biology\nBringing software-engineering discipline to computational-biology workflows."
   },
   {
-    "objectID": "index.html#elsewhere",
-    "href": "index.html#elsewhere",
+    "objectID": "index.html#now",
+    "href": "index.html#now",
     "title": "Steve Haigh",
-    "section": "Elsewhere",
-    "text": "Elsewhere\nSee the Projects page for repos and decks, or the Blog for longer-form notes."
+    "section": "Now",
+    "text": "Now\nUpdated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation exploration UI in Dash. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission."
+  },
+  {
+    "objectID": "index.html#latest-post",
+    "href": "index.html#latest-post",
+    "title": "Steve Haigh",
+    "section": "Latest post",
+    "text": "Latest post\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\nplatelet\nmodelling\nlab\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
   },
   {
     "objectID": "about.html",
@@ -193,7 +186,7 @@
     "href": "about.html#research-interests",
     "title": "About",
     "section": "Research interests",
-    "text": "Research interests\n\nWhole-cell modelling and rule-based systems biology\nPlatelet activation, calcium signalling, and granule dynamics\nReproducible computational pipelines for wet-lab integration\nPractical applications of LLMs to scientific software engineering"
+    "text": "Research interests\n\nWhole-cell modelling and systems biology\nPlatelet activation, calcium signalling, and granule dynamics\nReproducible computational pipelines (bringing modern software development to the lab)\nPractical applications of LLMs to scientific software engineering\nUse of AI in systems biology"
   },
   {
     "objectID": "about.html#this-site",
