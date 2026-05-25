@@ -4,7 +4,7 @@ description: ""
 author: "Steve Haigh"
 date: "2026-05-25"
 categories: [career, lab, mres]
-draft: true
+draft: false
 ---
 
 __*This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already*__
