@@ -8,10 +8,11 @@ Thirty years building software, currently retraining as a research scientist. My
 
 ## Research interests
 
-- Whole-cell modelling and rule-based systems biology
+- Whole-cell modelling and systems biology
 - Platelet activation, calcium signalling, and granule dynamics
-- Reproducible computational pipelines for wet-lab integration
+- Reproducible computational pipelines (bringing modern software development to the lab)
 - Practical applications of LLMs to scientific software engineering
+- Use of AI in systems biology
 
 ## This site
 

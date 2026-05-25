@@ -5,7 +5,7 @@ author: "Steve Haigh"
 date: "2026-05-21"
 categories: [meta, tooling]
 image: ../../assets/placeholder.svg
-draft: false
+draft: true
 ---
 
 This is a placeholder post to show what a Quarto blog entry looks like. 

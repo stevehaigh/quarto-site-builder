@@ -4,7 +4,7 @@ subtitle: "Things I make when I'm not at a keyboard or a bench"
 toc: true
 ---
 
-This page is just a placeholder with some dummy text, it's moe about experimenting with Quarto layout than anyting else!
+This page is just a placeholder with some dummy text, it's more about experimenting with Quarto layout than anything else!
 
 ## Ceramics
 
