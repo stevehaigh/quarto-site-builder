@@ -25,7 +25,14 @@ Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated p
 
 [View slides](decks/lab-meeting-2026-05-14/index.html){.btn .btn-primary .btn-sm}
 [PDF](decks/lab-meeting-2026-05-14/index.pdf){.btn .btn-outline-secondary .btn-sm}
-[PPTX](decks/lab-meeting-2026-05-14/index.pptx){.btn .btn-outline-secondary .btn-sm}
+[PPTX](decks/lab-meeting-2026-05-14.pptx){.btn .btn-outline-secondary .btn-sm}
+
+### Academic deck template
+
+A pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. [Background and design notes](posts/academic-pptx-template/) in the blog.
+
+[Download template (.pptx)](decks/academic-template.pptx){.btn .btn-primary .btn-sm}
+[Read the post](posts/academic-pptx-template/){.btn .btn-outline-secondary .btn-sm}
 
 ## Posters & writeups
 
