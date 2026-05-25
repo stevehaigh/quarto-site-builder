@@ -6,7 +6,7 @@ project:
     - CNAME
 
 website:
-  title: "Steve Haigh"
+  title: "Steve Haigh · Computational Biology"
   description: "Notes on biomedical research, computational modelling, and software."
   site-url: https://haigh.bio 
   repo-url: https://github.com/stevehaigh/quarto-site-builder 
@@ -50,6 +50,9 @@ format:
       - text: |
           <script data-goatcounter="https://stevehaigh.goatcounter.com/count"
                   async src="//gc.zgo.at/count.js"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 
 execute:
   freeze: auto  # re-render only when source changes

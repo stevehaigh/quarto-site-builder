@@ -3,7 +3,9 @@ title: "Steve Haigh"
 subtitle: "Biomedical Sciences M.Res · University of Reading"
 about:
   template: trestles
-  # image: profile.jpg  # uncomment once you drop a square photo in the repo root
+  image: img/profile.jpg
+  image-shape: round
+  image-width: 14em
   links:
     - icon: github
       text: GitHub
@@ -14,7 +16,16 @@ about:
     - icon: envelope
       text: Email
       href: mailto:steve@haigh.bio
+listing:
+  - id: latest-post
+    contents: posts
+    sort: "date desc"
+    max-items: 1
+    type: default
+    fields: [date, title, description, categories]
 ---
+
+*Computational biology, viewed from a 30-year software career.*
 
 Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the *wcEcoli* whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.
 
@@ -22,10 +33,32 @@ This site collects notes, slide decks, and project write-ups from the intersecti
 
 ## Currently working on
 
-- Whole-cell modelling of human platelet activation
-- Containerised simulation pipelines and Dash-based exploration UIs
-- Bridging classical software engineering practice with computational biology workflows
+::: {.grid}
 
-## Elsewhere
+::: {.g-col-12 .g-col-md-4}
+#### Whole-cell modelling
+Extending *wcEcoli* to build the first computational model of a human platelet.
+:::
 
-See the [Projects](projects.qmd) page for repos and decks, or the [Blog](blog.qmd) for longer-form notes.
+::: {.g-col-12 .g-col-md-4}
+#### Simulation infrastructure
+Containerised pipelines and Dash-based UIs for exploring high-dimensional simulation output.
+:::
+
+::: {.g-col-12 .g-col-md-4}
+#### Engineering ↔ biology
+Bringing software-engineering discipline to computational-biology workflows.
+:::
+
+:::
+
+## Now
+
+*Updated May 2026.* Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation exploration UI in Dash. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission.
+
+## Latest post
+
+::: {#latest-post}
+:::
+
+See the [Blog](blog.qmd) for the full archive, or the [Projects](projects.qmd) page for repos and decks.
