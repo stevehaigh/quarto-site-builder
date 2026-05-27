@@ -6,7 +6,9 @@ toc: false
 sidebar: false
 ---
 
-Cells live, die, and replicate by [three rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules). The grid wraps at the edges. Click or drag to draw.
+Four [trivial rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules), applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile 'spaceships', logic gates, glider guns that emit them, and a working universal Turing machine. Life is Turing-complete. The same lesson runs through biology: tissues, swarms, and brains arise from cells following local rules, with no central plan.
+
+Click or drag to paint. The grid wraps at the edges.
 
 ```{=html}
 <div class="life-app">
