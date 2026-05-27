@@ -6,7 +6,7 @@ toc: false
 sidebar: false
 ---
 
-Four [trivial rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules), applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile 'spaceships', logic gates, glider guns that emit them, and a working universal Turing machine. Biology runs on the same trick. A cell has no idea it's part of a tissue; a neuron has no idea it's part of a thought. Local rules in parallel, with no one in charge — and out come the embryo, the immune system, the brain.
+Four [trivial rules](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules), applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile 'spaceships', logic gates, glider guns that emit them, and a working universal Turing machine.
 
 Click or drag to paint. The grid wraps at the edges.
 
