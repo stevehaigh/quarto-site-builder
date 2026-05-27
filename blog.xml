@@ -47,48 +47,6 @@
   <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>An ‘academic’ deck template, and why it looks the way it does</title>
-  <dc:creator>Steve Haigh</dc:creator>
-  <link>https://haigh.bio/posts/academic-pptx-template/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I was never very impressed with the default PowerPoint templates so for <a href="../lab-meeting-2026-05-14/">lab-meeting deck</a> I actually made my own set of slides (with some help from my friend <a href="https://claude.ai">Claude</a>).</p>
-<p><strong>Downloads</strong></p>
-<ul>
-<li><a href="../../decks/academic-template.pptx">Blank template (.pptx)</a> — open in PowerPoint or Keynote and start typing.</li>
-<li><a href="../../decks/lab-meeting-2026-05-14/index.html">Worked example: the platelet feasibility talk</a> (<a href="../../decks/lab-meeting-2026-05-14.pptx">.pptx</a>) — the same template with real content.</li>
-</ul>
-<section id="why-this-template" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-template">Why this template</h2>
-<p>There are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.</p>
-<p>The template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)</p>
-<p><strong>Content fills the slide.</strong> No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.</p>
-<p><strong>Two-column slides are first-class.</strong> Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.</p>
-<p><strong>Section breadcrumb instead of divider slides.</strong> Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow.</p>
-</section>
-<section id="the-quarto-version" class="level2">
-<h2 class="anchored" data-anchor-id="the-quarto-version">The Quarto version</h2>
-<p>I’ve experimented with <a href="https://quarto.org">Quarto</a> and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take a PDF and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort, I’d just skip PPTX and use the web presentation on this site.</p>
-<p>The PPTX template above is for when you just want to open a file and edit in PowerPoint.</p>
-</section>
-<section id="caveats" class="level2">
-<h2 class="anchored" data-anchor-id="caveats">Caveats</h2>
-<p>It’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender). This is more of a minimalist template.</p>
-
-
-</section>
-
- ]]></description>
-  <category>decks</category>
-  <category>tools</category>
-  <guid>https://haigh.bio/posts/academic-pptx-template/</guid>
-  <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>The Story So Far</title>
   <dc:creator>Steve Haigh</dc:creator>
   <link>https://haigh.bio/posts/the-story-so-far/</link>
@@ -141,6 +99,48 @@
   <category>lab</category>
   <category>mres</category>
   <guid>https://haigh.bio/posts/the-story-so-far/</guid>
+  <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>An ‘academic’ deck template, and why it looks the way it does</title>
+  <dc:creator>Steve Haigh</dc:creator>
+  <link>https://haigh.bio/posts/academic-pptx-template/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I was never very impressed with the default PowerPoint templates so for <a href="../lab-meeting-2026-05-14/">lab-meeting deck</a> I actually made my own set of slides (with some help from my friend <a href="https://claude.ai">Claude</a>).</p>
+<p><strong>Downloads</strong></p>
+<ul>
+<li><a href="../../decks/academic-template.pptx">Blank template (.pptx)</a> — open in PowerPoint or Keynote and start typing.</li>
+<li><a href="../../decks/lab-meeting-2026-05-14/index.html">Worked example: the platelet feasibility talk</a> (<a href="../../decks/lab-meeting-2026-05-14.pptx">.pptx</a>) — the same template with real content.</li>
+</ul>
+<section id="why-this-template" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-template">Why this template</h2>
+<p>There are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.</p>
+<p>The template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)</p>
+<p><strong>Content fills the slide.</strong> No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.</p>
+<p><strong>Two-column slides are first-class.</strong> Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.</p>
+<p><strong>Section breadcrumb instead of divider slides.</strong> Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow.</p>
+</section>
+<section id="the-quarto-version" class="level2">
+<h2 class="anchored" data-anchor-id="the-quarto-version">The Quarto version</h2>
+<p>I’ve experimented with <a href="https://quarto.org">Quarto</a> and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take a PDF and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort, I’d just skip PPTX and use the web presentation on this site.</p>
+<p>The PPTX template above is for when you just want to open a file and edit in PowerPoint.</p>
+</section>
+<section id="caveats" class="level2">
+<h2 class="anchored" data-anchor-id="caveats">Caveats</h2>
+<p>It’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender). This is more of a minimalist template.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>decks</category>
+  <category>tools</category>
+  <guid>https://haigh.bio/posts/academic-pptx-template/</guid>
   <pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
