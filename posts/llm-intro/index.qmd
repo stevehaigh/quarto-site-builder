@@ -1,0 +1,27 @@
+---
+title: "How do LLMs work? — a shallow-dive for scientists"
+description: "A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they're useful or dangerous in a research workflow."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [llms, ai, decks, lab]
+draft: false
+---
+
+A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it's pitched at the "what is this thing actually doing" level rather than the implementation level. I've put the deck on the site now in case it's useful to anyone else looking for the same kind of pitch.
+
+[**How do LLMs work? →**](../../decks/llm-intro/index.html)
+
+A few caveats up front. This is **not** a rigorous machine-learning talk — it's a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar's *Illustrated Transformer*, Raschka's *Build an LLM from Scratch*. Those are where to go after this.
+
+What I do try to cover:
+
+- **What an LLM actually is** — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.
+- **Embeddings as geometry** — the punchline that "meaning is a direction in space", and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.
+- **Attention, briefly** — what it does, why it scales, and why "every frontier system today is a transformer" isn't an exaggeration.
+- **The base model vs. the product** — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).
+- **A live-ish demo** comparing an untuned base model to a tuned one when you ask it something it shouldn't help with — the kind of thing that's hard to convey without seeing.
+- **Using them well in research** — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).
+
+The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You'd review an RA's draft before signing your name to it — do the same here.
+
+The deck is built with Quarto reveal.js from the same template I [wrote up the other week](../academic-pptx-template/). PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).
