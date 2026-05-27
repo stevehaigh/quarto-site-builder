@@ -28,10 +28,10 @@ The template tries to land somewhere in between. Here's the rationale (I'm no de
 
 ## The Quarto version
 
-I've experimented with [Quarto](https://quarto.org) and using it to create a PPTX. It didn't work out so well. I have had success in using Quarto tooling to take a PDF and create a web-presentable deck and a PDF, and maybe when I get chance I'll try again using Quarto to write the original PPTX too, but to be honest I'm not sure if that's worth the effort, I'd just skip PPTX and use the web presentation on this site.
+I've experimented with [Quarto](https://quarto.org) and using it to create a PPTX. It didn't work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I'll try again using Quarto to write the original PPTX too, but to be honest I'm not sure if that's worth the effort.
 
 The PPTX template above is for when you just want to open a file and edit in PowerPoint.
 
 ## Caveats
 
-It's not pretty in the way a designed deck is pretty. There's no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you'll want a real template from a designer (or BioRender). This is more of a minimalist template.
+It's not pretty in the way a designed deck is pretty. There's no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you'll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template.
