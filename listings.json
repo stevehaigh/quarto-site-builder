@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
       "/posts/llm-intro/index.html",
       "/posts/the-story-so-far/index.html",
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "listing": "/blog.html",
+    "listing": "/index.html",
     "items": [
       "/posts/llm-intro/index.html",
       "/posts/the-story-so-far/index.html",
