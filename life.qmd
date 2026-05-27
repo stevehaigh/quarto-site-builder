@@ -248,7 +248,10 @@ Cells live, die, and replicate by [three rules](https://en.wikipedia.org/wiki/Co
 - [LifeWiki](https://conwaylife.com/wiki/) — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.
 - [conwaylife.com forums](https://conwaylife.com/forums/) — the research community is still active. New patterns get discovered every week.
 - [Golly](https://golly.sourceforge.io/) — the high-performance simulator. Uses [Hashlife](https://en.wikipedia.org/wiki/Hashlife) to run universes that would crush the naive algorithm above by many orders of magnitude.
+- [Paul Rendell's Universal Turing Machine](http://www.rendell-attic.org/gol/utm/) — a working UTM built inside Life. Glider streams as signals, glider guns as clocks, eaters as gates, all wired into a tape-and-state machine. Load it in Golly and watch it compute. The constructive proof that Life is Turing-complete.
+- [0E0P metacell](https://conwaylife.com/wiki/0E0P_metacell) — Adam Goucher's self-replicating pattern (2018). A von Neumann universal constructor that copies itself from empty space, no background grid required. Decades after Life's invention before someone actually built one.
 - ["Life in Life"](https://www.youtube.com/watch?v=xP5-iIeKXE8) — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.
+- [Hashlife in Python](https://johnhw.github.io/hashlife/index.md.html) — John Williamson's pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: [python-lifelib](https://gitlab.com/apgoucher/python-lifelib), by the same author as the 0E0P metacell above.)
 - [xkcd 2293](https://xkcd.com/2293/) — Randall Munroe's tribute to John Conway, who died of COVID in April 2020.
 
 [← back to haigh.bio](index.qmd)
