@@ -62,3 +62,25 @@ Bringing software-engineering discipline to computational-biology workflows.
 :::
 
 See the [Blog](blog.qmd) for the full archive, or the [Projects](projects.qmd) page for repos and decks.
+
+```{=html}
+<a href="life.html" class="glider-hint" aria-label="A small surprise">
+  <svg width="22" height="22" viewBox="0 0 16 16">
+    <rect x="6"  y="1"  width="4" height="4" fill="currentColor"/>
+    <rect x="11" y="6"  width="4" height="4" fill="currentColor"/>
+    <rect x="1"  y="11" width="4" height="4" fill="currentColor"/>
+    <rect x="6"  y="11" width="4" height="4" fill="currentColor"/>
+    <rect x="11" y="11" width="4" height="4" fill="currentColor"/>
+  </svg>
+</a>
+<style>
+  .glider-hint {
+    display: inline-block;
+    margin-top: 3rem;
+    color: #2ea043;
+    opacity: 0.25;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .glider-hint:hover { opacity: 1; transform: translate(2px, 2px); }
+</style>
+```
