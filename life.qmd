@@ -242,4 +242,15 @@ Cells live, die, and replicate by [three rules](https://en.wikipedia.org/wiki/Co
 </script>
 ```
 
-Built by a glider, for a glider.
+## Further down the rabbit hole
+
+- [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) — Wikipedia: rules, history, and why a 4-rule cellular automaton is Turing-complete.
+- [LifeWiki](https://conwaylife.com/wiki/) — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.
+- [conwaylife.com forums](https://conwaylife.com/forums/) — the research community is still active. New patterns get discovered every week.
+- [Golly](https://golly.sourceforge.io/) — the high-performance simulator. Uses [Hashlife](https://en.wikipedia.org/wiki/Hashlife) to run universes that would crush the naive algorithm above by many orders of magnitude.
+- ["Life in Life"](https://www.youtube.com/watch?v=xP5-iIeKXE8) — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.
+- [xkcd 2293](https://xkcd.com/2293/) — Randall Munroe's tribute to John Conway, who died of COVID in April 2020.
+
+[← back to haigh.bio](index.qmd)
+
+*Built by a glider, for a glider.*
