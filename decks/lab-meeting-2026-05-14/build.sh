@@ -38,8 +38,9 @@ fi
 # CI deployment (GitHub's Quarto Action doesn't have Chrome). The `decks/**`
 # resource glob in _quarto.yml copies it into _site on the next render.
 echo "→ Printing PDF via Chrome headless"
-"$CHROME" --headless --disable-gpu --no-pdf-header-footer \
-  --virtual-time-budget=15000 \
+"$CHROME" --headless=new --disable-gpu --no-pdf-header-footer \
+  --virtual-time-budget=120000 \
+  --run-all-compositor-stages-before-draw \
   --print-to-pdf="$DECK_SRC_DIR/index.pdf" \
   "file://$DECK_DIR/index.html?print-pdf"
 cp "$DECK_SRC_DIR/index.pdf" "$DECK_DIR/index.pdf"
