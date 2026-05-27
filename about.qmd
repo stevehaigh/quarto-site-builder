@@ -20,4 +20,17 @@ Built with [Quarto](https://quarto.org), hosted on GitHub Pages. Source is on [G
 
 ## Contact
 
-The fastest route is email: [steve@haigh.bio](mailto:steve@haigh.bio).
+The fastest route is email: <span id="contact-email"></span>.
+
+```{=html}
+<script>
+(function () {
+  const u = "steve", d = "haigh.bio";
+  const a = document.createElement("a");
+  a.href = "mailto:" + u + "@" + d;
+  a.textContent = u + "@" + d;
+  const slot = document.getElementById("contact-email");
+  if (slot) slot.appendChild(a);
+})();
+</script>
+```

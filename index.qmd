@@ -15,7 +15,7 @@ about:
       href: https://linkedin.com/in/shaigh
     - icon: envelope
       text: Email
-      href: mailto:steve@haigh.bio
+      href: "#email"
 listing:
   - id: latest-post
     contents: posts
@@ -121,4 +121,12 @@ See the [Blog](blog.qmd) for the full archive, or the [Projects](projects.qmd) p
     .glider-hint .phase-0 { opacity: 1; }
   }
 </style>
+<script>
+(function () {
+  const u = "steve", d = "haigh.bio";
+  document.querySelectorAll('a[href="#email"]').forEach(a => {
+    a.href = "mailto:" + u + "@" + d;
+  });
+})();
+</script>
 ```
