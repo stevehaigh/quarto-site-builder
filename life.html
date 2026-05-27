@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Steve Haigh – Steve Haigh · Computational Biology</title>
+<title>Conway’s Game of Life – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,12 +33,11 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -75,70 +74,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest-post .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest-post'] = new List('listing-latest-post', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -323,7 +264,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -356,130 +297,271 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-  <ul>
-  <li><a href="#currently-working-on" id="toc-currently-working-on" class="nav-link active" data-scroll-target="#currently-working-on">Currently working on</a></li>
-  <li><a href="#now" id="toc-now" class="nav-link" data-scroll-target="#now">Now</a></li>
-  <li><a href="#latest-post" id="toc-latest-post" class="nav-link" data-scroll-target="#latest-post">Latest post</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="img/profile.jpg" class="about-image
-  round " style="height: 14em; width: 14em;">
+<main class="content column-page" id="quarto-document-content">
+
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Steve Haigh</h1>
-<p class="subtitle lead">Biomedical Sciences M.Res · University of Reading</p>
+<h1 class="title">Conway’s Game of Life</h1>
+<p class="subtitle lead">You found it.</p>
 </div>
-<div class="quarto-title-meta">
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
   </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://github.com/stevehaigh" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-  <a href="https://linkedin.com/in/shaigh" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="mailto:steve@haigh.bio" class="about-link" rel="" target="">
-    <i class="bi bi-envelope"></i>
-     <span class="about-link-text">Email</span>
-  </a>
-</div>
+
+
+<p>Cells live, die, and replicate by <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules">three rules</a>. The grid wraps at the edges. Click or drag to draw.</p>
+<div class="life-app">
+  <div class="life-controls">
+    <button id="life-play" type="button">Play</button>
+    <button id="life-step" type="button">Step</button>
+    <button id="life-clear" type="button">Clear</button>
+    <button id="life-random" type="button">Randomize</button>
+    <select id="life-preset" aria-label="Preset pattern">
+      <option value="">Preset…</option>
+      <option value="glider">Glider</option>
+      <option value="gun">Gosper glider gun</option>
+      <option value="pulsar">Pulsar</option>
+      <option value="lwss">Lightweight spaceship</option>
+    </select>
+    <label class="life-speed">
+      Speed
+      <input id="life-fps" type="range" min="2" max="30" step="1" value="12">
+      <span id="life-fps-out">12</span>/s
+    </label>
   </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
+  <canvas id="life-canvas" aria-label="Game of Life simulation"></canvas>
+</div>
 
-
-<p><em>Computational biology, viewed from a 30-year software career.</em></p>
-<p>Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the <em>wcEcoli</em> whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.</p>
-<p>This site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology.</p>
-<section id="currently-working-on" class="level2">
-<h2 data-anchor-id="currently-working-on">Currently working on</h2>
-<div class="grid">
-<section id="whole-cell-modelling" class="level4 g-col-12 g-col-md-4">
-<h4 data-anchor-id="whole-cell-modelling">Whole-cell modelling</h4>
-<p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
-</section>
-<section id="simulation-infrastructure" class="level4 g-col-12 g-col-md-4">
-<h4 data-anchor-id="simulation-infrastructure">Simulation infrastructure</h4>
-<p>Containerised pipelines and Dash-based UIs for exploring high-dimensional simulation output.</p>
-</section>
-<section id="engineering-biology" class="level4 g-col-12 g-col-md-4">
-<h4 data-anchor-id="engineering-biology">Engineering ↔︎ biology</h4>
-<p>Bringing software-engineering discipline to computational-biology workflows.</p>
-</section>
-</div>
-</section>
-<section id="now" class="level2">
-<h2 data-anchor-id="now">Now</h2>
-<p><em>Updated May 2026.</em> Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation exploration UI in Dash. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission.</p>
-</section>
-<section id="latest-post" class="level2">
-<h2 data-anchor-id="latest-post">Latest post</h2>
-<div id="listing-latest-post" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1779907166955" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/llm-intro/index.html" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
-</h3>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-</div>
-<div class="delink listing-description"><a href="./posts/llm-intro/index.html" class="no-external">
-<p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/llm-intro/index.html" class="no-external">
-<div class="listing-date">
-May 27, 2026
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-<p>See the <a href="./blog.html">Blog</a> for the full archive, or the <a href="./projects.html">Projects</a> page for repos and decks.</p>
-<a href="life.html" class="glider-hint" aria-label="A small surprise">
-  <svg width="22" height="22" viewbox="0 0 16 16">
-    <rect x="6" y="1" width="4" height="4" fill="currentColor"></rect>
-    <rect x="11" y="6" width="4" height="4" fill="currentColor"></rect>
-    <rect x="1" y="11" width="4" height="4" fill="currentColor"></rect>
-    <rect x="6" y="11" width="4" height="4" fill="currentColor"></rect>
-    <rect x="11" y="11" width="4" height="4" fill="currentColor"></rect>
-  </svg>
-</a>
 <style>
-  .glider-hint {
-    display: inline-block;
-    margin-top: 3rem;
-    color: #2ea043;
-    opacity: 0.25;
-    transition: opacity 0.3s, transform 0.3s;
+  .life-app {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
   }
-  .glider-hint:hover { opacity: 1; transform: translate(2px, 2px); }
+  .life-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .life-controls button,
+  .life-controls select {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #d0d7de;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .life-controls button:hover,
+  .life-controls select:hover { border-color: #2ea043; }
+  .life-controls button:active { background: #f6f8fa; }
+  .life-speed {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 0.5rem;
+  }
+  .life-speed input { accent-color: #2ea043; }
+  #life-canvas {
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    image-rendering: pixelated;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    .life-controls button,
+    .life-controls select { background: #161b22; border-color: #30363d; color: #c9d1d9; }
+    .life-controls button:active { background: #21262d; }
+    #life-canvas { background: #0d1117; border-color: #30363d; }
+  }
 </style>
 
+<script>
+(() => {
+  const COLS = 80, ROWS = 50, CELL = 10;
+  const ALIVE = '#2ea043', DEAD_LIGHT = '#fafafa', DEAD_DARK = '#0d1117';
 
-</section>
-</main></div>
-</div>
- <!-- /main -->
+  const canvas = document.getElementById('life-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = COLS * CELL;
+  canvas.height = ROWS * CELL;
+
+  let grid = makeGrid();
+  let running = false;
+  let fps = 12;
+  let lastTick = 0;
+
+  function makeGrid() {
+    return Array.from({ length: ROWS }, () => new Uint8Array(COLS));
+  }
+
+  function step() {
+    const next = makeGrid();
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        let n = 0;
+        for (let dr = -1; dr <= 1; dr++) {
+          for (let dc = -1; dc <= 1; dc++) {
+            if (dr === 0 && dc === 0) continue;
+            const rr = (r + dr + ROWS) % ROWS;
+            const cc = (c + dc + COLS) % COLS;
+            n += grid[rr][cc];
+          }
+        }
+        const alive = grid[r][c];
+        next[r][c] = (alive && (n === 2 || n === 3)) || (!alive && n === 3) ? 1 : 0;
+      }
+    }
+    grid = next;
+  }
+
+  function bgColor() {
+    return matchMedia('(prefers-color-scheme: dark)').matches ? DEAD_DARK : DEAD_LIGHT;
+  }
+
+  function draw() {
+    ctx.fillStyle = bgColor();
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = ALIVE;
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) {
+        if (grid[r][c]) ctx.fillRect(c * CELL + 1, r * CELL + 1, CELL - 2, CELL - 2);
+      }
+    }
+  }
+
+  function loop(t) {
+    if (running && t - lastTick > 1000 / fps) {
+      step();
+      lastTick = t;
+    }
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  // ---- patterns: each is an array of [row, col] offsets ----
+  const PATTERNS = {
+    glider: [[0,1],[1,2],[2,0],[2,1],[2,2]],
+    lwss: [[0,1],[0,4],[1,0],[2,0],[2,4],[3,0],[3,1],[3,2],[3,3]],
+    pulsar: [
+      [0,2],[0,3],[0,4],[0,8],[0,9],[0,10],
+      [2,0],[2,5],[2,7],[2,12],
+      [3,0],[3,5],[3,7],[3,12],
+      [4,0],[4,5],[4,7],[4,12],
+      [5,2],[5,3],[5,4],[5,8],[5,9],[5,10],
+      [7,2],[7,3],[7,4],[7,8],[7,9],[7,10],
+      [8,0],[8,5],[8,7],[8,12],
+      [9,0],[9,5],[9,7],[9,12],
+      [10,0],[10,5],[10,7],[10,12],
+      [12,2],[12,3],[12,4],[12,8],[12,9],[12,10],
+    ],
+    gun: [
+      [4,0],[4,1],[5,0],[5,1],
+      [4,34],[4,35],[5,34],[5,35],
+      [2,12],[2,13],[3,11],[3,15],[4,10],[4,16],
+      [5,10],[5,14],[5,16],[5,17],[6,10],[6,16],
+      [7,11],[7,15],[8,12],[8,13],
+      [0,24],[1,22],[1,24],[2,20],[2,21],[3,20],[3,21],
+      [4,20],[4,21],[5,22],[5,24],[6,24],
+    ],
+  };
+
+  function loadPattern(name) {
+    const cells = PATTERNS[name];
+    if (!cells) return;
+    grid = makeGrid();
+    let maxR = 0, maxC = 0;
+    for (const [r, c] of cells) { if (r > maxR) maxR = r; if (c > maxC) maxC = c; }
+    const rOff = Math.floor((ROWS - maxR) / 2);
+    const cOff = Math.floor((COLS - maxC) / 2);
+    for (const [r, c] of cells) grid[r + rOff][c + cOff] = 1;
+  }
+
+  function randomize() {
+    for (let r = 0; r < ROWS; r++) {
+      for (let c = 0; c < COLS; c++) grid[r][c] = Math.random() < 0.28 ? 1 : 0;
+    }
+  }
+
+  // ---- input ----
+  let painting = false, paintValue = 1;
+
+  function cellAt(evt) {
+    const rect = canvas.getBoundingClientRect();
+    const x = (evt.clientX - rect.left) * (canvas.width / rect.width);
+    const y = (evt.clientY - rect.top) * (canvas.height / rect.height);
+    return [Math.floor(y / CELL), Math.floor(x / CELL)];
+  }
+
+  canvas.addEventListener('pointerdown', e => {
+    const [r, c] = cellAt(e);
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS) return;
+    paintValue = grid[r][c] ? 0 : 1;
+    grid[r][c] = paintValue;
+    painting = true;
+    canvas.setPointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (!painting) return;
+    const [r, c] = cellAt(e);
+    if (r < 0 || r >= ROWS || c < 0 || c >= COLS) return;
+    grid[r][c] = paintValue;
+  });
+  canvas.addEventListener('pointerup', () => { painting = false; });
+
+  // ---- buttons ----
+  const playBtn = document.getElementById('life-play');
+  playBtn.addEventListener('click', () => {
+    running = !running;
+    playBtn.textContent = running ? 'Pause' : 'Play';
+  });
+  document.getElementById('life-step').addEventListener('click', step);
+  document.getElementById('life-clear').addEventListener('click', () => { grid = makeGrid(); });
+  document.getElementById('life-random').addEventListener('click', randomize);
+  document.getElementById('life-preset').addEventListener('change', e => {
+    if (e.target.value) loadPattern(e.target.value);
+    e.target.value = '';
+  });
+  const fpsInput = document.getElementById('life-fps');
+  const fpsOut = document.getElementById('life-fps-out');
+  fpsInput.addEventListener('input', () => {
+    fps = +fpsInput.value;
+    fpsOut.textContent = fps;
+  });
+
+  // start with a glider, paused
+  loadPattern('glider');
+  requestAnimationFrame(loop);
+})();
+</script>
+<p>Built by a glider, for a glider.</p>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -495,6 +577,13 @@ May 27, 2026
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
