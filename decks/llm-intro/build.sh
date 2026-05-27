@@ -39,7 +39,7 @@ fi
 # resource glob in _quarto.yml copies it into _site on the next render.
 echo "→ Printing PDF via Chrome headless"
 "$CHROME" --headless=new --disable-gpu --no-pdf-header-footer \
-  --virtual-time-budget=60000 \
+  --virtual-time-budget=120000 \
   --run-all-compositor-stages-before-draw \
   --print-to-pdf="$DECK_SRC_DIR/index.pdf" \
   "file://$DECK_DIR/index.html?print-pdf"
