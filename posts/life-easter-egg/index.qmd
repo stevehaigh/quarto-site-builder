@@ -8,10 +8,10 @@ image: ../../favicon.svg
 draft: true
 ---
 
-Look at the bottom of [the home page](../../index.qmd) and you'll see a small green glider. It links to [/life](../../life.qmd) — a working Conway's Game of Life simulator, with controls and presets.
+There's a small green glider at the bottom of [the home page](../../index.qmd). Click it for [/life](../../life.qmd) — a working Conway's Game of Life simulator with controls and presets.
 
-I built it as an evening's tinker. The favicon went on first — the cleanest 5-pixel design I could think of for a computational-biology site — and once a glider was sitting up in the browser tab, the obvious next move was a page to explain it.
+The favicon came first: five green squares in a 16×16 box — the smallest pattern in the game that moves. Once a glider was up in the browser tab, the page that explained it followed a day later.
 
-Life keeps catching me. Four rules, applied to every cell at once, and out of it come oscillators, glider guns, self-replicating constructors, and a [working universal Turing machine](http://www.rendell-attic.org/gol/utm/). The further-reading list at the bottom of /life is what I bookmarked over an hour down that rabbit hole.
+Four rules, applied to every cell at once, give you oscillators, glider guns, self-replicating constructors, and a [working universal Turing machine](http://www.rendell-attic.org/gol/utm/). The further-reading list at the bottom of /life is the half-dozen sites I kept returning to.
 
-If you find yourself there mid-meeting, the Gosper glider gun is the most satisfying preset.
+If you find yourself there mid-meeting, try the Gosper glider gun preset.
