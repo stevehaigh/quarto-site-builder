@@ -8,7 +8,8 @@ project:
 website:
   title: "Steve Haigh · Computational Biology"
   description: "Notes on biomedical research, computational modelling, and software."
-  site-url: https://haigh.bio 
+  favicon: favicon.svg
+  site-url: https://haigh.bio
   repo-url: https://github.com/stevehaigh/quarto-site-builder 
   navbar:
     pinned: true
