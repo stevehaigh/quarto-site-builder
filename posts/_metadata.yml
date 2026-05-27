@@ -6,3 +6,14 @@ format:
     toc: true
     toc-depth: 3
     code-fold: false
+
+comments:
+  giscus:
+    repo: stevehaigh/quarto-site-builder
+    repo-id: R_kgDOSkFujg
+    category: Blog comments
+    category-id: DIC_kwDOSkFujs4C98nP
+    mapping: pathname
+    reactions-enabled: true
+    loading: lazy
+    theme: preferred_color_scheme
