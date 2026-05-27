@@ -34,7 +34,7 @@
 <li><strong>Using them well in research</strong> — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).</li>
 </ul>
 <p>The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.</p>
-<p>The deck is built with Quarto reveal.js from the same template I <a href="../academic-pptx-template/">wrote up the other week</a>. PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.</p>
+<p>The deck is built with Quarto reveal.js from the same template I <a href="../academic-pptx-template/">wrote up the other day</a>. PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.</p>
 
 
 
