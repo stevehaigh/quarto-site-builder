@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://haigh.bio/personal.html</loc>
-    <lastmod>2026-05-27T22:38:25.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/projects.html</loc>
-    <lastmod>2026-05-27T22:38:25.613Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/blog.html</loc>
-    <lastmod>2026-05-27T22:38:25.577Z</lastmod>
+    <loc>https://haigh.bio/posts/the-story-so-far/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.032Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/decks/lab-meeting-2026-05-14/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.605Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/posts/the-story-so-far/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.612Z</lastmod>
+    <lastmod>2026-05-27T22:41:59.025Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/life.html</loc>
-    <lastmod>2026-05-27T22:38:25.611Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/posts/lab-meeting-2026-05-14/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.612Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/posts/academic-pptx-template/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.612Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/posts/llm-intro/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.612Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/decks/llm-intro/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.609Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/index.html</loc>
-    <lastmod>2026-05-27T22:38:25.611Z</lastmod>
+    <lastmod>2026-05-27T22:41:59.031Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/about.html</loc>
-    <lastmod>2026-05-27T22:38:25.577Z</lastmod>
+    <lastmod>2026-05-27T22:41:58.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/blog.html</loc>
+    <lastmod>2026-05-27T22:41:58.994Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/personal.html</loc>
+    <lastmod>2026-05-27T22:41:59.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/decks/llm-intro/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/projects.html</loc>
+    <lastmod>2026-05-27T22:41:59.033Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/posts/llm-intro/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/posts/lab-meeting-2026-05-14/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/posts/academic-pptx-template/index.html</loc>
+    <lastmod>2026-05-27T22:41:59.032Z</lastmod>
   </url>
 </urlset>
