@@ -1,0 +1,28 @@
+---
+title: "Turing's two great ideas were the same idea"
+description: "The 1936 universal computer, the 1952 morphogen equations, and Conway's 1970 Game of Life are one intellectual project at three resolutions."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [biology, computation, books]
+draft: true
+---
+
+In 1936 Alan Turing wrote down what a computer is. In 1952 he wrote down what a leopard's spots are. The two papers are usually shelved in different rooms — theoretical computer science, theoretical biology — but the underlying move is the same one, and Conway's Game of Life is the bridge between them.
+
+The 1936 paper asks: what is the minimal abstract machine that can compute anything computable? The answer is a head reading a tape, a finite set of states, a transition table. No physics, no biology, no semantics, just local rules iterated indefinitely. The state of the machine at time *t+1* is a function of the state at time *t*. Computation is what you get when you let it run.
+
+The 1952 paper asks: how does a homogeneous ball of cells produce a non-homogeneous animal? Turing's answer is that two chemicals — morphogens — react with each other and diffuse across the substrate, and under particular ratios of reaction rate to diffusion rate the homogeneous solution becomes unstable. The chemicals self-organise into peaks and troughs. Stripes appear. Spots appear. No central designer, no global plan, just local rules iterated until they settle.
+
+Read those two summaries next to each other. Same shape. Local rules, iterated in parallel, producing structure that looks designed.
+
+Conway's Game of Life (1970) is the same idea at a third resolution. A grid of cells, four rules applied in parallel each tick, no central coordinator. The patterns that emerge — gliders, oscillators, guns, eventually a working universal Turing machine — are the cellular-automaton analogues of the morphogen stripes Turing predicted in 1952.
+
+The math meets, too. Cellular automata are routinely treated as discrete approximations of reaction-diffusion equations. The Greenberg–Hastings automaton models excitable media — heart muscle, slime-mold waves; the numerical PDE solvers for reaction-diffusion are CAs under the hood. The discrete-continuous boundary is porous in both directions.
+
+There's a closure in the arc I find satisfying. Turing's 1936 abstraction — the universal computer — was concretely built inside the discrete cousin of his 1952 abstraction, by Paul Rendell in 2010: a working universal Turing machine, made of gliders, running inside a cellular automaton. Turing 1936 instantiated in Turing 1952's cousin, by people who weren't trying for the closure. The two papers turn out to have been about each other all along.
+
+For biology this is more than aesthetic. Turing-pattern mechanisms have been experimentally confirmed in zebrafish stripes (Kondo & Miura, *Science* 2010), in digit spacing in mouse limbs (Sharpe lab, *Science* 2014), and in hair-follicle distribution. Cellular Potts models, agent-based morphogenesis, the wcEcoli-style whole-cell simulations I work on — all in the cellular-automaton family. Pattern formation in the modern literature is the same project Turing started; we're just sweeping the resolution finer.
+
+If you want to follow this further, two books. Philip Ball's *[The Self-Made Tapestry](https://global.oup.com/academic/product/the-self-made-tapestry-9780198502432)* is the popular treatment, beautifully illustrated, tying Turing to spots, stripes, branching, sand ripples, and honeycombs. James Murray's *[Mathematical Biology](https://link.springer.com/book/10.1007/b98868)* is the rigorous one, the standard textbook for reaction-diffusion in biology, with well over a thousand references — the place to graduate to once you've read Ball.
+
+The companion piece to this would be a [reaction-diffusion playground](#) alongside [/life](../../life.qmd) — same idea, continuous instead of discrete, with sliders for the morphogen rate constants. On the list.
