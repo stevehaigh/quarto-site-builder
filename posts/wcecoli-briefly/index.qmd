@@ -1,0 +1,32 @@
+---
+title: "wcEcoli, briefly: what a whole-cell model actually is"
+description: "Simulating every known molecule in a cell over time — what that means, and what it doesn't."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [research, modelling]
+draft: true
+---
+
+*[Scaffold — fill in.]*
+
+A whole-cell model is what it sounds like: a simulation that includes every annotated molecular component of a single cell — genome, transcriptome, proteome, metabolism, regulation — and integrates them across one division cycle. The Covert lab's *wcEcoli* is the canonical implementation, built around *E. coli* MG1655.
+
+## What it includes
+
+*[Components, scale, time-stepping. ~30k reactions, the metabolite/protein/gene layers, the cell-division integration. Stochastic where appropriate; deterministic ODE for metabolism.]*
+
+## What it doesn't
+
+*[Not every molecule — only what's annotated. Skips spatial structure. Doesn't predict novel mechanisms; encodes existing knowledge.]*
+
+## What it's good for
+
+*[Hypothesis generation; in silico knockouts; coverage gaps in the literature; sanity-checking proposed mechanisms; finding places where the literature is internally inconsistent.]*
+
+## What it isn't a replacement for
+
+*[Wet lab. The model encodes what we already know.]*
+
+## Why I'm extending it to platelets
+
+*[Briefly: the platelet is a tractable cell to model — small genome of pre-loaded mRNA, no transcription, clear inputs and outputs. wcEcoli's framework adapts. Link to the platelet post when written.]*

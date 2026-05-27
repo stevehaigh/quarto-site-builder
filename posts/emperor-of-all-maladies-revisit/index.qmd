@@ -1,0 +1,32 @@
+---
+title: "*The Emperor of All Maladies*, ten years on"
+description: "Re-reading Mukherjee's biography of cancer with actual cell biology under my belt."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, biology]
+draft: true
+---
+
+*[Scaffold — fill in.]*
+
+Mukherjee's *The Emperor of All Maladies* was the book that tipped me into biology. I read it years before I'd touched a pipette or learned what a kinase was, and the narrative arc — three thousand years of trying to understand a disease, told as a single story — was enough. A decade later, with actual cell biology between me and the page, the book reads differently.
+
+## What landed first time
+
+*[The narrative power; the human cases; the historical sweep; the willingness to sit with uncertainty. What I responded to as a curious outsider.]*
+
+## What reads differently now
+
+*[Knowing what oncogenes and tumour suppressors actually do; understanding the molecular biology under the chemotherapy chapter; recognising which trial designs were primitive and which were ingenious.]*
+
+## What's aged
+
+*[Immunotherapy, checkpoint inhibitors, CAR-T — all post-publication. The genomics era is barely covered. The cancer landscape Mukherjee describes is recognisably the same disease, treated with substantially different tools.]*
+
+## What's held up
+
+*[The framing of cancer as cellular evolution; the handling of clinical-trial uncertainty; the willingness to say "we don't know."]*
+
+## Worth re-reading?
+
+*[Yes / no / depends — write the verdict.]*

@@ -1,0 +1,32 @@
+---
+title: "A platelet has no nucleus and a lot to do"
+description: "Anucleate, short-lived, and running sophisticated signalling. Why it's interesting to model."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [research, biology]
+draft: true
+---
+
+*[Scaffold — fill in.]*
+
+A platelet is a cell fragment. It has no nucleus, no DNA to transcribe, a lifespan of about ten days, and yet a healthy adult carries ~10¹² of them in circulation, each running a surprisingly sophisticated signalling repertoire. They're the only cell in the body that has to do its job without being able to change its mind.
+
+## What it is
+
+*[Derived from megakaryocyte fragmentation; anucleate but contains pre-loaded mRNA, mitochondria, dense granules, alpha granules; size, count, lifespan.]*
+
+## What it does
+
+*[Haemostasis (the obvious one), but also: immune signalling, inflammation, wound healing, vascular integrity. Not just a clotting cell.]*
+
+## What's strange about it
+
+*[No transcription, so all proteins are either pre-loaded or translated from pre-loaded mRNA. Finite resources. Cannot adapt to chronic stimuli the way nucleated cells can. The molecular biology is "what you see is what you get."]*
+
+## Why it's interesting to model
+
+*[The closed system is a feature. A wcEcoli-style model has a tractable scope because there's no transcriptional regulation to worry about — the protein inventory is set at birth.]*
+
+## Open questions I'm chasing
+
+*[Specific to my dissertation — fill in as the work progresses.]*

@@ -1,0 +1,44 @@
+---
+title: "Books that made me switch fields, ranked"
+description: "The reading list that turned a 30-year software career into an MRes in biomedicine."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, career]
+draft: true
+---
+
+*[Scaffold — fill in. This post would link out to the deep-dive posts on Mukherjee, Lane, Dawkins, and Pinker.]*
+
+The interest in biology built slowly, then suddenly. Looking back, a handful of books did most of the work. Ranked here by influence on the decision to switch fields — not by quality, not by chronology.
+
+## 1. *The Emperor of All Maladies* — Siddhartha Mukherjee
+
+*[The tipping point. Why this one rather than the others. Link to deep-dive post.]*
+
+## 2. *The Vital Question* — Nick Lane
+
+*[The framework. The energy-first view of biology. Link to deep-dive post.]*
+
+## 3. *The Selfish Gene* — Richard Dawkins
+
+*[The lens — replicator vs vehicle, the information frame on inheritance. Link to deep-dive post.]*
+
+## 4. *[TBD]*
+
+*[Candidates: Ridley's *Genome*; Lane's *Power, Sex, Suicide*; Nessa Carey's *The Epigenetics Revolution*; Mukherjee's *The Gene*. Pick the one that earned its place.]*
+
+## 5. *[TBD]*
+
+*[Wildcard slot — something less obvious.]*
+
+## Honourable mentions
+
+*[Books that were good but didn't quite move the needle for this particular decision. Maybe: textbooks (Molecular Biology of the Cell), MOOC companions, Ridley.]*
+
+## What I'd skip
+
+*[Books that have a reputation but didn't repay the time investment for me. Be honest; be brief.]*
+
+## The MOOC layer
+
+*[The reading wasn't enough on its own. MITx Introduction to Biology (Eric Lander) was the bridge. Brief note on which courses moved the dial.]*

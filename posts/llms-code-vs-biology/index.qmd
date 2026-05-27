@@ -1,0 +1,32 @@
+---
+title: "Why I trust LLMs for code and don't for biology"
+description: "Code has a compiler. Biology has the literature. The failure modes diverge."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [llms, biology]
+draft: true
+---
+
+*[Scaffold — fill in.]*
+
+When I ask an LLM to write Python, it produces something I can run, test, and reject in seconds. When I ask it to explain a signalling pathway, it produces something that sounds right whether or not it is, and the only check is to go and read the literature myself. Same model, same prompt-quality, very different trust calibrations — because the verification environments are different.
+
+## The asymmetry
+
+*[Code is checkable by the language runtime. A biology claim needs triangulation through papers, often across decades. The LLM's failure modes — confident hallucination of citations, plausible mechanisms that don't exist — are catastrophic in domains where verification is slow.]*
+
+## Where they help in code
+
+*[Boilerplate, mechanical refactors, syntax lookup, idiom translation across languages, regex, test scaffolding. Almost anywhere I'd otherwise read the docs.]*
+
+## Where they help in biology
+
+*[Light literature scoping ("what's the consensus on X"), jargon translation, paper summaries for triage, generating search terms I wouldn't have thought of, drafting figures captions. With sources checked.]*
+
+## Where they fail in biology
+
+*[Hallucinated citations are the obvious one. Worse: plausible-sounding mechanisms that conflate two different pathways, or describe the textbook version of a system known to be more complicated. The model has no signal about which claim is settled and which is contested.]*
+
+## The rule I use
+
+*[LLM output is a first draft of a search query, not a fact. Sources are not negotiable. If I'd cite it in a paper, I've read it.]*

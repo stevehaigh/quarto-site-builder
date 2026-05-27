@@ -1,0 +1,36 @@
+---
+title: "Reading papers is a learnable skill"
+description: "What I wish I'd been told when I started reading the primary literature."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [research, career]
+draft: true
+---
+
+*[Scaffold — fill in.]*
+
+Career switchers tend to make the same mistake with papers: they read them like textbooks. Start at the abstract, work through the methods, finish at the conclusion, panic at how much they didn't follow. The papers most of us are reading were written to be skimmed, criticised, and slotted into a mental graph of related work. The reading routine should match.
+
+## The mistake
+
+*[Reading top-to-bottom on the first pass. Treating every sentence as load-bearing. Not knowing what to skip.]*
+
+## The routine that worked for me
+
+*[Title and abstract first. Figures second — most of the argument is there. Discussion third. Methods only if I need them. Introduction almost never.]*
+
+## When to read deeply
+
+*[Methods paper you're going to use; a result you're going to cite; a paper your supervisor flagged; a paper you're presenting.]*
+
+## When to scan
+
+*[Background reading; staying current; literature review for a paragraph in your dissertation.]*
+
+## Keeping notes that survive
+
+*[A single source of truth — Zotero, Obsidian, plain markdown, whatever. One paragraph per paper minimum: claim, evidence, why it matters to me. Future-me thanks present-me.]*
+
+## The journal-club shortcut
+
+*[Presenting forces deep reading. If you can volunteer once a month, you get one paper a month you actually understand.]*

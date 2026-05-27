@@ -1,0 +1,20 @@
+---
+title: "Why I keep coming back to Pinker's *Sense of Style*"
+description: "A linguist's manual for prose, useful past the first read."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, writing]
+draft: true
+---
+
+Most writing guides bore me. Strunk and White is a list of taboos with no theory behind them, half of them invented. The standard MFA-school books are about voice and vibe. Pinker's *The Sense of Style* is the first one I've read that tells you *why* prose works when it does — and the answer is roughly: because the language is a tree your reader is parsing under time pressure, and you can either make that easy or hard.
+
+The book's central frame is what Pinker calls *classic style*: the writer points at something in a shared world, and the reader looks at it. No throat-clearing about complexity, no signposting ("In this section we shall…"), no professional narcissism about the field of study. Just: here is the thing. That frame alone solves about half of what's wrong with academic prose.
+
+The other half it solves with diagnostics. Zombie nouns (the *–tion / –ment / –ance* abstractions that hide who's doing what). Garden-path sentences ("The horse raced past the barn fell"). The given-new contract — start each sentence with what the reader already knows, end with the new information. None of these are new ideas; they come out of fifty years of psycholinguistics. Pinker is the first writer I've read who put them in a form a working writer can use.
+
+Where it has aged: the final third is a chapter on usage rules, parsing each through Pinker's test of "is this a real rule or a Latin-derived peeve?" Useful as a reference, less essential than the first two-thirds.
+
+The book has changed how I read my own drafts. Knowing what the failure modes look like means I notice them in the second pass — sometimes the third — instead of leaving them in. That, more than any rule list, is what a good style guide buys you.
+
+If you've ever struggled to explain *why* a passage of someone else's prose was bad, the book is calibration. If you write for anyone other than yourself, it's a tool.
