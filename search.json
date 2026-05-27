@@ -158,7 +158,7 @@
     "href": "life.html",
     "title": "Conway’s Game of Life",
     "section": "",
-    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine. Biology runs on the same trick. A cell has no idea it’s part of a tissue; a neuron has no idea it’s part of a thought. Local rules in parallel, with no one in charge — and out come the embryo, the immune system, the brain.\nClick or drag to paint. The grid wraps at the edges."
+    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.\nClick or drag to paint. The grid wraps at the edges."
   },
   {
     "objectID": "life.html#further-down-the-rabbit-hole",
