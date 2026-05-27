@@ -24,4 +24,4 @@ What I do try to cover:
 
 The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You'd review an RA's draft before signing your name to it — do the same here.
 
-The deck is built with Quarto reveal.js from the same template I [wrote up the other week](../academic-pptx-template/). PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).
+The deck is built with Quarto reveal.js from the same template I [wrote up the other day](../academic-pptx-template/). PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).
