@@ -158,7 +158,7 @@
     "href": "life.html",
     "title": "Conway’s Game of Life",
     "section": "",
-    "text": "Cells live, die, and replicate by three rules. The grid wraps at the edges. Click or drag to draw."
+    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine. Life is Turing-complete. The same lesson runs through biology: tissues, swarms, and brains arise from cells following local rules, with no central plan.\nClick or drag to paint. The grid wraps at the edges."
   },
   {
     "objectID": "life.html#further-down-the-rabbit-hole",
