@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Steve Haigh">
+<meta name="dcterms.date" content="2026-05-27">
+<meta name="description" content="A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.">
 
-<title>Projects &amp; Decks – Steve Haigh · Computational Biology</title>
+<title>How do LLMs work? — a shallow-dive for scientists – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,26 +29,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-4c126188ccdf9f1976ed429720a0ada6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -252,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
@@ -263,23 +266,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./personal.html"> 
+    <a class="nav-link" href="../../personal.html"> 
 <span class="menu-text">Personal</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -299,25 +302,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#code" id="toc-code" class="nav-link active" data-scroll-target="#code">Code</a>
-  <ul class="collapse">
-  <li><a href="#platelet-whole-cell-model" id="toc-platelet-whole-cell-model" class="nav-link" data-scroll-target="#platelet-whole-cell-model">Platelet whole-cell model</a></li>
-  <li><a href="#other-repos" id="toc-other-repos" class="nav-link" data-scroll-target="#other-repos">Other repos</a></li>
-  </ul></li>
-  <li><a href="#slide-decks" id="toc-slide-decks" class="nav-link" data-scroll-target="#slide-decks">Slide decks</a>
-  <ul class="collapse">
-  <li><a href="#how-do-llms-work-a-shallow-dive-for-scientists" id="toc-how-do-llms-work-a-shallow-dive-for-scientists" class="nav-link" data-scroll-target="#how-do-llms-work-a-shallow-dive-for-scientists">How do LLMs work? — a shallow-dive for scientists</a></li>
-  <li><a href="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet" id="toc-the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="nav-link" data-scroll-target="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</a></li>
-  <li><a href="#academic-deck-template" id="toc-academic-deck-template" class="nav-link" data-scroll-target="#academic-deck-template">Academic deck template</a></li>
-  </ul></li>
-  <li><a href="#posters-writeups" id="toc-posters-writeups" class="nav-link" data-scroll-target="#posters-writeups">Posters &amp; writeups</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -325,14 +311,37 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects &amp; Decks</h1>
-</div>
+<h1 class="title">How do LLMs work? — a shallow-dive for scientists</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">llms</div>
+    <div class="quarto-category">ai</div>
+    <div class="quarto-category">decks</div>
+    <div class="quarto-category">lab</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Steve Haigh </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 27, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -342,43 +351,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="code" class="level2">
-<h2 class="anchored" data-anchor-id="code">Code</h2>
-<section id="platelet-whole-cell-model" class="level3">
-<h3 class="anchored" data-anchor-id="platelet-whole-cell-model">Platelet whole-cell model</h3>
-<p>Extending the <em>wcEcoli</em> framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.</p>
-<p><a href="https://github.com/stevehaigh/platelet-wcm"><img src="https://img.shields.io/badge/GitHub-repo-181717?logo=github.png" class="img-fluid"></a></p>
-</section>
-<section id="other-repos" class="level3">
-<h3 class="anchored" data-anchor-id="other-repos">Other repos</h3>
-<p>See <a href="https://github.com/stevehaigh?tab=repositories">all repositories on GitHub</a>.</p>
-</section>
-</section>
-<section id="slide-decks" class="level2">
-<h2 class="anchored" data-anchor-id="slide-decks">Slide decks</h2>
-<p>Decks are written as Quarto Reveal.js (<code>.qmd</code>) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.</p>
-<section id="how-do-llms-work-a-shallow-dive-for-scientists" class="level3">
-<h3 class="anchored" data-anchor-id="how-do-llms-work-a-shallow-dive-for-scientists">How do LLMs work? — a shallow-dive for scientists</h3>
-<p>Dash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.</p>
-<p><a href="decks/llm-intro/index.html" class="btn btn-primary btn-sm">View slides</a> <a href="decks/llm-intro/index.pdf" class="btn btn-outline-secondary btn-sm">PDF</a> <a href="decks/llm-intro.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
-</section>
-<section id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="level3">
-<h3 class="anchored" data-anchor-id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</h3>
-<p>Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.</p>
-<p><a href="decks/lab-meeting-2026-05-14/index.html" class="btn btn-primary btn-sm">View slides</a> <a href="decks/lab-meeting-2026-05-14/index.pdf" class="btn btn-outline-secondary btn-sm">PDF</a> <a href="decks/lab-meeting-2026-05-14.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
-</section>
-<section id="academic-deck-template" class="level3">
-<h3 class="anchored" data-anchor-id="academic-deck-template">Academic deck template</h3>
-<p>A pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. <a href="posts/academic-pptx-template/">Background and design notes</a> in the blog.</p>
-<p><a href="decks/academic-template.pptx" class="btn btn-primary btn-sm">Download template (.pptx)</a> <a href="posts/academic-pptx-template/" class="btn btn-outline-secondary btn-sm">Read the post</a></p>
-</section>
-</section>
-<section id="posters-writeups" class="level2">
-<h2 class="anchored" data-anchor-id="posters-writeups">Posters &amp; writeups</h2>
-<p>A good place to link supplementary material, conference posters, or dissertation chapters once they’re ready.</p>
+<p>A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.</p>
+<p><a href="../../decks/llm-intro/index.html"><strong>How do LLMs work? →</strong></a></p>
+<p>A few caveats up front. This is <strong>not</strong> a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s <em>Illustrated Transformer</em>, Raschka’s <em>Build an LLM from Scratch</em>. Those are where to go after this.</p>
+<p>What I do try to cover:</p>
+<ul>
+<li><strong>What an LLM actually is</strong> — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.</li>
+<li><strong>Embeddings as geometry</strong> — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.</li>
+<li><strong>Attention, briefly</strong> — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.</li>
+<li><strong>The base model vs.&nbsp;the product</strong> — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).</li>
+<li><strong>A live-ish demo</strong> comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.</li>
+<li><strong>Using them well in research</strong> — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).</li>
+</ul>
+<p>The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.</p>
+<p>The deck is built with Quarto reveal.js from the same template I <a href="../academic-pptx-template/">wrote up the other week</a>. PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -812,7 +800,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml">
+    <a class="nav-link" href="../../blog.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -825,5 +813,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

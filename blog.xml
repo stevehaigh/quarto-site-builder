@@ -10,7 +10,42 @@
 <atom:link href="https://haigh.bio/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on biomedical research, computational modelling, and software.</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Mon, 25 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>How do LLMs work? — a shallow-dive for scientists</title>
+  <dc:creator>Steve Haigh</dc:creator>
+  <link>https://haigh.bio/posts/llm-intro/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.</p>
+<p><a href="../../decks/llm-intro/index.html"><strong>How do LLMs work? →</strong></a></p>
+<p>A few caveats up front. This is <strong>not</strong> a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s <em>Illustrated Transformer</em>, Raschka’s <em>Build an LLM from Scratch</em>. Those are where to go after this.</p>
+<p>What I do try to cover:</p>
+<ul>
+<li><strong>What an LLM actually is</strong> — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.</li>
+<li><strong>Embeddings as geometry</strong> — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.</li>
+<li><strong>Attention, briefly</strong> — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.</li>
+<li><strong>The base model vs.&nbsp;the product</strong> — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).</li>
+<li><strong>A live-ish demo</strong> comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.</li>
+<li><strong>Using them well in research</strong> — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).</li>
+</ul>
+<p>The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.</p>
+<p>The deck is built with Quarto reveal.js from the same template I <a href="../academic-pptx-template/">wrote up the other week</a>. PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.</p>
+
+
+
+ ]]></description>
+  <category>llms</category>
+  <category>ai</category>
+  <category>decks</category>
+  <category>lab</category>
+  <guid>https://haigh.bio/posts/llm-intro/</guid>
+  <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>An ‘academic’ deck template, and why it looks the way it does</title>
   <dc:creator>Steve Haigh</dc:creator>

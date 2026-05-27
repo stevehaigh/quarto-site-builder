@@ -39,7 +39,7 @@
     "href": "projects.html#slide-decks",
     "title": "Projects & Decks",
     "section": "Slide decks",
-    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
+    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nHow do LLMs work? — a shallow-dive for scientists\nDash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.\nView slides PDF PPTX\n\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
   },
   {
     "objectID": "projects.html#posters-writeups",
@@ -53,91 +53,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "An ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/academic-pptx-template/index.html",
-    "href": "posts/academic-pptx-template/index.html",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "",
-    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
-  },
-  {
-    "objectID": "posts/academic-pptx-template/index.html#why-this-template",
-    "href": "posts/academic-pptx-template/index.html#why-this-template",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Why this template",
-    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
-  },
-  {
-    "objectID": "posts/academic-pptx-template/index.html#the-quarto-version",
-    "href": "posts/academic-pptx-template/index.html#the-quarto-version",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "The Quarto version",
-    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take a PDF and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort, I’d just skip PPTX and use the web presentation on this site.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
-  },
-  {
-    "objectID": "posts/academic-pptx-template/index.html#caveats",
-    "href": "posts/academic-pptx-template/index.html#caveats",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Caveats",
-    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender). This is more of a minimalist template."
-  },
-  {
-    "objectID": "posts/lab-meeting-2026-05-14/index.html",
-    "href": "posts/lab-meeting-2026-05-14/index.html",
-    "title": "Lab meeting: the platelet model, first showing",
-    "section": "",
-    "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html",
-    "href": "posts/the-story-so-far/index.html",
-    "title": "The Story So Far",
-    "section": "",
-    "text": "This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already"
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
-    "href": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
-    "title": "The Story So Far",
-    "section": "From Debugging Code to Debugging Cells: A Year of Switching Fields",
-    "text": "From Debugging Code to Debugging Cells: A Year of Switching Fields\nLast August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap."
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#why-biology-and-why-now",
-    "href": "posts/the-story-so-far/index.html#why-biology-and-why-now",
-    "title": "The Story So Far",
-    "section": "Why biology, and why now",
-    "text": "Why biology, and why now\nThe interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-seriously studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.\nAt some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again."
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
-    "href": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
-    "title": "The Story So Far",
-    "section": "The first six weeks: lectures, journal clubs, and introduction to a real lab",
-    "text": "The first six weeks: lectures, journal clubs, and introduction to a real lab\nThe course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.\nThen came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results."
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
-    "href": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
-    "title": "The Story So Far",
-    "section": "End of semester one: the unexpected hard part",
-    "text": "End of semester one: the unexpected hard part\nBy the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.\nThe biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.\nThe harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I really wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.\nAcademic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.\nSome things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.\nI’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end)."
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
-    "href": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
-    "title": "The Story So Far",
-    "section": "The project: a whole-cell model of a platelet",
-    "text": "The project: a whole-cell model of a platelet\nThe research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.\nThe project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August."
-  },
-  {
-    "objectID": "posts/the-story-so-far/index.html#what-comes-next",
-    "href": "posts/the-story-so-far/index.html#what-comes-next",
-    "title": "The Story So Far",
-    "section": "What comes next",
-    "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
+    "text": "How do LLMs work? — a shallow-dive for scientists\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "decks/lab-meeting-2026-05-14/index.html#quick-recap",
@@ -217,6 +133,216 @@
     "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
   },
   {
+    "objectID": "posts/the-story-so-far/index.html",
+    "href": "posts/the-story-so-far/index.html",
+    "title": "The Story So Far",
+    "section": "",
+    "text": "This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already"
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "href": "posts/the-story-so-far/index.html#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "title": "The Story So Far",
+    "section": "From Debugging Code to Debugging Cells: A Year of Switching Fields",
+    "text": "From Debugging Code to Debugging Cells: A Year of Switching Fields\nLast August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#why-biology-and-why-now",
+    "href": "posts/the-story-so-far/index.html#why-biology-and-why-now",
+    "title": "The Story So Far",
+    "section": "Why biology, and why now",
+    "text": "Why biology, and why now\nThe interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-seriously studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.\nAt some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "href": "posts/the-story-so-far/index.html#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "title": "The Story So Far",
+    "section": "The first six weeks: lectures, journal clubs, and introduction to a real lab",
+    "text": "The first six weeks: lectures, journal clubs, and introduction to a real lab\nThe course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.\nThen came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
+    "href": "posts/the-story-so-far/index.html#end-of-semester-one-the-unexpected-hard-part",
+    "title": "The Story So Far",
+    "section": "End of semester one: the unexpected hard part",
+    "text": "End of semester one: the unexpected hard part\nBy the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.\nThe biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.\nThe harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I really wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.\nAcademic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.\nSome things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.\nI’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end)."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
+    "href": "posts/the-story-so-far/index.html#the-project-a-whole-cell-model-of-a-platelet",
+    "title": "The Story So Far",
+    "section": "The project: a whole-cell model of a platelet",
+    "text": "The project: a whole-cell model of a platelet\nThe research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.\nThe project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August."
+  },
+  {
+    "objectID": "posts/the-story-so-far/index.html#what-comes-next",
+    "href": "posts/the-story-so-far/index.html#what-comes-next",
+    "title": "The Story So Far",
+    "section": "What comes next",
+    "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
+  },
+  {
+    "objectID": "posts/academic-pptx-template/index.html",
+    "href": "posts/academic-pptx-template/index.html",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "",
+    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
+  },
+  {
+    "objectID": "posts/academic-pptx-template/index.html#why-this-template",
+    "href": "posts/academic-pptx-template/index.html#why-this-template",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Why this template",
+    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
+  },
+  {
+    "objectID": "posts/academic-pptx-template/index.html#the-quarto-version",
+    "href": "posts/academic-pptx-template/index.html#the-quarto-version",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "The Quarto version",
+    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take a PDF and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort, I’d just skip PPTX and use the web presentation on this site.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
+  },
+  {
+    "objectID": "posts/academic-pptx-template/index.html#caveats",
+    "href": "posts/academic-pptx-template/index.html#caveats",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Caveats",
+    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender). This is more of a minimalist template."
+  },
+  {
+    "objectID": "posts/lab-meeting-2026-05-14/index.html",
+    "href": "posts/lab-meeting-2026-05-14/index.html",
+    "title": "Lab meeting: the platelet model, first showing",
+    "section": "",
+    "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+  },
+  {
+    "objectID": "posts/llm-intro/index.html",
+    "href": "posts/llm-intro/index.html",
+    "title": "How do LLMs work? — a shallow-dive for scientists",
+    "section": "",
+    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other week. PDF and PPTX downloads are linked from the Projects & Decks page."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#why-this-matters",
+    "href": "decks/llm-intro/index.html#why-this-matters",
+    "title": "How do LLMs work?",
+    "section": "Why this matters",
+    "text": "Why this matters\nUbiquity.\n\nLLMs are showing up in every step of research — coding, search, writing, annotation, figures.\n\nProductivity.\n\nThey genuinely accelerate and augment in many areas.\n\nFailure modes.\n\nEasily produce plausible nonsense; create dependence.\n\nLiteracy.\n\nUnderstanding AI is like understanding a lab protocol — follow without understanding and you will make mistakes."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#what-an-llm-is",
+    "href": "decks/llm-intro/index.html#what-an-llm-is",
+    "title": "How do LLMs work?",
+    "section": "What an LLM is",
+    "text": "What an LLM is\nA giant neural network.\n\nConnections learned through billions of examples; trained to predict the next token.\n\nEverything is a vector.\n\nWords, proteins, images — all mapped into high-dimensional space where geometry encodes meaning.\n\nA pattern machine, not a reasoning engine.\n\nReasoning-like behaviour emerges from statistical structure; there is no world-model inside."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#a-very-quick-history",
+    "href": "decks/llm-intro/index.html#a-very-quick-history",
+    "title": "How do LLMs work?",
+    "section": "A very quick history",
+    "text": "A very quick history\n\nBefore 2013 — NLP existed (TF–IDF, spam filters, bag-of-words). Useful but shallow.\n2013 Word2Vec — word meanings as vectors; “king − man + woman ≈ queen”.\n2017 Transformer — “Attention Is All You Need”; massively parallel training unlocks scale.\n2020 GPT-3 — scale produces new capabilities; emergence.\n2022 ChatGPT — RLHF turns the raw model into a public-facing assistant.\n2024+ — multimodal, agentic, scientific applications.\n\n\nKey point. Every frontier system today is a transformer. The recipe hasn’t fundamentally changed since 2017."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#before-llms-the-word-embedding-problem",
+    "href": "decks/llm-intro/index.html#before-llms-the-word-embedding-problem",
+    "title": "How do LLMs work?",
+    "section": "Before LLMs: the word-embedding problem",
+    "text": "Before LLMs: the word-embedding problem\n\nNLP existed before LLMs but was limited — spam filtering, document similarity, sentiment.\nNeural networks worked well on images (pixels are numbers) but struggled with text.\nHow do you convert text into meaningful numbers? Assigning each word an integer carries no semantic meaning.\nThe key insight — represent meaning as direction in a high-dimensional space."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#embeddings-meaning-as-geometry",
+    "href": "decks/llm-intro/index.html#embeddings-meaning-as-geometry",
+    "title": "How do LLMs work?",
+    "section": "Embeddings — meaning as geometry",
+    "text": "Embeddings — meaning as geometry\n\n\nThe idea\nWords, sentences, even proteins become vectors in a high-dimensional space.\nCo-occurring tokens cluster together; similar meanings point in similar directions.\nEnables semantic search and clustering — the same trick powers protein language models, gene embeddings, SMILES chemistry models.\nWhenever you see an “AI for bio” model, an embedding space is doing the work.\n\nExample clusters\nbiology — protein · cell · peptide · gene\nAnalogy (Word2Vec)\nking − man + woman ≈ queen\nThe vector from man→woman is parallel to king→queen. That direction encodes “female”. Meaning is geometry."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#attention-context-awareness",
+    "href": "decks/llm-intro/index.html#attention-context-awareness",
+    "title": "How do LLMs work?",
+    "section": "Attention — context awareness",
+    "text": "Attention — context awareness\nA mechanism that decides, for each token, which other tokens in the context matter.\n\n“The assay failed because it was contaminated.”\n\nWhat does it refer to? Attention figures this out by weighting every other token.\n\nLong-range dependencies — any two tokens connect in one step, regardless of distance.\nParallelisable — every token’s attention is computed simultaneously on a GPU. This is the secret behind scale.\nMulti-headed — several attention functions run in parallel, capturing different relationships (syntactic, semantic, coreference).\n\n\nReference. Vaswani et al. (2017), Attention Is All You Need. arxiv.org/abs/1706.03762"
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#llm-vs.-chatgpt-claude-copilot",
+    "href": "decks/llm-intro/index.html#llm-vs.-chatgpt-claude-copilot",
+    "title": "How do LLMs work?",
+    "section": "LLM vs. ChatGPT / Claude / Copilot",
+    "text": "LLM vs. ChatGPT / Claude / Copilot\n\n\nBase LLM\n\nPure text prediction.\nNo ethics or safety — will happily explain how to make a bomb.\nNo memory.\nNo personality.\nNo tools — you give it text, it gives you text.\n\n\nProduct\n\nBehaviour-shaped via RLHF.\nHidden system prompt on every invocation.\nGuardrails — filter and refuse unsafe content.\nTools — web search, file access, code execution.\nContext — can remember what you said.\n\nWhen you read about “GPT-4’s reasoning”, it’s the model plus the wrapper."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#a-quick-demo",
+    "href": "decks/llm-intro/index.html#a-quick-demo",
+    "title": "How do LLMs work?",
+    "section": "A quick demo…",
+    "text": "A quick demo…\n\nComparing an “untuned” base model to a “tuned” model with instructions to be ethical."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#what-is-rlhf",
+    "href": "decks/llm-intro/index.html#what-is-rlhf",
+    "title": "How do LLMs work?",
+    "section": "What is RLHF?",
+    "text": "What is RLHF?\nReinforcement Learning with Human Feedback.\n\nHumans ask the model questions and score answers; the model is then trained to favour high-scoring responses.\nIterative and time-consuming, so a second neural network is trained to score for the humans (a “reward model”).\nReshapes behaviour — tone, structure, refusals — not facts. Knowledge already lives in the base model.\nSide-effect: optimising for human approval biases models toward telling you what you want to hear."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#rlhf-in-more-detail-like-editing-a-thesis",
+    "href": "decks/llm-intro/index.html#rlhf-in-more-detail-like-editing-a-thesis",
+    "title": "How do LLMs work?",
+    "section": "RLHF, in more detail — like editing a thesis",
+    "text": "RLHF, in more detail — like editing a thesis\n\n\nRLHF step\nPre-trained base model. Knows how to predict tokens, but is verbose, inconsistent, sometimes evasive.\nSupervised fine-tuning. Humans write high-quality example conversations; the model imitates them.\nReward model. Humans rank pairs of outputs; a second network learns to predict those preferences.\nRL step. The main model is tuned so its outputs score higher against the reward model. Iterate → helpful, polite, usually safe.\n\nThesis analogy\nDraft. You’ve done the reading, but your prose is too long, casual, and off-topic.\nSupervisor lectures you. They give you well-written examples; you imitate them. Already much better.\nTrained postdoc. The supervisor can’t review every draft, so they train a postdoc to judge writing the same way.\nIterate. Postdoc scores your work; you learn what earns ticks. Eventually you write with the right voice by default."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#where-llms-are-helpful",
+    "href": "decks/llm-intro/index.html#where-llms-are-helpful",
+    "title": "How do LLMs work?",
+    "section": "Where LLMs are helpful",
+    "text": "Where LLMs are helpful\nCoding.\n\nThe original use case — boilerplate, conversion between languages, unit tests, debugging.\n\nLiterature triage.\n\nIs this paper worth reading? Summaries, method comparison, reagents.\n\nData wrangling.\n\nExtracting structured data from PDFs and free text — traditionally very hard to automate.\n\nDrafting routine documents.\n\nWeekly progress summaries, SOPs, risk assessments. Not theses or papers.\n\nFigure iteration & formatting.\n\nEndless ggplot / matplotlib / LaTeX back-and-forth disappears.\n\nAlways verify — if you can’t check the output, you’re taking a huge risk."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#pitfalls-and-boundaries",
+    "href": "decks/llm-intro/index.html#pitfalls-and-boundaries",
+    "title": "How do LLMs work?",
+    "section": "Pitfalls and boundaries",
+    "text": "Pitfalls and boundaries\nTheses and manuscripts.\n\nIntegrity, ownership, and disclosure requirements from funders and journals. Know your local policy.\n\nUnpublished or confidential data.\n\nBy default, anything you paste leaves your machine and is logged (usually in US jurisdiction). Patient data: never via consumer products.\n\nStatistical verdicts.\n\nThe model can write the code, but you have to own the interpretation. P-values aren’t vibes-based.\n\nDisclosure.\n\nWhen in doubt, declare LLM use — it’s increasingly expected."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#the-failure-modes",
+    "href": "decks/llm-intro/index.html#the-failure-modes",
+    "title": "How do LLMs work?",
+    "section": "The failure modes",
+    "text": "The failure modes\nHallucination.\n\nConfident, plausible nonsense — worst around citations, authors, and other precise facts.\n\nPlausibility bias.\n\nTrained to produce confident-sounding output. Confidence ≠ correctness.\n\nSycophancy.\n\nTends to agree with your framing. Don’t ask leading questions — can spiral into “this is groundbreaking work!”\n\nSampling variance.\n\nBuilt-in randomness (“temperature”) means the same prompt can produce different answers.\n\nTreat the LLM like a fast but unreliable collaborator. You’d edit an RA’s draft — do the same here."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#further-viewing-reading",
+    "href": "decks/llm-intro/index.html#further-viewing-reading",
+    "title": "How do LLMs work?",
+    "section": "Further viewing / reading",
+    "text": "Further viewing / reading\n\n3Blue1Brown — Neural Networks. youtube.com/@3blue1brown · the gentlest introduction that isn’t hand-wavy.\nAndrej Karpathy — Intro to LLMs / Deep Dive into LLMs. youtube.com/@AndrejKarpathy · a software engineer’s tour, very long.\nJay Alammar — The Illustrated Transformer. jalammar.github.io/illustrated-transformer · the definitive picture-led explainer.\nStephen Wolfram — What Is ChatGPT Doing… and Why Does It Work? writings.stephenwolfram.com/2023/02/ · book-length essay, very readable.\nNeil Lawrence — The Atomic Human. Cambridge ML professor on what AI is, isn’t, and what it means for us.\nSebastian Raschka — Build a Large Language Model (From Scratch). manning.com · if you want to implement one.\nAnthropic — Mapping the Mind of a Large Language Model. anthropic.com/research · interpretability — what’s actually inside the network."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#a-few-more-good-links",
+    "href": "decks/llm-intro/index.html#a-few-more-good-links",
+    "title": "How do LLMs work?",
+    "section": "A few more good links",
+    "text": "A few more good links\nAI in general, not just LLMs.\n\nRoyal Society lecture — “This is not the AI we were promised”.\nHannah Fry TV series — “AI Confidential”.\nFree GitHub Copilot for students (including PhDs) — sign up via the student pack.\nWant to run an LLM on your laptop? Ask your favourite assistant about Ollama or LM Studio."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#bonus-content",
+    "href": "decks/llm-intro/index.html#bonus-content",
+    "title": "How do LLMs work?",
+    "section": "Bonus content",
+    "text": "Bonus content\nQ. If LLMs only predict one word at a time, how come we see whole sentences — even essays?\nA. After it emits one word, the tooling feeds the prompt plus the new word back into the model to get the next one. Then repeat.\nQ. So if it just keeps adding words, how does it ever stop?\nA. There’s a special “hidden” word inside the model called &lt;STOP&gt;. When that token comes up, the tool knows to stop feeding text back in. It’s a learned token, used like any other."
+  },
+  {
+    "objectID": "decks/llm-intro/index.html#thanks-questions",
+    "href": "decks/llm-intro/index.html#thanks-questions",
+    "title": "How do LLMs work?",
+    "section": "Thanks — questions?",
+    "text": "Thanks — questions?"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Steve Haigh",
@@ -242,7 +368,7 @@
     "href": "index.html#latest-post",
     "title": "Steve Haigh",
     "section": "Latest post",
-    "text": "Latest post\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\ndecks\ntools\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+    "text": "Latest post\n\n\n\n\n\nHow do LLMs work? — a shallow-dive for scientists\n\n\nllms\nai\ndecks\nlab\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
   },
   {
     "objectID": "about.html",
