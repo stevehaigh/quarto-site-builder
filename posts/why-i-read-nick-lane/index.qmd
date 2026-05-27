@@ -1,0 +1,24 @@
+---
+title: "Why I read Nick Lane even though it's hard work"
+description: "Bioenergetics is dense. The questions it answers make it worth the effort."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, biology]
+draft: true
+---
+
+Why did complex life evolve only once?
+
+Bacteria are old and abundant. They've been around for nearly four billion years, and they're metabolically inventive — they ferment, photosynthesise, eat rocks, breathe sulfate. But in all that time none of them ever became a tree, or a fish, or a brain. Every complex thing alive today — every plant, every animal, every fungus — descends from a single ancestor that arose, just once, about 1.5 billion years ago, when one cell swallowed another and made it a power source.
+
+That singular event is the puzzle Nick Lane has spent twenty years trying to explain. His claim is that complexity has an energy cost prokaryotes can't pay, and that the only solution — internalised power generators in the form of mitochondria — was a statistically improbable accident.
+
+This is the argument across most of his books. *The Vital Question* lays out the energetics. *Power, Sex, Suicide* runs the mitochondrial consequences forward into aging, sex, programmed death, and multicellularity. *Transformer* takes the Krebs cycle and shows how its chemistry shapes everything downstream, including disease. *Life Ascending* steps back and tells the whole arc in ten chapters.
+
+Lane is hard work because he isn't summarising consensus. He's arguing for his own framework, in book form, with the depth of citation you'd expect from a review article. The biochemistry is real biochemistry — Q-cycles, proton-motive force, redox potentials. You will look up terms.
+
+It's worth the work because most popular biology leaves the impression that evolution is something that happens to creatures. Lane writes as if evolution is something that happens because of *thermodynamics* — that life is a particular solution to disequilibrium, and the constraints of energy flow have shaped every major event in biology, from the first cell to the brain reading this sentence.
+
+And: he's wrong about some of it. The alkaline-vent origin of life is plausible but not settled; the eukaryotic-origin timing is contested; some of the aging implications are still in debate. Reading Lane is reading a live argument, not a textbook. For anyone doing actual biology, that's the right mode.
+
+Start with *Life Ascending* if you want the tour. Start with *The Vital Question* if you want the argument that holds it together.

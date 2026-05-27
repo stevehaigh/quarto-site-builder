@@ -1,0 +1,20 @@
+---
+title: "Why *The Selfish Gene* still matters"
+description: "Fifty years on, what the book actually argued — and what it didn't."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, biology]
+draft: true
+---
+
+Most people who think they have an opinion about *The Selfish Gene* have an opinion about its title. Dawkins published the book in 1976, and the bumper-sticker version — "we are all selfish because our genes are selfish" — has been repeated, misquoted, and railed against ever since.
+
+The actual argument is more interesting. Genes don't *want* anything. The book asks a different question: if natural selection retains or discards heritable units, what are those units? Dawkins's answer is that the gene is the smallest thing for which the answer is unambiguous. An organism dies; a gene gets copied, sometimes for billions of years. The body is the vehicle; the gene is the replicator.
+
+That reframing buys you a lot. Hamilton's rule — *altruism evolves when rB > C* — falls out of it naturally. So does kin selection in social insects, the evolution of cooperation in repeated games, and the persistence of traits like sickle-cell anaemia that look harmful at the level of the individual. The book is the readable translation of twenty years of mathematical work by Hamilton, Williams, Maynard Smith, and Trivers.
+
+What's aged? The framework has competition now — multi-level selection, niche construction, evo-devo, transgenerational epigenetics. Dawkins's framing turns out to be one good lens, not the only one. But it remains the lens you reach for when asking *why does this gene persist?*, and the alternatives mostly extend the gene's-eye view rather than replace it.
+
+The other reason the book matters: it taught a generation of biologists to think about heredity as *information* rather than matter. For anyone arriving at biology from a software background, that move is already familiar — what gets copied is the schema, not the substrate. Dawkins made it in 1976, before the genome was sequenced.
+
+If you've never read it, do. If you read it long ago and remember the bumper-sticker version, read it again.
