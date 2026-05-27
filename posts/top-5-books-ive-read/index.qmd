@@ -1,0 +1,30 @@
+---
+title: "Top 5 books I've read"
+description: "Yes it's clickbait. No I'm not sorry."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books]
+draft: true
+---
+
+Five books, listed in roughly the order they changed how I think. Not the best books I've read, not the most enjoyable — the ones that left the deepest mark.
+
+## 1. *The Emperor of All Maladies* — Siddhartha Mukherjee
+
+The book that made me change careers. A three-thousand-year history of cancer told as a single narrative, written by an oncologist who can also write. I read it as a software exec and finished it wanting to be in a lab.
+
+## 2. *The Vital Question* — Nick Lane
+
+The book that taught me to think about biology in terms of energy. Why life uses chemiosmosis. Why eukaryotes only happened once. Why complexity is rare. Lane bets hard on his framework; I bet hard on Lane.
+
+## 3. *The Selfish Gene* — Richard Dawkins
+
+The book that taught me to think about heredity as information. The gene's-eye view holds up fifty years on, and even where it has competition now, it remains the lens I reach for first.
+
+## 4. *The Sense of Style* — Steven Pinker
+
+The book that taught me why some prose works. Classic-style stance, given-new contract, zombie nouns. The first writing manual I've read that explains *why* rather than just listing *don'ts*.
+
+## 5. *[TBD — your call.]*
+
+*[Candidates: Ridley's* Genome *or* The Red Queen*; a software classic (*Code Complete*,* The Pragmatic Programmer*,* Designing Data-Intensive Applications*); Hofstadter's* Gödel, Escher, Bach*; a fiction wildcard. Pick the one that earned the slot.]*

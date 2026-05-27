@@ -1,0 +1,36 @@
+---
+title: "Top 5 books I should read according to Claude (seriously)"
+description: "I asked the model what I was missing. It actually had answers."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [books, llms]
+draft: true
+---
+
+I asked Claude — the model I've been using as a research assistant through the MRes — for five books I should read, given what it knows about my interests and what I've already read. The reasoning had to be specific; "this is a great book" doesn't earn a slot.
+
+These are its picks. I haven't read them yet. I'll mark each one off as I do.
+
+## 1. *The Major Transitions in Evolution* — John Maynard Smith & Eörs Szathmáry
+
+The rigorous version of what Nick Lane writes about for popular audiences. From self-replicating molecules through eusocial insects, mapped as a sequence of transitions in how information is stored and inherited. Claude flagged this as the academic core under the Lane reading — same questions, more maths, fewer flourishes.
+
+## 2. *The Music of Life* — Denis Noble
+
+A direct challenge to the selfish-gene paradigm, from a systems-biology insider. Argues that the gene-centric view misses how living systems actually work. Claude's note: "He'll sharpen your thinking precisely because he disagrees with books you like."
+
+## 3. *Endless Forms Most Beautiful* — Sean Carroll
+
+Evo-devo, accessibly written. Why a fly, a mouse, and a human use almost the same toolkit genes to build wildly different bodies. Connects the Dawkins replicator-view to the actual mechanics of development.
+
+## 4. *Designing Data-Intensive Applications* — Martin Kleppmann
+
+The software book on the list. Claude's argument was that my sim-infrastructure work — containerised pipelines, exploratory UIs for high-dimensional output — sits squarely in DDIA's territory, and that the book is the most concentrated dose of modern systems-design thinking on the market. Honest caveat: it may already be on my shelf and I forgot.
+
+## 5. *The Eighth Day of Creation* — Horace Freeland Judson
+
+A narrative history of molecular biology's founding decades, from Avery and Pauling through to recombinant DNA. Claude's pitch: "You've read the Mukherjee history of cancer. You're missing the equivalent for molecular biology."
+
+---
+
+*[Open question: how does this list age? Update with one-line verdicts as I read them.]*
