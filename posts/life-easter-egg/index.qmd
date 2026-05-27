@@ -1,0 +1,17 @@
+---
+title: "There's a Game of Life on my home page"
+description: "A glider, a click, and a small Conway simulator."
+author: "Steve Haigh"
+date: "2026-05-27"
+categories: [meta, fun]
+image: ../../favicon.svg
+draft: true
+---
+
+Look at the bottom of [the home page](../../index.qmd) and you'll see a small green glider. It links to [/life](../../life.qmd) — a working Conway's Game of Life simulator, with controls and presets.
+
+I built it as an evening's tinker. The favicon went on first — the cleanest 5-pixel design I could think of for a computational-biology site — and once a glider was sitting up in the browser tab, the obvious next move was a page to explain it.
+
+Life keeps catching me. Four rules, applied to every cell at once, and out of it come oscillators, glider guns, self-replicating constructors, and a [working universal Turing machine](http://www.rendell-attic.org/gol/utm/). The further-reading list at the bottom of /life is what I bookmarked over an hour down that rabbit hole.
+
+If you find yourself there mid-meeting, the Gosper glider gun is the most satisfying preset.
