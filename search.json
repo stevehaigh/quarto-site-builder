@@ -1,31 +1,24 @@
 [
   {
-    "objectID": "personal/",
-    "href": "personal/",
-    "title": "Personal",
+    "objectID": "projects/",
+    "href": "projects/",
+    "title": "Projects & Decks",
     "section": "",
-    "text": "This page is just a placeholder with some dummy text, it’s more about experimenting with Quarto layout than anything else!"
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
   },
   {
-    "objectID": "personal/#ceramics",
-    "href": "personal/#ceramics",
-    "title": "Personal",
-    "section": "Ceramics",
-    "text": "Ceramics\n\n\n\n\n\n\nStoneware vessel · 2025\n\n\n\n\n\n\n\nPorcelain bowl · 2024\n\n\n\n\n\n\n\nTea bowl, wood-fired · 2025\n\n\n\n\n\n\n\n\n\nFaceted jar · 2024\n\n\n\n\n\n\n\nSlip-decorated plate · 2025\n\n\n\n\n\n\n\nBottle form · 2025"
-  },
-  {
-    "objectID": "personal/#photography",
-    "href": "personal/#photography",
-    "title": "Personal",
-    "section": "Photography",
-    "text": "Photography\n\n\n\n\n\n\nMadonna di Campiglio, Dolomites · 2026\n\n\n\n\n\n\n\nReading riverside, late autumn · 2024\n\n\n\n\n\n\n\n\n\nEast Tyrol approach, dusk · 2025\n\n\n\n\n\n\n\nStudio, working light · 2025\n\n\n\n\n\n\n\n\n\n\n\nNoteNotes on the work\n\n\n\n\n\nBoth also reward patience in a way the rest of my work doesn’t."
-  },
-  {
-    "objectID": "blog/posts/llm-intro/",
-    "href": "blog/posts/llm-intro/",
-    "title": "How do LLMs work? — a shallow-dive for scientists",
+    "objectID": "projects/#code",
+    "href": "projects/#code",
+    "title": "Projects & Decks",
     "section": "",
-    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
+  },
+  {
+    "objectID": "projects/#slide-decks",
+    "href": "projects/#slide-decks",
+    "title": "Projects & Decks",
+    "section": "Slide decks",
+    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nHow do LLMs work? — a shallow-dive for scientists\nDash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.\nView slides PDF PPTX\n\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
   },
   {
     "objectID": "blog/posts/academic-pptx-template/",
@@ -63,25 +56,11 @@
     "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
   },
   {
-    "objectID": "projects/",
-    "href": "projects/",
-    "title": "Projects & Decks",
+    "objectID": "blog/posts/llm-intro/",
+    "href": "blog/posts/llm-intro/",
+    "title": "How do LLMs work? — a shallow-dive for scientists",
     "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
-  },
-  {
-    "objectID": "projects/#code",
-    "href": "projects/#code",
-    "title": "Projects & Decks",
-    "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
-  },
-  {
-    "objectID": "projects/#slide-decks",
-    "href": "projects/#slide-decks",
-    "title": "Projects & Decks",
-    "section": "Slide decks",
-    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nHow do LLMs work? — a shallow-dive for scientists\nDash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.\nView slides PDF PPTX\n\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
+    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
   },
   {
     "objectID": "decks/lab-meeting-2026-05-14/#quick-recap",
@@ -161,6 +140,34 @@
     "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and biology.\n\n   GitHub\n   LinkedIn\n   Email\n\n\n\n\n\n\n\n\n\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows.\n\n\n\n\n\nUpdated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models.\n\n\n\n\n\n\n\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+  },
+  {
+    "objectID": "index.html#current-projects",
+    "href": "index.html#current-projects",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Extending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows."
+  },
+  {
+    "objectID": "index.html#currently-looking-at",
+    "href": "index.html#currently-looking-at",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Updated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models."
+  },
+  {
+    "objectID": "index.html#latest-post",
+    "href": "index.html#latest-post",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+  },
+  {
     "objectID": "life/",
     "href": "life/",
     "title": "Conway’s Game of Life",
@@ -208,6 +215,27 @@
     "title": "About",
     "section": "Contact",
     "text": "Contact\nThe fastest route is email: ."
+  },
+  {
+    "objectID": "personal/",
+    "href": "personal/",
+    "title": "Personal",
+    "section": "",
+    "text": "This page is just a placeholder with some dummy text, it’s more about experimenting with Quarto layout than anything else!"
+  },
+  {
+    "objectID": "personal/#ceramics",
+    "href": "personal/#ceramics",
+    "title": "Personal",
+    "section": "Ceramics",
+    "text": "Ceramics\n\n\n\n\n\n\nStoneware vessel · 2025\n\n\n\n\n\n\n\nPorcelain bowl · 2024\n\n\n\n\n\n\n\nTea bowl, wood-fired · 2025\n\n\n\n\n\n\n\n\n\nFaceted jar · 2024\n\n\n\n\n\n\n\nSlip-decorated plate · 2025\n\n\n\n\n\n\n\nBottle form · 2025"
+  },
+  {
+    "objectID": "personal/#photography",
+    "href": "personal/#photography",
+    "title": "Personal",
+    "section": "Photography",
+    "text": "Photography\n\n\n\n\n\n\nMadonna di Campiglio, Dolomites · 2026\n\n\n\n\n\n\n\nReading riverside, late autumn · 2024\n\n\n\n\n\n\n\n\n\nEast Tyrol approach, dusk · 2025\n\n\n\n\n\n\n\nStudio, working light · 2025\n\n\n\n\n\n\n\n\n\n\n\nNoteNotes on the work\n\n\n\n\n\nBoth also reward patience in a way the rest of my work doesn’t."
   },
   {
     "objectID": "decks/llm-intro/#why-this-matters",
@@ -329,32 +357,11 @@
     "text": "Thanks — questions?"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Steve Haigh",
+    "objectID": "blog/",
+    "href": "blog/",
+    "title": "Blog",
     "section": "",
-    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology.\n\n   GitHub\n   LinkedIn\n   Email\n\n\n\n\n\n\n\n\n\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows.\n\n\n\n\n\nUpdated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the bench and the keyboard.\n\n\n\n\n\n\n\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
-  },
-  {
-    "objectID": "index.html#current-projects",
-    "href": "index.html#current-projects",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Extending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows."
-  },
-  {
-    "objectID": "index.html#currently-looking-at",
-    "href": "index.html#currently-looking-at",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Updated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the bench and the keyboard."
-  },
-  {
-    "objectID": "index.html#latest-post",
-    "href": "index.html#latest-post",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+    "text": "How do LLMs work? — a shallow-dive for scientists\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/posts/the-story-so-far/",
@@ -404,12 +411,5 @@
     "title": "The Story So Far",
     "section": "What comes next",
     "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
-  },
-  {
-    "objectID": "blog/",
-    "href": "blog/",
-    "title": "Blog",
-    "section": "",
-    "text": "How do LLMs work? — a shallow-dive for scientists\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   }
 ]
