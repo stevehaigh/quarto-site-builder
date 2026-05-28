@@ -25,4 +25,4 @@ For biology this is more than aesthetic. Turing-pattern mechanisms have been exp
 
 If you want to follow this further, two books. Philip Ball's *[The Self-Made Tapestry](https://global.oup.com/academic/product/the-self-made-tapestry-9780198502432)* is the popular treatment, beautifully illustrated, tying Turing to spots, stripes, branching, sand ripples, and honeycombs. James Murray's *[Mathematical Biology](https://link.springer.com/book/10.1007/b98868)* is the rigorous one, the standard textbook for reaction-diffusion in biology, with well over a thousand references — the place to graduate to once you've read Ball.
 
-The companion piece to this would be a [reaction-diffusion playground](#) alongside [/life](../../life.qmd) — same idea, continuous instead of discrete, with sliders for the morphogen rate constants. On the list.
+The companion piece to this would be a [reaction-diffusion playground](#) alongside [/life](/life/) — same idea, continuous instead of discrete, with sliders for the morphogen rate constants. On the list.

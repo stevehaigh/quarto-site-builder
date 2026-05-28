@@ -12,7 +12,7 @@ title=${2:-$slug}
 date=$(date +%Y-%m-%d)
 
 repo_root=$(cd "$(dirname "$0")/.." && pwd)
-dir="$repo_root/posts/$slug"
+dir="$repo_root/blog/posts/$slug"
 file="$dir/index.qmd"
 
 if [[ -e $dir ]]; then

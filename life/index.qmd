@@ -256,6 +256,6 @@ Click or drag to paint. The grid wraps at the edges.
 - [Hashlife in Python](https://johnhw.github.io/hashlife/index.md.html) — John Williamson's pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: [python-lifelib](https://gitlab.com/apgoucher/python-lifelib), by the same author as the 0E0P metacell above.)
 - [xkcd 2293](https://xkcd.com/2293/) — Randall Munroe's tribute to John Conway, who died of COVID in April 2020.
 
-[← back to haigh.bio](index.qmd)
+[← back to haigh.bio](/)
 
 *Built by a glider, for a glider.*

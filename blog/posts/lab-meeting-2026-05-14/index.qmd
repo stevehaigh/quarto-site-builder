@@ -11,6 +11,6 @@ Presented the platelet whole-cell model work at the Dash lab meeting yesterday �
 
 Slides are here:
 
-[**The feasibility of a whole-cell model of the human platelet** →](../../decks/lab-meeting-2026-05-14/index.html)
+[**The feasibility of a whole-cell model of the human platelet** →](/decks/lab-meeting-2026-05-14/index.html)
 
-(PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).)
+(PDF and PPTX downloads are linked from the [Projects & Decks page](/projects/#slide-decks).)

@@ -9,7 +9,7 @@ draft: false
 
 A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it's pitched at the "what is this thing actually doing" level rather than the implementation level. I've put the deck on the site now in case it's useful to anyone else looking for the same kind of pitch.
 
-[**How do LLMs work? →**](../../decks/llm-intro/index.html)
+[**How do LLMs work? →**](/decks/llm-intro/index.html)
 
 A few caveats up front. This is **not** a rigorous machine-learning talk — it's a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar's *Illustrated Transformer*, Raschka's *Build an LLM from Scratch*. Those are where to go after this.
 
@@ -24,4 +24,4 @@ What I do try to cover:
 
 The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You'd review an RA's draft before signing your name to it — do the same here.
 
-The deck is built with Quarto reveal.js from the same template I [wrote up the other day](../academic-pptx-template/). PDF and PPTX downloads are linked from the [Projects & Decks page](../../projects.html#slide-decks).
+The deck is built with Quarto reveal.js from the same template I [wrote up the other day](../academic-pptx-template/). PDF and PPTX downloads are linked from the [Projects & Decks page](/projects/#slide-decks).

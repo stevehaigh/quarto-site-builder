@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  post-render:
+    - bin/clean-urls.sh
   resources:
     - "decks/**"
     - CNAME
@@ -16,13 +18,11 @@ website:
     right:
       - href: index.qmd
         text: Home
-      - href: blog.qmd
+      - href: blog/index.qmd
         text: Blog
-      - href: projects.qmd
+      - href: projects/index.qmd
         text: Projects & Decks
-      - href: personal.qmd
-        text: Personal
-      - href: about.qmd
+      - href: about/index.qmd
         text: About
       - icon: github
         href: https://github.com/stevehaigh  # change me
@@ -34,12 +34,13 @@ website:
       - icon: github
         href: https://github.com/stevehaigh  # change me
       - icon: rss
-        href: blog.xml
+        href: blog/index.xml
 
 format:
   html:
+    respect-user-color-scheme: true
     theme:
-      light: cosmo
+      light: flatly
       dark: darkly
     css: styles.css
     toc: true
