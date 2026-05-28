@@ -1,0 +1,43 @@
+---
+title: "Projects & Decks"
+toc: true
+---
+
+## Code
+
+### Platelet whole-cell model
+
+Extending the *wcEcoli* framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.
+
+[![GitHub repository: platelet-wcm](https://img.shields.io/badge/GitHub-repo-181717?logo=github)](https://github.com/stevehaigh/platelet-wcm)
+
+### Other repos
+
+See [all repositories on GitHub](https://github.com/stevehaigh?tab=repositories).
+
+## Slide decks
+
+Decks are written as Quarto Reveal.js (`.qmd`) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.
+
+### How do LLMs work? — a shallow-dive for scientists
+
+Dash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.
+
+[View slides](/decks/llm-intro/index.html){.btn .btn-primary .btn-sm}
+[PDF](/decks/llm-intro/index.pdf){target="_blank" .btn .btn-outline-secondary .btn-sm}
+[PPTX](/decks/llm-intro.pptx){.btn .btn-outline-secondary .btn-sm}
+
+### The feasibility of a whole-cell model of the human platelet
+
+Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.
+
+[View slides](/decks/lab-meeting-2026-05-14/index.html){.btn .btn-primary .btn-sm}
+[PDF](/decks/lab-meeting-2026-05-14/index.pdf){target="_blank" .btn .btn-outline-secondary .btn-sm}
+[PPTX](/decks/lab-meeting-2026-05-14.pptx){.btn .btn-outline-secondary .btn-sm}
+
+### Academic deck template
+
+A pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. [Background and design notes](/blog/posts/academic-pptx-template/) in the blog.
+
+[Download template (.pptx)](/decks/academic-template.pptx){.btn .btn-primary .btn-sm}
+[Read the post](/blog/posts/academic-pptx-template/){.btn .btn-outline-secondary .btn-sm}

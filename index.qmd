@@ -4,6 +4,7 @@ subtitle: "Biomedical Sciences M.Res · University of Reading"
 about:
   template: trestles
   image: img/profile.jpg
+  image-alt: "Photo of Steve Haigh"
   image-shape: round
   image-width: 14em
   links:
@@ -18,7 +19,7 @@ about:
       href: "#email"
 listing:
   - id: latest-post
-    contents: posts
+    contents: blog/posts
     sort: "date desc"
     max-items: 1
     type: default
@@ -61,10 +62,10 @@ Bringing software-engineering discipline to computational-biology workflows.
 ::: {#latest-post}
 :::
 
-See the [Blog](blog.qmd) for the full archive, or the [Projects](projects.qmd) page for repos and decks.
+See the [Blog](blog/index.qmd) for the full archive, or the [Projects](projects/index.qmd) page for repos and decks.
 
 ```{=html}
-<a href="life.html" class="glider-hint" aria-label="A small surprise">
+<a href="/life/" class="glider-hint" aria-label="A small surprise">
   <svg width="22" height="22" viewBox="0 0 16 16">
     <g class="phase phase-0">
       <rect x="6"  y="1"  width="4" height="4"/>
@@ -124,7 +125,7 @@ See the [Blog](blog.qmd) for the full archive, or the [Projects](projects.qmd) p
 <script>
 (function () {
   const u = "steve", d = "haigh.bio";
-  document.querySelectorAll('a[href="#email"]').forEach(a => {
+  document.querySelectorAll('a[href$="#email"]').forEach(a => {
     a.href = "mailto:" + u + "@" + d;
   });
 })();

@@ -4,11 +4,11 @@ description: "A glider, a click, and a small Conway simulator."
 author: "Steve Haigh"
 date: "2026-05-27"
 categories: [meta, fun]
-image: ../../favicon.svg
+image: /favicon.svg
 draft: true
 ---
 
-There's a small green glider at the bottom of [the home page](../../index.qmd). Click it for [/life](../../life.qmd) — a working Conway's Game of Life simulator with controls and presets.
+There's a small green glider at the bottom of [the home page](/). Click it for [/life](/life/) — a working Conway's Game of Life simulator with controls and presets.
 
 The favicon came first: five green squares in a 16×16 box — the smallest pattern in the game that moves. Once a glider was up in the browser tab, the page that explained it followed a day later.
 

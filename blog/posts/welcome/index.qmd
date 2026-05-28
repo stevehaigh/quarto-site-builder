@@ -4,7 +4,7 @@ description: "A first post — Quarto + GitHub Pages + Cloudflare, low effort an
 author: "Steve Haigh"
 date: "2026-05-21"
 categories: [meta, tooling]
-image: ../../assets/placeholder.svg
+image: /assets/placeholder.svg
 draft: true
 ---
 

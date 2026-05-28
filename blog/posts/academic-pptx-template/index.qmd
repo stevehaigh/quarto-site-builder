@@ -11,8 +11,8 @@ I was never very impressed with the default PowerPoint templates so for [lab-mee
 
 **Downloads**
 
-- [Blank template (.pptx)](../../decks/academic-template.pptx) — open in PowerPoint or Keynote and start typing.
-- [Worked example: the platelet feasibility talk](../../decks/lab-meeting-2026-05-14/index.html) ([.pptx](../../decks/lab-meeting-2026-05-14.pptx)) — the same template with real content.
+- [Blank template (.pptx)](/decks/academic-template.pptx) — open in PowerPoint or Keynote and start typing.
+- [Worked example: the platelet feasibility talk](/decks/lab-meeting-2026-05-14/index.html) ([.pptx](/decks/lab-meeting-2026-05-14.pptx)) — the same template with real content.
 
 ## Why this template
 
