@@ -1,22 +1,7 @@
 ---
-title: "Steve Haigh"
-subtitle: "Biomedical Sciences M.Res · University of Reading"
-about:
-  template: trestles
-  image: img/profile.jpg
-  image-alt: "Photo of Steve Haigh"
-  image-shape: round
-  image-width: 14em
-  links:
-    - icon: github
-      text: GitHub
-      href: https://github.com/stevehaigh
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/shaigh
-    - icon: envelope
-      text: Email
-      href: "#email"
+pagetitle: "Steve Haigh · Computational Biology"
+toc: false
+lightbox: false
 listing:
   - id: latest-post
     contents: blog/posts
@@ -26,13 +11,31 @@ listing:
     fields: [date, title, description, categories]
 ---
 
+::::: {.grid .home-hero}
+
+:::: {.g-col-12 .g-col-md-4 .home-aside}
+<img src="img/profile.jpg" alt="Photo of Steve Haigh" class="home-photo">
+
+# Steve Haigh {.home-name}
+
 *Computational biology, viewed from a 30-year software career.*
 
 Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the *wcEcoli* whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.
 
 This site collects notes, slide decks, and project write-ups from the intersection of software and wet-lab biology.
 
-## Currently working on
+```{=html}
+<div class="home-links">
+  <a href="https://github.com/stevehaigh"><i class="bi bi-github" role="img" aria-label="GitHub"></i> GitHub</a>
+  <a href="https://linkedin.com/in/shaigh"><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i> LinkedIn</a>
+  <a href="#email"><i class="bi bi-envelope" role="img" aria-label="Email"></i> Email</a>
+</div>
+```
+::::
+
+:::: {.g-col-12 .g-col-md-8 .home-content}
+
+## Current projects
 
 ::: {.grid}
 
@@ -43,7 +46,7 @@ Extending *wcEcoli* to build the first computational model of a human platelet.
 
 ::: {.g-col-12 .g-col-md-4}
 #### Simulation infrastructure
-Containerised pipelines and Dash-based UIs for exploring high-dimensional simulation output.
+Containerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.
 :::
 
 ::: {.g-col-12 .g-col-md-4}
@@ -53,9 +56,9 @@ Bringing software-engineering discipline to computational-biology workflows.
 
 :::
 
-## Now
+## Currently looking at…
 
-*Updated May 2026.* Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation exploration UI in Dash. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission.
+*Updated May 2026.* Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback is generating a couple of small follow-up studies worth firming up before dissertation submission. I'm also building out this site itself — a Quarto + GitHub Pages project I tinker with between the bench and the keyboard.
 
 ## Latest post
 
@@ -63,6 +66,10 @@ Bringing software-engineering discipline to computational-biology workflows.
 :::
 
 See the [Blog](blog/index.qmd) for the full archive, or the [Projects](projects/index.qmd) page for repos and decks.
+
+::::
+
+:::::
 
 ```{=html}
 <a href="/life/" class="glider-hint" aria-label="A small surprise">
