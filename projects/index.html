@@ -26,27 +26,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-990183aeeadb6ee11b2ccd3686d3bf2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -227,7 +230,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -240,6 +244,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -253,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../">
     <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
@@ -264,23 +276,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link active" href="../projects/" aria-current="page"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./personal.html"> 
-<span class="menu-text">Personal</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about/"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -316,7 +324,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet" id="toc-the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="nav-link" data-scroll-target="#the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</a></li>
   <li><a href="#academic-deck-template" id="toc-academic-deck-template" class="nav-link" data-scroll-target="#academic-deck-template">Academic deck template</a></li>
   </ul></li>
-  <li><a href="#posters-writeups" id="toc-posters-writeups" class="nav-link" data-scroll-target="#posters-writeups">Posters &amp; writeups</a></li>
   </ul>
 </nav>
     </div>
@@ -348,7 +355,12 @@ ul.task-list li input[type="checkbox"] {
 <section id="platelet-whole-cell-model" class="level3">
 <h3 class="anchored" data-anchor-id="platelet-whole-cell-model">Platelet whole-cell model</h3>
 <p>Extending the <em>wcEcoli</em> framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.</p>
-<p><a href="https://github.com/stevehaigh/platelet-wcm"><img src="https://img.shields.io/badge/GitHub-repo-181717?logo=github.png" class="img-fluid"></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://img.shields.io/badge/GitHub-repo-181717?logo=github.png" class="img-fluid figure-img"></p>
+<figcaption>GitHub repository: platelet-wcm</figcaption>
+</figure>
+</div>
 </section>
 <section id="other-repos" class="level3">
 <h3 class="anchored" data-anchor-id="other-repos">Other repos</h3>
@@ -361,24 +373,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="how-do-llms-work-a-shallow-dive-for-scientists" class="level3">
 <h3 class="anchored" data-anchor-id="how-do-llms-work-a-shallow-dive-for-scientists">How do LLMs work? — a shallow-dive for scientists</h3>
 <p>Dash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.</p>
-<p><a href="decks/llm-intro/index.html" class="btn btn-primary btn-sm">View slides</a> <a href="decks/llm-intro/index.pdf" class="btn btn-outline-secondary btn-sm">PDF</a> <a href="decks/llm-intro.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
+<p><a href="../decks/llm-intro/" class="btn btn-primary btn-sm">View slides</a> <a href="../decks/llm-intro/index.pdf" class="btn btn-outline-secondary btn-sm" target="_blank">PDF</a> <a href="../decks/llm-intro.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
 </section>
 <section id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet" class="level3">
 <h3 class="anchored" data-anchor-id="the-feasibility-of-a-whole-cell-model-of-the-human-platelet">The feasibility of a whole-cell model of the human platelet</h3>
 <p>Dash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.</p>
-<p><a href="decks/lab-meeting-2026-05-14/index.html" class="btn btn-primary btn-sm">View slides</a> <a href="decks/lab-meeting-2026-05-14/index.pdf" class="btn btn-outline-secondary btn-sm">PDF</a> <a href="decks/lab-meeting-2026-05-14.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
+<p><a href="../decks/lab-meeting-2026-05-14/" class="btn btn-primary btn-sm">View slides</a> <a href="../decks/lab-meeting-2026-05-14/index.pdf" class="btn btn-outline-secondary btn-sm" target="_blank">PDF</a> <a href="../decks/lab-meeting-2026-05-14.pptx" class="btn btn-outline-secondary btn-sm">PPTX</a></p>
 </section>
 <section id="academic-deck-template" class="level3">
 <h3 class="anchored" data-anchor-id="academic-deck-template">Academic deck template</h3>
-<p>A pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. <a href="posts/academic-pptx-template/">Background and design notes</a> in the blog.</p>
-<p><a href="decks/academic-template.pptx" class="btn btn-primary btn-sm">Download template (.pptx)</a> <a href="posts/academic-pptx-template/" class="btn btn-outline-secondary btn-sm">Read the post</a></p>
-</section>
-</section>
-<section id="posters-writeups" class="level2">
-<h2 class="anchored" data-anchor-id="posters-writeups">Posters &amp; writeups</h2>
-<p>A good place to link supplementary material, conference posters, or dissertation chapters once they’re ready.</p>
+<p>A pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. <a href="../blog/posts/academic-pptx-template/">Background and design notes</a> in the blog.</p>
+<p><a href="../decks/academic-template.pptx" class="btn btn-primary btn-sm">Download template (.pptx)</a> <a href="../blog/posts/academic-pptx-template/" class="btn btn-outline-secondary btn-sm">Read the post</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -813,7 +821,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml">
+    <a class="nav-link" href="../blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -822,9 +830,41 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

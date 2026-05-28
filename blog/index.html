@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Steve Haigh">
-<meta name="dcterms.date" content="2026-05-25">
-<meta name="description" content="A simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.">
 
-<title>An ‘academic’ deck template, and why it looks the way it does – Steve Haigh · Computational Biology</title>
+<title>Blog – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,27 +26,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-990183aeeadb6ee11b2ccd3686d3bf2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,15 +76,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
-</head>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="alternate" type="application/rss+xml" title="Steve Haigh · Computational Biology" href="index.xml" data-external="1"></head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -230,7 +287,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -243,6 +301,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -256,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../">
     <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
@@ -267,23 +333,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link active" href="../blog/" aria-current="page"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html"> 
+    <a class="nav-link" href="../projects/"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../personal.html"> 
-<span class="menu-text">Personal</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../about/"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -300,55 +362,26 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#why-this-template" id="toc-why-this-template" class="nav-link active" data-scroll-target="#why-this-template">Why this template</a></li>
-  <li><a href="#the-quarto-version" id="toc-the-quarto-version" class="nav-link" data-scroll-target="#the-quarto-version">The Quarto version</a></li>
-  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats">Caveats</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2FyZWVy">career <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVja3M=">decks <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kZWxsaW5n">modelling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bXJlcw==">mres <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGxhdGVsZXQ=">platelet <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dG9vbHM=">tools <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">An ‘academic’ deck template, and why it looks the way it does</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">decks</div>
-    <div class="quarto-category">tools</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    A simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.
-  </div>
+<h1 class="title">Blog</h1>
 </div>
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Steve Haigh </p>
-          </div>
-  </div>
+<div class="quarto-title-meta column-page-left">
+
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 25, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -358,33 +391,151 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>I was never very impressed with the default PowerPoint templates so for <a href="../lab-meeting-2026-05-14/">lab-meeting deck</a> I actually made my own set of slides (with some help from my friend <a href="https://claude.ai">Claude</a>).</p>
-<p><strong>Downloads</strong></p>
-<ul>
-<li><a href="../../decks/academic-template.pptx">Blank template (.pptx)</a> — open in PowerPoint or Keynote and start typing.</li>
-<li><a href="../../decks/lab-meeting-2026-05-14/index.html">Worked example: the platelet feasibility talk</a> (<a href="../../decks/lab-meeting-2026-05-14.pptx">.pptx</a>) — the same template with real content.</li>
-</ul>
-<section id="why-this-template" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-template">Why this template</h2>
-<p>There are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.</p>
-<p>The template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)</p>
-<p><strong>Content fills the slide.</strong> No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.</p>
-<p><strong>Two-column slides are first-class.</strong> Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.</p>
-<p><strong>Section breadcrumb instead of divider slides.</strong> Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow.</p>
-</section>
-<section id="the-quarto-version" class="level2">
-<h2 class="anchored" data-anchor-id="the-quarto-version">The Quarto version</h2>
-<p>I’ve experimented with <a href="https://quarto.org">Quarto</a> and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort.</p>
-<p>The PPTX template above is for when you just want to open a file and edit in PowerPoint.</p>
-</section>
-<section id="caveats" class="level2">
-<h2 class="anchored" data-anchor-id="caveats">Caveats</h2>
-<p>It’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1779966063765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
+<div class="thumbnail"><a href="../blog/posts/llm-intro/" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
+
+</div>
+<div class="delink listing-description"><a href="../blog/posts/llm-intro/" class="no-external">
+<p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/llm-intro/" class="no-external">
+<div class="listing-date">
+May 27, 2026
+</div>
+<div class="listing-author">
+Steve Haigh
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="ZGVja3MlMkN0b29scw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1779966063765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
+<div class="thumbnail"><a href="../blog/posts/academic-pptx-template/" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/academic-pptx-template/" class="no-external">An ‘academic’ deck template, and why it looks the way it does</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
+
+</div>
+<div class="delink listing-description"><a href="../blog/posts/academic-pptx-template/" class="no-external">
+<p>A simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/academic-pptx-template/" class="no-external">
+<div class="listing-date">
+May 25, 2026
+</div>
+<div class="listing-author">
+Steve Haigh
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Y2FyZWVyJTJDbGFiJTJDbXJlcw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1779966063765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092">
+<div class="thumbnail"><a href="../blog/posts/the-story-so-far/" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/the-story-so-far/" class="no-external">The Story So Far</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">career</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bXJlcw=='); return false;">mres</div>
+
+</div>
+<div class="delink listing-description"><a href="../blog/posts/the-story-so-far/" class="no-external">
+<strong><em>This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already</em></strong>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/the-story-so-far/" class="no-external">
+<div class="listing-date">
+May 25, 2026
+</div>
+<div class="listing-author">
+Steve Haigh
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="cGxhdGVsZXQlMkNtb2RlbGxpbmclMkNsYWI=" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1779966063765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
+<div class="thumbnail"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">Lab meeting: the platelet model, first showing</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
+
+</div>
+<div class="delink listing-description"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
+<p>First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
+<div class="listing-date">
+May 22, 2026
+</div>
+<div class="listing-author">
+Steve Haigh
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -798,38 +949,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
-<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
-<script>
-  function loadGiscus() {
-    // Function to get the theme based on body class
-    const getTheme = () => {
-      let baseTheme = document.getElementById('giscus-base-theme').value;
-      let altTheme = document.getElementById('giscus-alt-theme').value;
-      if (authorPrefersDark) {
-          [baseTheme, altTheme] = [altTheme, baseTheme];
-      }
-      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
-    };
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.dataset.repo = "stevehaigh/quarto-site-builder";
-    script.dataset.repoId = "R_kgDOSkFujg";
-    script.dataset.category = "Blog comments";
-    script.dataset.categoryId = "DIC_kwDOSkFujs4C98nP";
-    script.dataset.mapping = "pathname";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-    script.dataset.theme = getTheme();
-    script.dataset.lang = "en";
-    script.crossOrigin = "anonymous";
-    // Append the script to the desired div instead of at the end of the body
-    document.getElementById("quarto-content").appendChild(script);
-  }
-  loadGiscus();
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -848,7 +967,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../blog.xml">
+    <a class="nav-link" href="../blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -861,5 +980,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

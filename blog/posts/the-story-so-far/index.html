@@ -7,10 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Steve Haigh">
-<meta name="dcterms.date" content="2026-05-27">
-<meta name="description" content="A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.">
+<meta name="dcterms.date" content="2026-05-25">
 
-<title>How do LLMs work? — a shallow-dive for scientists – Steve Haigh · Computational Biology</title>
+<title>The Story So Far – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,27 +28,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-990183aeeadb6ee11b2ccd3686d3bf2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -230,7 +229,8 @@ ul.task-list li input[type="checkbox"] {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -243,6 +243,14 @@ ul.task-list li input[type="checkbox"] {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -256,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../">
     <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
@@ -267,23 +275,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../../../blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html"> 
+    <a class="nav-link" href="../../../projects/"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../personal.html"> 
-<span class="menu-text">Personal</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about/"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -303,8 +307,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#from-debugging-code-to-debugging-cells-a-year-of-switching-fields" id="toc-from-debugging-code-to-debugging-cells-a-year-of-switching-fields" class="nav-link active" data-scroll-target="#from-debugging-code-to-debugging-cells-a-year-of-switching-fields">From Debugging Code to Debugging Cells: A Year of Switching Fields</a></li>
+  <li><a href="#why-biology-and-why-now" id="toc-why-biology-and-why-now" class="nav-link" data-scroll-target="#why-biology-and-why-now">Why biology, and why now</a></li>
+  <li><a href="#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab" id="toc-the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab" class="nav-link" data-scroll-target="#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab">The first six weeks: lectures, journal clubs, and introduction to a real lab</a></li>
+  <li><a href="#end-of-semester-one-the-unexpected-hard-part" id="toc-end-of-semester-one-the-unexpected-hard-part" class="nav-link" data-scroll-target="#end-of-semester-one-the-unexpected-hard-part">End of semester one: the unexpected hard part</a></li>
+  <li><a href="#the-project-a-whole-cell-model-of-a-platelet" id="toc-the-project-a-whole-cell-model-of-a-platelet" class="nav-link" data-scroll-target="#the-project-a-whole-cell-model-of-a-platelet">The project: a whole-cell model of a platelet</a></li>
+  <li><a href="#what-comes-next" id="toc-what-comes-next" class="nav-link" data-scroll-target="#what-comes-next">What comes next</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -312,20 +327,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">How do LLMs work? — a shallow-dive for scientists</h1>
+<h1 class="title">The Story So Far</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">llms</div>
-    <div class="quarto-category">ai</div>
-    <div class="quarto-category">decks</div>
+    <div class="quarto-category">career</div>
     <div class="quarto-category">lab</div>
+    <div class="quarto-category">mres</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -340,7 +349,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 27, 2026</p>
+      <p class="date">May 25, 2026</p>
     </div>
   </div>
   
@@ -352,22 +361,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.</p>
-<p><a href="../../decks/llm-intro/index.html"><strong>How do LLMs work? →</strong></a></p>
-<p>A few caveats up front. This is <strong>not</strong> a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s <em>Illustrated Transformer</em>, Raschka’s <em>Build an LLM from Scratch</em>. Those are where to go after this.</p>
-<p>What I do try to cover:</p>
-<ul>
-<li><strong>What an LLM actually is</strong> — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.</li>
-<li><strong>Embeddings as geometry</strong> — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.</li>
-<li><strong>Attention, briefly</strong> — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.</li>
-<li><strong>The base model vs.&nbsp;the product</strong> — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).</li>
-<li><strong>A live-ish demo</strong> comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.</li>
-<li><strong>Using them well in research</strong> — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).</li>
-</ul>
-<p>The framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.</p>
-<p>The deck is built with Quarto reveal.js from the same template I <a href="../academic-pptx-template/">wrote up the other day</a>. PDF and PPTX downloads are linked from the <a href="../../projects.html#slide-decks">Projects &amp; Decks page</a>.</p>
+<p><strong><em>This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already</em></strong></p>
+<section id="from-debugging-code-to-debugging-cells-a-year-of-switching-fields" class="level2">
+<h2 class="anchored" data-anchor-id="from-debugging-code-to-debugging-cells-a-year-of-switching-fields">From Debugging Code to Debugging Cells: A Year of Switching Fields</h2>
+<p>Last August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap.</p>
+</section>
+<section id="why-biology-and-why-now" class="level2">
+<h2 class="anchored" data-anchor-id="why-biology-and-why-now">Why biology, and why now</h2>
+<p>The interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-seriously studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.</p>
+<p>At some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again.</p>
+</section>
+<section id="the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab" class="level2">
+<h2 class="anchored" data-anchor-id="the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab">The first six weeks: lectures, journal clubs, and introduction to a real lab</h2>
+<p>The course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.</p>
+<p>Then came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results.</p>
+</section>
+<section id="end-of-semester-one-the-unexpected-hard-part" class="level2">
+<h2 class="anchored" data-anchor-id="end-of-semester-one-the-unexpected-hard-part">End of semester one: the unexpected hard part</h2>
+<p>By the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.</p>
+<p>The biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.</p>
+<p>The harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I <em>really</em> wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.</p>
+<p>Academic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.</p>
+<p>Some things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.</p>
+<p>I’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end).</p>
+</section>
+<section id="the-project-a-whole-cell-model-of-a-platelet" class="level2">
+<h2 class="anchored" data-anchor-id="the-project-a-whole-cell-model-of-a-platelet">The project: a whole-cell model of a platelet</h2>
+<p>The research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.</p>
+<p>The project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August.</p>
+</section>
+<section id="what-comes-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-comes-next">What comes next</h2>
+<p>I’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.</p>
+<p>Whatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar</p>
+<p>So, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -833,7 +863,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../../blog.xml">
+    <a class="nav-link" href="../../../blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -846,5 +876,5 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

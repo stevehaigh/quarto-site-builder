@@ -1,20 +1,20 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/",
     "items": [
-      "/posts/llm-intro/index.html",
-      "/posts/the-story-so-far/index.html",
-      "/posts/academic-pptx-template/index.html",
-      "/posts/lab-meeting-2026-05-14/index.html"
+      "/blog/posts/llm-intro/",
+      "/blog/posts/academic-pptx-template/",
+      "/blog/posts/the-story-so-far/",
+      "/blog/posts/lab-meeting-2026-05-14/"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/blog/",
     "items": [
-      "/posts/llm-intro/index.html",
-      "/posts/the-story-so-far/index.html",
-      "/posts/academic-pptx-template/index.html",
-      "/posts/lab-meeting-2026-05-14/index.html"
+      "/blog/posts/llm-intro/",
+      "/blog/posts/academic-pptx-template/",
+      "/blog/posts/the-story-so-far/",
+      "/blog/posts/lab-meeting-2026-05-14/"
     ]
   }
 ]

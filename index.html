@@ -45,9 +45,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-990183aeeadb6ee11b2ccd3686d3bf2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-4568b7d28f8c57a57ba72b841ab41158.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-5575227e0c2a788818c88903d4fb7161.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-248b8cca454f3d90dc177367e57043ae.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -286,7 +286,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -299,6 +300,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -312,7 +321,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="./">
     <span class="navbar-title">Steve Haigh · Computational Biology</span>
     </a>
   </div>
@@ -323,23 +332,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="./" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="./blog/"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="./projects/"> 
 <span class="menu-text">Projects &amp; Decks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./personal.html"> 
-<span class="menu-text">Personal</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./about/"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -372,7 +377,7 @@ window.Quarto = {
 <!-- main -->
 <div class="quarto-about-trestles">
   <div class="about-entity">
-    <img src="img/profile.jpg" class="about-image
+    <img src="img/profile.jpg" alt="Photo of Steve Haigh" class="about-image
   round " style="height: 14em; width: 14em;">
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -428,10 +433,10 @@ window.Quarto = {
 <h2 data-anchor-id="latest-post">Latest post</h2>
 <div id="listing-latest-post" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1779921719032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
+<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1779966063765" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/llm-intro/index.html" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
+<a href="./blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
 </h3>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
@@ -439,12 +444,12 @@ window.Quarto = {
 <div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
 <div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
 </div>
-<div class="delink listing-description"><a href="./posts/llm-intro/index.html" class="no-external">
+<div class="delink listing-description"><a href="./blog/posts/llm-intro/" class="no-external">
 <p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
 </a></div>
 </div>
 <div class="metadata">
-<a href="./posts/llm-intro/index.html" class="no-external">
+<a href="./blog/posts/llm-intro/" class="no-external">
 <div class="listing-date">
 May 27, 2026
 </div>
@@ -454,8 +459,8 @@ May 27, 2026
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<p>See the <a href="./blog.html">Blog</a> for the full archive, or the <a href="./projects.html">Projects</a> page for repos and decks.</p>
-<a href="life.html" class="glider-hint" aria-label="A small surprise">
+<p>See the <a href="./blog/">Blog</a> for the full archive, or the <a href="./projects/">Projects</a> page for repos and decks.</p>
+<a href="./life/" class="glider-hint" aria-label="A small surprise">
   <svg width="22" height="22" viewbox="0 0 16 16">
     <g class="phase phase-0">
       <rect x="6" y="1" width="4" height="4"></rect>
@@ -515,7 +520,7 @@ May 27, 2026
 <script>
 (function () {
   const u = "steve", d = "haigh.bio";
-  document.querySelectorAll('a[href="#email"]').forEach(a => {
+  document.querySelectorAll('a[href$="#email"]').forEach(a => {
     a.href = "mailto:" + u + "@" + d;
   });
 })();
@@ -950,7 +955,7 @@ May 27, 2026
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml">
+    <a class="nav-link" href="./blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
