@@ -1,0 +1,6 @@
+---
+title: "Page not found"
+toc: false
+---
+
+This page doesn't exist — but you can find everything else using the links in the navigation bar above.
