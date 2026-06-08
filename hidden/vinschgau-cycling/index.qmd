@@ -1,0 +1,253 @@
+---
+title: "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano"
+subtitle: "Vinschgau / Val Venosta · Meraner Land · Bolzano · the South Tyrolean Wine Road (Alto Adige / Südtirol)"
+toc: true
+toc-depth: 3
+---
+
+A working guide to the vineyards, restaurants and beds along the Via Claudia Augusta / Etschtal cycle route, working downhill from the Reschen Pass and Mals through Merano to Bolzano, then south along the Wine Road. Three sections — **Wine, Eat, Sleep** — each covering the whole route end to end. Prices, hours and scores were current as of June 2026; always reconfirm directly, as small wineries change hours seasonally and often need an appointment, and many kitchens close 1–2 days a week.
+
+Every entry has a **\[📍 Map\]** link that opens it in Google Maps.
+
+------------------------------------------------------------------------
+
+## The route & getting around
+
+-   The **Vinschgau / Via Claudia Augusta cycle path** runs from **Mals (Malles Venosta)** down the Adige (Etsch) valley to **Merano**, roughly **80 km**, mostly gently downhill and traffic-free. **Merano → Bolzano** adds \~30 km on the Etschtal route, so Mals→Bolzano is \~**110–120 km** over several days, plus an optional Wine Road day.
+-   **Starting higher than Mals (at Reschen):** the classic way to ride the whole valley is to start at the top, by the **Reschensee** (the half-submerged church tower). The **BikeLiner only runs Merano↔Mals**, so to get above Mals take **public bus line 273 (Mals → Reschen)**, or the private **Südtirolbike** shuttle (Merano → Resia, \~€20–25 pp with ≥5 riders; book at suedtirolbike.info). From Reschen it's a **\~20 km, \~500 m descent** down to Mals.
+-   **BikeLiner bike shuttle:** daily **18 Apr – 4 Oct 2026**, Merano→Mals (board only in Merano; drop-offs at Naturns, Latsch, Schlanders, Spondinig, Mals). **Online booking mandatory by 6 pm the day before** (bikebooking.suedtirolmobil.info); needs a travel ticket + €7 bike day-ticket. Regular & e-bikes only (no tandems/cargo/trailers).
+-   **Vinschgau railway (Merano–Mals)** is resuming gradually in 2026 after electrification works, with limited bike capacity — useful for skipping a leg, but don't rely on it for bikes without checking close to your dates.
+-   **Rough plan on Komoot** [from Mals - Malles Venosta to Salorno sulla Strada del Vino - Salurn an der Weinstraße](https://www.komoot.com/tour/3009149855?share_token=a2LsFC1sPZL6o4DfgxOIBGe6ltEemlvpL1sgnnJZ4Ian44LdSJ&ref=wtd&t_s=referral&t_cid=route_share&t_ref_username=362149305218 "from Mals - Malles Venosta to Salorno sulla Strada del Vino - Salurn an der Weinstraße")
+
+### Route map
+
+![Route map](../../img/hidden/map.png)
+
+------------------------------------------------------------------------
+
+# 1 — WINE (every vineyard on the route)
+
+Four wine bands, top to bottom: the high, dry **Val Venosta**; the milder **Meraner hills**; the **Bolzano basin** of Lagrein & Santa Maddalena; and the **South Tyrolean Wine Road** south of Bolzano — the densest and prettiest stretch, easily a day on its own.
+
+## A. Lower Val Venosta / Vinschgau (Castelbello – Naturns)
+
+South Tyrol's smallest, highest-altitude zone (≈500–900 m), extremely dry, dominated by small independent growers. Whites shine — Riesling, Pinot Bianco, Müller Thurgau — alongside elegant Pinot Noir and indigenous Vernatsch (Schiava).
+
+### Weingut Falkenstein (Pratzner family) — Naturns ⭐ flagship — [📍 Map](https://www.google.com/maps/search/?api=1&query=Weingut+Falkenstein+Naturns)
+
+-   **Website:** <https://www.falkenstein.bz> · **Tel:** +39 0473 666 054
+-   **Address:** Schlossweg / Via Castello 19, 39025 Naturns
+-   **Hours:** Wine shop Mon–Fri 08:00–12:00; afternoons & Sat morning **by appointment**; closed Sat PM, Sun & holidays.
+-   **Tours:** Guided tour + tasting with the Naturns tourist office roughly **every 2nd Thursday, late Mar–early Oct, 15:30 (\~1.5 hrs)**. Book ≥2 days ahead (+39 0473 666077).
+-   **Grapes:** Riesling, Pinot Bianco, Sauvignon, Gewürztraminer, Pinot Noir. 14 ha at 600–900 m; \~90,000 bottles/yr.
+-   **Wines & prices:** Flagship **Riesling Südtirol Vinschgau DOC** \~€18–22 (EU) / \~\$30–33 (US); top **"Anadûron" Riesling** higher; rising-star Pinot Bianco; a spicy Pinot Noir (insider tip).
+-   **Reviews:** Among Italy's best Rieslings. *Falstaff* 94 pts (2020), 93 (2021); Anadûron 93–94. Franz Pratzner won the *Premio Angelo Betti* (2019).
+
+### Weingut Unterortl – Castel Juval (owner Reinhold Messner) — Castelbello — [📍 Map](https://www.google.com/maps/search/?api=1&query=Unterortl+Castel+Juval+Castelbello)
+
+-   **Website:** <https://www.unterortl.it> · **Tel:** +39 351 551 2238
+-   **Address:** Juval 1B, 39020 Castelbello (Juval hill, mouth of the Schnalstal)
+-   **Visiting:** Small estate — visits & tastings **by arrangement**; pairs perfectly with **Juval Castle (Messner Mountain Museum)** on the same hill.
+-   **Grapes:** Riesling, Pinot Bianco, Müller Thurgau, Pinot Noir. \~4 ha at 600–850 m; \~30,000 bottles/yr. Also a distillery.
+-   **Wines:** Known for **Riesling** & **Pinot Noir**, plus a rosé and white blend **"GLIMMER"**. Riesling tiers: *Gletscherschliff*, *Unterortl*, *Windbichel*.
+
+### Other small Val Venosta growers (visit by appointment)
+
+Tiny farm wineries on the "Via Vinum Venostis" trail between Castelbello and Schlanders — call ahead:
+
+-   **Köfelgut** (Castelbello) — whites & Vernatsch. [📍 Map](https://www.google.com/maps/search/?api=1&query=Weingut+K%C3%B6felgut+Castelbello)
+-   **Marinushof** (Tschars/Castelbello) — Riesling, Pinot Noir. [📍 Map](https://www.google.com/maps/search/?api=1&query=Marinushof+Tschars+Castelbello)
+-   **Befehlhof** (Vetzan/Schlanders) — Via Torgglweg 2. [📍 Map](https://www.google.com/maps/search/?api=1&query=Befehlhof+Vetzan+Schlanders)
+-   Area overview: <https://www.vinschgau.net/en/castelbello-ciardes/food-wine/via-vinum-venostis.html>
+
+## B. Meraner Land (Marling / Merano hills)
+
+Milder, almost Mediterranean. Indigenous **Vernatsch** and **Lagrein** reds carry DOC status, alongside a wide spread of whites.
+
+### Cantina Merano / Kellerei Meran — Marling (Marlengo) ⭐ major cooperative — [📍 Map](https://www.google.com/maps/search/?api=1&query=Kellerei+Meran+Cantina+Merano+Marling)
+
+-   **Website:** <https://www.kellereimeran.it> · **Tel:** +39 0473 447137
+-   **Address:** Kellereistraße / Via Cantina 9, 39020 Marling. Also **City.Vinothek**, Portici/Lauben 218, central Merano.
+-   **Hours:** Marling enoteca/shop Mon–Fri 08:00–19:00, Sat 08:00–18:00, Sun closed. Bus 211 stops at the door.
+-   **Grapes:** 20+ varieties incl. **Vernatsch, Lagrein, Gewürztraminer**, plus Pinot Bianco, Chardonnay, Sauvignon, Pinot Grigio, Müller Thurgau, Kerner, Riesling, Moscato, Pinot Nero, Merlot, Cabernet. 360 members, \~250 ha.
+-   **Wines:** \~35 wines in a glass-pavilion enoteca. Tiers: **"Festival"** (everyday, great value), **"Graf"** (elegant), **"Vinschgau"** (mineral mountain), **"Weinberg & Raritäten"** (single-vineyard). Masterpiece: *Pinot Bianco Riserva "V Years"* (5 yrs on lees).
+-   **Reviews:** *Falstaff* calls it the most important winery in north-west South Tyrol; praised for value and architecture.
+
+### Other Merano-area estates worth a detour
+
+-   **Castel Rametz** (Obermais, Merano) — pergola vines, **wine museum, tours & restaurant**. [📍 Map](https://www.google.com/maps/search/?api=1&query=Schloss+Rametz+Merano)
+-   **Kränzelhof** (Tscherms/Cermes) — wines plus a famous **maze garden** & art park. [📍 Map](https://www.google.com/maps/search/?api=1&query=Kr%C3%A4nzelhof+Tscherms)
+-   **Popphof** (near Merano) — family estate, 500+ years of wine. [📍 Map](https://www.google.com/maps/search/?api=1&query=Popphof+Andrian+Merano)
+
+## C. Bolzano basin (Gries & Santa Maddalena)
+
+The warm valley floor and slopes — home to **Lagrein** (deep, spicy reds) and **Santa Maddalena** (a perfumed Schiava-based red).
+
+### Cantina Bolzano / Kellerei Bozen — Bolzano (Moritzing/Gries) ⭐ flagship cooperative — [📍 Map](https://www.google.com/maps/search/?api=1&query=Kellerei+Bozen+Cantina+Bolzano+Via+San+Maurizio)
+
+-   **Website:** <https://www.kellereibozen.com> · **Tel:** +39 0471 270909
+-   **Address:** Via San Maurizio 36, 39100 Bolzano
+-   **Hours:** **Vinarius wine shop Mon–Sat 09:30–18:30** (Sun closed). Guided tours & tastings (incl. blind) bookable ahead.
+-   **Grapes:** Indigenous **Lagrein, Santa Maddalena, Gewürztraminer**, plus Sauvignon, Pinot Grigio/Bianco, Chardonnay, Müller Thurgau, Kerner, Sylvaner, Riesling, Moscato Giallo; reds Pinot Noir, Cabernet Franc, Merlot, Moscato Rosa. 224 families, \~350 ha; 37 wines.
+-   **Wines & prices:** Flagship **"Taber" Lagrein Riserva** (\~100-yr-old vines; among Italy's most influential wines, repeat *Tre Bicchieri*) **\~€35–45**; **Santa Maddalena Classico** \~€10–14; **Lagrein (classic)** \~€16.
+-   **Reviews:** Praised for knowledgeable guides, the "bronze cube" architecture and tastings; a little hard to reach without a car. Many wines 90+ at *Falstaff*.
+
+## D. South Tyrolean Wine Road (south of Bolzano)
+
+*Eppan → Kaltern → Tramin → Margreid.* Gently rolling vineyards, the warm **Lake Kaltern**, and a remarkable density of top cooperatives *and* famous independent estates — very cyclable as a day from Bolzano.
+
+### Cantina Tramin / Kellerei Tramin — Tramin (Termeno) ⭐ Gewürztraminer's home — [📍 Map](https://www.google.com/maps/search/?api=1&query=Cantina+Tramin+Termeno)
+
+-   **Website:** <https://www.cantinatramin.it> · **Tel:** +39 0471 096633
+-   **Address:** Strada del Vino / Weinstraße 144, 39040 Tramin
+-   **Hours:** Apr–Oct Mon–Fri 09:00–19:00, Sat to 17:00; Nov–Mar to 18:00 / Sat 17:00; closed Sun. **Walk-in tastings**; cellar tours \~Apr–Oct — book ahead.
+-   **Grapes:** Benchmark **Gewürztraminer**, plus Chardonnay, Pinot Grigio/Bianco, Sauvignon, Müller Thurgau; reds Pinot Noir, Lagrein, Schiava, Merlot, Cabernet Franc.
+-   **Star wines:** **Nussbaumer** (Italy's most-awarded Gewürztraminer); **Epokale** (first Italian white to score **100 Parker points**); **Stoan**; **Terminum** (sweet).
+-   **Reviews:** Dramatic glass-and-metal building, terrace and Lake Kaltern views; knowledgeable guides. Tip: **clarify tasting fees up front**.
+
+### Cantina Kaltern / Kellerei Kaltern — Kaltern (Caldaro), by the lake ⭐ Schiava / Kalterersee — [📍 Map](https://www.google.com/maps/search/?api=1&query=Kellerei+Kaltern+Cantina+Caldaro)
+
+-   **Website:** <https://www.kellereikaltern.com> · **Tel:** +39 0471 966067
+-   **Outlets:** **Winecenter**, Via Stazione 7 (wine lounge/terrace); **Vinothek**, Via delle Cantine 12, Mon–Fri 09:00–19:00, Sat to 18:00, Sun closed.
+-   **Tours:** Apr–Oct **Wed 17:00 & Fri 10:00** (book ahead), ending with 5 wines. Walk-in counter tastings during shop hours.
+-   **Grapes:** Spiritual home of **Schiava** — its **Kalterersee Classico Superiore DOC** names the region's oldest DOC. Also the **Erste+Neue** and **Baron Di Pauli** wines. \~590 families.
+-   **Reviews:** Multiple *Tre Bicchieri*; lovely lakeside setting beside the warmest lake in the Alps.
+
+### Kellerei St. Michael-Eppan — Eppan (Appiano) ⭐ cult whites — [📍 Map](https://www.google.com/maps/search/?api=1&query=Kellerei+St+Michael+Eppan+Appiano)
+
+-   **Website:** <https://www.stmichael.it> · **Tel:** +39 0471 664466
+-   **Address:** Via Circonvallazione 17–19, 39057 Appiano
+-   **Hours:** May–Oct Mon–Fri 09:00–18:30, Sat to 17:00; Nov–Apr Mon–Fri 09:00–13:00 & 14:30–18:30, Sat to 13:00; closed Sun.
+-   **Ranges:** **Classic**, **Selection**, premium **Sanct Valentin** (cult **Sauvignon**, \~€23+) and ultra-premium **Appius**.
+-   **Reviews:** One of Italy's most decorated co-ops — *Gambero Rosso* Cooperative of the Year (2021 & 2001).
+
+### Famous independent estates on the Wine Road (mostly by appointment)
+
+-   **Tenuta Alois Lageder** (Margreid) — iconic **biodynamic** estate (est. 1823), \~35 wines. **"Paradeis"** wine shop + restaurant; book the **"Tòr Löwengang"** tour. <https://www.aloislageder.eu> · [📍 Map](https://www.google.com/maps/search/?api=1&query=Alois+Lageder+Margreid)
+-   **Elena Walch** (Tramin) — Pinot Bianco/Grigio, Gewürztraminer, single-vineyards. Two shops: central Tramin & **Castel Ringberg** above the lake (\~May–Nov). <https://www.elenawalch.com> · [📍 Map](https://www.google.com/maps/search/?api=1&query=Elena+Walch+Tramin)
+-   **J. Hofstätter** (Tramin) — renowned for Pinot Noir (Barthenau) & Gewürztraminer; central tasting room. [📍 Map](https://www.google.com/maps/search/?api=1&query=Hofst%C3%A4tter+Tramin)
+-   **Tiefenbrunner – Castel Turmhof** (Kurtatsch) — castle estate; "Feldmarschall von Fenner". [📍 Map](https://www.google.com/maps/search/?api=1&query=Tiefenbrunner+Castel+Turmhof+Kurtatsch)
+-   **Manincor** (Kaltern) — esteemed biodynamic estate by the lake. [📍 Map](https://www.google.com/maps/search/?api=1&query=Manincor+Kaltern+Caldaro)
+-   Directory: <https://www.suedtiroler-weinstrasse.it/>
+
+::: callout-note
+**Geography note:** Cantina Terlano (Terlan), legendary for long-lived Pinot Bianco, sits north-west of Bolzano — on your Merano→Bolzano leg rather than the Wine Road south.
+:::
+
+------------------------------------------------------------------------
+
+# 2 — EAT (lunch & dinner, end to end)
+
+Ratings are Google scores (with counts) at research time. Several places close 1–2 days a week; many kitchens close by \~21:00, and the Wine Road has lots of dinner-only cellars from \~17:00 — reconfirm.
+
+## Upper Vinschgau — Mals, Glurns & nearby
+
+-   **Flurin – Bar, Restaurant & Suites** (Glurns) — ★4.7 (926). Stylish fusion + traditional in Italy's smallest walled town; reasonable, also has rooms. *Check days.* +39 0473 428136 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Flurin+Glurns+Glorenza)
+-   **Kulturcafé SALINA** (Glurns) — ★4.8 (223). Local/organic, a favourite of Via Claudia cyclists. Closed Wed. +39 0473 538900 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Kulturcaf%C3%A9+Salina+Glurns)
+-   **Wirtshaus Steinbock** (Glurns) — ★4.6 (140). Renovated historic inn; venison praised. Closed Wed–Thu. +39 0473 538590 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Wirtshaus+Steinbock+Glurns)
+-   **Pizzeria Restaurant Erika** (Glurns) — ★4.6 (1008). Reliable budget pizza with a terrace. +39 0473 835262 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pizzeria+Erika+Glurns)
+-   **Calva Restaurant** (Laudes, near Mals) — ★4.7 (1104). Pizza + Tyrolean classics, family-friendly, also a B&B. Closed Tue. +39 0473 831109 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Calva+Restaurant+Laudes)
+
+## Schlanders / Silandro
+
+-   **Speckeggele** — ★4.7 (149). Small, excellent food and wine; **dinner only, Wed–Sat**. +39 335 531 2112 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Speckeggele+Silandro+Schlanders)
+-   **Gasthof Zum Schwarzen Adler** — ★4.5 (415). Honest local cooking, weekly menu. Closed Sat. +39 0473 730222 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Gasthof+Schwarzer+Adler+Silandro)
+-   **Hotel Restaurant Maria Theresia** — ★4.3 (1071). Southern-Italian pizzaiolo; some of the best pizza around (from \~14:00). +39 0473 730209 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Maria+Theresia+Silandro)
+
+## Naturns / Naturno — wine country
+
+-   **Restaurant Wiedenplatzerkeller** — ★4.8 (1332). Vaulted cellar + buzzing beer garden with mountain views, famous ribs, great-value wine list. Closed Tue. +39 0473 673280 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Wiedenplatzerkeller+Naturns)
+-   **Landgasthaus Langwies** — ★4.7 (372). Terrace with a view, hearty home cooking, excellent value. Closed Sat. +39 0473 667526 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Landgasthaus+Langwies+Naturns)
+-   **Weinberghof** — ★4.6 (380). Outstanding schnitzel, house-made dishes; terrace over the orchards. Closed Mon; kitchen to \~20:30. +39 377 342 8776 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Weinberghof+Naturns)
+-   **Gasthof Falkenstein** — ★4.6 (326). Traditional farm cooking by the Falkenstein winery, valley views (also rooms). +39 0473 667321 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Gasthof+Falkenstein+Naturns)
+
+## Between Naturns & Merano
+
+-   **Restaurant Hanswirt** (Rabland, Partschins) — A regular in *Gault Millau, Michelin* and *Gambero Rosso*; refined modern Tyrolean. Right on the route. [📍 Map](https://www.google.com/maps/search/?api=1&query=Hanswirt+Rabland+Partschins)
+
+## Merano / Meran
+
+-   **Bar Trattoria Mainardo** — ★4.6 (2073). Warm family-run, Italian + South Tyrolean; reasonable, friendly. Closed Sun. +39 345 157 5412 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Trattoria+Mainardo+Merano)
+-   **Forsterbräu Meran** — ★4.3 (10.5k). Big lively Forst brewpub opposite the Kurhaus; generous, open late. +39 0473 236535 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Forsterbr%C3%A4u+Meran)
+-   **Restaurant Festival** — ★4.7 (193). Homemade pasta, refined Alpine-Mediterranean, good value; **limited days (\~Mon–Wed)**. +39 0473 606456 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Restaurant+Festival+Merano)
+-   **Trattoria Napoletana** — ★4.6 (93). Authentic, small; reservations advised. +39 0473 603041 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Trattoria+Napoletana+Merano)
+-   **Restaurant Schloss Rametz** — ★4.7 (503). Dine at the wine estate/castle — steak, *Fiorentina*, estate Lagrein; smarter (€€€) but good value. Closed Sun–Mon. +39 0473 235856 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Schloss+Rametz+Merano)
+
+**Notable / acclaimed — special dinners around Merano:**
+
+-   **Sissi** (chef Andrea Fenoglio) — **1 Michelin star**; refined multi-course, central. [📍 Map](https://www.google.com/maps/search/?api=1&query=Restaurant+Sissi+Merano)
+-   **Prezioso – Castel Fragsburg** (chef Egon Heiss) — **1 Michelin star**; \~5 km up from Merano, single tasting menu, spectacular terrace. [📍 Map](https://www.google.com/maps/search/?api=1&query=Castel+Fragsburg+Merano)
+-   **In Viaggio** (chef Claudio Melis) — **1 Michelin star**, central Merano. [📍 Map](https://www.google.com/maps/search/?api=1&query=In+Viaggio+restaurant+Merano)
+-   **Castel** (chef Gerhard Wieser, Tirolo) — **2 Michelin stars**; evenings Tue–Sat from 19:00. [📍 Map](https://www.google.com/maps/search/?api=1&query=Hotel+Castel+Tirolo+Dorf+Tirol)
+
+## Bolzano / Bozen
+
+-   **Franziskanerstuben** — ★4.4 (2992). Cozy, central, South Tyrolean + Italian with seasonal specials; reserve. Closed Tue. +39 0471 976183 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Franziskanerstuben+Bolzano)
+-   **Restaurant Anita** (Piazza delle Erbe) — ★4.4 (571). By the market; schnitzel, venison goulash, local wines. +39 0471 973760 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Restaurant+Anita+Piazza+delle+Erbe+Bolzano)
+-   **Batzen Häusl** — ★4.3 (8769). Historic brewpub with its own beer; hearty Tyrolean classics, great-value \~€12 menu, lively. +39 0471 050950 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Batzen+H%C3%A4usl+Bolzano)
+-   **Karrner** — ★4.6 (1237). Casual wine bar with tiny gourmet sandwiches (\~€1.50), good wines; cheap & characterful. Closed Sun. +39 0471 970558 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Karrner+Bolzano)
+
+## On the Wine Road — Kaltern, Tramin & Margreid
+
+Several of the best are **dinner-only "keller" cellars** from \~17:00, closed one day a week — reconfirm.
+
+-   **Spuntloch Dine&Wine** (Kaltern) — ★4.7 (602). Almost any wine by the glass, truffle risotto, great value. Dinner Mon–Fri from 17:00, Sat lunch; closed Sun. +39 0471 163 2988 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Spuntloch+Kaltern+Caldaro)
+-   **Seehofkeller** (Kaltern, lakeside) — ★4.7 (576). On Lake Kaltern with its own vineyard; refined Italian, terrace (€€€). Closed Mon & Sat. +39 0471 960020 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Seehofkeller+Kaltern+Caldaro)
+-   **Torgglkeller** (Kaltern) — ★4.6 (636). Atmospheric cellar; charcuterie, local food and wine. Daily from 17:00, closed Sun. +39 0471 963421 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Torgglkeller+Kaltern+Caldaro)
+-   **Biergarten** (Kaltern, Pianizza) — ★4.4 (4334). Big garden restaurant; pizza + Tyrolean, generous portions, kids' play area. Open daily. +39 0471 965063 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Biergarten+Kaltern+Caldaro)
+-   **G'würzerkeller Gartenrestaurant** (Tramin) — ★4.5 (680). Garden restaurant up the hill; schnitzel, chestnut tiramisu; Tue–Sat, closed Mon & Sun. +39 339 478 1200 · [📍 Map](https://www.google.com/maps/search/?api=1&query=G%C3%BCrzerkeller+Tramin+Termeno)
+-   **Weis-Keller** (Tramin) — ★4.6 (493). Cosy keller, mostly outdoor, local specialities, good value. Evenings; closed Fri–Sat. +39 0471 860851 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Weis-Keller+Tramin+Termeno)
+-   **Paradeis** (Tenuta Alois Lageder, Margreid) — local/organic farm cooking paired with the estate's wines. [📍 Map](https://www.google.com/maps/search/?api=1&query=Paradeis+Alois+Lageder+Margreid)
+
+------------------------------------------------------------------------
+
+# 3 — SLEEP (simple but well-rated preferred)
+
+Leaning comfortable-but-unfussy rather than luxury. A couple of splurge options are flagged in case you want one comfort night.
+
+## Mals / Malles — the start
+
+-   **FinKa Kultur Hostel** — ★4.7 (213). Excellent cyclist base; clean light-wood rooms with private bathrooms, breakfast, fire pit, free parking. +39 0473 427040 · [📍 Map](https://www.google.com/maps/search/?api=1&query=FinKa+Kultur+Hostel+Mals+Malles)
+-   **Garní Sonne** — ★4.3 (187). Simple, friendly, English-speaking host, good value; popular with Stelvio cyclists. +39 340 682 0565 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Garni+Sonne+Mals+Malles)
+-   **Calva B&B** (Laudes, near Mals) — ★4.7 (1104). Rooms above the well-loved Calva restaurant. +39 0473 831109 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Calva+Laudes)
+
+## Naturns / Naturno — handy & cheaper than Merano
+
+-   **Pension Astoria** — ★4.8 (74). Central, clean, modern bathrooms, included hot tub, good value. +39 338 240 4682 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pension+Astoria+Naturns)
+-   **Pension Linserhof** — ★4.5 (75). Quiet with pool, garden, terrace and valley view. +39 0473 667238 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pension+Linserhof+Naturns)
+-   **Pension Nadine** — ★4.5 (113). Simple rooms near the Adige; in-house bistro/bar. +39 0473 660126 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pension+Nadine+Naturns)
+
+## Merano / Meran
+
+-   **Guesthouse diWine B&B** — ★4.9 (103). ⭐ Top pick. Short walk from station & old town; warm host, local-product breakfast, wine on the balcony. +39 329 609 8825 · [📍 Map](https://www.google.com/maps/search/?api=1&query=diWine+B%26B+Merano)
+-   **Maison Valentina B&B** — ★4.9 (157). Tucked behind a courtyard off the Portici arcades — central yet quiet, fresh rooms, homemade breakfast. +39 392 633 7057 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Maison+Valentina+Merano)
+-   **Hotel Pension Verdorfer** — ★4.9 (291). Family-run with garden and pool; best breakfast. Slightly up the hill (Obermais). Great value. +39 0473 232492 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pension+Verdorfer+Merano)
+-   **Garni Villa Betty** — ★4.1 (156). Budget choice on Via Petrarca, \~5 min to centre; spartan but cozy, praised breakfast (some noise). +39 0473 449968 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Garni+Villa+Betty+Merano)
+
+## Bolzano / Bozen
+
+-   **ADV HOME – Exclusive Rooms** — ★5.0 (209). Modern, spotless rooms \~10 min from the station; free snacks/drinks/coffee, very central. No breakfast but a coffee bar. +39 380 436 6326 · [📍 Map](https://www.google.com/maps/search/?api=1&query=ADV+Home+Exclusive+Rooms+Bolzano)
+-   **Boutique Hotel Goldenstern Townhouse** — ★4.7 (287). Characterful restored building in the old town; walkable, good breakfast. +39 0471 060043 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Goldenstern+Townhouse+Bolzano)
+-   **Hotel Figl** — ★4.5 (538). On Piazza del Grano in the heart of the old town; basic but clean, comfy beds, great value/location. +39 0471 978412 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Hotel+Figl+Bolzano)
+-   **B&B Hotel Bolzano** — ★4.6 (3313). Reliable modern chain near the station; clean and good value, a bit outside the old town. +39 02 8969 1501 · [📍 Map](https://www.google.com/maps/search/?api=1&query=B%26B+Hotel+Bolzano)
+-   **LOOM Hotel** — ★4.6 (108). Modern industrial-chic with parking; simple high-quality breakfast. Slightly out in a commercial zone. +39 0471 283075 · [📍 Map](https://www.google.com/maps/search/?api=1&query=LOOM+Hotel+Bolzano)
+-   *Caution:* **Stay COOPER – Capitol Rooms** (★4.0) — very central but reviews flag thin walls and no lift. [📍 Map](https://www.google.com/maps/search/?api=1&query=Stay+Cooper+Capitol+Bolzano)
+
+## On the Wine Road — Tramin & Kaltern
+
+-   **Gartenheim** (Tramin) — ★4.9 (152). ⭐ Top pick. Family-run B&B in the heart of Tramin yet peaceful; small pool, breakfast under a grapevine pergola. +39 0471 861101 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Gartenheim+Tramin+Termeno)
+-   **Garni Hotel Ritterhof** (Tramin) — ★4.6 (162). Breakfast pension with a terrace, **bike garage** and good breakfast (some road noise). +39 0471 860122 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Garni+Ritterhof+Tramin+Termeno)
+-   **Pernhof** (Tramin) — ★4.6 (444). Friendly hotel + restaurant in the village. +39 0471 860788 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Pernhof+Tramin+Termeno)
+-   **Hotel Goldener Stern** (Kaltern) — ★4.6 (210). Good-value hotel in the old town; wellness, pool, Dolomite views. +39 0471 963153 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Hotel+Goldener+Stern+Kaltern+Caldaro)
+-   **Kalterer See Hof** (Kaltern, lakeside) — ★4.3 (359). Simple guesthouse/hotel by the lake with a good kitchen and beer garden. +39 0471 960157 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Kalterer+See+Hof+Kaltern)
+-   *Splurge:* **Seeleiten – Lake Spa Hotel** (Kaltern) — ★4.8 (943). Lovely lakeside spa hotel with natural pool and bikes. +39 0471 960200 · [📍 Map](https://www.google.com/maps/search/?api=1&query=Seeleiten+Lake+Spa+Hotel+Kaltern)
+
+------------------------------------------------------------------------
+
+## Quick planning notes
+
+-   **Booking tastings:** Falkenstein and Unterortl are small and best by appointment / scheduled tour; the big cooperatives (Merano, Bolzano, Tramin, Kaltern, St. Michael) have walk-in shops with set hours and bookable tours — easiest to slot in.
+-   **Cycling + wine:** plan tastings for late afternoon / end of a riding day, and lean on the BikeLiner bus or Vinschgau train if a tasting day runs long.
+-   **Closing days matter:** many restaurants and small wineries close Sun/Mon (sometimes mid-week), and the Wine Road has lots of dinner-only cellars from \~17:00. Reconfirm the day before — especially the gourmet/Michelin spots and small Val Venosta growers.
+
+*Compiled June 2026. Hours, prices and scores change — verify directly before relying on any detail.*
