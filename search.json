@@ -273,46 +273,25 @@
     "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Steve Haigh",
+    "objectID": "personal/",
+    "href": "personal/",
+    "title": "Personal",
     "section": "",
-    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and biology.\n\n   GitHub\n   LinkedIn\n   Email\n\n\n\n\n\n\n\n\n\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows.\n\n\n\n\n\nUpdated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models.\n\n\n\n\n\n\n\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+    "text": "This page is just a placeholder with some dummy text, it’s more about experimenting with Quarto layout than anything else!"
   },
   {
-    "objectID": "index.html#current-projects",
-    "href": "index.html#current-projects",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Extending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows."
+    "objectID": "personal/#ceramics",
+    "href": "personal/#ceramics",
+    "title": "Personal",
+    "section": "Ceramics",
+    "text": "Ceramics\n\n\n\n\n\n\nStoneware vessel · 2025\n\n\n\n\n\n\n\nPorcelain bowl · 2024\n\n\n\n\n\n\n\nTea bowl, wood-fired · 2025\n\n\n\n\n\n\n\n\n\nFaceted jar · 2024\n\n\n\n\n\n\n\nSlip-decorated plate · 2025\n\n\n\n\n\n\n\nBottle form · 2025"
   },
   {
-    "objectID": "index.html#currently-looking-at",
-    "href": "index.html#currently-looking-at",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Updated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models."
-  },
-  {
-    "objectID": "index.html#latest-post",
-    "href": "index.html#latest-post",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
-  },
-  {
-    "objectID": "life/",
-    "href": "life/",
-    "title": "Conway’s Game of Life",
-    "section": "",
-    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.\nClick or drag to paint. The grid wraps at the edges."
-  },
-  {
-    "objectID": "life/#further-down-the-rabbit-hole",
-    "href": "life/#further-down-the-rabbit-hole",
-    "title": "Conway’s Game of Life",
-    "section": "Further down the rabbit hole",
-    "text": "Further down the rabbit hole\n\nConway’s Game of Life — Wikipedia: rules, history, and why a 4-rule cellular automaton is Turing-complete.\nLifeWiki — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.\nconwaylife.com forums — the research community is still active. New patterns get discovered every week.\nGolly — the high-performance simulator. Uses Hashlife to run universes that would crush the naive algorithm above by many orders of magnitude.\nPaul Rendell’s Universal Turing Machine — a working UTM built inside Life. Glider streams as signals, glider guns as clocks, eaters as gates, all wired into a tape-and-state machine. Load it in Golly and watch it compute. The constructive proof that Life is Turing-complete.\n0E0P metacell — Adam Goucher’s self-replicating pattern (2018). A von Neumann universal constructor that copies itself from empty space, no background grid required. Decades after Life’s invention before someone actually built one.\n“Life in Life” — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.\nHashlife in Python — John Williamson’s pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: python-lifelib, by the same author as the 0E0P metacell above.)\nxkcd 2293 — Randall Munroe’s tribute to John Conway, who died of COVID in April 2020.\n\n← back to haigh.bio\nBuilt by a glider, for a glider."
+    "objectID": "personal/#photography",
+    "href": "personal/#photography",
+    "title": "Personal",
+    "section": "Photography",
+    "text": "Photography\n\n\n\n\n\n\nMadonna di Campiglio, Dolomites · 2026\n\n\n\n\n\n\n\nReading riverside, late autumn · 2024\n\n\n\n\n\n\n\n\n\nEast Tyrol approach, dusk · 2025\n\n\n\n\n\n\n\nStudio, working light · 2025\n\n\n\n\n\n\n\n\n\n\n\nNoteNotes on the work\n\n\n\n\n\nBoth also reward patience in a way the rest of my work doesn’t."
   },
   {
     "objectID": "about/",
@@ -350,25 +329,46 @@
     "text": "Contact\nThe fastest route is email: ."
   },
   {
-    "objectID": "personal/",
-    "href": "personal/",
-    "title": "Personal",
+    "objectID": "life/",
+    "href": "life/",
+    "title": "Conway’s Game of Life",
     "section": "",
-    "text": "This page is just a placeholder with some dummy text, it’s more about experimenting with Quarto layout than anything else!"
+    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.\nClick or drag to paint. The grid wraps at the edges."
   },
   {
-    "objectID": "personal/#ceramics",
-    "href": "personal/#ceramics",
-    "title": "Personal",
-    "section": "Ceramics",
-    "text": "Ceramics\n\n\n\n\n\n\nStoneware vessel · 2025\n\n\n\n\n\n\n\nPorcelain bowl · 2024\n\n\n\n\n\n\n\nTea bowl, wood-fired · 2025\n\n\n\n\n\n\n\n\n\nFaceted jar · 2024\n\n\n\n\n\n\n\nSlip-decorated plate · 2025\n\n\n\n\n\n\n\nBottle form · 2025"
+    "objectID": "life/#further-down-the-rabbit-hole",
+    "href": "life/#further-down-the-rabbit-hole",
+    "title": "Conway’s Game of Life",
+    "section": "Further down the rabbit hole",
+    "text": "Further down the rabbit hole\n\nConway’s Game of Life — Wikipedia: rules, history, and why a 4-rule cellular automaton is Turing-complete.\nLifeWiki — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.\nconwaylife.com forums — the research community is still active. New patterns get discovered every week.\nGolly — the high-performance simulator. Uses Hashlife to run universes that would crush the naive algorithm above by many orders of magnitude.\nPaul Rendell’s Universal Turing Machine — a working UTM built inside Life. Glider streams as signals, glider guns as clocks, eaters as gates, all wired into a tape-and-state machine. Load it in Golly and watch it compute. The constructive proof that Life is Turing-complete.\n0E0P metacell — Adam Goucher’s self-replicating pattern (2018). A von Neumann universal constructor that copies itself from empty space, no background grid required. Decades after Life’s invention before someone actually built one.\n“Life in Life” — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.\nHashlife in Python — John Williamson’s pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: python-lifelib, by the same author as the 0E0P metacell above.)\nxkcd 2293 — Randall Munroe’s tribute to John Conway, who died of COVID in April 2020.\n\n← back to haigh.bio\nBuilt by a glider, for a glider."
   },
   {
-    "objectID": "personal/#photography",
-    "href": "personal/#photography",
-    "title": "Personal",
-    "section": "Photography",
-    "text": "Photography\n\n\n\n\n\n\nMadonna di Campiglio, Dolomites · 2026\n\n\n\n\n\n\n\nReading riverside, late autumn · 2024\n\n\n\n\n\n\n\n\n\nEast Tyrol approach, dusk · 2025\n\n\n\n\n\n\n\nStudio, working light · 2025\n\n\n\n\n\n\n\n\n\n\n\nNoteNotes on the work\n\n\n\n\n\nBoth also reward patience in a way the rest of my work doesn’t."
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and biology.\n\n   GitHub\n   LinkedIn\n   Email\n\n\n\n\n\n\n\n\n\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows.\n\n\n\n\n\nUpdated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models.\n\n\n\n\n\n\n\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
+  },
+  {
+    "objectID": "index.html#current-projects",
+    "href": "index.html#current-projects",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Extending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows."
+  },
+  {
+    "objectID": "index.html#currently-looking-at",
+    "href": "index.html#currently-looking-at",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "Updated May 2026. Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models."
+  },
+  {
+    "objectID": "index.html#latest-post",
+    "href": "index.html#latest-post",
+    "title": "Steve Haigh",
+    "section": "",
+    "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
   },
   {
     "objectID": "decks/llm-intro/#why-this-matters",
