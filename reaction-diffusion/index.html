@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Reaction-diffusion – Steve Haigh · Computational Biology</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b1871781106ed89e424c4fb5443c153b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-990183aeeadb6ee11b2ccd3686d3bf2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b1871781106ed89e424c4fb5443c153b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../">
+    <span class="navbar-title">Steve Haigh · Computational Biology</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blog/"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/"> 
+<span class="menu-text">Projects &amp; Decks</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about/"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/stevehaigh"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Reaction-diffusion</h1>
+<p class="subtitle lead">Two chemicals, a GPU, and Turing’s 1952 hunch</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Two chemicals diffuse across a surface and react where they meet. That’s the whole setup. Get the rates right and it stops being boring: the even mix goes unstable and sorts itself into spots, stripes, mazes, and blobs that split like dividing cells. Alan Turing wrote the maths down in <a href="https://en.wikipedia.org/wiki/The_chemical_basis_of_morphogenesis">1952</a>, as an answer to how a featureless ball of cells decides where to put a leopard’s spots. It’s the smooth cousin of the <a href="../life/">Game of Life</a> on the other page here: same idea, local rules run in parallel until structure emerges, but continuous instead of square.</p>
+<p>The version below is Gray-Scott. Two species, a feed rate that tops up the first, a kill rate that drains the second, and a reaction that turns one into the other. Move those two numbers and the same equations hand you coral, fingerprints, or self-replicating dots. Pick a preset and watch, or click on the canvas to drop in some chemical and start a pattern yourself.</p>
+<p>It all runs on the GPU. The state, two concentrations per cell, lives in a floating-point texture. A single fragment shader reads each cell and its four neighbours, applies a 5-point Laplacian for the diffusion term, does the Gray-Scott reaction, and writes the next state. A shader can’t read and write the same texture at once, so it ping-pongs between two of them: read A, write B, swap, repeat, a few dozen times per frame before anything reaches the screen.</p>
+<div class="rd-app">
+  <div class="rd-controls">
+    <button id="rd-play" type="button">Pause</button>
+    <button id="rd-reset" type="button">Reset</button>
+    <select id="rd-preset" aria-label="Pattern preset">
+      <option value="coral">Coral</option>
+      <option value="mitosis">Mitosis</option>
+      <option value="worms">Worms</option>
+      <option value="maze">Maze</option>
+      <option value="spots">Spots</option>
+      <option value="custom">Custom</option>
+    </select>
+    <label class="rd-speed">
+      Speed
+      <input id="rd-speed-in" type="range" min="1" max="40" step="1" value="14">
+      <span id="rd-speed-out">14</span>×
+    </label>
+    <label class="rd-param">
+      Feed (F)
+      <input id="rd-feed" type="range" min="0" max="0.1" step="0.0005" value="0.0545">
+      <output id="rd-feed-out">0.0545</output>
+    </label>
+    <label class="rd-param">
+      Kill (k)
+      <input id="rd-kill" type="range" min="0.03" max="0.075" step="0.0005" value="0.0620">
+      <output id="rd-kill-out">0.0620</output>
+    </label>
+  </div>
+  <canvas id="rd-canvas" aria-label="Gray-Scott reaction-diffusion simulation"></canvas>
+  <p class="rd-hint">Click or drag on the canvas to add chemical and seed new growth.</p>
+  <p id="rd-fallback" class="rd-fallback" hidden="">This needs WebGL2 with float textures, which your browser didn't provide, so the simulation can't run here.</p>
+</div>
+
+<style>
+  .rd-app {
+    max-width: 560px;
+    margin: 1.5rem auto 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .rd-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .rd-controls button,
+  .rd-controls select {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #d0d7de;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .rd-controls button:hover,
+  .rd-controls select:hover { border-color: #1f6f8b; }
+  .rd-controls button:active { background: #f6f8fa; }
+  .rd-speed,
+  .rd-param {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 0.25rem;
+  }
+  .rd-speed input,
+  .rd-param input { accent-color: #1f6f8b; }
+  .rd-param output {
+    font-variant-numeric: tabular-nums;
+    min-width: 3.6em;
+  }
+  #rd-canvas {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background: #05070d;
+    border: 1px solid #d0d7de;
+    border-radius: 4px;
+    cursor: crosshair;
+    touch-action: none;
+  }
+  .rd-hint { font-size: 0.85rem; color: #666; margin: 0; }
+  .rd-fallback { font-size: 0.9rem; color: #b03a3a; margin: 0; }
+  @media (prefers-color-scheme: dark) {
+    .rd-controls button,
+    .rd-controls select { background: #161b22; border-color: #30363d; color: #c9d1d9; }
+    .rd-controls button:active { background: #21262d; }
+    #rd-canvas { border-color: #30363d; }
+    .rd-hint { color: #8b949e; }
+  }
+</style>
+
+<script>
+(() => {
+  const SIM = 256;
+  const canvas = document.getElementById('rd-canvas');
+  const fallback = document.getElementById('rd-fallback');
+  const gl = canvas && canvas.getContext('webgl2', { antialias: false });
+
+  if (!gl || !gl.getExtension('EXT_color_buffer_float')) {
+    if (canvas) canvas.hidden = true;
+    document.querySelector('.rd-controls')?.setAttribute('hidden', '');
+    document.querySelector('.rd-hint')?.setAttribute('hidden', '');
+    if (fallback) fallback.hidden = false;
+    return;
+  }
+
+  canvas.width = SIM;
+  canvas.height = SIM;
+
+  const VS = `#version 300 es
+  in vec2 a_pos;
+  out vec2 v_uv;
+  void main() {
+    v_uv = a_pos * 0.5 + 0.5;
+    gl_Position = vec4(a_pos, 0.0, 1.0);
+  }`;
+
+  const SIM_FS = `#version 300 es
+  precision highp float;
+  precision highp sampler2D;
+  uniform sampler2D u_state;
+  uniform vec2 u_texel;
+  uniform float u_dA, u_dB, u_feed, u_kill, u_dt;
+  in vec2 v_uv;
+  out vec4 outColor;
+  void main() {
+    vec2 c = texture(u_state, v_uv).rg;
+    vec2 lap = texture(u_state, v_uv + vec2(u_texel.x, 0.0)).rg
+             + texture(u_state, v_uv - vec2(u_texel.x, 0.0)).rg
+             + texture(u_state, v_uv + vec2(0.0, u_texel.y)).rg
+             + texture(u_state, v_uv - vec2(0.0, u_texel.y)).rg
+             - 4.0 * c;
+    float A = c.r, B = c.g;
+    float reaction = A * B * B;
+    float nA = A + (u_dA * lap.r - reaction + u_feed * (1.0 - A)) * u_dt;
+    float nB = B + (u_dB * lap.g + reaction - (u_kill + u_feed) * B) * u_dt;
+    outColor = vec4(clamp(nA, 0.0, 1.0), clamp(nB, 0.0, 1.0), 0.0, 1.0);
+  }`;
+
+  const SPLAT_FS = `#version 300 es
+  precision highp float;
+  precision highp sampler2D;
+  uniform sampler2D u_state;
+  uniform vec2 u_point;
+  uniform float u_radius;
+  in vec2 v_uv;
+  out vec4 outColor;
+  void main() {
+    vec2 c = texture(u_state, v_uv).rg;
+    if (distance(v_uv, u_point) < u_radius) { c.r = 0.0; c.g = 0.9; }
+    outColor = vec4(c, 0.0, 1.0);
+  }`;
+
+  const DISP_FS = `#version 300 es
+  precision highp float;
+  precision highp sampler2D;
+  uniform sampler2D u_state;
+  in vec2 v_uv;
+  out vec4 outColor;
+  void main() {
+    float B = texture(u_state, v_uv).g;
+    vec3 col = vec3(0.04, 0.05, 0.10);
+    col = mix(col, vec3(0.10, 0.42, 0.52), smoothstep(0.08, 0.22, B));
+    col = mix(col, vec3(0.97, 0.96, 0.90), smoothstep(0.22, 0.40, B));
+    outColor = vec4(col, 1.0);
+  }`;
+
+  function compile(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) console.error(gl.getShaderInfoLog(s));
+    return s;
+  }
+  function program(fs) {
+    const p = gl.createProgram();
+    gl.attachShader(p, compile(gl.VERTEX_SHADER, VS));
+    gl.attachShader(p, compile(gl.FRAGMENT_SHADER, fs));
+    gl.bindAttribLocation(p, 0, 'a_pos');
+    gl.linkProgram(p);
+    if (!gl.getProgramParameter(p, gl.LINK_STATUS)) console.error(gl.getProgramInfoLog(p));
+    return p;
+  }
+
+  const simProg = program(SIM_FS);
+  const splatProg = program(SPLAT_FS);
+  const dispProg = program(DISP_FS);
+
+  const vao = gl.createVertexArray();
+  gl.bindVertexArray(vao);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0);
+  gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+
+  function makeTex() {
+    const t = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, t);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA32F, SIM, SIM, 0, gl.RGBA, gl.FLOAT, null);
+    return t;
+  }
+  let texA = makeTex();
+  let texB = makeTex();
+  const fbo = gl.createFramebuffer();
+
+  const sl = {
+    state: gl.getUniformLocation(simProg, 'u_state'),
+    texel: gl.getUniformLocation(simProg, 'u_texel'),
+    dA: gl.getUniformLocation(simProg, 'u_dA'),
+    dB: gl.getUniformLocation(simProg, 'u_dB'),
+    feed: gl.getUniformLocation(simProg, 'u_feed'),
+    kill: gl.getUniformLocation(simProg, 'u_kill'),
+    dt: gl.getUniformLocation(simProg, 'u_dt'),
+  };
+  const pl = {
+    state: gl.getUniformLocation(splatProg, 'u_state'),
+    point: gl.getUniformLocation(splatProg, 'u_point'),
+    radius: gl.getUniformLocation(splatProg, 'u_radius'),
+  };
+  const dl = { state: gl.getUniformLocation(dispProg, 'u_state') };
+
+  const PRESETS = {
+    coral:   { feed: 0.0545, kill: 0.0620 },
+    mitosis: { feed: 0.0367, kill: 0.0649 },
+    worms:   { feed: 0.0580, kill: 0.0630 },
+    maze:    { feed: 0.0290, kill: 0.0570 },
+    spots:   { feed: 0.0250, kill: 0.0600 },
+  };
+  const params = { dA: 0.16, dB: 0.08, dt: 1.0, feed: PRESETS.coral.feed, kill: PRESETS.coral.kill };
+
+  function seed() {
+    const data = new Float32Array(SIM * SIM * 4);
+    for (let i = 0; i < SIM * SIM; i++) { data[i * 4] = 1.0; data[i * 4 + 3] = 1.0; }
+    const stamp = (cx, cy, r) => {
+      for (let y = -r; y <= r; y++) for (let x = -r; x <= r; x++) {
+        const px = (cx + x + SIM) % SIM, py = (cy + y + SIM) % SIM;
+        const idx = (py * SIM + px) * 4;
+        data[idx] = 0.5; data[idx + 1] = 0.25;
+      }
+    };
+    stamp(SIM >> 1, SIM >> 1, 10);
+    for (let k = 0; k < 6; k++) stamp((Math.random() * SIM) | 0, (Math.random() * SIM) | 0, 6);
+    gl.bindTexture(gl.TEXTURE_2D, texA);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA32F, SIM, SIM, 0, gl.RGBA, gl.FLOAT, data);
+  }
+
+  function pass(prog, setup) {
+    gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texB, 0);
+    gl.viewport(0, 0, SIM, SIM);
+    gl.useProgram(prog);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texA);
+    setup();
+    gl.bindVertexArray(vao);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    const tmp = texA; texA = texB; texB = tmp;
+  }
+
+  function step() {
+    pass(simProg, () => {
+      gl.uniform1i(sl.state, 0);
+      gl.uniform2f(sl.texel, 1 / SIM, 1 / SIM);
+      gl.uniform1f(sl.dA, params.dA);
+      gl.uniform1f(sl.dB, params.dB);
+      gl.uniform1f(sl.feed, params.feed);
+      gl.uniform1f(sl.kill, params.kill);
+      gl.uniform1f(sl.dt, params.dt);
+    });
+  }
+
+  function splat(x, y) {
+    pass(splatProg, () => {
+      gl.uniform1i(pl.state, 0);
+      gl.uniform2f(pl.point, x, y);
+      gl.uniform1f(pl.radius, 0.03);
+    });
+  }
+
+  function render() {
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.useProgram(dispProg);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texA);
+    gl.uniform1i(dl.state, 0);
+    gl.bindVertexArray(vao);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+  }
+
+  let running = true;
+  let stepsPerFrame = 14;
+  let painting = false;
+
+  function loop() {
+    if (running) for (let i = 0; i < stepsPerFrame; i++) step();
+    render();
+    requestAnimationFrame(loop);
+  }
+
+  const playBtn = document.getElementById('rd-play');
+  playBtn.addEventListener('click', () => {
+    running = !running;
+    playBtn.textContent = running ? 'Pause' : 'Play';
+  });
+  document.getElementById('rd-reset').addEventListener('click', seed);
+  const presetSel = document.getElementById('rd-preset');
+  const feedIn = document.getElementById('rd-feed');
+  const killIn = document.getElementById('rd-kill');
+  const feedOut = document.getElementById('rd-feed-out');
+  const killOut = document.getElementById('rd-kill-out');
+  const fmt = (v) => v.toFixed(4);
+  function syncParamUI() {
+    feedIn.value = params.feed;
+    killIn.value = params.kill;
+    feedOut.textContent = fmt(params.feed);
+    killOut.textContent = fmt(params.kill);
+  }
+  presetSel.addEventListener('change', (e) => {
+    const p = PRESETS[e.target.value];
+    if (p) { params.feed = p.feed; params.kill = p.kill; syncParamUI(); }
+  });
+  feedIn.addEventListener('input', () => {
+    params.feed = +feedIn.value;
+    feedOut.textContent = fmt(params.feed);
+    presetSel.value = 'custom';
+  });
+  killIn.addEventListener('input', () => {
+    params.kill = +killIn.value;
+    killOut.textContent = fmt(params.kill);
+    presetSel.value = 'custom';
+  });
+  syncParamUI();
+  const speedIn = document.getElementById('rd-speed-in');
+  const speedOut = document.getElementById('rd-speed-out');
+  speedIn.addEventListener('input', () => { stepsPerFrame = +speedIn.value; speedOut.textContent = speedIn.value; });
+
+  function uvOf(e) {
+    const r = canvas.getBoundingClientRect();
+    return [(e.clientX - r.left) / r.width, 1.0 - (e.clientY - r.top) / r.height];
+  }
+  canvas.addEventListener('pointerdown', (e) => {
+    painting = true;
+    const [x, y] = uvOf(e); splat(x, y);
+    canvas.setPointerCapture(e.pointerId);
+  });
+  canvas.addEventListener('pointermove', (e) => {
+    if (!painting) return;
+    const [x, y] = uvOf(e); splat(x, y);
+  });
+  canvas.addEventListener('pointerup', () => { painting = false; });
+
+  seed();
+  requestAnimationFrame(loop);
+})();
+</script>
+<section id="the-two-knobs" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-knobs">The two knobs</h2>
+<p>Everything on screen is steered by two numbers: the feed rate <em>F</em> and the kill rate <em>k</em>. Most of the (<em>F</em>, <em>k</em>) plane is dead, the pattern either floods solid or starves to nothing. The interesting behaviour lives on a thin band between those fates, and small steps along it flip you between mazes, drifting spots, and mitosis. The presets drop you onto known-good points, and the <em>F</em> and <em>k</em> sliders let you wander off them and find your own; the links below map the rest.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://www.karlsims.com/rd.html">Karl Sims, <em>Reaction-Diffusion Tutorial</em></a> — the clearest walk-through of the equations and what each term does.</li>
+<li><a href="https://mrob.com/pub/comp/xmorphia/">Robert Munafo’s xmorphia</a> — the exhaustive (<em>F</em>, <em>k</em>) atlas: which numbers give which creatures.</li>
+<li><a href="https://pmneila.github.io/jsexp/grayscott/">pmneila’s WebGL Gray-Scott</a> — the in-browser demo that made it obvious you could run this on the GPU.</li>
+</ul>
+<p><a href="..">← back to haigh.bio</a></p>
+<p><em>Turing would’ve loved a fast GPU.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/haigh\.bio");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Steve Haigh · Built with <a href="https://quarto.org">Quarto</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/stevehaigh">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="../blog/index.xml">
+      <i class="bi bi-rss" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
