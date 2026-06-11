@@ -333,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Four <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Rules">trivial rules</a>, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.</p>
 <p>Click or drag to paint. The grid wraps at the edges.</p>
 <div class="life-app">
-  <div class="life-controls">
+  <div class="life-controls sim-controls">
     <button id="life-play" type="button">Play</button>
     <button id="life-step" type="button">Step</button>
     <button id="life-clear" type="button">Clear</button>
@@ -351,7 +351,7 @@ ul.task-list li input[type="checkbox"] {
       <span id="life-fps-out">12</span>/s
     </label>
   </div>
-  <canvas id="life-canvas" aria-label="Game of Life simulation"></canvas>
+  <canvas id="life-canvas" class="sim-canvas" aria-label="Game of Life simulation"></canvas>
 </div>
 
 <style>
@@ -361,54 +361,24 @@ ul.task-list li input[type="checkbox"] {
     gap: 0.75rem;
     margin: 1rem 0 2rem;
   }
-  .life-controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-  }
-  .life-controls button,
-  .life-controls select {
-    padding: 0.3rem 0.7rem;
-    border: 1px solid #d0d7de;
-    background: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .life-controls button:hover,
-  .life-controls select:hover { border-color: #2ea043; }
-  .life-controls button:active { background: #f6f8fa; }
   .life-speed {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
     margin-left: 0.5rem;
   }
-  .life-speed input { accent-color: #2ea043; }
+  .life-speed input { accent-color: #2ea043; }  /* green = "alive", a deliberate per-widget accent */
   #life-canvas {
-    width: 100%;
-    height: auto;
-    background: #fafafa;
-    border: 1px solid #d0d7de;
-    border-radius: 4px;
+    background: var(--bs-body-bg);
     image-rendering: pixelated;
     cursor: crosshair;
-    touch-action: none;
-  }
-  @media (prefers-color-scheme: dark) {
-    .life-controls button,
-    .life-controls select { background: #161b22; border-color: #30363d; color: #c9d1d9; }
-    .life-controls button:active { background: #21262d; }
-    #life-canvas { background: #0d1117; border-color: #30363d; }
   }
 </style>
 
 <script>
 (() => {
   const COLS = 80, ROWS = 50, CELL = 10;
-  const ALIVE = '#2ea043', DEAD_LIGHT = '#fafafa', DEAD_DARK = '#0d1117';
+  const ALIVE = '#2ea043';
 
   const canvas = document.getElementById('life-canvas');
   const ctx = canvas.getContext('2d');
@@ -445,7 +415,8 @@ ul.task-list li input[type="checkbox"] {
   }
 
   function bgColor() {
-    return matchMedia('(prefers-color-scheme: dark)').matches ? DEAD_DARK : DEAD_LIGHT;
+    // Active theme background — tracks both OS preference and the manual toggle.
+    return getComputedStyle(document.body).getPropertyValue('--bs-body-bg').trim() || '#fafafa';
   }
 
   function draw() {
@@ -1023,6 +994,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>
+// Email obfuscation, applied site-wide: linkify "#email" placeholder
+// anchors and fill any #contact-email slot, without the address in the HTML.
+(function () {
+  const u = "steve", d = "haigh.bio", addr = u + "@" + d;
+  document.querySelectorAll('a[href$="#email"]').forEach(a => { a.href = "mailto:" + addr; });
+  const slot = document.getElementById("contact-email");
+  if (slot) {
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    slot.appendChild(a);
+  }
+})();
+</script>
 
 
 

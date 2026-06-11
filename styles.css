@@ -19,9 +19,18 @@ a:hover {
 }
 
 main h2 {
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
   padding-bottom: 0.3rem;
   margin-top: 2rem;
+}
+
+/* Category badges (blog listing, home "Latest post", post headers): the theme
+   hardcodes a grey that doesn't adapt to dark and fails contrast there. Drive
+   them from theme variables so they track light/dark. */
+.listing-category,
+.quarto-category {
+  color: var(--bs-secondary-color);
+  border-color: var(--bs-border-color);
 }
 
 /* Serif headings — paired with system sans body */
@@ -93,4 +102,43 @@ div.sourceCode {
 .home-content > section:first-child h2,
 .home-content > h2:first-child {
   margin-top: 0;
+}
+/* Keep the "Current projects" column headings from wrapping mid-phrase */
+.home-content h4 {
+  text-wrap: balance;
+}
+
+/* Shared chrome for the interactive demos (Game of Life, reaction-diffusion).
+   Driven by Bootstrap theme variables so the controls track light/dark and the
+   manual color-scheme toggle, instead of each page hardcoding its own palette. */
+.sim-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.sim-controls button,
+.sim-controls select {
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--bs-border-color);
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.sim-controls button:hover,
+.sim-controls select:hover {
+  border-color: var(--accent);
+}
+.sim-controls button:active {
+  background: var(--bs-tertiary-bg);
+}
+.sim-canvas {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 4px;
+  touch-action: none;
 }

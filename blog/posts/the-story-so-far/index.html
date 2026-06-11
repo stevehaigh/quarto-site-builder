@@ -872,6 +872,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>
+// Email obfuscation, applied site-wide: linkify "#email" placeholder
+// anchors and fill any #contact-email slot, without the address in the HTML.
+(function () {
+  const u = "steve", d = "haigh.bio", addr = u + "@" + d;
+  document.querySelectorAll('a[href$="#email"]').forEach(a => { a.href = "mailto:" + addr; });
+  const slot = document.getElementById("contact-email");
+  if (slot) {
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    slot.appendChild(a);
+  }
+})();
+</script>
 
 
 

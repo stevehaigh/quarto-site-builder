@@ -361,16 +361,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="contact" class="level2">
 <h2 class="anchored" data-anchor-id="contact">Contact</h2>
 <p>The fastest route is email: <span id="contact-email"></span>.</p>
-<script>
-(function () {
-  const u = "steve", d = "haigh.bio";
-  const a = document.createElement("a");
-  a.href = "mailto:" + u + "@" + d;
-  a.textContent = u + "@" + d;
-  const slot = document.getElementById("contact-email");
-  if (slot) slot.appendChild(a);
-})();
-</script>
 
 
 </section>
@@ -816,6 +806,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>
+// Email obfuscation, applied site-wide: linkify "#email" placeholder
+// anchors and fill any #contact-email slot, without the address in the HTML.
+(function () {
+  const u = "steve", d = "haigh.bio", addr = u + "@" + d;
+  document.querySelectorAll('a[href$="#email"]').forEach(a => { a.href = "mailto:" + addr; });
+  const slot = document.getElementById("contact-email");
+  if (slot) {
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    slot.appendChild(a);
+  }
+})();
+</script>
 
 
 

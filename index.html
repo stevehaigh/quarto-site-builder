@@ -408,13 +408,13 @@ window.Quarto = {
 </section>
 <section id="currently-looking-at" class="level2">
 <h2 class="anchored" data-anchor-id="currently-looking-at">Currently looking at…</h2>
-<p><em>Updated May 2026.</em> Writing up the first-pass platelet Ca²⁺ model results and rebuilding the simulation-exploration UI. Lab-meeting feedback generated a couple of small follow-up studies worth firming up before dissertation submission. I’m also building out this site itself — a Quarto + GitHub Pages project I tinker with between the reading papers and the developing models.</p>
+<p><em>Updated June 2026.</em> Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site and other side projects. When I do manage to focus I’m finalising some figures and considering if I can add more biology to the basic model before I call it done (for now).</p>
 </section>
 <section id="latest-post" class="level2">
 <h2 class="anchored" data-anchor-id="latest-post">Latest post</h2>
 <div id="listing-latest-post" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1780914180124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
+<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1781171842058" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
@@ -506,14 +506,6 @@ May 27, 2026
     .glider-hint .phase-0 { opacity: 1; }
   }
 </style>
-<script>
-(function () {
-  const u = "steve", d = "haigh.bio";
-  document.querySelectorAll('a[href$="#email"]').forEach(a => {
-    a.href = "mailto:" + u + "@" + d;
-  });
-})();
-</script>
 
 
 
@@ -959,6 +951,21 @@ May 27, 2026
     </div>
   </div>
 </footer>
+<script>
+// Email obfuscation, applied site-wide: linkify "#email" placeholder
+// anchors and fill any #contact-email slot, without the address in the HTML.
+(function () {
+  const u = "steve", d = "haigh.bio", addr = u + "@" + d;
+  document.querySelectorAll('a[href$="#email"]').forEach(a => { a.href = "mailto:" + addr; });
+  const slot = document.getElementById("contact-email");
+  if (slot) {
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    slot.appendChild(a);
+  }
+})();
+</script>
 
 
 

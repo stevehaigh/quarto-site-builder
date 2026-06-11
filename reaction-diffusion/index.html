@@ -334,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The version below is Gray-Scott. Two species, a feed rate that tops up the first, a kill rate that drains the second, and a reaction that turns one into the other. Move those two numbers and the same equations hand you coral, fingerprints, or self-replicating dots. Pick a preset and watch, or click on the canvas to drop in some chemical and start a pattern yourself.</p>
 <p>It all runs on the GPU. The state, two concentrations per cell, lives in a floating-point texture. A single fragment shader reads each cell and its four neighbours, applies a 5-point Laplacian for the diffusion term, does the Gray-Scott reaction, and writes the next state. A shader can’t read and write the same texture at once, so it ping-pongs between two of them: read A, write B, swap, repeat, a few dozen times per frame before anything reaches the screen.</p>
 <div class="rd-app">
-  <div class="rd-controls">
+  <div class="rd-controls sim-controls">
     <button id="rd-play" type="button">Pause</button>
     <button id="rd-reset" type="button">Reset</button>
     <select id="rd-preset" aria-label="Pattern preset">
@@ -361,7 +361,7 @@ ul.task-list li input[type="checkbox"] {
       <output id="rd-kill-out">0.0620</output>
     </label>
   </div>
-  <canvas id="rd-canvas" aria-label="Gray-Scott reaction-diffusion simulation"></canvas>
+  <canvas id="rd-canvas" class="sim-canvas" aria-label="Gray-Scott reaction-diffusion simulation"></canvas>
   <p class="rd-hint">Click or drag on the canvas to add chemical and seed new growth.</p>
   <p id="rd-fallback" class="rd-fallback" hidden="">This needs WebGL2 with float textures, which your browser didn't provide, so the simulation can't run here.</p>
 </div>
@@ -374,25 +374,6 @@ ul.task-list li input[type="checkbox"] {
     flex-direction: column;
     gap: 0.75rem;
   }
-  .rd-controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-  }
-  .rd-controls button,
-  .rd-controls select {
-    padding: 0.3rem 0.7rem;
-    border: 1px solid #d0d7de;
-    background: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-  .rd-controls button:hover,
-  .rd-controls select:hover { border-color: #1f6f8b; }
-  .rd-controls button:active { background: #f6f8fa; }
   .rd-speed,
   .rd-param {
     display: inline-flex;
@@ -401,30 +382,18 @@ ul.task-list li input[type="checkbox"] {
     margin-left: 0.25rem;
   }
   .rd-speed input,
-  .rd-param input { accent-color: #1f6f8b; }
+  .rd-param input { accent-color: var(--accent); }
   .rd-param output {
     font-variant-numeric: tabular-nums;
     min-width: 3.6em;
   }
   #rd-canvas {
-    width: 100%;
-    height: auto;
     aspect-ratio: 1 / 1;
-    background: #05070d;
-    border: 1px solid #d0d7de;
-    border-radius: 4px;
+    background: #05070d;  /* simulation viewport — stays dark in both themes */
     cursor: crosshair;
-    touch-action: none;
   }
-  .rd-hint { font-size: 0.85rem; color: #666; margin: 0; }
+  .rd-hint { font-size: 0.85rem; color: var(--bs-secondary-color); margin: 0; }
   .rd-fallback { font-size: 0.9rem; color: #b03a3a; margin: 0; }
-  @media (prefers-color-scheme: dark) {
-    .rd-controls button,
-    .rd-controls select { background: #161b22; border-color: #30363d; color: #c9d1d9; }
-    .rd-controls button:active { background: #21262d; }
-    #rd-canvas { border-color: #30363d; }
-    .rd-hint { color: #8b949e; }
-  }
 </style>
 
 <script>
@@ -1154,6 +1123,21 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>
+// Email obfuscation, applied site-wide: linkify "#email" placeholder
+// anchors and fill any #contact-email slot, without the address in the HTML.
+(function () {
+  const u = "steve", d = "haigh.bio", addr = u + "@" + d;
+  document.querySelectorAll('a[href$="#email"]').forEach(a => { a.href = "mailto:" + addr; });
+  const slot = document.getElementById("contact-email");
+  if (slot) {
+    const a = document.createElement("a");
+    a.href = "mailto:" + addr;
+    a.textContent = addr;
+    slot.appendChild(a);
+  }
+})();
+</script>
 
 
 
