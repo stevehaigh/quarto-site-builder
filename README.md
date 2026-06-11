@@ -4,25 +4,32 @@ A [Quarto](https://quarto.org) website, deployed to GitHub Pages.
 
 ## Structure
 
+Each page is a directory containing `index.qmd`, which renders to `<dir>/index.html` and is
+served at the clean URL `<dir>/` (see `bin/clean-urls.sh`).
+
 ```
 .
-├── _quarto.yml          # site config (title, nav, theme)
-├── index.qmd            # home page
-├── about.qmd            # about page
-├── blog.qmd             # blog listing (auto-generated from posts/)
-├── projects.qmd         # projects & decks page
-├── personal.qmd         # ceramics + photography galleries
-├── posts/               # blog posts (one folder per post)
-│   ├── _metadata.yml    # defaults applied to every post
-│   └── welcome/
-│       └── index.qmd
-├── decks/               # drop slide PDFs here
-├── img/                 # gallery images for personal.qmd
-│   ├── ceramics/        # square images, 3-col grid
-│   └── photo/           # 3:2 landscape, 2-col grid
-├── styles.css           # site CSS tweaks
+├── _quarto.yml                 # site config (title, nav, theme)
+├── index.qmd                   # home page
+├── about/index.qmd             # about page
+├── blog/
+│   ├── index.qmd               # blog listing (auto-generated from posts/)
+│   └── posts/                  # blog posts (one folder per post)
+│       ├── _metadata.yml       # defaults applied to every post (incl. giscus comments)
+│       └── <slug>/index.qmd
+├── projects/index.qmd          # projects & decks page
+├── personal/index.qmd          # ceramics + photography galleries (draft)
+├── life/index.qmd              # Game of Life (canvas) easter egg
+├── reaction-diffusion/index.qmd# Gray-Scott reaction-diffusion (WebGL) easter egg
+├── decks/                      # Reveal.js deck sources + exported PDF/PPTX
+│   └── <slug>/index.qmd
+├── img/                        # gallery images for the Personal page
+│   ├── ceramics/               # square images, 3-col grid
+│   └── photo/                  # 3:2 landscape, 2-col grid
+├── bin/                        # build helpers (new-post.sh, clean-urls.sh)
+├── styles.css                  # site CSS tweaks
 └── .github/workflows/
-    └── publish.yml      # auto-deploy on push to main
+    └── publish.yml             # auto-deploy on push to main
 ```
 
 ## Local development
@@ -106,25 +113,27 @@ Search the repo for `stevehaigh`, `quarto-site-builder`, `you@example.com`, and 
 ## Adding a blog post
 
 ```bash
-mkdir posts/my-new-post
-$EDITOR posts/my-new-post/index.qmd
+bin/new-post.sh my-new-post "My new post"   # scaffolds blog/posts/my-new-post/index.qmd
+$EDITOR blog/posts/my-new-post/index.qmd
 ```
 
-Use `posts/welcome/index.qmd` as a template. Push to main, site rebuilds.
+New posts are created with `draft: true`; remove that line when ready to publish. Push to main,
+site rebuilds.
 
 ## Adding a slide deck
 
 1. Export your deck to PDF.
 2. Drop it in `decks/`.
-3. Add a link to it in `projects.qmd`.
+3. Add a link to it in `projects/index.qmd`.
 4. Commit and push.
 
 ## Adding gallery images
 
-The `personal.qmd` page currently references placeholder SVGs in `img/ceramics/` and `img/photo/`. To add your own work:
+The `personal/index.qmd` page currently references placeholder SVGs in `img/ceramics/` and `img/photo/`, and is marked `draft: true`. To add your own work:
 
 1. Drop your images into the relevant folder (`img/ceramics/` or `img/photo/`). See the `README.md` in each folder for size/format guidance.
-2. Update the image references in `personal.qmd` — change `placeholder-01.svg` to your filename (and remove placeholder files you no longer need).
-3. Commit and push.
+2. Update the image references in `personal/index.qmd` — change `placeholder-01.svg` to your filename (and remove placeholder files you no longer need).
+3. Remove `draft: true` from the front matter to publish the page.
+4. Commit and push.
 
 The lightbox extension (installed in one-time setup) gives each image click-to-zoom for free. Captions from the Markdown `![Caption](path)` syntax appear under the zoomed image.

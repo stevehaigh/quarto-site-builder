@@ -2,6 +2,7 @@
 title: "Personal"
 subtitle: "Things I make when I'm not at a keyboard or a bench"
 toc: true
+draft: true
 ---
 
 This page is just a placeholder with some dummy text, it's more about experimenting with Quarto layout than anything else!
