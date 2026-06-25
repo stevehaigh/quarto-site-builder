@@ -12,11 +12,11 @@ title=${2:-$slug}
 date=$(date +%Y-%m-%d)
 
 repo_root=$(cd "$(dirname "$0")/.." && pwd)
-dir="$repo_root/blog/posts/$slug"
+dir="$repo_root/blog/drafts/$slug"
 file="$dir/index.qmd"
 
-if [[ -e $dir ]]; then
-  echo "error: $dir already exists" >&2
+if [[ -e "$repo_root/blog/posts/$slug" || -e "$repo_root/blog/drafts/$slug" ]]; then
+  echo "error: post already exists under blog/posts/ or blog/drafts/" >&2
   exit 1
 fi
 
