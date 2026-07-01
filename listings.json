@@ -3,8 +3,8 @@
     "listing": "/",
     "items": [
       "/blog/posts/llm-intro/",
-      "/blog/posts/the-story-so-far/",
       "/blog/posts/academic-pptx-template/",
+      "/blog/posts/the-story-so-far/",
       "/blog/posts/lab-meeting-2026-05-14/"
     ]
   },
@@ -12,8 +12,8 @@
     "listing": "/blog/",
     "items": [
       "/blog/posts/llm-intro/",
-      "/blog/posts/the-story-so-far/",
       "/blog/posts/academic-pptx-template/",
+      "/blog/posts/the-story-so-far/",
       "/blog/posts/lab-meeting-2026-05-14/"
     ]
   }

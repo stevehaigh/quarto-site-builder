@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://haigh.bio/</loc>
+    <lastmod>2026-07-01T11:07:17.084Z</lastmod>
+  </url>
+  <url>
     <loc>https://haigh.bio/projects/</loc>
-    <lastmod>2026-06-11T09:57:22.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/hidden/vinschgau-cycling/</loc>
-    <lastmod>2026-06-11T09:57:22.093Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/blog/posts/academic-pptx-template/</loc>
-    <lastmod>2026-06-11T09:57:22.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/blog/posts/lab-meeting-2026-05-14/</loc>
-    <lastmod>2026-06-11T09:57:22.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/blog/posts/llm-intro/</loc>
-    <lastmod>2026-06-11T09:57:22.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/decks/lab-meeting-2026-05-14/</loc>
-    <lastmod>2026-06-11T09:57:22.088Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/about/</loc>
-    <lastmod>2026-06-11T09:57:22.057Z</lastmod>
+    <lastmod>2026-07-01T11:07:17.084Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/life/</loc>
-    <lastmod>2026-06-11T09:57:22.099Z</lastmod>
+    <lastmod>2026-07-01T11:07:17.084Z</lastmod>
   </url>
   <url>
-    <loc>https://haigh.bio/</loc>
-    <lastmod>2026-06-11T09:57:22.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://haigh.bio/decks/llm-intro/</loc>
-    <lastmod>2026-06-11T09:57:22.092Z</lastmod>
+    <loc>https://haigh.bio/about/</loc>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/blog/</loc>
-    <lastmod>2026-06-11T09:57:22.058Z</lastmod>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/blog/posts/lab-meeting-2026-05-14/</loc>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/decks/llm-intro/</loc>
+    <lastmod>2026-07-01T11:07:17.076Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/decks/lab-meeting-2026-05-14/</loc>
+    <lastmod>2026-07-01T11:07:17.073Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/blog/posts/academic-pptx-template/</loc>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/blog/posts/llm-intro/</loc>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/blog/posts/the-story-so-far/</loc>
-    <lastmod>2026-06-11T09:57:22.058Z</lastmod>
+    <lastmod>2026-07-01T11:07:17.043Z</lastmod>
+  </url>
+  <url>
+    <loc>https://haigh.bio/hidden/vinschgau-cycling/</loc>
+    <lastmod>2026-07-01T11:07:17.078Z</lastmod>
   </url>
   <url>
     <loc>https://haigh.bio/reaction-diffusion/</loc>
-    <lastmod>2026-06-11T09:57:22.099Z</lastmod>
+    <lastmod>2026-07-01T11:07:17.084Z</lastmod>
   </url>
 </urlset>
