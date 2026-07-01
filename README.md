@@ -1,6 +1,6 @@
 # Personal site
 
-A [Quarto](https://quarto.org) website, deployed to GitHub Pages.
+A [Quarto](https://quarto.org) website at [haigh.bio](https://haigh.bio), deployed to GitHub Pages.
 
 ## Structure
 
@@ -10,13 +10,18 @@ served at the clean URL `<dir>/` (see `bin/clean-urls.sh`).
 ```
 .
 ├── _quarto.yml                 # site config (title, nav, theme)
+├── _quarto-production.yml      # production profile — excludes drafts + hidden from deploy
 ├── index.qmd                   # home page
 ├── about/index.qmd             # about page
 ├── blog/
 │   ├── index.qmd               # blog listing (auto-generated from posts/)
-│   └── posts/                  # blog posts (one folder per post)
-│       ├── _metadata.yml       # defaults applied to every post (incl. giscus comments)
+│   ├── posts/                  # published posts (one folder per post)
+│   │   ├── _metadata.yml       # defaults applied to every post (incl. giscus comments)
+│   │   └── <slug>/index.qmd
+│   └── drafts/                 # WIP posts — excluded from production render
+│       ├── _metadata.yml
 │       └── <slug>/index.qmd
+├── hidden/                     # unlisted pages — excluded from production render
 ├── projects/index.qmd          # projects & decks page
 ├── personal/index.qmd          # ceramics + photography galleries (draft)
 ├── life/index.qmd              # Game of Life (canvas) easter egg
@@ -29,7 +34,8 @@ served at the clean URL `<dir>/` (see `bin/clean-urls.sh`).
 ├── bin/                        # build helpers (new-post.sh, clean-urls.sh)
 ├── styles.css                  # site CSS tweaks
 └── .github/workflows/
-    └── publish.yml             # auto-deploy on push to main
+    ├── publish.yml             # auto-deploy on push to main
+    └── check.yml               # render check on pull requests
 ```
 
 ## Local development
@@ -50,17 +56,23 @@ served at the clean URL `<dir>/` (see `bin/clean-urls.sh`).
 quarto preview
 ```
 
-This opens a live-reloading preview at `http://localhost:4242`.
+This includes draft posts and hidden pages and opens a live-reloading preview at
+`http://localhost:4242`.
 
 ### Render once
 
 ```bash
-quarto render
+quarto render                        # all pages (local)
+quarto render --profile production   # production targets only (matches CI)
 ```
 
 Output goes to `_site/`.
 
 ## Deploy to GitHub Pages
+
+Pushes to `main` trigger `.github/workflows/publish.yml`, which renders the site (excluding
+`blog/drafts/` and `hidden/`) and publishes to the `gh-pages` branch. Pull requests run
+`.github/workflows/check.yml`, which renders the same production targets without publishing.
 
 ### One-time setup
 
@@ -85,9 +97,10 @@ Output goes to `_site/`.
 4. In GitHub: **Settings → Pages → Build and deployment**
    - Source: *Deploy from a branch*
    - Branch: `gh-pages` / `/ (root)`
-5. Push to `main` — the Action in `.github/workflows/publish.yml` renders and publishes.
+5. Push to `main` — the publish workflow renders and deploys.
 
-Your site will be at `https://stevehaigh.github.io/quarto-site-builder/`.
+The site is live at [haigh.bio](https://haigh.bio) (GitHub Pages default URL:
+`https://stevehaigh.github.io/quarto-site-builder/`).
 
 ## Custom domain (Cloudflare)
 
@@ -106,25 +119,31 @@ Your site will be at `https://stevehaigh.github.io/quarto-site-builder/`.
 4. Tick **Enforce HTTPS** once the cert is issued.
 5. Update `site-url` in `_quarto.yml` to your new domain.
 
-## Things to change before going live
-
-Search the repo for `stevehaigh`, `quarto-site-builder`, `you@example.com`, and `example.com` — those are the placeholders to replace.
-
 ## Adding a blog post
 
 ```bash
-bin/new-post.sh my-new-post "My new post"   # scaffolds blog/posts/my-new-post/index.qmd
-$EDITOR blog/posts/my-new-post/index.qmd
+bin/new-post.sh my-new-post "My new post"   # scaffolds blog/drafts/my-new-post/index.qmd
+quarto preview                              # drafts are included in local preview
+$EDITOR blog/drafts/my-new-post/index.qmd
 ```
 
-New posts are created with `draft: true`; remove that line when ready to publish. Push to main,
-site rebuilds.
+When ready to publish:
+
+1. Move the folder from `blog/drafts/<slug>/` to `blog/posts/<slug>/`.
+2. Remove `draft: true` from the front matter.
+3. Push to `main` — the site rebuilds.
+
+Draft and hidden pages are excluded from production render, search, listings, and sitemap.
 
 ## Adding a slide deck
 
-1. Export your deck to PDF.
-2. Drop it in `decks/`.
-3. Add a link to it in `projects/index.qmd`.
+1. Create a Reveal.js deck source at `decks/<slug>/index.qmd` (see existing decks for examples).
+2. Build HTML, PPTX, and PDF locally:
+   ```bash
+   decks/<slug>/build.sh
+   ```
+   PDF export uses headless Chrome locally; commit the generated PDF so CI can deploy it.
+3. Add links in `projects/index.qmd`.
 4. Commit and push.
 
 ## Adding gallery images

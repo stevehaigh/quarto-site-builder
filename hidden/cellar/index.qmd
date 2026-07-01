@@ -1,0 +1,346 @@
+---
+title: "The Cellar"
+subtitle: "A wine buying shortlist — reds, whites & rosé from The Wine Society"
+toc: true
+toc-depth: 3
+---
+
+<style>
+.cellar-summary{font-size:.95rem;opacity:.85;margin:.2rem 0 1.6rem;}
+.wine-card{display:flex;gap:1.1rem;align-items:flex-start;padding:1rem 1.1rem;margin:0 0 1rem;
+  border:1px solid rgba(127,127,127,.22);border-left:4px solid var(--cat,#888);border-radius:10px;
+  background:rgba(127,127,127,.05);}
+.wine-card.cat-red{--cat:#b23347;}
+.wine-card.cat-white{--cat:#b08518;}
+.wine-card.cat-rose{--cat:#c76d8c;}
+.wine-img{flex:0 0 96px;width:96px;text-align:center;}
+.wine-img img{max-width:96px;max-height:155px;height:auto;display:block;margin:0 auto;}
+.wine-img--plaque .plaque{border:1px solid var(--cat,#888);border-radius:6px;padding:.7rem .35rem;
+  display:flex;flex-direction:column;gap:.3rem;align-items:center;justify-content:center;
+  background:rgba(127,127,127,.06);min-height:130px;}
+.plaque-vintage{font-family:"IBM Plex Serif",serif;font-size:1.6rem;font-weight:600;color:var(--cat);line-height:1;}
+.plaque-grape{font-size:.68rem;opacity:.8;text-transform:uppercase;letter-spacing:.04em;}
+.plaque-note{font-size:.6rem;opacity:.55;text-transform:uppercase;letter-spacing:.05em;}
+.wine-body{flex:1 1 auto;min-width:0;}
+.wine-price{float:right;font-weight:600;color:var(--cat);font-size:1.05rem;margin-left:.6rem;}
+.wine-name{font-family:"IBM Plex Serif",serif;margin:.1rem 0 .15rem;font-size:1.18rem;line-height:1.2;}
+.wine-sub{font-size:.9rem;opacity:.85;margin-bottom:.55rem;}
+.wine-meta{display:flex;flex-wrap:wrap;gap:.45rem .65rem;align-items:center;margin-bottom:.5rem;}
+.badge{font-size:.68rem;text-transform:uppercase;letter-spacing:.03em;font-weight:600;
+  padding:.16rem .55rem;border-radius:999px;background:var(--cat);color:#fff;}
+.window{font-size:.8rem;opacity:.7;}
+.img-vintage{font-size:.6rem;opacity:.6;margin-top:.3rem;line-height:1.1;}
+.wine-note{font-size:.9rem;line-height:1.5;margin:.3rem 0 .65rem;}
+.wine-links{display:flex;flex-wrap:wrap;gap:.4rem;}
+.wine-links a{font-size:.78rem;text-decoration:none;border:1px solid rgba(127,127,127,.3);
+  padding:.22rem .55rem;border-radius:6px;white-space:nowrap;}
+.wine-links a:hover{border-color:var(--cat);color:var(--cat);}
+@media(max-width:520px){.wine-img{flex-basis:74px;width:74px;}.wine-img img{max-width:74px;}}
+</style>
+
+A working shortlist of bottles worth buying — Bordeaux, Burgundy and the Rhône in red; Burgundy, the Loire, Alsace and the Jura in white, plus a pair of Provençal rosés. Prices are indicative for single bottles from [The Wine Society](https://www.thewinesociety.com) and drinking windows are a guide, not gospel. Each card links to the merchant page, to [Wine-Searcher](https://www.wine-searcher.com) for critic scores and global pricing, and to [CellarTracker](https://www.cellartracker.com) for community tasting notes.
+
+::: {.cellar-summary}
+**24 wines** · 12 red · 12 white & rosé · indicative total **£749.50** · 18 with a bottle photo (click any label to enlarge). Where a wine's exact vintage was unavailable the label shown is the nearest vintage (noted on the card); a few have no photo and appear as a plaque.
+:::
+
+
+## Reds
+
+
+### Bordeaux — Red
+
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/citran-haut-medoc-2009.png" alt="Château Citran Citran 2009 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£35</span>
+<h3 class="wine-name">Château Citran</h3>
+<div class="wine-sub">Citran · Haut-Médoc · <strong>2009</strong> · Cabernet/Merlot</div>
+<div class="wine-meta"><span class="badge">Drink now (mature)</span><span class="window">Drink 2026–2030</span></div>
+<p class="wine-note">2009 was one of the great modern Bordeaux vintages; fully mature at ~16 years and ready now. The drink-now counterweight to younger bottles — mature claret from a legendary year for £35.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/chateau-citran-haut-medoc-2009-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/chateau+citran/2009" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=chateau+citran+2009" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/la-chenade-lalande-de-pomerol-2022.png" alt="Durantou family La Chenade 2022 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£28</span>
+<h3 class="wine-name">Durantou family</h3>
+<div class="wine-sub">La Chenade · Lalande de Pomerol · <strong>2022</strong> · Merlot</div>
+<div class="wine-meta"><span class="badge">Near-term (right bank)</span><span class="window">Drink 2026–2032</span></div>
+<p class="wine-note">Right-bank Merlot contrast. From the Durantou family of L&#x27;Église-Clinet, one of Pomerol&#x27;s most revered estates — their humbler Lalande cuvée. Plush, sandy-gravel fruit; give it 2–3 years.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/la-chenade-lalande-de-pomerol-2022/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/durantou+la+chenade/2022" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=durantou+la+chenade+2022" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2016</span><span class="plaque-grape">Cabernet/Merlot</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£39</span>
+<h3 class="wine-name">Château Chasse-Spleen</h3>
+<div class="wine-sub">Chasse-Spleen · Moulis · <strong>2016</strong> · Cabernet/Merlot</div>
+<div class="wine-meta"><span class="badge">Lay down</span><span class="window">Drink 2026–2038</span></div>
+<p class="wine-note">The &#x27;chasing away melancholy&#x27; name; leading property of the overlooked Moulis appellation; 2016 a benchmark Left Bank vintage. Ages beautifully. (2019 available at £33 as a cheaper alternative.)</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/chateau-chasse-spleen-moulis-2016" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/chateau+chasse+spleen/2016" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=chateau+chasse+spleen+2016" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/reserve-de-la-comtesse-pauillac-2019.png" alt="Pichon-Lalande Réserve de la Comtesse 2019 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£39</span>
+<h3 class="wine-name">Pichon-Lalande</h3>
+<div class="wine-sub">Réserve de la Comtesse · Pauillac · <strong>2019</strong> · Cabernet/Merlot</div>
+<div class="wine-meta"><span class="badge">Lay down (super-second)</span><span class="window">Drink 2027–2038</span></div>
+<p class="wine-note">Second wine of Pichon-Lalande, a Médoc &#x27;super-second&#x27;, in the excellent 2019 vintage. Classic cassis-and-cedar Pauillac to cellar — most of the house style at a fraction of the grand vin price.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/reserve-de-la-comtesse-pauillac-2019/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/pichon+lalande+reserve+de+la+comtesse/2019" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=pichon+lalande+reserve+de+la+comtesse+2019" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Burgundy — Red
+
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/montille-bourgogne-rouge-2021.png" alt="Domaine de Montille Bourgogne Rouge 2021 bottle"/><div class="img-vintage">label shown: 2018 vintage</div></div>
+<div class="wine-body">
+<span class="wine-price">£30</span>
+<h3 class="wine-name">Domaine de Montille</h3>
+<div class="wine-sub">Bourgogne Rouge · Bourgogne · <strong>2021</strong> · Pinot Noir</div>
+<div class="wine-meta"><span class="badge">Drink now (smart value)</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">Declassified regional Pinot from a great Volnay/Pommard domaine; no new wood, pure and transparent. A slice of a top address for £30. 2021 was light — drink soon.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/domaine-de-montille-bourgogne-rouge-2018/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+de+montille+bourgogne+rouge/2021" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+de+montille+bourgogne+rouge+2021" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/jean-marc-vincent-santenay-rouge-vv-2018.png" alt="Jean-Marc Vincent Santenay Rouge Vieilles Vignes 2018 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£35</span>
+<h3 class="wine-name">Jean-Marc Vincent</h3>
+<div class="wine-sub">Santenay Rouge Vieilles Vignes · Santenay · <strong>2018</strong> · Pinot Noir</div>
+<div class="wine-meta"><span class="badge">Near-term (top grower)</span><span class="window">Drink 2026–2028</span></div>
+<p class="wine-note">Buy-the-grower in an overlooked village: Vincent revived Santenay&#x27;s reputation. Old vines, warm ripe 2018; keen money at a case-of-12 price.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/jean-marc-vincent-santenay-rouge-vieilles-vignes-2018/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/jean+marc+vincent+santenay+rouge+vieilles+vignes/2018" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=jean+marc+vincent+santenay+rouge+vieilles+vignes+2018" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/lecheneaut-morey-saint-denis-2020.png" alt="Domaine Lécheneaut Morey-Saint-Denis 2020 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£45</span>
+<h3 class="wine-name">Domaine Lécheneaut</h3>
+<div class="wine-sub">Morey-Saint-Denis · Morey-Saint-Denis · <strong>2020</strong> · Pinot Noir</div>
+<div class="wine-meta"><span class="badge">Lay down (Côte de Nuits)</span><span class="window">Drink 2026–2034</span></div>
+<p class="wine-note">Structured Côte de Nuits keeper from a top Nuits grower; a serious red commune in the benchmark 2020 vintage. Backbone and ageability the Beaune villages lack — the grandest address here for the money.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/domaine-lecheneaut-morey-st-denis-2020/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+lecheneaut+morey+saint+denis/2020" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+lecheneaut+morey+saint+denis+2020" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2020</span><span class="plaque-grape">Pinot Noir</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£33</span>
+<h3 class="wine-name">Chanson Père et Fils</h3>
+<div class="wine-sub">Savigny-lès-Beaune 1er Cru La Dominode · Savigny-lès-Beaune 1er Cru · <strong>2020</strong> · Pinot Noir</div>
+<div class="wine-meta"><span class="badge">Value 1er cru</span><span class="window">Drink 2025–2032</span></div>
+<p class="wine-note">One of Savigny&#x27;s finest old-vine sites; Chanson (Bollinger-owned) on strong form; generous 2020 vintage. A genuine premier cru for £33.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/search?q=Chanson%20Savigny%20Dominode%201er%20Cru%202020" target="_blank" rel="noopener">The Wine Society (search)</a><a href="https://www.wine-searcher.com/find/chanson+pere+et+fils+savigny+les+beaune+1er+cru+la+dominode/2020" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=chanson+pere+et+fils+savigny+les+beaune+1er+cru+la+dominode+2020" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Rhône — Red
+
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/domaine-du-tunnel-cornas-2019.png" alt="Domaine du Tunnel Cornas 2019 bottle"/><div class="img-vintage">label shown: 2017 vintage</div></div>
+<div class="wine-body">
+<span class="wine-price">£44</span>
+<h3 class="wine-name">Domaine du Tunnel</h3>
+<div class="wine-sub">Cornas · Cornas · <strong>2019</strong> · Syrah</div>
+<div class="wine-meta"><span class="badge">Lay down (structured Syrah)</span><span class="window">Drink 2026–2034</span></div>
+<p class="wine-note">Cornas is the dark, structured bargain next to Hermitage; benchmark 2019 vintage; cult grower Stéphane Robert makes it in a disused railway tunnel. Tannic and savoury — one to lay down.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/cornas-domaine-du-tunnel-2017" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+du+tunnel+cornas/2019" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+du+tunnel+cornas+2019" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2023</span><span class="plaque-grape">Syrah</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£32</span>
+<h3 class="wine-name">Domaine Yann Chave</h3>
+<div class="wine-sub">Crozes-Hermitage Le Rouvre (organic) · Crozes-Hermitage · <strong>2023</strong> · Syrah</div>
+<div class="wine-meta"><span class="badge">Near-term (northern Syrah)</span><span class="window">Drink 2025–2030</span></div>
+<p class="wine-note">Earlier-drinking northern Syrah from one of Crozes&#x27;s best growers, now farming organically; generous 2023. Peppery and approachable young — open while the Cornas sleeps.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/search?q=Yann%20Chave%20Crozes-Hermitage%20Le%20Rouvre%202023" target="_blank" rel="noopener">The Wine Society (search)</a><a href="https://www.wine-searcher.com/find/domaine+yann+chave+crozes+hermitage+le+rouvre/2023" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+yann+chave+crozes+hermitage+le+rouvre+2023" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/exhibition-gigondas-2019.png" alt="The Wine Society (Exhibition) Exhibition Gigondas 2019 bottle"/><div class="img-vintage">label shown: 2018 vintage</div></div>
+<div class="wine-body">
+<span class="wine-price">£22</span>
+<h3 class="wine-name">The Wine Society (Exhibition)</h3>
+<div class="wine-sub">Exhibition Gigondas · Gigondas · <strong>2019</strong> · Grenache/Syrah</div>
+<div class="wine-meta"><span class="badge">Value (southern Grenache)</span><span class="window">Drink 2026–2029</span></div>
+<p class="wine-note">Value steal: most of Châteauneuf&#x27;s warmth for far less, blended by Louis Barruol of Château de Saint Cosme in the excellent 2019 vintage. Top-grower craft at a giveaway price.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/the-societys-exhibition-gigondas-2018/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/the+wine+society+exhibition+gigondas/2019" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=the+wine+society+exhibition+gigondas+2019" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-red">
+<div class="wine-img"><img src="../../img/hidden/cellar/giraud-chateauneuf-du-pape-tradition-2023.png" alt="Domaine Giraud Châteauneuf-du-Pape Tradition 2023 bottle"/><div class="img-vintage">label shown: 2019 vintage</div></div>
+<div class="wine-body">
+<span class="wine-price">£39</span>
+<h3 class="wine-name">Domaine Giraud</h3>
+<div class="wine-sub">Châteauneuf-du-Pape Tradition · Châteauneuf-du-Pape · <strong>2023</strong> · Grenache blend</div>
+<div class="wine-meta"><span class="badge">Lay down (flagship south)</span><span class="window">Drink 2026–2035</span></div>
+<p class="wine-note">The flagship southern red done properly — a top family estate in the classic perfumed, Grenache-led style (not the heavy modern idiom). Garrigue-scented; built to age. (Exhibition Châteauneuf 2022 at £28.50 a value alt.)</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/chateauneuf-du-pape-tradition-domaine-giraud-2019/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+giraud+chateauneuf+du+pape+tradition/2023" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+giraud+chateauneuf+du+pape+tradition+2023" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+## Whites &amp; Rosé
+
+
+### Burgundy — White
+
+<div class="wine-card cat-white">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2021</span><span class="plaque-grape">Chardonnay</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£25</span>
+<h3 class="wine-name">Jean-Philippe Fichet</h3>
+<div class="wine-sub">Bourgogne Blanc · Bourgogne · <strong>2021</strong> · Chardonnay</div>
+<div class="wine-meta"><span class="badge">Smart value (declassified)</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">The white equivalent of the de Montille pick: Fichet is a revered Meursault grower and this barrel-fermented regional white is effectively a baby Meursault — his precision at a quarter of the village price. The linear 2021 suits it.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/jean-philippe-fichet-bourgogne-blanc-vieilles-vignes-2021/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/jean+philippe+fichet+bourgogne+blanc/2021" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=jean+philippe+fichet+bourgogne+blanc+2021" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/exhibition-saint-aubin-blanc-2023.png" alt="The Wine Society (Exhibition) Exhibition Saint-Aubin Blanc 2023 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£26</span>
+<h3 class="wine-name">The Wine Society (Exhibition)</h3>
+<div class="wine-sub">Exhibition Saint-Aubin Blanc · Saint-Aubin · <strong>2023</strong> · Chardonnay</div>
+<div class="wine-meta"><span class="badge">Value (Côte de Beaune)</span><span class="window">Drink 2026–2028</span></div>
+<p class="wine-note">Saint-Aubin is the connoisseur&#x27;s bargain of the Côte de Beaune — baby-Puligny character tucked behind Chassagne and Puligny. The Society&#x27;s own bottling from the ripe, generous 2023 vintage; a low-risk way in.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/the-societys-exhibition-st-aubin-blanc-2023-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/the+wine+society+exhibition+saint+aubin+blanc/2023" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=the+wine+society+exhibition+saint+aubin+blanc+2023" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2020</span><span class="plaque-grape">Chardonnay</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£32</span>
+<h3 class="wine-name">Olivier Merlin</h3>
+<div class="wine-sub">Mâcon La Roche Vineuse Les Cras · Mâcon-La Roche-Vineuse · <strong>2020</strong> · Chardonnay</div>
+<div class="wine-meta"><span class="badge">Value (Mâconnais)</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">The Mâconnais value statement. Merlin helped drag the region&#x27;s reputation upward; Les Cras is a limestone site (the name means chalk/limestone) and 2020 was an excellent white vintage. Serious southern-Burgundy Chardonnay for £32.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/search?q=Olivier%20Merlin%20Macon%20La%20Roche-Vineuse%20Les%20Cras%202020" target="_blank" rel="noopener">The Wine Society (search)</a><a href="https://www.wine-searcher.com/find/olivier+merlin+macon+la+roche+vineuse+les+cras/2020" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=olivier+merlin+macon+la+roche+vineuse+les+cras+2020" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/samuel-billaud-chablis-vaillons-vv-2021.png" alt="Samuel Billaud Chablis 1er Cru Vaillons Vieilles Vignes 2021 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£42</span>
+<h3 class="wine-name">Samuel Billaud</h3>
+<div class="wine-sub">Chablis 1er Cru Vaillons Vieilles Vignes · Chablis 1er Cru · <strong>2021</strong> · Chardonnay</div>
+<div class="wine-meta"><span class="badge">Lay down (grower Chablis)</span><span class="window">Drink 2026–2031</span></div>
+<p class="wine-note">A clear step up from the village Fèvre: Billaud is one of Chablis&#x27;s finest vignerons, this is premier cru from 60–90-year-old vines, and 2021 made classically taut, mineral Chablis. On offer (down from £49).</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/samuel-billaud-chablis-premier-cru-vaillons-vieilles-vignes-2021/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/samuel+billaud+chablis+1er+cru+vaillons+vieilles+vignes/2021" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=samuel+billaud+chablis+1er+cru+vaillons+vieilles+vignes+2021" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Loire — White
+
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/taille-aux-loups-montlouis-remus-2022.png" alt="Domaine de la Taille aux Loups Montlouis &#x27;Rémus&#x27; 2022 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£26</span>
+<h3 class="wine-name">Domaine de la Taille aux Loups</h3>
+<div class="wine-sub">Montlouis &#x27;Rémus&#x27; · Montlouis-sur-Loire · <strong>2022</strong> · Chenin Blanc</div>
+<div class="wine-meta"><span class="badge">Dry Chenin (the gap)</span><span class="window">Drink 2026–2032</span></div>
+<p class="wine-note">The dry Chenin the cellar lacked. From the late Jacky Blot&#x27;s estate, a giant of Loire Chenin; Rémus is his benchmark cuvée (a former WS Champion). Quince and chalk with real cut; ages a decade.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/montlouis-sur-loire-remus-domaine-de-la-taille-aux-loups-2022-organic/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+de+la+taille+aux+loups+montlouis+remus/2022" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+de+la+taille+aux+loups+montlouis+remus+2022" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/serge-laloue-sancerre-silex-2024.png" alt="Domaine Serge Laloue Sancerre Cuvée Silex 2024 bottle"/><div class="img-vintage">label shown: 2023 vintage</div></div>
+<div class="wine-body">
+<span class="wine-price">£26</span>
+<h3 class="wine-name">Domaine Serge Laloue</h3>
+<div class="wine-sub">Sancerre Cuvée Silex · Sancerre · <strong>2024</strong> · Sauvignon Blanc</div>
+<div class="wine-meta"><span class="badge">Classic Loire Sauvignon</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">Classic flinty Loire Sauvignon — &#x27;silex&#x27; is the flint soil behind the smoky, gun-flint mineral edge. Laloue&#x27;s top unoaked cuvée; drink young and fresh.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/sancerre-cuvee-silex-domaine-serge-laloue-2023-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+serge+laloue+sancerre+cuvee+silex/2024" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+serge+laloue+sancerre+cuvee+silex+2024" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Alsace — White
+
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/dirler-cade-riesling-kessler-grand-cru-2018.png" alt="Domaine Dirler-Cadé Riesling Grand Cru Kessler 2018 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£34</span>
+<h3 class="wine-name">Domaine Dirler-Cadé</h3>
+<div class="wine-sub">Riesling Grand Cru Kessler · Alsace Grand Cru (Kessler) · <strong>2018</strong> · Riesling</div>
+<div class="wine-meta"><span class="badge">Dry Alsace Riesling</span><span class="window">Drink 2026–2032</span></div>
+<p class="wine-note">Dry Alsace Riesling and a foil to the Mosel — fuller, drier, just as mineral. Small biodynamic family estate; top grand cru site; ripe 2018. Ages well. (Schoenenbourg, Dopff au Moulin 2018 at £26 a value alt.)</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/riesling-grand-cru-kessler-domaine-dirler-cade-2018-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+dirler+cade+riesling+grand+cru+kessler/2018" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+dirler+cade+riesling+grand+cru+kessler+2018" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/zind-humbrecht-pinot-gris-heimbourg-2018.png" alt="Domaine Zind-Humbrecht Pinot Gris Heimbourg 2018 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£25</span>
+<h3 class="wine-name">Domaine Zind-Humbrecht</h3>
+<div class="wine-sub">Pinot Gris Heimbourg · Alsace · <strong>2018</strong> · Pinot Gris</div>
+<div class="wine-meta"><span class="badge">Star-grower value</span><span class="window">Drink 2026–2028</span></div>
+<p class="wine-note">A star grower (Olivier Humbrecht MW) at a keen price; rich, gingery, white-pepper spice. May carry a touch of residual sweetness, as ZH Pinot Gris often does. Adds aromatic range.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/pinot-gris-heimbourg-domaine-zind-humbrecht-2018-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+zind+humbrecht+pinot+gris+heimbourg/2018" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+zind+humbrecht+pinot+gris+heimbourg+2018" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Jura — White
+
+<div class="wine-card cat-white">
+<div class="wine-img"><img src="../../img/hidden/cellar/carlines-en-lya-chardonnay-2019.png" alt="Domaine des Carlines Chardonnay &#x27;En Lya&#x27; 2019 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£26.50</span>
+<h3 class="wine-name">Domaine des Carlines</h3>
+<div class="wine-sub">Chardonnay &#x27;En Lya&#x27; · Côtes du Jura · <strong>2019</strong> · Chardonnay</div>
+<div class="wine-meta"><span class="badge">Jura Chardonnay (accessible)</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">The fresh, food-friendly face of the Jura — full-bodied but mineral Chardonnay from a plot near Château-Chalon; the page&#x27;s best-reviewed Jura. An easy way in.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/chardonnay-en-lya-domaine-des-carlines-2919/" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+des+carlines+chardonnay+en+lya/2019" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+des+carlines+chardonnay+en+lya+2019" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-white">
+<div class="wine-img wine-img--plaque"><div class="plaque"><span class="plaque-vintage">2022</span><span class="plaque-grape">Savagnin</span><span class="plaque-note">no photo</span></div></div>
+<div class="wine-body">
+<span class="wine-price">£30</span>
+<h3 class="wine-name">Domaine des Carlines</h3>
+<div class="wine-sub">En Charnay Savagnin · Côtes du Jura · <strong>2022</strong> · Savagnin</div>
+<div class="wine-meta"><span class="badge">Jura signature grape</span><span class="window">Drink 2026–2031</span></div>
+<p class="wine-note">The Jura&#x27;s signature grape, tasting like nothing else — saline, nutty, faintly wild even in this fresher style. Distinctive but approachable; develops for years. (Vin Jaune 2017 at £44 is the iconic deep end.)</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/en-charnay-savagnin-domaine-des-carlines-2022-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/domaine+des+carlines+en+charnay+savagnin/2022" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=domaine+des+carlines+en+charnay+savagnin+2022" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+### Provence — Rosé
+
+<div class="wine-card cat-rose">
+<div class="wine-img"><img src="../../img/hidden/cellar/dupuy-de-lome-bandol-rose-2025.png" alt="Dupuy de Lôme Bandol Rosé 2025 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£19.50</span>
+<h3 class="wine-name">Dupuy de Lôme</h3>
+<div class="wine-sub">Bandol Rosé · Bandol · <strong>2025</strong> · Mourvèdre blend</div>
+<div class="wine-meta"><span class="badge">Serious / ageworthy</span><span class="window">Drink 2026–2028</span></div>
+<p class="wine-note">Bandol is the gastronomic, Mourvèdre-led side of Provençal rosé — fuller, structured and built for the table rather than the sun-lounger; holds a couple of years. The serious pink, keenly priced for the appellation.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/bandol-rose-dupuy-de-lome-2025-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/dupuy+de+lome+bandol+rose/2025" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=dupuy+de+lome+bandol+rose+2025" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+<div class="wine-card cat-rose">
+<div class="wine-img"><img src="../../img/hidden/cellar/clos-de-lours-laccent-rose-2025.png" alt="Clos de l&#x27;Ours Côtes de Provence Rosé &#x27;L&#x27;Accent&#x27; 2025 bottle"/></div>
+<div class="wine-body">
+<span class="wine-price">£16.50</span>
+<h3 class="wine-name">Clos de l&#x27;Ours</h3>
+<div class="wine-sub">Côtes de Provence Rosé &#x27;L&#x27;Accent&#x27; · Côtes de Provence · <strong>2025</strong> · Cinsault</div>
+<div class="wine-meta"><span class="badge">Quality grower / easy</span><span class="window">Drink 2026–2027</span></div>
+<p class="wine-note">The easy-drinking counterpoint, but from a quality organic grower rather than a faceless brand — fuller and more savoury than the supermarket style, with redcurrant fruit and Mediterranean-herb lift. The summer/BBQ bottle.</p>
+<div class="wine-links"><a href="https://www.thewinesociety.com/product/cotes-de-provence-rose-clos-de-lours-laccent-2025-en.aspx" target="_blank" rel="noopener">The Wine Society</a><a href="https://www.wine-searcher.com/find/clos+de+l+ours+cotes+provence+rose+accent/2025" target="_blank" rel="noopener">Wine-Searcher</a><a href="https://www.cellartracker.com/list.asp?szSearch=clos+de+l+ours+cotes+provence+rose+accent+2025" target="_blank" rel="noopener">CellarTracker</a></div>
+</div>
+</div>
+
+
+------------------------------------------------------------------------
+
+*Compiled from a Wine Society shortlist, June 2026. Prices, vintages and availability change — confirm on the merchant page before buying. Bottle images © The Wine Society, shown for identification.*
+

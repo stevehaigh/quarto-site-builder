@@ -1,0 +1,7 @@
+# Production profile: exclude WIP posts and unlisted pages from deploy.
+# Used by CI (publish + PR check). Local preview/render uses the default profile.
+project:
+  render:
+    - "**/*.qmd"
+    - "!blog/drafts/**"
+    - "!hidden/**"
