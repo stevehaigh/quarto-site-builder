@@ -16,7 +16,10 @@
   --bs-body-bg: #faf8f3;
 }
 
-[data-bs-theme="dark"] {
+/* Scope to :root so the dark accent only applies in true page-dark mode —
+   a bare [data-bs-theme="dark"] would also match Quarto's dark-context navbar
+   and leak the dark accent into it in light mode. */
+:root[data-bs-theme="dark"] {
   --accent: #74a9cb;
 }
 
