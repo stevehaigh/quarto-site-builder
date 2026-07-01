@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "reaction-diffusion/",
+    "href": "reaction-diffusion/",
+    "title": "Reaction-diffusion",
+    "section": "",
+    "text": "Two chemicals diffuse across a surface and react where they meet. That’s the whole setup. Get the rates right and it stops being boring: the even mix goes unstable and sorts itself into spots, stripes, mazes, and blobs that split like dividing cells. Alan Turing wrote the maths down in 1952, as an answer to how a featureless ball of cells decides where to put a leopard’s spots. It’s the smooth cousin of the Game of Life on the other page here: same idea, local rules run in parallel until structure emerges, but continuous instead of square.\nThe version below is Gray-Scott. Two species, a feed rate that tops up the first, a kill rate that drains the second, and a reaction that turns one into the other. Move those two numbers and the same equations hand you coral, fingerprints, or self-replicating dots. Pick a preset and watch, or click on the canvas to drop in some chemical and start a pattern yourself.\nIt all runs on the GPU. The state, two concentrations per cell, lives in a floating-point texture. A single fragment shader reads each cell and its four neighbours, applies a 5-point Laplacian for the diffusion term, does the Gray-Scott reaction, and writes the next state. A shader can’t read and write the same texture at once, so it ping-pongs between two of them: read A, write B, swap, repeat, a few dozen times per frame before anything reaches the screen."
+  },
+  {
+    "objectID": "reaction-diffusion/#the-two-knobs",
+    "href": "reaction-diffusion/#the-two-knobs",
+    "title": "Reaction-diffusion",
+    "section": "The two knobs",
+    "text": "The two knobs\nEverything on screen is steered by two numbers: the feed rate F and the kill rate k. Most of the (F, k) plane is dead, the pattern either floods solid or starves to nothing. The interesting behaviour lives on a thin band between those fates, and small steps along it flip you between mazes, drifting spots, and mitosis. The presets drop you onto known-good points, and the F and k sliders let you wander off them and find your own; the links below map the rest."
+  },
+  {
+    "objectID": "reaction-diffusion/#further-reading",
+    "href": "reaction-diffusion/#further-reading",
+    "title": "Reaction-diffusion",
+    "section": "Further reading",
+    "text": "Further reading\n\nKarl Sims, Reaction-Diffusion Tutorial — the clearest walk-through of the equations and what each term does.\nRobert Munafo’s xmorphia — the exhaustive (F, k) atlas: which numbers give which creatures.\npmneila’s WebGL Gray-Scott — the in-browser demo that made it obvious you could run this on the GPU.\n\n← back to haigh.bio\nTuring would’ve loved a fast GPU."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Steve Haigh",
@@ -28,39 +49,116 @@
     "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
   },
   {
-    "objectID": "projects/",
-    "href": "projects/",
-    "title": "Projects & Decks",
+    "objectID": "decks/lab-meeting-2026-05-14/#quick-recap",
+    "href": "decks/lab-meeting-2026-05-14/#quick-recap",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Quick recap",
+    "text": "Quick recap\n\n\nWhat I evaluated\n\nAiming to build a computer model of the platelet.\nHas been done before in prokaryotes and yeast but not in other eukaryotic cells.\nLots of modelling done in platelets but not a whole-cell attempt.\nLots of options e.g., COPASI, V-Cell and others.\nLanded on wcEcoli project from Covert lab — capable of scaling to whole cell, code quality excellent, something I could work with and expand.\n\n\nWhat I did\n\nForked wcEcoli (i.e., took my own working copy).\nPruned all E. coli biology.\nUsed AI to build tests to verify I didn’t remove too much.\nRebuilt cell contents and processes from the platelet literature.\nKept the simulation engine, state partitioning, listener / analysis framework.\n~5,000 lines of working code I didn’t have to write.\nEmailed Prof. Covert — “sounds fun, good luck”.\n\n\n\nWhy not COPASI or V-Cell? — great single-pathway ODE tools, but no copy-number accounting across compartments.\nCheat sheet:\n\nCOPASI — open-source biochemical pathway simulator; great for single-pathway ODE work.\nV-Cell — UConn cell modelling platform; spatial PDE-capable, domain-specific.\nSBML — Systems Biology Markup Language; XML interchange format.\nBioModels — EBI repository of curated SBML models.\nwcEcoli — Covert Lab’s whole-cell E. coli model (Karr 2012 lineage; Macklin / Sun Science 2020)."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#method-to-build-a-calibrated-model",
+    "href": "decks/lab-meeting-2026-05-14/#method-to-build-a-calibrated-model",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Method to build a calibrated model",
+    "text": "Method to build a calibrated model\nFor each mechanism, a five-step process:\n\nAnchor paper. E.g., Dolan & Diamond 2014 supplied the validation experiment (Fig. 4 Ca²⁺ transients ± extracellular Ca²⁺) and resting-state targets (100 nM cyt, 250 µM DTS).\nLiterature review for kinetics. Primary sources: deYoung–Keizer 1992 for IP₃R, Caride 2007 for PMCA, Hoover & Lewis 2011 for SOCE, Mazet 2020 for the PI cycle…\nSpecies enumeration. Every Ca²⁺-binding or -gating protein state, with a compartment tag (DTS, Cyt etc.). ~50 species for the calcium pathway.\nCopy numbers from Burkhart 2012 platelet proteomics.\nRate constants. Primary-source values, units normalised, every value carrying a citation comment in code.\n\nThen: does the resting state hold? Do the timescales line up? Do the unit tests still pass?\n\nEvery numerical value carries a primary-source citation comment in the code. This is the discipline that catches transcription errors (segues into slide 8).\nStep 5 is the key one. There are ~85 rate constants in this model; each is a small research project.\n\nCalibrated model — a model whose parameters are constrained by measurements rather than fitted to the validation experiment.\nAnchor paper — the single paper whose experiment you’ll validate against; defines targets upfront.\nIP₃R — inositol-1,4,5-trisphosphate receptor; Ca²⁺ release channel on the DTS.\nSERCA — sarco/endoplasmic-reticulum Ca²⁺ ATPase; pumps Ca²⁺ back into the DTS.\nPMCA — plasma-membrane Ca²⁺ ATPase; pumps Ca²⁺ out of the cell.\nSOCE — store-operated Ca²⁺ entry; STIM1 / Orai1 mechanism that refills depleted stores from extracellular Ca²⁺.\nDTS — dense tubular system; platelet equivalent of ER, the intracellular Ca²⁺ store.\nBurkhart 2012 — platelet proteomics dataset; absolute copy numbers for ~3,800 platelet proteins."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-start-with-the-data",
+    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-start-with-the-data",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — start with the data",
+    "text": "Build code from source data — start with the data\nStart with the published data (usually PDF, sometimes CSV).\n\nJust a small excerpt."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-extraction",
+    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-extraction",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — AI extraction",
+    "text": "Build code from source data — AI extraction\n\n\nAsk AI to extract — get it to tell you what it’s doing to sanity check (but it is very good at this).\n\nE.g. I asked: “Please read Dolan and Diamond 2014 and tell me what the first 5 lines of table 1 show.”\n\nSimply not feasible to do this by hand at large scale; AI could process 100s of papers in a day. The only challenge is verification, but this is also amenable to AI assistance.\n\n\n\n\n\n\n\n\nDivision of labour: AI does the rote PDF extraction; humans do the sanity check.\n\nHeadline claim: 100s of papers a day is reachable; the bottleneck is verification — and verification is also AI-amenable (see slide 8).\nAuthorship of the model — primary source / wcEcoli / me, in that order.\nPDF extraction — historically painful for tables and footnotes; modern multimodal LLMs are now reliable on well-formatted tables, less so on figures.\nSanity check — the human step: does the extracted value match the paper’s text? Do the units make sense?"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-writes-the-code",
+    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-writes-the-code",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Build code from source data — AI writes the code",
+    "text": "Build code from source data — AI writes the code\n\n\nThen get AI to build the code, using the wcEcoli code as a template.\nThe code works well, the architecture is not perfect — needs some work to make it more usable for future expansion — but it’s an excellent start.\n\n\n\n\n\n\n\n\n“Building the code” means: scaffolding new process modules off the wcEcoli template, wiring rate constants into the existing solver, writing unit tests for invariants.\nWorks well, not perfect — will need refactoring before v.next.\n“Did the AI write code that worked first try?” → no, the back-and-forth is iterative; the AI is a fast scaffolder and a useful pair-programmer, not an oracle."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#what-did-i-build-so-far",
+    "href": "decks/lab-meeting-2026-05-14/#what-did-i-build-so-far",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "What did I build? (so far)",
+    "text": "What did I build? (so far)\n\n\n\nAgonist — a signal molecule that activates a platelet (thrombin, ADP, TXA2).\nGPCR — G-protein-coupled receptor (PAR1 / PAR4 for thrombin; P2Y1 and P2Y12 for ADP).\nGαq — α-subunit of the heterotrimeric G-protein that activates PLCβ. Gᵢ (P2Y12) is the inhibitory counterpart.\nPLCβ — phospholipase Cβ; cleaves PIP₂ → IP₃ + DAG.\nIP₃ — inositol-1,4,5-trisphosphate; the second messenger that gates IP₃R.\nNCX / NCLX / MCU — Na⁺/Ca²⁺ exchanger (PM); Na⁺/Ca²⁺/Li⁺ exchanger (mitochondrial); mitochondrial Ca²⁺ uniporter.\nCaM — calmodulin; cytosolic Ca²⁺ sensor / buffer; activates PMCA at high Ca²⁺.\nCALR / BiP / HSP90B1 / CREC — major intra-DTS Ca²⁺-binding buffers.\nSTIM1 / Orai1 — DTS Ca²⁺ sensor + PM channel; the SOCE machinery.\nP2X1 — ATP-gated PM Ca²⁺ channel; ionotropic, not GPCR.\nSCS / OCS — surface-connected (open canalicular) system; the platelet’s invaginated extracellular surface.\nTXA2R — thromboxane A2 receptor; not yet in model.\nPKC — protein kinase C; not yet in model."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#spotting-errors-in-the-source",
+    "href": "decks/lab-meeting-2026-05-14/#spotting-errors-in-the-source",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Spotting errors in the source",
+    "text": "Spotting errors in the source\nThe Purvis 2008 k₃ story.\n\nAsked AI to check values it had extracted.\nAI spotted that a value quoted in Purvis & Diamond 2008 (a well-known platelet modelling paper) was wrong — units were wrong and value was 100× too large.\nAI found the original study via the references and I verified for myself; AI was correct, there was a typo.\nVery strong use-case for AI — tracking values and assertions across papers. Also very useful for helping to review data: I got the AI to print values it had found, with reference to the primary source and the code, so I could easily review.\n\n\nResting-state targets — cytosolic Ca²⁺ in 90–110 nM; DTS Ca²⁺ in literature range (100–400 µM); IP₃ ≈ 50 nM.\nIP₃-stimulated transient — the calcium spike following IP₃ release from the GPCR cascade.\nGαq-active — fraction of Gαq protein in its GTP-bound, active conformation; an upstream proxy for receptor occupancy.\nUnit test — automated invariant check (e.g. mass balance, positivity, sub-state sum)."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#validation",
+    "href": "decks/lab-meeting-2026-05-14/#validation",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Validation",
+    "text": "Validation\n\n\nCriteria\nCompared output to existing models. Success criteria:\n\nResting cytosolic Ca²⁺ within 100 ± 10 nM band\nResting DTS Ca²⁺ in the literature range\nIP₃-stimulated transient peak height in band\nTransient duration matches shape of previous model(s)\n\n\nModel state at 14 May\n\nResting cyt Ca²⁺: 104 nM ✓\nResting DTS Ca²⁺: 235 µM ✓\nResting IP₃: 50 nM ✓\nResting Gαq-active: 100 of 5000 ✓\n21 / 21 unit tests pass\nDriven by physiological agonists — 1 nM thrombin, 10 µM ADP. No hand-fitted IP₃ forcing."
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-cytosolic-ca²",
+    "href": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-cytosolic-ca²",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺",
+    "text": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-dts-ca²",
+    "href": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-dts-ca²",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Model stimulated with ADP / thrombin — DTS Ca²⁺",
+    "text": "Model stimulated with ADP / thrombin — DTS Ca²⁺"
+  },
+  {
+    "objectID": "decks/lab-meeting-2026-05-14/#where-it-goes-from-here",
+    "href": "decks/lab-meeting-2026-05-14/#where-it-goes-from-here",
+    "title": "The feasibility of a whole-cell model of the human platelet",
+    "section": "Where it goes from here",
+    "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
+  },
+  {
+    "objectID": "blog/posts/llm-intro/",
+    "href": "blog/posts/llm-intro/",
+    "title": "How do LLMs work? — a shallow-dive for scientists",
     "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
+    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
   },
   {
-    "objectID": "projects/#code",
-    "href": "projects/#code",
-    "title": "Projects & Decks",
+    "objectID": "blog/posts/academic-pptx-template/",
+    "href": "blog/posts/academic-pptx-template/",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
     "section": "",
-    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
+    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
   },
   {
-    "objectID": "projects/#slide-decks",
-    "href": "projects/#slide-decks",
-    "title": "Projects & Decks",
-    "section": "Slide decks",
-    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nHow do LLMs work? — a shallow-dive for scientists\nDash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.\nView slides PDF PPTX\n\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
+    "objectID": "blog/posts/academic-pptx-template/#why-this-template",
+    "href": "blog/posts/academic-pptx-template/#why-this-template",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Why this template",
+    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
   },
   {
-    "objectID": "life/",
-    "href": "life/",
-    "title": "Conway’s Game of Life",
-    "section": "",
-    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.\nClick or drag to paint. The grid wraps at the edges."
+    "objectID": "blog/posts/academic-pptx-template/#the-quarto-version",
+    "href": "blog/posts/academic-pptx-template/#the-quarto-version",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "The Quarto version",
+    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
   },
   {
-    "objectID": "life/#further-down-the-rabbit-hole",
-    "href": "life/#further-down-the-rabbit-hole",
-    "title": "Conway’s Game of Life",
-    "section": "Further down the rabbit hole",
-    "text": "Further down the rabbit hole\n\nConway’s Game of Life — Wikipedia: rules, history, and why a 4-rule cellular automaton is Turing-complete.\nLifeWiki — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.\nconwaylife.com forums — the research community is still active. New patterns get discovered every week.\nGolly — the high-performance simulator. Uses Hashlife to run universes that would crush the naive algorithm above by many orders of magnitude.\nPaul Rendell’s Universal Turing Machine — a working UTM built inside Life. Glider streams as signals, glider guns as clocks, eaters as gates, all wired into a tape-and-state machine. Load it in Golly and watch it compute. The constructive proof that Life is Turing-complete.\n0E0P metacell — Adam Goucher’s self-replicating pattern (2018). A von Neumann universal constructor that copies itself from empty space, no background grid required. Decades after Life’s invention before someone actually built one.\n“Life in Life” — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.\nHashlife in Python — John Williamson’s pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: python-lifelib, by the same author as the 0E0P metacell above.)\nxkcd 2293 — Randall Munroe’s tribute to John Conway, who died of COVID in April 2020.\n\n← back to haigh.bio\nBuilt by a glider, for a glider."
+    "objectID": "blog/posts/academic-pptx-template/#caveats",
+    "href": "blog/posts/academic-pptx-template/#caveats",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Caveats",
+    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template."
   },
   {
     "objectID": "about/",
@@ -110,6 +208,55 @@
     "title": "Lab meeting: the platelet model, first showing",
     "section": "",
     "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/",
+    "href": "blog/posts/the-story-so-far/",
+    "title": "The Story So Far",
+    "section": "",
+    "text": "This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already"
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "href": "blog/posts/the-story-so-far/#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
+    "title": "The Story So Far",
+    "section": "From Debugging Code to Debugging Cells: A Year of Switching Fields",
+    "text": "From Debugging Code to Debugging Cells: A Year of Switching Fields\nLast August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap."
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#why-biology-and-why-now",
+    "href": "blog/posts/the-story-so-far/#why-biology-and-why-now",
+    "title": "The Story So Far",
+    "section": "Why biology, and why now",
+    "text": "Why biology, and why now\nThe interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-seriously studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.\nAt some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again."
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "href": "blog/posts/the-story-so-far/#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
+    "title": "The Story So Far",
+    "section": "The first six weeks: lectures, journal clubs, and introduction to a real lab",
+    "text": "The first six weeks: lectures, journal clubs, and introduction to a real lab\nThe course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.\nThen came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results."
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#end-of-semester-one-the-unexpected-hard-part",
+    "href": "blog/posts/the-story-so-far/#end-of-semester-one-the-unexpected-hard-part",
+    "title": "The Story So Far",
+    "section": "End of semester one: the unexpected hard part",
+    "text": "End of semester one: the unexpected hard part\nBy the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.\nThe biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.\nThe harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I really wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.\nAcademic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.\nSome things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.\nI’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end)."
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#the-project-a-whole-cell-model-of-a-platelet",
+    "href": "blog/posts/the-story-so-far/#the-project-a-whole-cell-model-of-a-platelet",
+    "title": "The Story So Far",
+    "section": "The project: a whole-cell model of a platelet",
+    "text": "The project: a whole-cell model of a platelet\nThe research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.\nThe project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August."
+  },
+  {
+    "objectID": "blog/posts/the-story-so-far/#what-comes-next",
+    "href": "blog/posts/the-story-so-far/#what-comes-next",
+    "title": "The Story So Far",
+    "section": "What comes next",
+    "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
   },
   {
     "objectID": "decks/llm-intro/#why-this-matters",
@@ -231,318 +378,38 @@
     "text": "Thanks — questions?"
   },
   {
-    "objectID": "decks/lab-meeting-2026-05-14/#quick-recap",
-    "href": "decks/lab-meeting-2026-05-14/#quick-recap",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Quick recap",
-    "text": "Quick recap\n\n\nWhat I evaluated\n\nAiming to build a computer model of the platelet.\nHas been done before in prokaryotes and yeast but not in other eukaryotic cells.\nLots of modelling done in platelets but not a whole-cell attempt.\nLots of options e.g., COPASI, V-Cell and others.\nLanded on wcEcoli project from Covert lab — capable of scaling to whole cell, code quality excellent, something I could work with and expand.\n\n\nWhat I did\n\nForked wcEcoli (i.e., took my own working copy).\nPruned all E. coli biology.\nUsed AI to build tests to verify I didn’t remove too much.\nRebuilt cell contents and processes from the platelet literature.\nKept the simulation engine, state partitioning, listener / analysis framework.\n~5,000 lines of working code I didn’t have to write.\nEmailed Prof. Covert — “sounds fun, good luck”.\n\n\n\nWhy not COPASI or V-Cell? — great single-pathway ODE tools, but no copy-number accounting across compartments.\nCheat sheet:\n\nCOPASI — open-source biochemical pathway simulator; great for single-pathway ODE work.\nV-Cell — UConn cell modelling platform; spatial PDE-capable, domain-specific.\nSBML — Systems Biology Markup Language; XML interchange format.\nBioModels — EBI repository of curated SBML models.\nwcEcoli — Covert Lab’s whole-cell E. coli model (Karr 2012 lineage; Macklin / Sun Science 2020)."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#method-to-build-a-calibrated-model",
-    "href": "decks/lab-meeting-2026-05-14/#method-to-build-a-calibrated-model",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Method to build a calibrated model",
-    "text": "Method to build a calibrated model\nFor each mechanism, a five-step process:\n\nAnchor paper. E.g., Dolan & Diamond 2014 supplied the validation experiment (Fig. 4 Ca²⁺ transients ± extracellular Ca²⁺) and resting-state targets (100 nM cyt, 250 µM DTS).\nLiterature review for kinetics. Primary sources: deYoung–Keizer 1992 for IP₃R, Caride 2007 for PMCA, Hoover & Lewis 2011 for SOCE, Mazet 2020 for the PI cycle…\nSpecies enumeration. Every Ca²⁺-binding or -gating protein state, with a compartment tag (DTS, Cyt etc.). ~50 species for the calcium pathway.\nCopy numbers from Burkhart 2012 platelet proteomics.\nRate constants. Primary-source values, units normalised, every value carrying a citation comment in code.\n\nThen: does the resting state hold? Do the timescales line up? Do the unit tests still pass?\n\nEvery numerical value carries a primary-source citation comment in the code. This is the discipline that catches transcription errors (segues into slide 8).\nStep 5 is the key one. There are ~85 rate constants in this model; each is a small research project.\n\nCalibrated model — a model whose parameters are constrained by measurements rather than fitted to the validation experiment.\nAnchor paper — the single paper whose experiment you’ll validate against; defines targets upfront.\nIP₃R — inositol-1,4,5-trisphosphate receptor; Ca²⁺ release channel on the DTS.\nSERCA — sarco/endoplasmic-reticulum Ca²⁺ ATPase; pumps Ca²⁺ back into the DTS.\nPMCA — plasma-membrane Ca²⁺ ATPase; pumps Ca²⁺ out of the cell.\nSOCE — store-operated Ca²⁺ entry; STIM1 / Orai1 mechanism that refills depleted stores from extracellular Ca²⁺.\nDTS — dense tubular system; platelet equivalent of ER, the intracellular Ca²⁺ store.\nBurkhart 2012 — platelet proteomics dataset; absolute copy numbers for ~3,800 platelet proteins."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-start-with-the-data",
-    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-start-with-the-data",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Build code from source data — start with the data",
-    "text": "Build code from source data — start with the data\nStart with the published data (usually PDF, sometimes CSV).\n\nJust a small excerpt."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-extraction",
-    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-extraction",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Build code from source data — AI extraction",
-    "text": "Build code from source data — AI extraction\n\n\nAsk AI to extract — get it to tell you what it’s doing to sanity check (but it is very good at this).\n\nE.g. I asked: “Please read Dolan and Diamond 2014 and tell me what the first 5 lines of table 1 show.”\n\nSimply not feasible to do this by hand at large scale; AI could process 100s of papers in a day. The only challenge is verification, but this is also amenable to AI assistance.\n\n\n\n\n\n\n\n\nDivision of labour: AI does the rote PDF extraction; humans do the sanity check.\n\nHeadline claim: 100s of papers a day is reachable; the bottleneck is verification — and verification is also AI-amenable (see slide 8).\nAuthorship of the model — primary source / wcEcoli / me, in that order.\nPDF extraction — historically painful for tables and footnotes; modern multimodal LLMs are now reliable on well-formatted tables, less so on figures.\nSanity check — the human step: does the extracted value match the paper’s text? Do the units make sense?"
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-writes-the-code",
-    "href": "decks/lab-meeting-2026-05-14/#build-code-from-source-data-ai-writes-the-code",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Build code from source data — AI writes the code",
-    "text": "Build code from source data — AI writes the code\n\n\nThen get AI to build the code, using the wcEcoli code as a template.\nThe code works well, the architecture is not perfect — needs some work to make it more usable for future expansion — but it’s an excellent start.\n\n\n\n\n\n\n\n\n“Building the code” means: scaffolding new process modules off the wcEcoli template, wiring rate constants into the existing solver, writing unit tests for invariants.\nWorks well, not perfect — will need refactoring before v.next.\n“Did the AI write code that worked first try?” → no, the back-and-forth is iterative; the AI is a fast scaffolder and a useful pair-programmer, not an oracle."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#what-did-i-build-so-far",
-    "href": "decks/lab-meeting-2026-05-14/#what-did-i-build-so-far",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "What did I build? (so far)",
-    "text": "What did I build? (so far)\n\n\n\nAgonist — a signal molecule that activates a platelet (thrombin, ADP, TXA2).\nGPCR — G-protein-coupled receptor (PAR1 / PAR4 for thrombin; P2Y1 and P2Y12 for ADP).\nGαq — α-subunit of the heterotrimeric G-protein that activates PLCβ. Gᵢ (P2Y12) is the inhibitory counterpart.\nPLCβ — phospholipase Cβ; cleaves PIP₂ → IP₃ + DAG.\nIP₃ — inositol-1,4,5-trisphosphate; the second messenger that gates IP₃R.\nNCX / NCLX / MCU — Na⁺/Ca²⁺ exchanger (PM); Na⁺/Ca²⁺/Li⁺ exchanger (mitochondrial); mitochondrial Ca²⁺ uniporter.\nCaM — calmodulin; cytosolic Ca²⁺ sensor / buffer; activates PMCA at high Ca²⁺.\nCALR / BiP / HSP90B1 / CREC — major intra-DTS Ca²⁺-binding buffers.\nSTIM1 / Orai1 — DTS Ca²⁺ sensor + PM channel; the SOCE machinery.\nP2X1 — ATP-gated PM Ca²⁺ channel; ionotropic, not GPCR.\nSCS / OCS — surface-connected (open canalicular) system; the platelet’s invaginated extracellular surface.\nTXA2R — thromboxane A2 receptor; not yet in model.\nPKC — protein kinase C; not yet in model."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#spotting-errors-in-the-source",
-    "href": "decks/lab-meeting-2026-05-14/#spotting-errors-in-the-source",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Spotting errors in the source",
-    "text": "Spotting errors in the source\nThe Purvis 2008 k₃ story.\n\nAsked AI to check values it had extracted.\nAI spotted that a value quoted in Purvis & Diamond 2008 (a well-known platelet modelling paper) was wrong — units were wrong and value was 100× too large.\nAI found the original study via the references and I verified for myself; AI was correct, there was a typo.\nVery strong use-case for AI — tracking values and assertions across papers. Also very useful for helping to review data: I got the AI to print values it had found, with reference to the primary source and the code, so I could easily review.\n\n\nResting-state targets — cytosolic Ca²⁺ in 90–110 nM; DTS Ca²⁺ in literature range (100–400 µM); IP₃ ≈ 50 nM.\nIP₃-stimulated transient — the calcium spike following IP₃ release from the GPCR cascade.\nGαq-active — fraction of Gαq protein in its GTP-bound, active conformation; an upstream proxy for receptor occupancy.\nUnit test — automated invariant check (e.g. mass balance, positivity, sub-state sum)."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#validation",
-    "href": "decks/lab-meeting-2026-05-14/#validation",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Validation",
-    "text": "Validation\n\n\nCriteria\nCompared output to existing models. Success criteria:\n\nResting cytosolic Ca²⁺ within 100 ± 10 nM band\nResting DTS Ca²⁺ in the literature range\nIP₃-stimulated transient peak height in band\nTransient duration matches shape of previous model(s)\n\n\nModel state at 14 May\n\nResting cyt Ca²⁺: 104 nM ✓\nResting DTS Ca²⁺: 235 µM ✓\nResting IP₃: 50 nM ✓\nResting Gαq-active: 100 of 5000 ✓\n21 / 21 unit tests pass\nDriven by physiological agonists — 1 nM thrombin, 10 µM ADP. No hand-fitted IP₃ forcing."
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-cytosolic-ca²",
-    "href": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-cytosolic-ca²",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺",
-    "text": "Model stimulated with ADP / thrombin — cytosolic Ca²⁺"
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-dts-ca²",
-    "href": "decks/lab-meeting-2026-05-14/#model-stimulated-with-adp-thrombin-dts-ca²",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Model stimulated with ADP / thrombin — DTS Ca²⁺",
-    "text": "Model stimulated with ADP / thrombin — DTS Ca²⁺"
-  },
-  {
-    "objectID": "decks/lab-meeting-2026-05-14/#where-it-goes-from-here",
-    "href": "decks/lab-meeting-2026-05-14/#where-it-goes-from-here",
-    "title": "The feasibility of a whole-cell model of the human platelet",
-    "section": "Where it goes from here",
-    "text": "Where it goes from here\nNear-term biology\n\nGranule release — the model currently stops at the Ca²⁺ peak.\nImplement P2Y₁₂, TXA2R receptors and more, depending on time.\nRun experiments e.g. when P2Y₁₂ / Gᵢ are wired up, add clopidogrel as an in silico drug experiment.\n\nWider impact\n\nPlatelet–CTC interactions. A calibrated platelet model could in principle be coupled to a tumour-cell model.\nMethodology generalises to other single-cell calibration problems — if pathways are well-quantified, no reason not to try modelling them in a cancer cell.\nMultiple cell–cell interactions — thrombus formation?\n\nBlue sky goal\n\nI’d like to get to a point where a biologist with limited coding experience could build a model with AI help. Very long shot: a system where a user drops primary data and text instructions into an app and the model builds itself."
-  },
-  {
-    "objectID": "blog/posts/academic-pptx-template/",
-    "href": "blog/posts/academic-pptx-template/",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "objectID": "life/",
+    "href": "life/",
+    "title": "Conway’s Game of Life",
     "section": "",
-    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
+    "text": "Four trivial rules, applied to every cell at once, produce unbounded complexity. From them you can build oscillators, mobile ‘spaceships’, logic gates, glider guns that emit them, and a working universal Turing machine.\nClick or drag to paint. The grid wraps at the edges."
   },
   {
-    "objectID": "blog/posts/academic-pptx-template/#why-this-template",
-    "href": "blog/posts/academic-pptx-template/#why-this-template",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Why this template",
-    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
+    "objectID": "life/#further-down-the-rabbit-hole",
+    "href": "life/#further-down-the-rabbit-hole",
+    "title": "Conway’s Game of Life",
+    "section": "Further down the rabbit hole",
+    "text": "Further down the rabbit hole\n\nConway’s Game of Life — Wikipedia: rules, history, and why a 4-rule cellular automaton is Turing-complete.\nLifeWiki — encyclopedic catalogue of patterns. Still lifes, oscillators, spaceships, guns, puffers, eaters, reflectors — thousands of them.\nconwaylife.com forums — the research community is still active. New patterns get discovered every week.\nGolly — the high-performance simulator. Uses Hashlife to run universes that would crush the naive algorithm above by many orders of magnitude.\nPaul Rendell’s Universal Turing Machine — a working UTM built inside Life. Glider streams as signals, glider guns as clocks, eaters as gates, all wired into a tape-and-state machine. Load it in Golly and watch it compute. The constructive proof that Life is Turing-complete.\n0E0P metacell — Adam Goucher’s self-replicating pattern (2018). A von Neumann universal constructor that copies itself from empty space, no background grid required. Decades after Life’s invention before someone actually built one.\n“Life in Life” — the Game of Life simulating itself, via the OTCA metapixel. Sit with this one.\nHashlife in Python — John Williamson’s pure-Python implementation. The quadtree memoization that makes Golly fast, in code you can read in an evening. (For production use: python-lifelib, by the same author as the 0E0P metacell above.)\nxkcd 2293 — Randall Munroe’s tribute to John Conway, who died of COVID in April 2020.\n\n← back to haigh.bio\nBuilt by a glider, for a glider."
   },
   {
-    "objectID": "blog/posts/academic-pptx-template/#the-quarto-version",
-    "href": "blog/posts/academic-pptx-template/#the-quarto-version",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "The Quarto version",
-    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
-  },
-  {
-    "objectID": "blog/posts/academic-pptx-template/#caveats",
-    "href": "blog/posts/academic-pptx-template/#caveats",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Caveats",
-    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template."
-  },
-  {
-    "objectID": "blog/posts/llm-intro/",
-    "href": "blog/posts/llm-intro/",
-    "title": "How do LLMs work? — a shallow-dive for scientists",
+    "objectID": "projects/",
+    "href": "projects/",
+    "title": "Projects & Decks",
     "section": "",
-    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
   },
   {
-    "objectID": "blog/posts/the-story-so-far/",
-    "href": "blog/posts/the-story-so-far/",
-    "title": "The Story So Far",
+    "objectID": "projects/#code",
+    "href": "projects/#code",
+    "title": "Projects & Decks",
     "section": "",
-    "text": "This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already"
+    "text": "Extending the wcEcoli framework to model human platelet activation. Containerised simulation environment with a Dash exploration UI.\n\n\n\nGitHub repository: platelet-wcm\n\n\n\n\n\nSee all repositories on GitHub."
   },
   {
-    "objectID": "blog/posts/the-story-so-far/#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
-    "href": "blog/posts/the-story-so-far/#from-debugging-code-to-debugging-cells-a-year-of-switching-fields",
-    "title": "The Story So Far",
-    "section": "From Debugging Code to Debugging Cells: A Year of Switching Fields",
-    "text": "From Debugging Code to Debugging Cells: A Year of Switching Fields\nLast August, after thirty years in software — Microsoft, Skyscanner, Ericsson, Avanade, Logica, MDA Space I decided to leave it all behind. Not for another tech company, but to start an M.Res. in Biomedicine at the University of Reading. This is a short account of how that’s gone so far, written partly for friends and former colleagues who’ve asked, and partly for anyone else weighing up a similar leap."
-  },
-  {
-    "objectID": "blog/posts/the-story-so-far/#why-biology-and-why-now",
-    "href": "blog/posts/the-story-so-far/#why-biology-and-why-now",
-    "title": "The Story So Far",
-    "section": "Why biology, and why now",
-    "text": "Why biology, and why now\nThe interest wasn’t sudden. It had been building for years through BBC Horizon documentaries, books by Dawkins, Ridley, Nick Lane, and — probably the one that tipped it — Siddhartha Mukherjee’s The Emperor of All Maladies. I even started semi-seriously studying in my own time using MOOCs: the MITx Introduction to Biology course taught by Eric Lander was a turning point, and I worked through much of the MITx biochemistry, molecular and cell biology catalogue after it.\nAt some point the reading stopped feeling like enough. I didn’t just want to follow the science from the outside; I wanted to do some of it. So, I went back to full-time education. My plan was vague (still is), but enrolling on a Masters course near where I lived was low risk and whatever follows I knew I’d enjoy learning again."
-  },
-  {
-    "objectID": "blog/posts/the-story-so-far/#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
-    "href": "blog/posts/the-story-so-far/#the-first-six-weeks-lectures-journal-clubs-and-introduction-to-a-real-lab",
-    "title": "The Story So Far",
-    "section": "The first six weeks: lectures, journal clubs, and introduction to a real lab",
-    "text": "The first six weeks: lectures, journal clubs, and introduction to a real lab\nThe course opened with six weeks of lectures and seminars — a tour through the research happening at Reading, journal clubs to get used to reading papers critically, and time to start thinking about where my own project might sit. I sat in on some undergraduate cancer lectures too, which were genuinely useful for filling gaps.\nThen came the labs. Before this course I had never set foot in a life-sciences lab, so the first week felt like jumping in at the deep end. I learned to culture E. coli, use them to produce a human protein, then extract and purify it. Then a more challenging practical; culturing a cancer cell line and looking for specific proteins to verify if the cells were migrating. I came out the other side with a stack of techniques I didn’t have before, plus a useful refresher on stats and Excel. More importantly, to me at least, I absolutely loved the practical work. It’s one thing to read the theory, it is quite another tp spend days preparing a sample and then loom under a microscope and see results."
-  },
-  {
-    "objectID": "blog/posts/the-story-so-far/#end-of-semester-one-the-unexpected-hard-part",
-    "href": "blog/posts/the-story-so-far/#end-of-semester-one-the-unexpected-hard-part",
-    "title": "The Story So Far",
-    "section": "End of semester one: the unexpected hard part",
-    "text": "End of semester one: the unexpected hard part\nBy the end of the first semester I’d handed in my first major piece of coursework and had a chance to reflect.\nThe biggest worry going in had been whether I could keep up with classmates who’d done a Biomedicine BSc. The prep paid off though, the MITx courses, YouTube lectures, and a lot of self-directed revision had left me well-prepared. I’m still leaning on those resources now. Uri Alon’s systems biology lectures are excellent, and 3Blue1Brown has me genuinely enjoying calculus again, which I wouldn’t have predicted.\nThe harder adjustments were ones I hadn’t anticipated. Choosing a research project was much tougher than expected — there are so many interesting directions that committing to one felt like a real dilemma. Although I was new to lab work I really wanted to pursue that, but at the same time I also knew I could do some really meaningful work on the computational side too. I went the computational route (for now), but more on that later.\nAcademic submissions are a different rhythm from industry work: in a software team you sanity-check things constantly with colleagues. Hitting “submit” without that back-and-forth takes some getting used to. The staff support is excellent when you ask for it, but the default mode is more solitary than I was used to.\nSome things have been just great: the people are friendly and supportive, and the lab facilities at Reading punch well above the university’s size. It’s an easy environment to stay curious in.\nI’ve also picked up a whole new toolkit along the way — Zotero for references, BioRender for figures that make it look like I know what I’m doing, GraphPad for analysis, and even MATLAB, which I hadn’t expected to be learning at this stage but has been surprisingly fun (spoiler - I’m not using MATLAB for my current work, I went back to my happy place of Python in end)."
-  },
-  {
-    "objectID": "blog/posts/the-story-so-far/#the-project-a-whole-cell-model-of-a-platelet",
-    "href": "blog/posts/the-story-so-far/#the-project-a-whole-cell-model-of-a-platelet",
-    "title": "The Story So Far",
-    "section": "The project: a whole-cell model of a platelet",
-    "text": "The project: a whole-cell model of a platelet\nThe research project — the bulk of the course — is now well underway. I’m building a computer model of a human platelet. Platelets are the cells responsible for wound healing, but they’re also central to heart attacks and strokes, so well worth understanding in detail.\nThe project sits at the intersection of physics, computation, and biology, which is a good place for someone with my background to be useful. The first version of the model is running, which is a milestone I’m pleased with, and the work has been a genuine two-way exchange — my software skills get a real workout, and I’m absorbing a lot of biology in the process. The plan is to write up and submit the thesis in August."
-  },
-  {
-    "objectID": "blog/posts/the-story-so-far/#what-comes-next",
-    "href": "blog/posts/the-story-so-far/#what-comes-next",
-    "title": "The Story So Far",
-    "section": "What comes next",
-    "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/",
-    "href": "hidden/vinschgau-cycling/",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "",
-    "text": "A working guide to the vineyards, restaurants and beds along the Via Claudia Augusta / Etschtal cycle route, working downhill from the Reschen Pass and Mals through Merano to Bolzano, then south along the Wine Road. Three sections — Wine, Eat, Sleep — each covering the whole route end to end. Prices, hours and scores were current as of June 2026; always reconfirm directly, as small wineries change hours seasonally and often need an appointment, and many kitchens close 1–2 days a week.\nEvery entry has a [📍 Map] link that opens it in Google Maps."
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#the-route-getting-around",
-    "href": "hidden/vinschgau-cycling/#the-route-getting-around",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "The route & getting around",
-    "text": "The route & getting around\n\nThe Vinschgau / Via Claudia Augusta cycle path runs from Mals (Malles Venosta) down the Adige (Etsch) valley to Merano, roughly 80 km, mostly gently downhill and traffic-free. Merano → Bolzano adds ~30 km on the Etschtal route, so Mals→Bolzano is ~110–120 km over several days, plus an optional Wine Road day.\nStarting higher than Mals (at Reschen): the classic way to ride the whole valley is to start at the top, by the Reschensee (the half-submerged church tower). The BikeLiner only runs Merano↔︎Mals, so to get above Mals take public bus line 273 (Mals → Reschen), or the private Südtirolbike shuttle (Merano → Resia, ~€20–25 pp with ≥5 riders; book at suedtirolbike.info). From Reschen it’s a ~20 km, ~500 m descent down to Mals.\nBikeLiner bike shuttle: daily 18 Apr – 4 Oct 2026, Merano→Mals (board only in Merano; drop-offs at Naturns, Latsch, Schlanders, Spondinig, Mals). Online booking mandatory by 6 pm the day before (bikebooking.suedtirolmobil.info); needs a travel ticket + €7 bike day-ticket. Regular & e-bikes only (no tandems/cargo/trailers).\nVinschgau railway (Merano–Mals) is resuming gradually in 2026 after electrification works, with limited bike capacity — useful for skipping a leg, but don’t rely on it for bikes without checking close to your dates.\nRough plan on Komoot from Mals - Malles Venosta to Salorno sulla Strada del Vino - Salurn an der Weinstraße\n\n\nRoute map\n\n\n\nRoute map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#a.-lower-val-venosta-vinschgau-castelbello-naturns",
-    "href": "hidden/vinschgau-cycling/#a.-lower-val-venosta-vinschgau-castelbello-naturns",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "A. Lower Val Venosta / Vinschgau (Castelbello – Naturns)",
-    "text": "A. Lower Val Venosta / Vinschgau (Castelbello – Naturns)\nSouth Tyrol’s smallest, highest-altitude zone (≈500–900 m), extremely dry, dominated by small independent growers. Whites shine — Riesling, Pinot Bianco, Müller Thurgau — alongside elegant Pinot Noir and indigenous Vernatsch (Schiava).\n\nWeingut Falkenstein (Pratzner family) — Naturns ⭐ flagship — 📍 Map\n\nWebsite: https://www.falkenstein.bz · Tel: +39 0473 666 054\nAddress: Schlossweg / Via Castello 19, 39025 Naturns\nHours: Wine shop Mon–Fri 08:00–12:00; afternoons & Sat morning by appointment; closed Sat PM, Sun & holidays.\nTours: Guided tour + tasting with the Naturns tourist office roughly every 2nd Thursday, late Mar–early Oct, 15:30 (~1.5 hrs). Book ≥2 days ahead (+39 0473 666077).\nGrapes: Riesling, Pinot Bianco, Sauvignon, Gewürztraminer, Pinot Noir. 14 ha at 600–900 m; ~90,000 bottles/yr.\nWines & prices: Flagship Riesling Südtirol Vinschgau DOC ~€18–22 (EU) / ~$30–33 (US); top “Anadûron” Riesling higher; rising-star Pinot Bianco; a spicy Pinot Noir (insider tip).\nReviews: Among Italy’s best Rieslings. Falstaff 94 pts (2020), 93 (2021); Anadûron 93–94. Franz Pratzner won the Premio Angelo Betti (2019).\n\n\n\nWeingut Unterortl – Castel Juval (owner Reinhold Messner) — Castelbello — 📍 Map\n\nWebsite: https://www.unterortl.it · Tel: +39 351 551 2238\nAddress: Juval 1B, 39020 Castelbello (Juval hill, mouth of the Schnalstal)\nVisiting: Small estate — visits & tastings by arrangement; pairs perfectly with Juval Castle (Messner Mountain Museum) on the same hill.\nGrapes: Riesling, Pinot Bianco, Müller Thurgau, Pinot Noir. ~4 ha at 600–850 m; ~30,000 bottles/yr. Also a distillery.\nWines: Known for Riesling & Pinot Noir, plus a rosé and white blend “GLIMMER”. Riesling tiers: Gletscherschliff, Unterortl, Windbichel.\n\n\n\nOther small Val Venosta growers (visit by appointment)\nTiny farm wineries on the “Via Vinum Venostis” trail between Castelbello and Schlanders — call ahead:\n\nKöfelgut (Castelbello) — whites & Vernatsch. 📍 Map\nMarinushof (Tschars/Castelbello) — Riesling, Pinot Noir. 📍 Map\nBefehlhof (Vetzan/Schlanders) — Via Torgglweg 2. 📍 Map\nArea overview: https://www.vinschgau.net/en/castelbello-ciardes/food-wine/via-vinum-venostis.html"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#b.-meraner-land-marling-merano-hills",
-    "href": "hidden/vinschgau-cycling/#b.-meraner-land-marling-merano-hills",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "B. Meraner Land (Marling / Merano hills)",
-    "text": "B. Meraner Land (Marling / Merano hills)\nMilder, almost Mediterranean. Indigenous Vernatsch and Lagrein reds carry DOC status, alongside a wide spread of whites.\n\nCantina Merano / Kellerei Meran — Marling (Marlengo) ⭐ major cooperative — 📍 Map\n\nWebsite: https://www.kellereimeran.it · Tel: +39 0473 447137\nAddress: Kellereistraße / Via Cantina 9, 39020 Marling. Also City.Vinothek, Portici/Lauben 218, central Merano.\nHours: Marling enoteca/shop Mon–Fri 08:00–19:00, Sat 08:00–18:00, Sun closed. Bus 211 stops at the door.\nGrapes: 20+ varieties incl. Vernatsch, Lagrein, Gewürztraminer, plus Pinot Bianco, Chardonnay, Sauvignon, Pinot Grigio, Müller Thurgau, Kerner, Riesling, Moscato, Pinot Nero, Merlot, Cabernet. 360 members, ~250 ha.\nWines: ~35 wines in a glass-pavilion enoteca. Tiers: “Festival” (everyday, great value), “Graf” (elegant), “Vinschgau” (mineral mountain), “Weinberg & Raritäten” (single-vineyard). Masterpiece: Pinot Bianco Riserva “V Years” (5 yrs on lees).\nReviews: Falstaff calls it the most important winery in north-west South Tyrol; praised for value and architecture.\n\n\n\nOther Merano-area estates worth a detour\n\nCastel Rametz (Obermais, Merano) — pergola vines, wine museum, tours & restaurant. 📍 Map\nKränzelhof (Tscherms/Cermes) — wines plus a famous maze garden & art park. 📍 Map\nPopphof (near Merano) — family estate, 500+ years of wine. 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#c.-bolzano-basin-gries-santa-maddalena",
-    "href": "hidden/vinschgau-cycling/#c.-bolzano-basin-gries-santa-maddalena",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "C. Bolzano basin (Gries & Santa Maddalena)",
-    "text": "C. Bolzano basin (Gries & Santa Maddalena)\nThe warm valley floor and slopes — home to Lagrein (deep, spicy reds) and Santa Maddalena (a perfumed Schiava-based red).\n\nCantina Bolzano / Kellerei Bozen — Bolzano (Moritzing/Gries) ⭐ flagship cooperative — 📍 Map\n\nWebsite: https://www.kellereibozen.com · Tel: +39 0471 270909\nAddress: Via San Maurizio 36, 39100 Bolzano\nHours: Vinarius wine shop Mon–Sat 09:30–18:30 (Sun closed). Guided tours & tastings (incl. blind) bookable ahead.\nGrapes: Indigenous Lagrein, Santa Maddalena, Gewürztraminer, plus Sauvignon, Pinot Grigio/Bianco, Chardonnay, Müller Thurgau, Kerner, Sylvaner, Riesling, Moscato Giallo; reds Pinot Noir, Cabernet Franc, Merlot, Moscato Rosa. 224 families, ~350 ha; 37 wines.\nWines & prices: Flagship “Taber” Lagrein Riserva (~100-yr-old vines; among Italy’s most influential wines, repeat Tre Bicchieri) ~€35–45; Santa Maddalena Classico ~€10–14; Lagrein (classic) ~€16.\nReviews: Praised for knowledgeable guides, the “bronze cube” architecture and tastings; a little hard to reach without a car. Many wines 90+ at Falstaff."
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#d.-south-tyrolean-wine-road-south-of-bolzano",
-    "href": "hidden/vinschgau-cycling/#d.-south-tyrolean-wine-road-south-of-bolzano",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "D. South Tyrolean Wine Road (south of Bolzano)",
-    "text": "D. South Tyrolean Wine Road (south of Bolzano)\nEppan → Kaltern → Tramin → Margreid. Gently rolling vineyards, the warm Lake Kaltern, and a remarkable density of top cooperatives and famous independent estates — very cyclable as a day from Bolzano.\n\nCantina Tramin / Kellerei Tramin — Tramin (Termeno) ⭐ Gewürztraminer’s home — 📍 Map\n\nWebsite: https://www.cantinatramin.it · Tel: +39 0471 096633\nAddress: Strada del Vino / Weinstraße 144, 39040 Tramin\nHours: Apr–Oct Mon–Fri 09:00–19:00, Sat to 17:00; Nov–Mar to 18:00 / Sat 17:00; closed Sun. Walk-in tastings; cellar tours ~Apr–Oct — book ahead.\nGrapes: Benchmark Gewürztraminer, plus Chardonnay, Pinot Grigio/Bianco, Sauvignon, Müller Thurgau; reds Pinot Noir, Lagrein, Schiava, Merlot, Cabernet Franc.\nStar wines: Nussbaumer (Italy’s most-awarded Gewürztraminer); Epokale (first Italian white to score 100 Parker points); Stoan; Terminum (sweet).\nReviews: Dramatic glass-and-metal building, terrace and Lake Kaltern views; knowledgeable guides. Tip: clarify tasting fees up front.\n\n\n\nCantina Kaltern / Kellerei Kaltern — Kaltern (Caldaro), by the lake ⭐ Schiava / Kalterersee — 📍 Map\n\nWebsite: https://www.kellereikaltern.com · Tel: +39 0471 966067\nOutlets: Winecenter, Via Stazione 7 (wine lounge/terrace); Vinothek, Via delle Cantine 12, Mon–Fri 09:00–19:00, Sat to 18:00, Sun closed.\nTours: Apr–Oct Wed 17:00 & Fri 10:00 (book ahead), ending with 5 wines. Walk-in counter tastings during shop hours.\nGrapes: Spiritual home of Schiava — its Kalterersee Classico Superiore DOC names the region’s oldest DOC. Also the Erste+Neue and Baron Di Pauli wines. ~590 families.\nReviews: Multiple Tre Bicchieri; lovely lakeside setting beside the warmest lake in the Alps.\n\n\n\nKellerei St. Michael-Eppan — Eppan (Appiano) ⭐ cult whites — 📍 Map\n\nWebsite: https://www.stmichael.it · Tel: +39 0471 664466\nAddress: Via Circonvallazione 17–19, 39057 Appiano\nHours: May–Oct Mon–Fri 09:00–18:30, Sat to 17:00; Nov–Apr Mon–Fri 09:00–13:00 & 14:30–18:30, Sat to 13:00; closed Sun.\nRanges: Classic, Selection, premium Sanct Valentin (cult Sauvignon, ~€23+) and ultra-premium Appius.\nReviews: One of Italy’s most decorated co-ops — Gambero Rosso Cooperative of the Year (2021 & 2001).\n\n\n\nFamous independent estates on the Wine Road (mostly by appointment)\n\nTenuta Alois Lageder (Margreid) — iconic biodynamic estate (est. 1823), ~35 wines. “Paradeis” wine shop + restaurant; book the “Tòr Löwengang” tour. https://www.aloislageder.eu · 📍 Map\nElena Walch (Tramin) — Pinot Bianco/Grigio, Gewürztraminer, single-vineyards. Two shops: central Tramin & Castel Ringberg above the lake (~May–Nov). https://www.elenawalch.com · 📍 Map\nJ. Hofstätter (Tramin) — renowned for Pinot Noir (Barthenau) & Gewürztraminer; central tasting room. 📍 Map\nTiefenbrunner – Castel Turmhof (Kurtatsch) — castle estate; “Feldmarschall von Fenner”. 📍 Map\nManincor (Kaltern) — esteemed biodynamic estate by the lake. 📍 Map\nDirectory: https://www.suedtiroler-weinstrasse.it/\n\n\n\n\n\n\n\nNote\n\n\n\nGeography note: Cantina Terlano (Terlan), legendary for long-lived Pinot Bianco, sits north-west of Bolzano — on your Merano→Bolzano leg rather than the Wine Road south."
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#upper-vinschgau-mals-glurns-nearby",
-    "href": "hidden/vinschgau-cycling/#upper-vinschgau-mals-glurns-nearby",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Upper Vinschgau — Mals, Glurns & nearby",
-    "text": "Upper Vinschgau — Mals, Glurns & nearby\n\nFlurin – Bar, Restaurant & Suites (Glurns) — ★4.7 (926). Stylish fusion + traditional in Italy’s smallest walled town; reasonable, also has rooms. Check days. +39 0473 428136 · 📍 Map\nKulturcafé SALINA (Glurns) — ★4.8 (223). Local/organic, a favourite of Via Claudia cyclists. Closed Wed. +39 0473 538900 · 📍 Map\nWirtshaus Steinbock (Glurns) — ★4.6 (140). Renovated historic inn; venison praised. Closed Wed–Thu. +39 0473 538590 · 📍 Map\nPizzeria Restaurant Erika (Glurns) — ★4.6 (1008). Reliable budget pizza with a terrace. +39 0473 835262 · 📍 Map\nCalva Restaurant (Laudes, near Mals) — ★4.7 (1104). Pizza + Tyrolean classics, family-friendly, also a B&B. Closed Tue. +39 0473 831109 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#schlanders-silandro",
-    "href": "hidden/vinschgau-cycling/#schlanders-silandro",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Schlanders / Silandro",
-    "text": "Schlanders / Silandro\n\nSpeckeggele — ★4.7 (149). Small, excellent food and wine; dinner only, Wed–Sat. +39 335 531 2112 · 📍 Map\nGasthof Zum Schwarzen Adler — ★4.5 (415). Honest local cooking, weekly menu. Closed Sat. +39 0473 730222 · 📍 Map\nHotel Restaurant Maria Theresia — ★4.3 (1071). Southern-Italian pizzaiolo; some of the best pizza around (from ~14:00). +39 0473 730209 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#naturns-naturno-wine-country",
-    "href": "hidden/vinschgau-cycling/#naturns-naturno-wine-country",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Naturns / Naturno — wine country",
-    "text": "Naturns / Naturno — wine country\n\nRestaurant Wiedenplatzerkeller — ★4.8 (1332). Vaulted cellar + buzzing beer garden with mountain views, famous ribs, great-value wine list. Closed Tue. +39 0473 673280 · 📍 Map\nLandgasthaus Langwies — ★4.7 (372). Terrace with a view, hearty home cooking, excellent value. Closed Sat. +39 0473 667526 · 📍 Map\nWeinberghof — ★4.6 (380). Outstanding schnitzel, house-made dishes; terrace over the orchards. Closed Mon; kitchen to ~20:30. +39 377 342 8776 · 📍 Map\nGasthof Falkenstein — ★4.6 (326). Traditional farm cooking by the Falkenstein winery, valley views (also rooms). +39 0473 667321 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#between-naturns-merano",
-    "href": "hidden/vinschgau-cycling/#between-naturns-merano",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Between Naturns & Merano",
-    "text": "Between Naturns & Merano\n\nRestaurant Hanswirt (Rabland, Partschins) — A regular in Gault Millau, Michelin and Gambero Rosso; refined modern Tyrolean. Right on the route. 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#merano-meran",
-    "href": "hidden/vinschgau-cycling/#merano-meran",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Merano / Meran",
-    "text": "Merano / Meran\n\nBar Trattoria Mainardo — ★4.6 (2073). Warm family-run, Italian + South Tyrolean; reasonable, friendly. Closed Sun. +39 345 157 5412 · 📍 Map\nForsterbräu Meran — ★4.3 (10.5k). Big lively Forst brewpub opposite the Kurhaus; generous, open late. +39 0473 236535 · 📍 Map\nRestaurant Festival — ★4.7 (193). Homemade pasta, refined Alpine-Mediterranean, good value; limited days (~Mon–Wed). +39 0473 606456 · 📍 Map\nTrattoria Napoletana — ★4.6 (93). Authentic, small; reservations advised. +39 0473 603041 · 📍 Map\nRestaurant Schloss Rametz — ★4.7 (503). Dine at the wine estate/castle — steak, Fiorentina, estate Lagrein; smarter (€€€) but good value. Closed Sun–Mon. +39 0473 235856 · 📍 Map\n\nNotable / acclaimed — special dinners around Merano:\n\nSissi (chef Andrea Fenoglio) — 1 Michelin star; refined multi-course, central. 📍 Map\nPrezioso – Castel Fragsburg (chef Egon Heiss) — 1 Michelin star; ~5 km up from Merano, single tasting menu, spectacular terrace. 📍 Map\nIn Viaggio (chef Claudio Melis) — 1 Michelin star, central Merano. 📍 Map\nCastel (chef Gerhard Wieser, Tirolo) — 2 Michelin stars; evenings Tue–Sat from 19:00. 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#bolzano-bozen",
-    "href": "hidden/vinschgau-cycling/#bolzano-bozen",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Bolzano / Bozen",
-    "text": "Bolzano / Bozen\n\nFranziskanerstuben — ★4.4 (2992). Cozy, central, South Tyrolean + Italian with seasonal specials; reserve. Closed Tue. +39 0471 976183 · 📍 Map\nRestaurant Anita (Piazza delle Erbe) — ★4.4 (571). By the market; schnitzel, venison goulash, local wines. +39 0471 973760 · 📍 Map\nBatzen Häusl — ★4.3 (8769). Historic brewpub with its own beer; hearty Tyrolean classics, great-value ~€12 menu, lively. +39 0471 050950 · 📍 Map\nKarrner — ★4.6 (1237). Casual wine bar with tiny gourmet sandwiches (~€1.50), good wines; cheap & characterful. Closed Sun. +39 0471 970558 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#on-the-wine-road-kaltern-tramin-margreid",
-    "href": "hidden/vinschgau-cycling/#on-the-wine-road-kaltern-tramin-margreid",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "On the Wine Road — Kaltern, Tramin & Margreid",
-    "text": "On the Wine Road — Kaltern, Tramin & Margreid\nSeveral of the best are dinner-only “keller” cellars from ~17:00, closed one day a week — reconfirm.\n\nSpuntloch Dine&Wine (Kaltern) — ★4.7 (602). Almost any wine by the glass, truffle risotto, great value. Dinner Mon–Fri from 17:00, Sat lunch; closed Sun. +39 0471 163 2988 · 📍 Map\nSeehofkeller (Kaltern, lakeside) — ★4.7 (576). On Lake Kaltern with its own vineyard; refined Italian, terrace (€€€). Closed Mon & Sat. +39 0471 960020 · 📍 Map\nTorgglkeller (Kaltern) — ★4.6 (636). Atmospheric cellar; charcuterie, local food and wine. Daily from 17:00, closed Sun. +39 0471 963421 · 📍 Map\nBiergarten (Kaltern, Pianizza) — ★4.4 (4334). Big garden restaurant; pizza + Tyrolean, generous portions, kids’ play area. Open daily. +39 0471 965063 · 📍 Map\nG’würzerkeller Gartenrestaurant (Tramin) — ★4.5 (680). Garden restaurant up the hill; schnitzel, chestnut tiramisu; Tue–Sat, closed Mon & Sun. +39 339 478 1200 · 📍 Map\nWeis-Keller (Tramin) — ★4.6 (493). Cosy keller, mostly outdoor, local specialities, good value. Evenings; closed Fri–Sat. +39 0471 860851 · 📍 Map\nParadeis (Tenuta Alois Lageder, Margreid) — local/organic farm cooking paired with the estate’s wines. 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#mals-malles-the-start",
-    "href": "hidden/vinschgau-cycling/#mals-malles-the-start",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Mals / Malles — the start",
-    "text": "Mals / Malles — the start\n\nFinKa Kultur Hostel — ★4.7 (213). Excellent cyclist base; clean light-wood rooms with private bathrooms, breakfast, fire pit, free parking. +39 0473 427040 · 📍 Map\nGarní Sonne — ★4.3 (187). Simple, friendly, English-speaking host, good value; popular with Stelvio cyclists. +39 340 682 0565 · 📍 Map\nCalva B&B (Laudes, near Mals) — ★4.7 (1104). Rooms above the well-loved Calva restaurant. +39 0473 831109 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#naturns-naturno-handy-cheaper-than-merano",
-    "href": "hidden/vinschgau-cycling/#naturns-naturno-handy-cheaper-than-merano",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Naturns / Naturno — handy & cheaper than Merano",
-    "text": "Naturns / Naturno — handy & cheaper than Merano\n\nPension Astoria — ★4.8 (74). Central, clean, modern bathrooms, included hot tub, good value. +39 338 240 4682 · 📍 Map\nPension Linserhof — ★4.5 (75). Quiet with pool, garden, terrace and valley view. +39 0473 667238 · 📍 Map\nPension Nadine — ★4.5 (113). Simple rooms near the Adige; in-house bistro/bar. +39 0473 660126 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#merano-meran-1",
-    "href": "hidden/vinschgau-cycling/#merano-meran-1",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Merano / Meran",
-    "text": "Merano / Meran\n\nGuesthouse diWine B&B — ★4.9 (103). ⭐ Top pick. Short walk from station & old town; warm host, local-product breakfast, wine on the balcony. +39 329 609 8825 · 📍 Map\nMaison Valentina B&B — ★4.9 (157). Tucked behind a courtyard off the Portici arcades — central yet quiet, fresh rooms, homemade breakfast. +39 392 633 7057 · 📍 Map\nHotel Pension Verdorfer — ★4.9 (291). Family-run with garden and pool; best breakfast. Slightly up the hill (Obermais). Great value. +39 0473 232492 · 📍 Map\nGarni Villa Betty — ★4.1 (156). Budget choice on Via Petrarca, ~5 min to centre; spartan but cozy, praised breakfast (some noise). +39 0473 449968 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#bolzano-bozen-1",
-    "href": "hidden/vinschgau-cycling/#bolzano-bozen-1",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Bolzano / Bozen",
-    "text": "Bolzano / Bozen\n\nADV HOME – Exclusive Rooms — ★5.0 (209). Modern, spotless rooms ~10 min from the station; free snacks/drinks/coffee, very central. No breakfast but a coffee bar. +39 380 436 6326 · 📍 Map\nBoutique Hotel Goldenstern Townhouse — ★4.7 (287). Characterful restored building in the old town; walkable, good breakfast. +39 0471 060043 · 📍 Map\nHotel Figl — ★4.5 (538). On Piazza del Grano in the heart of the old town; basic but clean, comfy beds, great value/location. +39 0471 978412 · 📍 Map\nB&B Hotel Bolzano — ★4.6 (3313). Reliable modern chain near the station; clean and good value, a bit outside the old town. +39 02 8969 1501 · 📍 Map\nLOOM Hotel — ★4.6 (108). Modern industrial-chic with parking; simple high-quality breakfast. Slightly out in a commercial zone. +39 0471 283075 · 📍 Map\nCaution: Stay COOPER – Capitol Rooms (★4.0) — very central but reviews flag thin walls and no lift. 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#on-the-wine-road-tramin-kaltern",
-    "href": "hidden/vinschgau-cycling/#on-the-wine-road-tramin-kaltern",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "On the Wine Road — Tramin & Kaltern",
-    "text": "On the Wine Road — Tramin & Kaltern\n\nGartenheim (Tramin) — ★4.9 (152). ⭐ Top pick. Family-run B&B in the heart of Tramin yet peaceful; small pool, breakfast under a grapevine pergola. +39 0471 861101 · 📍 Map\nGarni Hotel Ritterhof (Tramin) — ★4.6 (162). Breakfast pension with a terrace, bike garage and good breakfast (some road noise). +39 0471 860122 · 📍 Map\nPernhof (Tramin) — ★4.6 (444). Friendly hotel + restaurant in the village. +39 0471 860788 · 📍 Map\nHotel Goldener Stern (Kaltern) — ★4.6 (210). Good-value hotel in the old town; wellness, pool, Dolomite views. +39 0471 963153 · 📍 Map\nKalterer See Hof (Kaltern, lakeside) — ★4.3 (359). Simple guesthouse/hotel by the lake with a good kitchen and beer garden. +39 0471 960157 · 📍 Map\nSplurge: Seeleiten – Lake Spa Hotel (Kaltern) — ★4.8 (943). Lovely lakeside spa hotel with natural pool and bikes. +39 0471 960200 · 📍 Map"
-  },
-  {
-    "objectID": "hidden/vinschgau-cycling/#quick-planning-notes",
-    "href": "hidden/vinschgau-cycling/#quick-planning-notes",
-    "title": "Cycling & Wine Tasting Guide — Reschen / Mals → Merano → Bolzano",
-    "section": "Quick planning notes",
-    "text": "Quick planning notes\n\nBooking tastings: Falkenstein and Unterortl are small and best by appointment / scheduled tour; the big cooperatives (Merano, Bolzano, Tramin, Kaltern, St. Michael) have walk-in shops with set hours and bookable tours — easiest to slot in.\nCycling + wine: plan tastings for late afternoon / end of a riding day, and lean on the BikeLiner bus or Vinschgau train if a tasting day runs long.\nClosing days matter: many restaurants and small wineries close Sun/Mon (sometimes mid-week), and the Wine Road has lots of dinner-only cellars from ~17:00. Reconfirm the day before — especially the gourmet/Michelin spots and small Val Venosta growers.\n\nCompiled June 2026. Hours, prices and scores change — verify directly before relying on any detail."
-  },
-  {
-    "objectID": "reaction-diffusion/",
-    "href": "reaction-diffusion/",
-    "title": "Reaction-diffusion",
-    "section": "",
-    "text": "Two chemicals diffuse across a surface and react where they meet. That’s the whole setup. Get the rates right and it stops being boring: the even mix goes unstable and sorts itself into spots, stripes, mazes, and blobs that split like dividing cells. Alan Turing wrote the maths down in 1952, as an answer to how a featureless ball of cells decides where to put a leopard’s spots. It’s the smooth cousin of the Game of Life on the other page here: same idea, local rules run in parallel until structure emerges, but continuous instead of square.\nThe version below is Gray-Scott. Two species, a feed rate that tops up the first, a kill rate that drains the second, and a reaction that turns one into the other. Move those two numbers and the same equations hand you coral, fingerprints, or self-replicating dots. Pick a preset and watch, or click on the canvas to drop in some chemical and start a pattern yourself.\nIt all runs on the GPU. The state, two concentrations per cell, lives in a floating-point texture. A single fragment shader reads each cell and its four neighbours, applies a 5-point Laplacian for the diffusion term, does the Gray-Scott reaction, and writes the next state. A shader can’t read and write the same texture at once, so it ping-pongs between two of them: read A, write B, swap, repeat, a few dozen times per frame before anything reaches the screen."
-  },
-  {
-    "objectID": "reaction-diffusion/#the-two-knobs",
-    "href": "reaction-diffusion/#the-two-knobs",
-    "title": "Reaction-diffusion",
-    "section": "The two knobs",
-    "text": "The two knobs\nEverything on screen is steered by two numbers: the feed rate F and the kill rate k. Most of the (F, k) plane is dead, the pattern either floods solid or starves to nothing. The interesting behaviour lives on a thin band between those fates, and small steps along it flip you between mazes, drifting spots, and mitosis. The presets drop you onto known-good points, and the F and k sliders let you wander off them and find your own; the links below map the rest."
-  },
-  {
-    "objectID": "reaction-diffusion/#further-reading",
-    "href": "reaction-diffusion/#further-reading",
-    "title": "Reaction-diffusion",
-    "section": "Further reading",
-    "text": "Further reading\n\nKarl Sims, Reaction-Diffusion Tutorial — the clearest walk-through of the equations and what each term does.\nRobert Munafo’s xmorphia — the exhaustive (F, k) atlas: which numbers give which creatures.\npmneila’s WebGL Gray-Scott — the in-browser demo that made it obvious you could run this on the GPU.\n\n← back to haigh.bio\nTuring would’ve loved a fast GPU."
+    "objectID": "projects/#slide-decks",
+    "href": "projects/#slide-decks",
+    "title": "Projects & Decks",
+    "section": "Slide decks",
+    "text": "Slide decks\nDecks are written as Quarto Reveal.js (.qmd) sources and rendered to HTML, PDF, and PPTX so each can be browsed in-page or downloaded.\n\nHow do LLMs work? — a shallow-dive for scientists\nDash lab meeting, 30 April 2026 — a non-rigorous overview of large language models aimed at lab-group scientists: what an LLM actually is, embeddings, attention, RLHF, where they help, and where they bite.\nView slides PDF PPTX\n\n\nThe feasibility of a whole-cell model of the human platelet\nDash lab meeting, 21 May 2026 — a five-step recipe for building a calibrated platelet Ca²⁺ model on the wcEcoli framework, with some notes on AI-assisted data extraction and a typo I found in a well-cited 2008 paper.\nView slides PDF PPTX\n\n\nAcademic deck template\nA pared-back PPTX template for academic talks — content fills the slide, two-column layouts as the default, section breadcrumbs instead of divider slides. Background and design notes in the blog.\nDownload template (.pptx) Read the post"
   }
 ]
