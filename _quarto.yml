@@ -17,13 +17,13 @@ website:
     pinned: true
     right:
       - href: index.qmd
-        text: Home
+        text: "~/home"
       - href: blog/index.qmd
-        text: Blog
+        text: "~/blog"
       - href: projects/index.qmd
-        text: Projects & Decks
+        text: "~/projects"
       - href: about/index.qmd
-        text: About
+        text: "~/about"
       - icon: github
         href: https://github.com/stevehaigh
         aria-label: GitHub
@@ -54,7 +54,7 @@ format:
                   async src="//gc.zgo.at/count.js"></script>
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     include-after-body:
       - text: |
           <script>
