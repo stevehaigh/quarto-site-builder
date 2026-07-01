@@ -3,6 +3,14 @@ pagetitle: "Steve Haigh · Computational Biology"
 page-layout: custom
 toc: false
 lightbox: false
+listing:
+  - id: latest-post
+    contents: blog/posts
+    sort: "date desc"
+    max-items: 1
+    template: partials/latest-post.ejs
+    date-format: "YYYY-MM-DD"
+    fields: [date, title, description, categories, path]
 include-in-header:
   - text: |
       <style>
@@ -88,15 +96,12 @@ include-in-header:
         <span class="nb-sec-label">Latest post</span>
         <div class="nb-sec-rule"></div>
       </div>
-      <div class="nb-post">
-        <div class="nb-post-date">2026-05-27</div>
-        <div>
-          <h3 class="nb-post-title"><a href="/blog/posts/llm-intro/">How do LLMs work? — a shallow-dive for scientists</a></h3>
-          <p class="nb-post-desc">What they are, how they got here, and where they're useful or dangerous in a research workflow.</p>
-          <div class="nb-post-tags">[llms] [ai] [decks] [lab]</div>
-        </div>
-      </div>
+```
 
+::: {#latest-post}
+:::
+
+```{=html}
       <div class="nb-egg">
         <a href="/life/" aria-label="A small surprise">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="11" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"/><rect x="1" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g></svg></a>
       </div>
