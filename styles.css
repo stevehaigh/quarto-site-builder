@@ -1,13 +1,21 @@
 /* Subtle typography polish — keep this short, let the theme do the work */
 
 :root {
-  --bs-body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --bs-body-font-family: "Newsreader", Georgia, "Times New Roman", serif;
   --accent: #1f6f8b;
+  /* Subtle warm off-white page background (light mode only; the dark theme
+     overrides --bs-body-bg via its higher-specificity [data-bs-theme] rules) */
+  --bs-body-bg: #faf8f3;
 }
 
 [data-bs-theme="dark"] {
   --accent: #6fbfd6;
+}
+
+/* Keep UI chrome (navbar) in clean sans — serif nav reads as fussy */
+.navbar {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 a {
@@ -37,7 +45,7 @@ main h2 {
 h1, h2, h3, h4, h5, h6,
 .quarto-title-block .title,
 .about-entity .about-contents h1 {
-  font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
