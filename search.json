@@ -21,34 +21,6 @@
     "text": "Further reading\n\nKarl Sims, Reaction-Diffusion Tutorial — the clearest walk-through of the equations and what each term does.\nRobert Munafo’s xmorphia — the exhaustive (F, k) atlas: which numbers give which creatures.\npmneila’s WebGL Gray-Scott — the in-browser demo that made it obvious you could run this on the GPU.\n\n← back to haigh.bio\nTuring would’ve loved a fast GPU."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Computational biology, viewed from a 30-year software career.\nSoftware developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the wcEcoli whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.\nThis site collects notes, slide decks, and project write-ups from the intersection of software and biology.\n\n   GitHub\n   LinkedIn\n   Email\n\n\n\n\n\n\n\n\n\nExtending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows.\n\n\n\n\n\nUpdated June 2026. Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site and other side projects. When I do manage to focus I’m finalising some figures and considering if I can add more biology to the basic model before I call it done (for now).\n\n\n\n\n\n\n\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
-  },
-  {
-    "objectID": "index.html#current-projects",
-    "href": "index.html#current-projects",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Extending wcEcoli to build the first computational model of a human platelet.\n\n\n\nContainerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.\n\n\n\nBringing software-engineering discipline to computational-biology workflows."
-  },
-  {
-    "objectID": "index.html#currently-looking-at",
-    "href": "index.html#currently-looking-at",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "Updated June 2026. Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site and other side projects. When I do manage to focus I’m finalising some figures and considering if I can add more biology to the basic model before I call it done (for now)."
-  },
-  {
-    "objectID": "index.html#latest-post",
-    "href": "index.html#latest-post",
-    "title": "Steve Haigh",
-    "section": "",
-    "text": "llms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\n\n\n\nNo matching items\n\nSee the Blog for the full archive, or the Projects page for repos and decks."
-  },
-  {
     "objectID": "decks/lab-meeting-2026-05-14/#quick-recap",
     "href": "decks/lab-meeting-2026-05-14/#quick-recap",
     "title": "The feasibility of a whole-cell model of the human platelet",

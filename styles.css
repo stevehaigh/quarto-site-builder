@@ -2,20 +2,84 @@
 
 :root {
   --bs-body-font-family: "Newsreader", Georgia, "Times New Roman", serif;
-  --accent: #1f6f8b;
-  /* Subtle warm off-white page background (light mode only; the dark theme
-     overrides --bs-body-bg via its higher-specificity [data-bs-theme] rules) */
+  /* Steel-blue accent from the "lab notebook" palette (matches the homepage) */
+  --accent: #3d6d8c;
+  /* Mono used for structural chrome: navbar, code, captions */
+  --nb-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --bs-font-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Subtle warm off-white page background, light mode only. Scoped with :not so it
+   never overrides darkly's dark background (both target :root, and this file
+   loads after the theme, so an unscoped :root rule would win in dark mode). */
+:root:not([data-bs-theme="dark"]) {
   --bs-body-bg: #faf8f3;
 }
 
-[data-bs-theme="dark"] {
-  --accent: #6fbfd6;
+/* Scope to :root so the dark accent only applies in true page-dark mode —
+   a bare [data-bs-theme="dark"] would also match Quarto's dark-context navbar
+   and leak the dark accent into it in light mode. */
+:root[data-bs-theme="dark"] {
+  --accent: #74a9cb;
 }
 
-/* Keep UI chrome (navbar) in clean sans — serif nav reads as fussy */
+/* Site header: restyle Quarto's navbar into the monospace "lab notebook"
+   header used on the homepage — a light bar with an ink hairline, mono type,
+   and ~/ path-style nav. Applies on every page; the homepage uses this same
+   navbar instead of a hand-built header. */
+/* Explicit colours throughout: Quarto/flatly give the navbar its own dark
+   theme context, so Bootstrap vars like --bs-body-bg/-color resolve to the
+   wrong (dark) values here. Hard-coding avoids that. */
 .navbar {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--nb-mono);
+  font-size: 13px;
+  background: #faf8f3 !important;
+  border-bottom: 1px solid #20242a;
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+:root[data-bs-theme="dark"] .navbar {
+  background: #212529 !important;
+  border-bottom-color: rgba(232, 230, 222, 0.32);
+}
+/* Wordmark: keep the descriptive site title as the accessible/SEO name (zeroed
+   visually) and render the "stevehaigh.bio" wordmark in its place. */
+.navbar-brand {
+  font-size: 0;
+  font-weight: 600;
+}
+.navbar-brand::after {
+  content: "stevehaigh.bio";
+  font-family: var(--nb-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: #20242a;
+}
+:root[data-bs-theme="dark"] .navbar-brand::after {
+  color: #e8e6de;
+}
+.navbar .navbar-nav .nav-link {
+  font-family: var(--nb-mono);
+  font-size: 13px;
+  color: #4a4f55 !important;
+}
+:root[data-bs-theme="dark"] .navbar .navbar-nav .nav-link {
+  color: #86847c !important;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+  color: #3d6d8c !important;
+}
+:root[data-bs-theme="dark"] .navbar .navbar-nav .nav-link.active,
+:root[data-bs-theme="dark"] .navbar .navbar-nav .nav-link:hover {
+  color: #74a9cb !important;
+}
+/* Navbar tools (GitHub, search, dark toggle) inherit the muted ink tone */
+.navbar .quarto-navbar-tools a {
+  color: #4a4f55 !important;
+}
+:root[data-bs-theme="dark"] .navbar .quarto-navbar-tools a {
+  color: #86847c !important;
 }
 
 a {
@@ -41,11 +105,12 @@ main h2 {
   border-color: var(--bs-border-color);
 }
 
-/* Serif headings — paired with system sans body */
+/* Display headings in Spectral (the lab-notebook heading face); body prose
+   stays Newsreader. */
 h1, h2, h3, h4, h5, h6,
 .quarto-title-block .title,
 .about-entity .about-contents h1 {
-  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-family: "Spectral", Georgia, "Times New Roman", serif;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
@@ -150,3 +215,307 @@ div.sourceCode {
   border-radius: 4px;
   touch-action: none;
 }
+
+/* ===========================================================================
+   Homepage — "Lab notebook" (1C) layout.
+   All rules scoped under .nb so they never leak to other pages. Colour tokens
+   live in CSS variables on .nb; the dark-mode block only remaps those tokens
+   (layout, type and spacing are identical between modes). See design handoff.
+   =========================================================================== */
+.nb {
+  --nb-paper: #f2f1ea;
+  --nb-card: #ffffff;
+  --nb-ink: #20242a;
+  --nb-prose: #33383e;
+  --nb-secondary: #4a4f55;
+  --nb-muted: #6a6f75;
+  --nb-faint: #8a8f95;
+  --nb-railval: #3a3f45;
+  --nb-accent: #3d6d8c;
+  --nb-dot: oklch(0.62 0.11 150);
+  --nb-header-border: #20242a;
+  --nb-rail-border: rgba(34, 38, 43, 0.22);
+  --nb-sec-rule: rgba(34, 38, 43, 0.2);
+  --nb-dotted: rgba(34, 38, 43, 0.28);
+  --nb-fig-border: rgba(34, 38, 43, 0.22);
+  --nb-figcap-border: rgba(34, 38, 43, 0.16);
+  --nb-figcap-bg: #f2f1ea;
+  --nb-photo-border: rgba(34, 38, 43, 0.25);
+  --nb-card-border: transparent;
+
+  --nb-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --nb-serif: "Spectral", Georgia, "Times New Roman", serif;
+
+  max-width: 1080px;
+  margin: 0 auto;
+  background: var(--nb-paper);
+  color: var(--nb-ink);
+  font-family: var(--nb-serif);
+}
+
+[data-bs-theme="dark"] .nb {
+  --nb-paper: #16181b;
+  --nb-card: #ffffff;
+  --nb-ink: #e8e6de;
+  --nb-prose: #c9c7bf;
+  --nb-secondary: #a7a59d;
+  --nb-muted: #86847c;
+  --nb-faint: #77756e;
+  --nb-railval: #b8b6ae;
+  --nb-accent: #74a9cb;
+  --nb-dot: #5cc08c;
+  --nb-header-border: rgba(232, 230, 222, 0.32);
+  --nb-rail-border: rgba(232, 230, 222, 0.16);
+  --nb-sec-rule: rgba(232, 230, 222, 0.18);
+  --nb-dotted: rgba(232, 230, 222, 0.22);
+  --nb-fig-border: rgba(232, 230, 222, 0.16);
+  --nb-figcap-border: rgba(232, 230, 222, 0.12);
+  --nb-figcap-bg: #1c1f22;
+  --nb-photo-border: rgba(232, 230, 222, 0.18);
+  --nb-card-border: rgba(232, 230, 222, 0.08);
+
+  border: 1px solid var(--nb-card-border);
+}
+
+/* Body grid: fixed rail + main */
+.nb-body {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+}
+
+/* Left metadata rail */
+.nb-rail {
+  grid-column: 1;
+  border-right: 1px solid var(--nb-rail-border);
+  padding: 34px 30px;
+  font-family: var(--nb-mono);
+  font-size: 12.5px;
+  line-height: 2;
+  color: var(--nb-railval);
+}
+.nb-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.04);
+  border: 1px solid var(--nb-photo-border);
+  margin-bottom: 24px;
+  display: block;
+}
+.nb-k { color: var(--nb-faint); }
+.nb-v { margin-bottom: 12px; color: var(--nb-railval); }
+.nb-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.nb-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--nb-dot);
+  display: inline-block;
+  flex: none;
+}
+.nb-links { display: flex; flex-direction: column; }
+.nb-links a { color: var(--nb-accent); text-decoration: none; }
+.nb-links a:hover { text-decoration: underline; }
+
+/* Main column */
+.nb-main { grid-column: 2; min-width: 0; padding: 42px 46px 50px; }
+.nb-eyebrow {
+  font-family: var(--nb-mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--nb-faint);
+  margin-bottom: 10px;
+}
+.nb-name {
+  font-family: var(--nb-serif);
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--nb-ink);
+}
+.nb-tagline {
+  font-family: var(--nb-serif);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--nb-accent);
+  margin: 0 0 6px;
+  line-height: 1.35;
+  max-width: 26em;
+}
+.nb-intro {
+  font-family: var(--nb-serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--nb-prose);
+  margin: 16px 0 0;
+  max-width: 40em;
+}
+
+/* Featured figure — stays on white in both modes */
+.nb-fig {
+  margin: 30px 0 0;
+  border: 1px solid var(--nb-fig-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--nb-card);
+}
+.nb-fig img { display: block; width: 100%; height: auto; }
+.nb-fig figcaption {
+  font-family: var(--nb-mono);
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--nb-muted);
+  padding: 11px 14px;
+  border-top: 1px solid var(--nb-figcap-border);
+  background: var(--nb-figcap-bg);
+}
+.nb-figmeta { color: var(--nb-faint); }
+
+/* Section header pattern (§01 / §02 / §03) */
+.nb-sec {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 36px 0 8px;
+}
+.nb-sec-num {
+  font-family: var(--nb-mono);
+  font-size: 13px;
+  color: var(--nb-accent);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.nb-sec-label {
+  font-family: var(--nb-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--nb-muted);
+}
+.nb-sec-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--nb-sec-rule);
+}
+
+/* Current-focus rows */
+.nb-row {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 26px;
+  padding: 13px 0;
+  border-bottom: 1px dotted var(--nb-dotted);
+}
+.nb-key {
+  font-family: var(--nb-mono);
+  font-size: 13px;
+  color: var(--nb-ink);
+}
+.nb-row p {
+  font-family: var(--nb-serif);
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: var(--nb-secondary);
+  margin: 0;
+}
+
+/* §02 Now */
+.nb-now {
+  font-family: var(--nb-serif);
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--nb-prose);
+  margin: 0;
+  max-width: 44em;
+}
+
+/* §03 Latest post */
+.nb-post {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 26px;
+  align-items: baseline;
+}
+.nb-post-date {
+  font-family: var(--nb-mono);
+  font-size: 12.5px;
+  color: var(--nb-faint);
+}
+.nb-post-title {
+  font-family: var(--nb-serif);
+  font-size: 22px;
+  margin: 0 0 7px;
+  font-weight: 600;
+}
+.nb-post-title a { color: var(--nb-ink); text-decoration: none; }
+.nb-post-title a:hover { color: var(--nb-accent); }
+.nb-post-desc {
+  font-family: var(--nb-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--nb-secondary);
+  margin: 0 0 8px;
+}
+.nb-post-tags {
+  font-family: var(--nb-mono);
+  font-size: 11.5px;
+  color: var(--nb-faint);
+}
+
+/* Easter-egg terminal prompt + walking glider */
+.nb-egg {
+  margin-top: 42px;
+  padding-top: 15px;
+  border-top: 1px dotted var(--nb-dotted);
+}
+.nb-egg a {
+  font-family: var(--nb-mono);
+  font-size: 12.5px;
+  color: var(--nb-faint);
+  text-decoration: none;
+}
+.nb-egg a:hover { color: var(--nb-accent); }
+.nb-glider {
+  margin-left: 8px;
+  vertical-align: -3px;
+  fill: currentColor;
+}
+.nb-glider .nb-gp { animation: nb-glider 0.9s linear infinite; }
+.nb-glider .nb-gp:nth-child(1) { animation-delay: 0s; }
+.nb-glider .nb-gp:nth-child(2) { animation-delay: -0.225s; }
+.nb-glider .nb-gp:nth-child(3) { animation-delay: -0.45s; }
+.nb-glider .nb-gp:nth-child(4) { animation-delay: -0.675s; }
+@keyframes nb-glider {
+  0% { opacity: 1; }
+  25% { opacity: 1; }
+  25.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nb-glider .nb-gp { animation: none; opacity: 0; }
+  .nb-glider .nb-gp:nth-child(1) { opacity: 1; }
+}
+
+/* Responsive: collapse to a single column below ~720px */
+@media (max-width: 720px) {
+  .nb-body { grid-template-columns: 1fr; }
+  .nb-rail {
+    border-right: none;
+    border-bottom: 1px solid var(--nb-rail-border);
+  }
+  .nb-main { padding: 30px 26px 40px; }
+  .nb-name { font-size: 40px; }
+  .nb-row { grid-template-columns: 1fr; gap: 6px; }
+  .nb-post { grid-template-columns: 1fr; gap: 6px; }
+  .nb-header { padding: 14px 22px; }
+}
+

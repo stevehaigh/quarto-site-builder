@@ -86,9 +86,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-freeze","listing-comments","listing-title","listing-description","listing-author","listing-date","listing-categories","listing-draft","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -109,7 +109,28 @@ ul.task-list li input[type="checkbox"] {
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  /* Homepage-only: the warm "paper" background for the showcase layout,
+     and a full-width content area (the shared navbar supplies the header).
+     The footer is hidden here — the page ends on its own easter-egg line.
+     Scoped to index.qmd only. */
+  body { background: #f2f1ea; }
+  [data-bs-theme="dark"] body { background: #16181b; }
+  /* Blend the shared navbar with the homepage's warm paper (html prefix
+     out-specifies the global .navbar rule in styles.css) */
+  html .navbar { background: #f2f1ea !important; }
+  html[data-bs-theme="dark"] .navbar { background: #16181b !important; }
+  .nav-footer, footer.footer { display: none !important; }
+  #quarto-content, main.content, .page-columns, .content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    display: block !important;
+  }
+</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -334,19 +355,19 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">~/home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./blog/"> 
-<span class="menu-text">Blog</span></a>
+<span class="menu-text">~/blog</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./projects/"> 
-<span class="menu-text">Projects &amp; Decks</span></a>
+<span class="menu-text">~/projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about/"> 
-<span class="menu-text">About</span></a>
+<span class="menu-text">~/about</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/stevehaigh"> <i class="bi bi-github" role="img" aria-label="GitHub">
@@ -362,155 +383,104 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 
-<div class="grid home-hero">
-<div class="g-col-12 g-col-md-4 home-aside">
-<p><img src="img/profile.jpg" alt="Photo of Steve Haigh" class="home-photo"></p>
-<section id="steve-haigh" class="level1 home-name">
-<h1 class="home-name">Steve Haigh</h1>
-<p><em>Computational biology, viewed from a 30-year software career.</em></p>
-<p>Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the <em>wcEcoli</em> whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.</p>
-<p>This site collects notes, slide decks, and project write-ups from the intersection of software and biology.</p>
-<div class="home-links">
-  <a href="https://github.com/stevehaigh"><i class="bi bi-github" role="img" aria-label="GitHub"></i> GitHub</a>
-  <a href="https://linkedin.com/in/shaigh"><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i> LinkedIn</a>
-  <a href="#email"><i class="bi bi-envelope" role="img" aria-label="Email"></i> Email</a>
+<div class="nb">
+  <div class="nb-body">
+    <div class="nb-rail">
+      <img src="img/profile.jpg" alt="Steve Haigh" class="nb-photo">
+      <div class="nb-k">NAME</div><div class="nb-v">Steve Haigh</div>
+      <div class="nb-k">ROLE</div><div class="nb-v">Comp-bio researcher</div>
+      <div class="nb-k">LAB</div><div class="nb-v">Univ. Reading · Dr M. Fry</div>
+      <div class="nb-k">MODEL</div><div class="nb-v">human platelet / wcEcoli</div>
+      <div class="nb-k">STATUS</div>
+      <div class="nb-v nb-status"><span class="nb-dot"></span>writing dissertation</div>
+      <div class="nb-k">LINKS</div>
+      <div class="nb-links">
+        <a href="https://github.com/stevehaigh">→ github</a>
+        <a href="https://linkedin.com/in/shaigh">→ linkedin</a>
+        <a href="#email">→ email</a>
+      </div>
+    </div>
+
+    <div class="nb-main">
+      <div class="nb-eyebrow">§ index</div>
+      <h1 class="nb-name">Steve Haigh</h1>
+      <p class="nb-tagline">Computational biology, viewed from a 30-year software career.</p>
+      <p class="nb-intro">Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the <em>wcEcoli</em> whole-cell framework to the first computational model of a human platelet.</p>
+
+      <figure class="nb-fig figure">
+        <img src="assets/integrin-activation.png" alt="Two stacked line charts from a platelet simulation run over 600 seconds. Top chart: the share of activated integrin receptors — the sticky surface molecules platelets use to clump together and form clots — holds near zero for about 300 seconds, then climbs steeply in an S-shaped curve to a high, steady level; a grey reference line settles slightly higher than the purple main line, and a faint dotted line traces a smaller, short-lived trigger signal that rises then fades. Bottom chart: a molecular brake that normally dampens activation stays flat at its resting level, then temporarily swells to a peak around the 370-second mark before easing back down, plotted against a flat baseline for comparison." class="figure-img">
+        <figcaption>Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. <span class="nb-figmeta">plot: demo_integrin.py · seed 0 · 600 s</span></figcaption>
+      </figure>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§01</span>
+        <span class="nb-sec-label">Current focus</span>
+        <div class="nb-sec-rule"></div>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">whole_cell_model</div>
+        <p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">sim_infra</div>
+        <p>Containerised pipelines and interactive browser-based UIs for high-dimensional output.</p>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">eng_x_bio</div>
+        <p>Software-engineering discipline brought to computational-biology workflows.</p>
+      </div>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§02</span>
+        <span class="nb-sec-label">Now — updated Jun 2026</span>
+        <div class="nb-sec-rule"></div>
+      </div>
+      <p class="nb-now">Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site. When I focus, I'm finalising figures and weighing whether to add more biology to the model before calling it done.</p>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§03</span>
+        <span class="nb-sec-label">Latest post</span>
+        <div class="nb-sec-rule"></div>
+      </div>
+<div id="listing-latest-post" class="quarto-listing quarto-listing-container-custom">
+<div class="nb-post">
+<div class="nb-post-date">
+2026-05-27
 </div>
-</section>
-</div>
-<div class="g-col-12 g-col-md-8 home-content">
-<section id="current-projects" class="level2">
-<h2 class="anchored" data-anchor-id="current-projects">Current projects</h2>
-<div class="grid">
-<section id="whole-cell-modelling" class="level4 g-col-12 g-col-md-4">
-<h4 class="anchored" data-anchor-id="whole-cell-modelling">Whole-cell modelling</h4>
-<p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
-</section>
-<section id="simulation-infrastructure" class="level4 g-col-12 g-col-md-4">
-<h4 class="anchored" data-anchor-id="simulation-infrastructure">Simulation infrastructure</h4>
-<p>Containerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.</p>
-</section>
-<section id="engineering-biology" class="level4 g-col-12 g-col-md-4">
-<h4 class="anchored" data-anchor-id="engineering-biology">Engineering ↔︎ biology</h4>
-<p>Bringing software-engineering discipline to computational-biology workflows.</p>
-</section>
-</div>
-</section>
-<section id="currently-looking-at" class="level2">
-<h2 class="anchored" data-anchor-id="currently-looking-at">Currently looking at…</h2>
-<p><em>Updated June 2026.</em> Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site and other side projects. When I do manage to focus I’m finalising some figures and considering if I can add more biology to the basic model before I call it done (for now).</p>
-</section>
-<section id="latest-post" class="level2">
-<h2 class="anchored" data-anchor-id="latest-post">Latest post</h2>
-<div id="listing-latest-post" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1782904161646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
+<div>
+<h3 class="nb-post-title">
+<a href="./blog/posts/llm-intro/">How do LLMs work? — a shallow-dive for scientists</a>
 </h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="./blog/posts/llm-intro/" class="no-external">
-<p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./blog/posts/llm-intro/" class="no-external">
-<div class="listing-date">
-May 27, 2026
-</div>
-</a>
+<p class="nb-post-desc">
+A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.
+</p>
+<div class="nb-post-tags">
+[llms] [ai] [decks] [lab]
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-<p>See the <a href="./blog/">Blog</a> for the full archive, or the <a href="./projects/">Projects</a> page for repos and decks.</p>
-</section>
+      <div class="nb-egg">
+        <a href="./life/" aria-label="A small surprise">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewbox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="1" y="11" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect><rect x="11" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"></rect><rect x="11" y="1" width="4" height="4"></rect><rect x="6" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"></rect><rect x="1" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect><rect x="11" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"></rect><rect x="6" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="1" y="11" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect></g></svg></a>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-<a href="./life/" class="glider-hint" aria-label="A small surprise">
-  <svg width="22" height="22" viewbox="0 0 16 16">
-    <g class="phase phase-0">
-      <rect x="6" y="1" width="4" height="4"></rect>
-      <rect x="11" y="6" width="4" height="4"></rect>
-      <rect x="1" y="11" width="4" height="4"></rect>
-      <rect x="6" y="11" width="4" height="4"></rect>
-      <rect x="11" y="11" width="4" height="4"></rect>
-    </g>
-    <g class="phase phase-1">
-      <rect x="1" y="1" width="4" height="4"></rect>
-      <rect x="11" y="1" width="4" height="4"></rect>
-      <rect x="6" y="6" width="4" height="4"></rect>
-      <rect x="11" y="6" width="4" height="4"></rect>
-      <rect x="6" y="11" width="4" height="4"></rect>
-    </g>
-    <g class="phase phase-2">
-      <rect x="11" y="1" width="4" height="4"></rect>
-      <rect x="1" y="6" width="4" height="4"></rect>
-      <rect x="11" y="6" width="4" height="4"></rect>
-      <rect x="6" y="11" width="4" height="4"></rect>
-      <rect x="11" y="11" width="4" height="4"></rect>
-    </g>
-    <g class="phase phase-3">
-      <rect x="1" y="1" width="4" height="4"></rect>
-      <rect x="6" y="6" width="4" height="4"></rect>
-      <rect x="11" y="6" width="4" height="4"></rect>
-      <rect x="1" y="11" width="4" height="4"></rect>
-      <rect x="6" y="11" width="4" height="4"></rect>
-    </g>
-  </svg>
-</a>
-<style>
-  .glider-hint {
-    display: inline-block;
-    margin-top: 3rem;
-    color: #2ea043;
-    opacity: 0.35;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  .glider-hint:hover { opacity: 1; transform: translate(2px, 2px); }
-  .glider-hint svg rect { fill: currentColor; }
-  .glider-hint .phase { opacity: 0; }
-  .glider-hint .phase-0 { animation: gh-p0 1.6s infinite; }
-  .glider-hint .phase-1 { animation: gh-p1 1.6s infinite; }
-  .glider-hint .phase-2 { animation: gh-p2 1.6s infinite; }
-  .glider-hint .phase-3 { animation: gh-p3 1.6s infinite; }
-  .glider-hint:hover .phase { animation-play-state: paused; }
-  @keyframes gh-p0 { 0%, 24.9% { opacity: 1; } 25%, 100% { opacity: 0; } }
-  @keyframes gh-p1 { 0%, 24.9% { opacity: 0; } 25%, 49.9% { opacity: 1; } 50%, 100% { opacity: 0; } }
-  @keyframes gh-p2 { 0%, 49.9% { opacity: 0; } 50%, 74.9% { opacity: 1; } 75%, 100% { opacity: 0; } }
-  @keyframes gh-p3 { 0%, 74.9% { opacity: 0; } 75%, 100% { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) {
-    .glider-hint .phase { animation: none; }
-    .glider-hint .phase-0 { opacity: 1; }
-  }
-</style>
 
 
 
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
