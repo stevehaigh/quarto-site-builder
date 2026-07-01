@@ -1,0 +1,10 @@
+<% for (const item of items) { %>
+<div class="nb-post">
+<div class="nb-post-date"><%= item.date %></div>
+<div>
+<h3 class="nb-post-title"><a href="<%- item.path %>"><%= item.title %></a></h3>
+<p class="nb-post-desc"><%= item.description %></p>
+<div class="nb-post-tags"><% for (const c of (item.categories || [])) { %>[<%= c %>] <% } %></div>
+</div>
+</div>
+<% } %>

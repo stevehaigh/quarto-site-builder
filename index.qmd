@@ -1,5 +1,6 @@
 ---
 pagetitle: "Steve Haigh · Computational Biology"
+page-layout: custom
 toc: false
 lightbox: false
 listing:
@@ -7,126 +8,104 @@ listing:
     contents: blog/posts
     sort: "date desc"
     max-items: 1
-    type: default
-    fields: [date, title, description, categories]
+    template: partials/latest-post.ejs
+    date-format: "YYYY-MM-DD"
+    fields: [date, title, description, categories, path]
+include-in-header:
+  - text: |
+      <style>
+        /* Homepage-only: the warm "paper" background for the showcase layout,
+           and a full-width content area (the shared navbar supplies the header).
+           The footer is hidden here — the page ends on its own easter-egg line.
+           Scoped to index.qmd only. */
+        body { background: #f2f1ea; }
+        [data-bs-theme="dark"] body { background: #16181b; }
+        /* Blend the shared navbar with the homepage's warm paper (html prefix
+           out-specifies the global .navbar rule in styles.css) */
+        html .navbar { background: #f2f1ea !important; }
+        html[data-bs-theme="dark"] .navbar { background: #16181b !important; }
+        .nav-footer, footer.footer { display: none !important; }
+        #quarto-content, main.content, .page-columns, .content {
+          max-width: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          gap: 0 !important;
+          grid-template-columns: none !important;
+          display: block !important;
+        }
+      </style>
 ---
 
-::::: {.grid .home-hero}
-
-:::: {.g-col-12 .g-col-md-4 .home-aside}
-<img src="img/profile.jpg" alt="Photo of Steve Haigh" class="home-photo">
-
-# Steve Haigh {.home-name}
-
-*Computational biology, viewed from a 30-year software career.*
-
-Software developer of 30 years, now researching biomedical sciences at the University of Reading. My dissertation extends the *wcEcoli* whole-cell modelling framework to build the first computational model of a human platelet, supervised by Dr Mike Fry.
-
-This site collects notes, slide decks, and project write-ups from the intersection of software and biology.
-
 ```{=html}
-<div class="home-links">
-  <a href="https://github.com/stevehaigh"><i class="bi bi-github" role="img" aria-label="GitHub"></i> GitHub</a>
-  <a href="https://linkedin.com/in/shaigh"><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i> LinkedIn</a>
-  <a href="#email"><i class="bi bi-envelope" role="img" aria-label="Email"></i> Email</a>
-</div>
+<div class="nb">
+  <div class="nb-body">
+    <div class="nb-rail">
+      <img src="img/profile.jpg" alt="Steve Haigh" class="nb-photo">
+      <div class="nb-k">NAME</div><div class="nb-v">Steve Haigh</div>
+      <div class="nb-k">ROLE</div><div class="nb-v">Comp-bio researcher</div>
+      <div class="nb-k">LAB</div><div class="nb-v">Univ. Reading · Dr M. Fry</div>
+      <div class="nb-k">MODEL</div><div class="nb-v">human platelet / wcEcoli</div>
+      <div class="nb-k">STATUS</div>
+      <div class="nb-v nb-status"><span class="nb-dot"></span>writing dissertation</div>
+      <div class="nb-k">LINKS</div>
+      <div class="nb-links">
+        <a href="https://github.com/stevehaigh">→ github</a>
+        <a href="https://linkedin.com/in/shaigh">→ linkedin</a>
+        <a href="#email">→ email</a>
+      </div>
+    </div>
+
+    <div class="nb-main">
+      <div class="nb-eyebrow">§ index</div>
+      <h1 class="nb-name">Steve Haigh</h1>
+      <p class="nb-tagline">Computational biology, viewed from a 30-year software career.</p>
+      <p class="nb-intro">Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the <em>wcEcoli</em> whole-cell framework to the first computational model of a human platelet.</p>
+
+      <figure class="nb-fig">
+        <img src="assets/integrin-activation.png" alt="Two stacked line charts from a platelet simulation run over 600 seconds. Top chart: the share of activated integrin receptors — the sticky surface molecules platelets use to clump together and form clots — holds near zero for about 300 seconds, then climbs steeply in an S-shaped curve to a high, steady level; a grey reference line settles slightly higher than the purple main line, and a faint dotted line traces a smaller, short-lived trigger signal that rises then fades. Bottom chart: a molecular brake that normally dampens activation stays flat at its resting level, then temporarily swells to a peak around the 370-second mark before easing back down, plotted against a flat baseline for comparison.">
+        <figcaption>Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. <span class="nb-figmeta">plot: demo_integrin.py · seed 0 · 600 s</span></figcaption>
+      </figure>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§01</span>
+        <span class="nb-sec-label">Current focus</span>
+        <div class="nb-sec-rule"></div>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">whole_cell_model</div>
+        <p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">sim_infra</div>
+        <p>Containerised pipelines and interactive browser-based UIs for high-dimensional output.</p>
+      </div>
+      <div class="nb-row">
+        <div class="nb-key">eng_x_bio</div>
+        <p>Software-engineering discipline brought to computational-biology workflows.</p>
+      </div>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§02</span>
+        <span class="nb-sec-label">Now — updated Jun 2026</span>
+        <div class="nb-sec-rule"></div>
+      </div>
+      <p class="nb-now">Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site. When I focus, I'm finalising figures and weighing whether to add more biology to the model before calling it done.</p>
+
+      <div class="nb-sec">
+        <span class="nb-sec-num">§03</span>
+        <span class="nb-sec-label">Latest post</span>
+        <div class="nb-sec-rule"></div>
+      </div>
 ```
-::::
-
-:::: {.g-col-12 .g-col-md-8 .home-content}
-
-## Current projects
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-#### Whole-cell modelling
-Extending *wcEcoli* to build the first computational model of a human platelet.
-:::
-
-::: {.g-col-12 .g-col-md-4}
-#### Simulation infrastructure
-Containerised pipelines and interactive browser-based UIs for exploring high-dimensional simulation output.
-:::
-
-::: {.g-col-12 .g-col-md-4}
-#### Engineering ↔ biology
-Bringing software-engineering discipline to computational-biology workflows.
-:::
-
-:::
-
-## Currently looking at…
-
-*Updated June 2026.* Starting on a draft of my dissertation... which means work avoidance and too much time playing with this site and other side projects. When I do manage to focus I'm finalising some figures and considering if I can add more biology to the basic model before I call it done (for now).
-
-## Latest post
 
 ::: {#latest-post}
 :::
 
-See the [Blog](blog/index.qmd) for the full archive, or the [Projects](projects/index.qmd) page for repos and decks.
-
-::::
-
-:::::
-
 ```{=html}
-<a href="/life/" class="glider-hint" aria-label="A small surprise">
-  <svg width="22" height="22" viewBox="0 0 16 16">
-    <g class="phase phase-0">
-      <rect x="6"  y="1"  width="4" height="4"/>
-      <rect x="11" y="6"  width="4" height="4"/>
-      <rect x="1"  y="11" width="4" height="4"/>
-      <rect x="6"  y="11" width="4" height="4"/>
-      <rect x="11" y="11" width="4" height="4"/>
-    </g>
-    <g class="phase phase-1">
-      <rect x="1"  y="1"  width="4" height="4"/>
-      <rect x="11" y="1"  width="4" height="4"/>
-      <rect x="6"  y="6"  width="4" height="4"/>
-      <rect x="11" y="6"  width="4" height="4"/>
-      <rect x="6"  y="11" width="4" height="4"/>
-    </g>
-    <g class="phase phase-2">
-      <rect x="11" y="1"  width="4" height="4"/>
-      <rect x="1"  y="6"  width="4" height="4"/>
-      <rect x="11" y="6"  width="4" height="4"/>
-      <rect x="6"  y="11" width="4" height="4"/>
-      <rect x="11" y="11" width="4" height="4"/>
-    </g>
-    <g class="phase phase-3">
-      <rect x="1"  y="1"  width="4" height="4"/>
-      <rect x="6"  y="6"  width="4" height="4"/>
-      <rect x="11" y="6"  width="4" height="4"/>
-      <rect x="1"  y="11" width="4" height="4"/>
-      <rect x="6"  y="11" width="4" height="4"/>
-    </g>
-  </svg>
-</a>
-<style>
-  .glider-hint {
-    display: inline-block;
-    margin-top: 3rem;
-    color: #2ea043;
-    opacity: 0.35;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  .glider-hint:hover { opacity: 1; transform: translate(2px, 2px); }
-  .glider-hint svg rect { fill: currentColor; }
-  .glider-hint .phase { opacity: 0; }
-  .glider-hint .phase-0 { animation: gh-p0 1.6s infinite; }
-  .glider-hint .phase-1 { animation: gh-p1 1.6s infinite; }
-  .glider-hint .phase-2 { animation: gh-p2 1.6s infinite; }
-  .glider-hint .phase-3 { animation: gh-p3 1.6s infinite; }
-  .glider-hint:hover .phase { animation-play-state: paused; }
-  @keyframes gh-p0 { 0%, 24.9% { opacity: 1; } 25%, 100% { opacity: 0; } }
-  @keyframes gh-p1 { 0%, 24.9% { opacity: 0; } 25%, 49.9% { opacity: 1; } 50%, 100% { opacity: 0; } }
-  @keyframes gh-p2 { 0%, 49.9% { opacity: 0; } 50%, 74.9% { opacity: 1; } 75%, 100% { opacity: 0; } }
-  @keyframes gh-p3 { 0%, 74.9% { opacity: 0; } 75%, 100% { opacity: 1; } }
-  @media (prefers-reduced-motion: reduce) {
-    .glider-hint .phase { animation: none; }
-    .glider-hint .phase-0 { opacity: 1; }
-  }
-</style>
+      <div class="nb-egg">
+        <a href="/life/" aria-label="A small surprise">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="11" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"/><rect x="1" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g></svg></a>
+      </div>
+    </div>
+  </div>
+</div>
 ```
