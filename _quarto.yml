@@ -27,6 +27,8 @@ website:
         text: "~/home"
       - href: blog/index.qmd
         text: "~/blog"
+      - href: trips/index.qmd
+        text: "~/trips"
       - href: projects/index.qmd
         text: "~/projects"
       - href: about/index.qmd
