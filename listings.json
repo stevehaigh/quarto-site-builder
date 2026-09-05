@@ -1,6 +1,10 @@
 [
   {
-    "listing": "/",
+    "listing": "/trips/",
+    "items": []
+  },
+  {
+    "listing": "/blog/",
     "items": [
       "/blog/posts/llm-intro/",
       "/blog/posts/academic-pptx-template/",
@@ -9,7 +13,7 @@
     ]
   },
   {
-    "listing": "/blog/",
+    "listing": "/",
     "items": [
       "/blog/posts/llm-intro/",
       "/blog/posts/academic-pptx-template/",
