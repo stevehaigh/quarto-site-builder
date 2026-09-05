@@ -1,0 +1,45 @@
+---
+title: "Dissertation Submitted — What Comes Next"
+description: "The M.Res. dissertation is in, a poster is going up at the UK platelet conference, and the next chapter is taking shape."
+author: "Steve Haigh"
+date: "2026-09-04"
+categories: [career, mres, platelet]
+draft: true
+---
+
+<!-- Scaffold — replace the bracketed notes under each heading with prose. -->
+
+## The dissertation is in
+
+[How it felt to finally hit submit after a year of work. A sentence or two on
+what the dissertation covered — the whole-cell platelet model — and anything
+about the final write-up push worth sharing: what was harder than expected,
+what the last few weeks looked like.]
+
+## Presenting a poster at the UK platelet conference
+
+[Next week: attending the UK platelet conference in Reading and presenting a
+poster on the project. First academic conference / first poster? What the
+poster covers, what you're hoping to get out of the meeting — feedback on the
+model, meeting the platelet community, gauging interest in the computational
+approach. Could add a photo of the poster after the event.]
+
+## Looking at PhD options
+
+[After the conference, the search begins. What kind of PhD you're looking for —
+presumably at the computing/biology intersection, possibly extending the
+platelet work. What matters in choosing: topic, supervisor, location, funding.
+Honest about the uncertainty, as in "The Story So Far".]
+
+## Keeping up the mathematical biology
+
+[Continuing to self-study mathematical biology in the meantime — what's on the
+reading/course list. And the long-suffering MITx Biochemistry course started
+months ago, which might finally get finished. Ties back to the MOOC habit
+mentioned in earlier posts.]
+
+## [Closing]
+
+[Short wrap-up: the in-between period between submitting and whatever comes
+next. Invite readers doing similar transitions or platelet/comp-bio people to
+get in touch, as before.]
