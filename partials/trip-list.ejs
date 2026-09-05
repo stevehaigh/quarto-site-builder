@@ -1,0 +1,42 @@
+<%
+// One listing, split into upcoming and past at render time so a trip moves
+// between the two on its own. Templates only get `items`, hence both sections
+// here rather than two listings.
+//
+// sortableValues.date is epoch millis, so the split doesn't depend on the
+// listing's date-format; item.date is the display string.
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+const cutoff = today.getTime();
+
+function when(item) {
+  const raw = item.sortableValues && item.sortableValues.date;
+  const ms = raw !== undefined ? Number(raw) : Date.parse(item.date);
+  return isNaN(ms) ? cutoff : ms;
+}
+
+const upcoming = items.filter(i => when(i) >= cutoff).sort((a, b) => when(a) - when(b));
+const past = items.filter(i => when(i) < cutoff).sort((a, b) => when(b) - when(a));
+
+const sections = [
+  { title: "Upcoming", list: upcoming, empty: "Nothing booked at the moment." },
+  { title: "Past", list: past, empty: "No trips logged yet." },
+];
+// Emitted flush left on purpose: indented lines are read as a Markdown code
+// block, which escapes the tags instead of rendering them.
+%>
+<% for (const section of sections) { %>
+<h2 class="trip-section"><%= section.title %></h2>
+<% if (section.list.length === 0) { %>
+<p class="trip-empty"><%= section.empty %></p>
+<% } %>
+<% for (const item of section.list) { %>
+<div class="trip-card">
+<div class="trip-card-date"><%= item.date %></div>
+<div>
+<h3 class="trip-card-title"><a href="<%- item.path %>"><%= item.title %></a></h3>
+<% if (item.subtitle) { %><p class="trip-card-sub"><%= item.subtitle %></p><% } %>
+</div>
+</div>
+<% } %>
+<% } %>

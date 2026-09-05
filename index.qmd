@@ -3,6 +3,11 @@ pagetitle: "Steve Haigh · Computational Biology"
 page-layout: custom
 toc: false
 lightbox: false
+# The §01–§03 headers are structural, not linkable sections; anchor links would
+# also land as a stray flex item inside .nb-sec.
+anchor-sections: false
+# Lets the homepage-only navbar rule live in styles.css beside the global one.
+body-classes: nb-home
 listing:
   - id: latest-post
     contents: blog/posts
@@ -17,13 +22,11 @@ include-in-header:
         /* Homepage-only: the warm "paper" background for the showcase layout,
            and a full-width content area (the shared navbar supplies the header).
            The footer is hidden here — the page ends on its own easter-egg line.
-           Scoped to index.qmd only. */
-        body { background: #f2f1ea; }
-        [data-bs-theme="dark"] body { background: #16181b; }
-        /* Blend the shared navbar with the homepage's warm paper (html prefix
-           out-specifies the global .navbar rule in styles.css) */
-        html .navbar { background: #f2f1ea !important; }
-        html[data-bs-theme="dark"] .navbar { background: #16181b !important; }
+           Scoped to index.qmd only. --nb-paper is redefined on body.quarto-dark
+           in styles.css, so one rule covers both modes. The matching navbar
+           rule lives in styles.css under body.nb-home, where it can be written
+           to not collide with the global dark-navbar rule. */
+        body { background: var(--nb-paper); }
         .nav-footer, footer.footer { display: none !important; }
         #quarto-content, main.content, .page-columns, .content {
           max-width: none !important;
@@ -37,7 +40,7 @@ include-in-header:
 ---
 
 ```{=html}
-<div class="nb">
+<main class="nb">
   <div class="nb-body">
     <div class="nb-rail">
       <img src="img/profile.jpg" alt="Steve Haigh" class="nb-photo">
@@ -66,11 +69,11 @@ include-in-header:
         <figcaption>Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. <span class="nb-figmeta">plot: demo_integrin.py · seed 0 · 600 s</span></figcaption>
       </figure>
 
-      <div class="nb-sec">
+      <h2 class="nb-sec">
         <span class="nb-sec-num">§01</span>
         <span class="nb-sec-label">Current focus</span>
-        <div class="nb-sec-rule"></div>
-      </div>
+        <span class="nb-sec-rule"></span>
+      </h2>
       <div class="nb-row">
         <div class="nb-key">whole_cell_model</div>
         <p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
@@ -84,18 +87,18 @@ include-in-header:
         <p>Software-engineering discipline brought to computational-biology workflows.</p>
       </div>
 
-      <div class="nb-sec">
+      <h2 class="nb-sec">
         <span class="nb-sec-num">§02</span>
         <span class="nb-sec-label">Now — updated Jun 2026</span>
-        <div class="nb-sec-rule"></div>
-      </div>
+        <span class="nb-sec-rule"></span>
+      </h2>
       <p class="nb-now">Starting on a draft of my dissertation… which means work avoidance and too much time playing with this site. When I focus, I'm finalising figures and weighing whether to add more biology to the model before calling it done.</p>
 
-      <div class="nb-sec">
+      <h2 class="nb-sec">
         <span class="nb-sec-num">§03</span>
         <span class="nb-sec-label">Latest post</span>
-        <div class="nb-sec-rule"></div>
-      </div>
+        <span class="nb-sec-rule"></span>
+      </h2>
 ```
 
 ::: {#latest-post}
@@ -103,9 +106,9 @@ include-in-header:
 
 ```{=html}
       <div class="nb-egg">
-        <a href="/life/" aria-label="A small surprise">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="11" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"/><rect x="1" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g></svg></a>
+        <a href="/life/">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="11" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"/><rect x="1" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/><rect x="11" y="11" width="4" height="4"/></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"/><rect x="6" y="6" width="4" height="4"/><rect x="11" y="6" width="4" height="4"/><rect x="1" y="11" width="4" height="4"/><rect x="6" y="11" width="4" height="4"/></g></svg></a>
       </div>
     </div>
   </div>
-</div>
+</main>
 ```

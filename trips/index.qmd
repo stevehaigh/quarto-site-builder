@@ -1,0 +1,15 @@
+---
+title: "Trips"
+subtitle: "Chronological plans — where we're going, and where we've been."
+listing:
+  id: trips
+  contents: "*/index.qmd"
+  template: ../partials/trip-list.ejs
+  sort: "date desc"
+  date-format: "D MMM YYYY"
+  fields: [date, title, subtitle, path]
+title-block-banner: false
+---
+
+:::{#trips}
+:::
