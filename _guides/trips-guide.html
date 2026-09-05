@@ -1,0 +1,507 @@
+<title>Writing a Trip Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --paper:      #f5f6f7;
+    --surface:    #ffffff;
+    --ink:        #1b2027;
+    --body:       #333c46;
+    --muted:      #5c6672;
+    --faint:      #7d8894;
+    --rule:       #dde1e5;
+    --rule-soft:  #e8ebee;
+    --accent:     #2f6e8f;
+    --accent-bg:  #eaf1f5;
+    --amber:      #7d5f16;
+    --amber-bg:   #f7f1e0;
+    --code-bg:    #eef0f2;
+
+    --sans: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --step: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #14181c;
+      --surface:    #1b2025;
+      --ink:        #e6e9ec;
+      --body:       #c3c9d0;
+      --muted:      #98a1ab;
+      --faint:      #7c858f;
+      --rule:       #2c333a;
+      --rule-soft:  #242a30;
+      --accent:     #74a9cb;
+      --accent-bg:  #1c2a33;
+      --amber:      #d0ac5c;
+      --amber-bg:   #2a2419;
+      --code-bg:    #21272d;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #14181c;
+    --surface:    #1b2025;
+    --ink:        #e6e9ec;
+    --body:       #c3c9d0;
+    --muted:      #98a1ab;
+    --faint:      #7c858f;
+    --rule:       #2c333a;
+    --rule-soft:  #242a30;
+    --accent:     #74a9cb;
+    --accent-bg:  #1c2a33;
+    --amber:      #d0ac5c;
+    --amber-bg:   #2a2419;
+    --code-bg:    #21272d;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--body);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+  }
+
+  /* ---- masthead ---- */
+  header.masthead {
+    padding: 3.5rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 0.9rem;
+  }
+  h1 {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: clamp(2rem, 5.5vw, 2.9rem);
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+    color: var(--ink);
+    margin: 0 0 0.75rem;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: 1.075rem;
+    color: var(--muted);
+    margin: 0;
+    max-width: 62ch;
+    text-wrap: pretty;
+  }
+
+  /* ---- sticky route strip ---- */
+  nav.route {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+  .route-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .route-inner a {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0.15rem 0;
+    border-bottom: 1.5px solid transparent;
+  }
+  .route-inner a:hover,
+  .route-inner a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* ---- sections ---- */
+  section { margin-bottom: var(--step); }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 2.75rem 0 1.1rem;
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    flex: none;
+  }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sec-rule { flex: 1; height: 1px; background: var(--rule); }
+
+  h3 {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 1.9rem 0 0.7rem;
+  }
+
+  p { margin: 0 0 0.95rem; max-width: 68ch; text-wrap: pretty; }
+  a { color: var(--accent); }
+
+  /* ---- code ---- */
+  pre {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 1.7;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 2px solid var(--accent);
+    border-radius: 3px;
+    padding: 1rem 1.1rem;
+    margin: 0 0 1.1rem;
+    overflow-x: auto;
+  }
+  pre .c { color: var(--faint); }
+  pre .k { color: var(--accent); font-weight: 600; }
+  code {
+    font-family: var(--mono);
+    font-size: 0.845em;
+    background: var(--code-bg);
+    padding: 0.1em 0.36em;
+    border-radius: 3px;
+    color: var(--ink);
+  }
+  pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
+
+  /* ---- tables ---- */
+  .table-scroll { overflow-x: auto; margin: 0 0 1.2rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+  }
+  th {
+    text-align: left;
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding: 0 0.9rem 0.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.62rem 0.9rem 0.62rem 0;
+    border-bottom: 1px solid var(--rule-soft);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  td code { white-space: nowrap; }
+
+  /* ---- type chips ---- */
+  .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.4rem; }
+  .chip {
+    font-family: var(--mono);
+    font-size: 0.76rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.24rem 0.5rem;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .chip .ic { font-size: 0.85rem; line-height: 1; }
+  .group-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 1.1rem 0 0.45rem;
+  }
+
+  /* ---- callout ---- */
+  .callout {
+    background: var(--accent-bg);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 3px 3px 0;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1.2rem;
+    font-size: 0.925rem;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--ink); }
+
+  .warnbox {
+    background: var(--amber-bg);
+    border-left: 2px solid var(--amber);
+    border-radius: 0 3px 3px 0;
+    padding: 0.5rem 1.1rem;
+    margin: 0 0 1.2rem;
+  }
+  .warnbox table { font-size: 0.855rem; }
+  .warnbox th { border-bottom-color: color-mix(in srgb, var(--amber) 35%, transparent); }
+  .warnbox td { border-bottom-color: color-mix(in srgb, var(--amber) 18%, transparent); }
+
+  /* ---- rendered preview ---- */
+  .preview {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 1.1rem 1.2rem;
+    margin: 0 0 1.2rem;
+  }
+  .preview-label {
+    font-family: var(--mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin-bottom: 0.85rem;
+  }
+  .pv-stop { display: grid; grid-template-columns: 1.5em 1fr; gap: 0.7rem; padding: 0.32rem 0; align-items: baseline; }
+  .pv-icon { text-align: center; font-size: 0.9em; }
+  .pv-place { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+  .pv-detail { font-family: var(--mono); font-size: 0.73rem; color: var(--muted); display: block; }
+  .pv-note { font-family: var(--mono); font-size: 0.73rem; color: var(--muted); font-style: italic; display: block; }
+  .pv-leg { font-family: var(--mono); font-size: 0.71rem; color: var(--muted); border-bottom: 1px dotted var(--rule); }
+
+  footer.end {
+    margin-top: 3.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--faint);
+  }
+
+  a:focus-visible, .route-inner a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+  @media (max-width: 560px) {
+    .sec-head { gap: 0.5rem; }
+    td, th { padding-right: 0.6rem; }
+  }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <p class="eyebrow">haigh.bio · authoring reference</p>
+    <h1>Writing a Trip Page</h1>
+    <p class="lede">Trip pages are ordinary Quarto pages with two extra shortcodes for plan entries. You write the prose; the shortcodes handle the icons, the map links and the legs between stops.</p>
+  </header>
+</div>
+
+<nav class="route" aria-label="Sections">
+  <div class="route-inner">
+    <a href="#start">start a trip</a>
+    <a href="#write">write the plan</a>
+    <a href="#publish">publish</a>
+    <a href="#stop">stop</a>
+    <a href="#travel">travel</a>
+    <a href="#types">types</a>
+    <a href="#wrong">when it's wrong</a>
+    <a href="#files">where things live</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="start">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Start a trip</h2><div class="sec-rule"></div></div>
+    <pre><span class="c"># from the repo root</span>
+bin/new-trip.sh dolomites-2027 <span class="k">"Dolomites 2027"</span></pre>
+    <p>That creates <code>trips/dolomites-2027/index.qmd</code> with the frontmatter filled in and a cheat sheet in a comment.</p>
+    <div class="callout">
+      <p><strong>Set <code>date:</code> to the start of the trip</strong> before you publish. It orders the trips list and decides whether the trip files under Upcoming or Past — and it moves between the two on its own as the date passes.</p>
+    </div>
+  </section>
+
+  <section id="write">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Write the plan</h2><div class="sec-rule"></div></div>
+    <p>Days are <code>##</code> headings. Everything else is normal prose — drop the shortcodes wherever you want them.</p>
+    <pre><span class="c">## Sat 14 May — into the Dolomites</span>
+
+Easy first day, arrive by train from Verona.
+
+{{&lt; <span class="k">stop</span> train "Verona Porta Nuova → Bolzano" time="08:12" booking="9K22H" &gt;}}
+
+{{&lt; <span class="k">travel</span> train "1 h 35" &gt;}}
+
+{{&lt; <span class="k">stop</span> hotel "Hotel Greif, Bolzano" nights=2 booking="BK-83321" &gt;}}
+
+Anything on the Piazza Walther works for dinner:
+
+{{&lt; <span class="k">travel</span> walk "8 min" &gt;}}
+
+{{&lt; <span class="k">stop</span> eat "Vögele, Bolzano" note="trad. Tyrolean, book ahead" &gt;}}</pre>
+
+    <div class="preview">
+      <div class="preview-label">renders as</div>
+      <div class="pv-stop"><span class="pv-icon">🚆</span><span><span class="pv-place">Verona Porta Nuova → Bolzano</span><span class="pv-detail">08:12 · 9K22H</span></span></div>
+      <div class="pv-stop"><span class="pv-icon">🚆</span><span class="pv-leg">1 h 35</span></div>
+      <div class="pv-stop"><span class="pv-icon">🏨</span><span><span class="pv-place">Hotel Greif, Bolzano</span><span class="pv-detail">2 nights · BK-83321</span></span></div>
+      <div class="pv-stop"><span class="pv-icon">🥾</span><span class="pv-leg">8 min</span></div>
+      <div class="pv-stop"><span class="pv-icon">🍽️</span><span><span class="pv-place">Vögele, Bolzano</span><span class="pv-note">trad. Tyrolean, book ahead</span></span></div>
+    </div>
+    <p>Every place name and every leg is a live link — the place to a Google Maps search, the leg to Maps directions.</p>
+  </section>
+
+  <section id="publish">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Preview and publish</h2><div class="sec-rule"></div></div>
+    <pre>quarto preview</pre>
+    <p>Push to <code>main</code> and it's live. There's no draft step for trips — a plan is most useful while you're still making it, so the page goes up from day one and you keep editing it. (<code>blog/drafts</code> and <code>hidden</code> are still excluded from the production build; <code>trips</code> is not.)</p>
+  </section>
+
+  <section id="stop">
+    <div class="sec-head"><h2>stop — one entry in the plan</h2><div class="sec-rule"></div></div>
+    <pre>{{&lt; <span class="k">stop</span> TYPE "PLACE" &gt;}}</pre>
+    <p>Write the place name the way you'd type it into Google Maps — that's exactly where it gets linked.</p>
+    <h3>Optional details</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Attribute</th><th>Example</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><code>time</code></td><td><code>time="09:40"</code></td><td>—</td></tr>
+          <tr><td><code>nights</code></td><td><code>nights=2</code></td><td>Pluralised for you</td></tr>
+          <tr><td><code>booking</code></td><td><code>booking="BK-83321"</code></td><td>—</td></tr>
+          <tr><td><code>cost</code></td><td><code>cost="€240"</code></td><td>—</td></tr>
+          <tr><td><code>note</code></td><td><code>note="book ahead"</code></td><td>Italic, on its own line</td></tr>
+          <tr><td><code>url</code></td><td><code>url="https://…"</code></td><td>Links the place here instead of Maps</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><code>time</code>, <code>nights</code>, <code>booking</code> and <code>cost</code> render as one dot-separated line under the place, in that order — whichever of them you supply.</p>
+  </section>
+
+  <section id="travel">
+    <div class="sec-head"><h2>travel — a leg between two stops</h2><div class="sec-rule"></div></div>
+    <pre>{{&lt; <span class="k">travel</span> MODE "DURATION" &gt;}}</pre>
+    <div class="chips">
+      <span class="chip"><span class="ic">🚗</span>drive</span>
+      <span class="chip"><span class="ic">🥾</span>walk</span>
+      <span class="chip"><span class="ic">🚴</span>ride</span>
+      <span class="chip"><span class="ic">🚆</span>train</span>
+      <span class="chip"><span class="ic">⛴️</span>ferry</span>
+      <span class="chip"><span class="ic">✈️</span>flight</span>
+    </div>
+    <p>Put it <em>between</em> two stops. The origin and destination come from the stops either side, so you never type a place twice.</p>
+    <div class="callout">
+      <p><strong>You type the duration yourself</strong>, copied from Google Maps while you're planning. That's deliberate: no API key, no billing, no build-time network calls, and nothing that silently goes stale in a way the page can't show you.</p>
+    </div>
+    <p>A leg with no stop after it renders nothing, so a trailing <code>travel</code> while you're mid-edit is harmless.</p>
+  </section>
+
+  <section id="types">
+    <div class="sec-head"><h2>The thirteen stop types</h2><div class="sec-rule"></div></div>
+    <div class="group-label">Core</div>
+    <div class="chips">
+      <span class="chip"><span class="ic">🏨</span>hotel</span>
+      <span class="chip"><span class="ic">🍽️</span>eat</span>
+      <span class="chip"><span class="ic">⛴️</span>ferry</span>
+      <span class="chip"><span class="ic">🚗</span>drive</span>
+      <span class="chip"><span class="ic">✈️</span>flight</span>
+      <span class="chip"><span class="ic">🚆</span>train</span>
+      <span class="chip"><span class="ic">👁️</span>see</span>
+    </div>
+    <div class="group-label">Activity</div>
+    <div class="chips">
+      <span class="chip"><span class="ic">🚴</span>ride</span>
+      <span class="chip"><span class="ic">🥾</span>walk</span>
+      <span class="chip"><span class="ic">🍷</span>wine</span>
+    </div>
+    <div class="group-label">Admin</div>
+    <div class="chips">
+      <span class="chip"><span class="ic">📝</span>note</span>
+      <span class="chip"><span class="ic">☐</span>todo</span>
+      <span class="chip"><span class="ic">💷</span>cost</span>
+    </div>
+    <p style="margin-top:1.1rem">Admin entries are for things that aren't places — a parking reminder, a booking deadline, a running total. They get no map link, and they don't interrupt a leg, so a note sitting between two stops won't be mistaken for the leg's destination.</p>
+    <pre>{{&lt; <span class="k">stop</span> todo "Book Vögele by 1 Apr" &gt;}}
+{{&lt; <span class="k">stop</span> cost "£1,480 all in" &gt;}}</pre>
+  </section>
+
+  <section id="wrong">
+    <div class="sec-head"><h2>When something's wrong</h2><div class="sec-rule"></div></div>
+    <p>The build warns rather than fails, and always renders something. Warnings appear in the <code>quarto render</code> output, prefixed <code>[trips]</code>.</p>
+    <div class="warnbox">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>What you wrote</th><th>What happens</th></tr></thead>
+          <tbody>
+            <tr><td>Unknown stop type</td><td>Generic <code>•</code> marker</td></tr>
+            <tr><td>Unknown travel mode</td><td>Routed as driving</td></tr>
+            <tr><td><code>travel</code> before any stop</td><td>Skipped — nowhere to route from</td></tr>
+            <tr><td><code>stop</code> missing type or place</td><td>Skipped</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="files">
+    <div class="sec-head"><h2>Where things live</h2><div class="sec-rule"></div></div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Path</th><th>What</th></tr></thead>
+        <tbody>
+          <tr><td><code>trips/&lt;slug&gt;/index.qmd</code></td><td>One trip</td></tr>
+          <tr><td><code>trips/index.qmd</code></td><td>Listing — splits Upcoming/Past by date</td></tr>
+          <tr><td><code>trips/_metadata.yml</code></td><td>Shared defaults for every trip page</td></tr>
+          <tr><td><code>partials/trip-list.ejs</code></td><td>Listing template</td></tr>
+          <tr><td><code>_extensions/trips/trips.lua</code></td><td>The two shortcodes</td></tr>
+          <tr><td><code>bin/new-trip.sh</code></td><td>Scaffold</td></tr>
+          <tr><td><code>styles.css</code></td><td><code>.trip-*</code> rules</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Adding a stop type</h3>
+    <p>Add the icon to <code>ICONS</code> in <code>_extensions/trips/trips.lua</code>. If it isn't a place, add it to <code>ADMIN</code> too. A new travel mode also needs a <code>TRAVEL_MODES</code> entry mapping to a Google Maps travel mode — <code>driving</code>, <code>walking</code>, <code>bicycling</code> or <code>transit</code>.</p>
+  </section>
+
+  <footer class="end">
+    Design notes and decisions: quarto-site-notes#18 · Markdown copy: _guides/trips.md
+  </footer>
+</div>
