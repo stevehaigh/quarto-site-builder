@@ -359,7 +359,12 @@ body.quarto-dark .nb {
   display: block;
 }
 .nb-k { color: var(--nb-faint); }
-.nb-v { margin-bottom: 12px; color: var(--nb-railval); }
+/* Values now run to full words rather than abbreviations, so several wrap;
+   1.55 keeps a wrapped value reading as one block against the rail's airy
+   line-height: 2, which the label spacing still uses. */
+.nb-v { margin-bottom: 12px; color: var(--nb-railval); line-height: 1.55; }
+/* Keeps a name from breaking across lines; the value wraps at the · instead. */
+.nb-nowrap { white-space: nowrap; }
 .nb-status {
   display: flex;
   align-items: center;
