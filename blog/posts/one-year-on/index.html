@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Steve Haigh">
+<meta name="dcterms.date" content="2026-09-15">
+<meta name="description" content="The M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.">
 
-<title>Steve Haigh · Computational Biology</title>
+<title>One year on – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,28 +32,27 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-84a83039c8fb10572e12fcc81c7dae2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-84a83039c8fb10572e12fcc81c7dae2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,95 +80,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-latest-post .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
-      
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-freeze","listing-comments","listing-title","listing-description","listing-author","listing-date","listing-categories","listing-draft","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-latest-post'] = new List('listing-latest-post', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Steve Haigh · Blog" href="https://haigh.bio/blog/index.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
-<style>
-  /* Homepage-only: the warm "paper" background for the showcase layout,
-     and a full-width content area (the shared navbar supplies the header).
-     The footer is hidden here — the page ends on its own easter-egg line.
-     Scoped to index.qmd only. --nb-paper is redefined on body.quarto-dark
-     in styles.css, so one rule covers both modes. The matching navbar
-     rule lives in styles.css under body.nb-home, where it can be written
-     to not collide with the global dark-navbar rule. */
-  body { background: var(--nb-paper); }
-  .nav-footer, footer.footer { display: none !important; }
-  #quarto-content, main.content, .page-columns, .content {
-    max-width: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 0 !important;
-    grid-template-columns: none !important;
-    display: block !important;
-  }
-</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed nb-home fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -344,7 +269,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./">
+    <a class="navbar-brand" href="../../../">
     <span class="navbar-title">haigh.bio</span>
     </a>
   </div>
@@ -355,23 +280,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./" aria-current="page"> 
+    <a class="nav-link" href="../../../"> 
 <span class="menu-text">~/home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog/"> 
+    <a class="nav-link" href="../../../blog/"> 
 <span class="menu-text">~/blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./trips/"> 
+    <a class="nav-link" href="../../../trips/"> 
 <span class="menu-text">~/trips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/"> 
+    <a class="nav-link" href="../../../projects/"> 
 <span class="menu-text">~/projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about/"> 
+    <a class="nav-link" href="../../../about/"> 
 <span class="menu-text">~/about</span></a>
   </li>  
   <li class="nav-item compact">
@@ -388,104 +313,97 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-<!-- main -->
-
-
-
-
-
-<main class="nb"><header id="title-block-header" class="quarto-title-block"></header>
-  <div class="nb-body">
-    <div class="nb-rail">
-      <img src="img/profile.jpg" alt="Steve Haigh" class="nb-photo">
-      <div class="nb-k">NAME</div><div class="nb-v">Steve Haigh</div>
-      <div class="nb-k">ROLE</div><div class="nb-v">Computational biology researcher</div>
-      <div class="nb-k">LAB</div><div class="nb-v">University of Reading · <span class="nb-nowrap">Dr M. Fry</span></div>
-      <div class="nb-k">MODEL</div><div class="nb-v">Human platelet / wcEcoli</div>
-      <div class="nb-k">STATUS</div>
-      <div class="nb-v nb-status"><span class="nb-dot"></span>M.Res. submitted, awaiting result</div>
-      <div class="nb-k">LINKS</div>
-      <div class="nb-links">
-        <a href="https://github.com/stevehaigh">→ GitHub</a>
-        <a href="https://linkedin.com/in/shaigh">→ LinkedIn</a>
-        <a href="#email">→ Email</a>
-      </div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-poster" id="toc-the-poster" class="nav-link active" data-scroll-target="#the-poster">The poster</a></li>
+  <li><a href="#what-i-want-to-do-next" id="toc-what-i-want-to-do-next" class="nav-link" data-scroll-target="#what-i-want-to-do-next">What I want to do next</a></li>
+  </ul>
+</nav>
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-    <div class="nb-main">
-      <div class="nb-eyebrow">§ index</div>
-      <h1 class="nb-name">Steve Haigh</h1>
-      <p class="nb-tagline">Computational biology, viewed from a 30-year software career.</p>
-      <p class="nb-intro">Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the <em>wcEcoli</em> whole-cell framework to the first computational model of a human platelet.</p>
 
-      <figure class="nb-fig figure">
-        <img src="assets/integrin-activation.png" alt="Two stacked line charts from a platelet simulation run over 600 seconds. Top chart: the share of activated integrin receptors — the sticky surface molecules platelets use to clump together and form clots — holds near zero for about 300 seconds, then climbs steeply in an S-shaped curve to a high, steady level; a grey reference line settles slightly higher than the purple main line, and a faint dotted line traces a smaller, short-lived trigger signal that rises then fades. Bottom chart: a molecular brake that normally dampens activation stays flat at its resting level, then temporarily swells to a peak around the 370-second mark before easing back down, plotted against a flat baseline for comparison." class="figure-img">
-        <figcaption>Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. <span class="nb-figmeta">plot: demo_integrin.py · seed 0 · 600 s</span></figcaption>
-      </figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">One year on</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">career</div>
+    <div class="quarto-category">mres</div>
+    <div class="quarto-category">platelet</div>
+  </div>
+  </div>
 
-      <h2 class="nb-sec">
-        <span class="nb-sec-num">§01</span>
-        <span class="nb-sec-label">Current focus</span>
-        <span class="nb-sec-rule"></span>
-      </h2>
-      <div class="nb-row">
-        <div class="nb-key">whole_cell_model</div>
-        <p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
-      </div>
-      <div class="nb-row">
-        <div class="nb-key">sim_infra</div>
-        <p>Containerised pipelines and interactive browser-based UIs for high-dimensional output.</p>
-      </div>
-      <div class="nb-row">
-        <div class="nb-key">eng_x_bio</div>
-        <p>Software-engineering discipline brought to computational-biology workflows.</p>
-      </div>
-
-      <h2 class="nb-sec">
-        <span class="nb-sec-num">§02</span>
-        <span class="nb-sec-label">Now — updated Sep 2026</span>
-        <span class="nb-sec-rule"></span>
-      </h2>
-      <p class="nb-now">The dissertation is submitted and the result is a month or so away. I presented a poster on the platelet model at the UK platelet conference in Reading, where the questions from the modellers were harder, and more useful, than the questions from the biologists. Next up: finding a PhD, or funding to carry on with what I have started. In the meantime I am relearning the mathematics, plus a biochemistry course I started some time ago and intend to finish.</p>
-
-      <h2 class="nb-sec">
-        <span class="nb-sec-num">§03</span>
-        <span class="nb-sec-label">Latest post</span>
-        <span class="nb-sec-rule"></span>
-      </h2>
-<div id="listing-latest-post" class="quarto-listing quarto-listing-container-custom">
-<div class="nb-post">
-<div class="nb-post-date">
-2026-09-15
-</div>
 <div>
-<h3 class="nb-post-title">
-<a href="./blog/posts/one-year-on/">One year on</a>
-</h3>
-<p class="nb-post-desc">
-The M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.
-</p>
-<div class="nb-post-tags">
-[career] [mres] [platelet]
+  <div class="description">
+    The M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.
+  </div>
 </div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-      <div class="nb-egg">
-        <a href="./life/">$ cd ~/life<svg class="nb-glider" width="15" height="15" viewbox="0 0 16 16" aria-hidden="true"><g class="nb-gp"><rect x="6" y="1" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="1" y="11" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect><rect x="11" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"></rect><rect x="11" y="1" width="4" height="4"></rect><rect x="6" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="11" y="1" width="4" height="4"></rect><rect x="1" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect><rect x="11" y="11" width="4" height="4"></rect></g><g class="nb-gp"><rect x="1" y="1" width="4" height="4"></rect><rect x="6" y="6" width="4" height="4"></rect><rect x="11" y="6" width="4" height="4"></rect><rect x="1" y="11" width="4" height="4"></rect><rect x="6" y="11" width="4" height="4"></rect></g></svg></a>
-      </div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Steve Haigh </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 15, 2026</p>
     </div>
   </div>
-</main>
+  
+    
+  </div>
+  
 
 
+</header>
 
 
+<p>The M.Res. is done.</p>
+<p>I don’t have the result yet, that’s another month or so away, so 🤞. Whatever the mark turns out to be, the year itself has already been worth it. I enjoyed it more than I expected to, and I learned more than I expected to, which is not always the same thing.</p>
+<section id="the-poster" class="level2">
+<h2 class="anchored" data-anchor-id="the-poster">The poster</h2>
+<p>As I mentioned in <a href="../../../blog/posts/the-story-so-far/">my last update</a>, my research project was a computer model of the platelet, the small cell in your blood responsible for clotting. It went well enough that when I presented it to my lab group, someone suggested I put a poster in for the UK Platelet Society conference, which was held last week here in Reading.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="platelet-wcm-poster.pdf"><img src="platelet-wcm-poster.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The platelet whole-cell model poster."></a></p>
+</figure>
+</div>
+<p>Standing next to a poster is a strange kind of exam. Nobody hands you the syllabus, and the questions arrive in whatever order the room happens to walk past in.</p>
+<p>The biologists liked it. Several asked whether they could try the model on their own questions, which is exactly the reaction I wanted, and a good nudge to get on with putting it behind a web page so that using it doesn’t require opening a terminal.</p>
+<p>The mathematical biologists were a harder audience, and they were right to be. They pointed at parts of the model I hadn’t understood were problems. For a while I was taken aback. I thought the work was good, and I still think the work is good. But when I saw what they actually meant, it turned out to be the most useful feedback I’ve had all year.</p>
+<p>Simply put, I had thrown in a lot of reactions, which makes it look more like a platelet, but the model loses a lot of predictive power because there are too many moving parts.</p>
+<p>There’s a longer post in this, because the gap between the two reactions is interesting and I want to understand properly why a piece of work can land so differently with two groups of people who are, nominally, in the same field. I’ll write that up once I’ve worked through the details. For now the thing worth noting is that the feedback has been enormously helpful in making me specific about what I want to work on next.</p>
+</section>
+<section id="what-i-want-to-do-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-want-to-do-next">What I want to do next</h2>
+<p>I always meant the M.Res. to be a stepping stone to a PhD, and that hasn’t changed. What’s changed is the shape of it. Having built a model and then had it reviewed by people who build models for a living, I want the PhD to sit further towards the mathematics.</p>
+<p>In one sense that’s just the logical next step from the project. In another it’s a different job, and it means relearning a lot of maths I last used properly in the 1990s, plus a fair amount I never did.</p>
+<p>I taught myself enough biology to get onto this course out of online courses and books, so I know the approach works, and I’m running it again. At the moment that means <a href="https://www.youtube.com/watch?v=41P4vFP7RWo&amp;list=PLXsDp0z6VWFQlsNP4tamU-QtSAG77u4T9">a lecture course on YouTube</a> and the <a href="https://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering">Strogatz book</a> that goes with it. There’ll be a post about the rest of the reading list in due course.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering"><img src="strogatz-nonlinear-dynamics.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Cover of Steven Strogatz, Nonlinear Dynamics and Chaos, second edition." width="180"></a></p>
+</figure>
+</div>
+<p>A year ago I couldn’t have told you what a platelet actually does. Last week I presented a model of one, and sat in on several very interesting talks. Better still, a couple of researchers have offered data measuring exactly the parameters I’m trying to model, so there are potential future collaborations forming!</p>
+<p>I just need to get on and find a PhD now, or find funding to carry on with what I’ve started.</p>
 
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -501,6 +419,13 @@ The M.Res. is finished, a poster got picked apart in the most useful way, and th
       window.document.body.appendChild(a);
     }
     setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -892,6 +817,38 @@ The M.Res. is finished, a poster got picked apart in the most useful way, and th
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "stevehaigh/quarto-site-builder";
+    script.dataset.repoId = "R_kgDOSkFujg";
+    script.dataset.category = "Blog comments";
+    script.dataset.categoryId = "DIC_kwDOSkFujs4C98nP";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -910,7 +867,7 @@ The M.Res. is finished, a poster got picked apart in the most useful way, and th
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./blog/index.xml">
+    <a class="nav-link" href="../../../blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -938,5 +895,5 @@ The M.Res. is finished, a poster got picked apart in the most useful way, and th
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

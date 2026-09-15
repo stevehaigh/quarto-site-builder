@@ -210,18 +210,39 @@
     "text": "What comes next\nI’m making tentative plans for what comes after the M.Res., though my ideas change weekly. I could extend the model to other cell types. I could use it to study aspects of cancer. I could stay on platelets and push the research further. The idea currently in the lead is to take what I’ve built — usable by a software developer in its current form — and turn it into something a biologist with no programming background could actually use.\nWhatever I land on, I’m certain it will be at the intersection of computing and biology. One of the things I’ve learned this year is the cliché that turns out to be true: the more you learn, the more you realise there is to learn. I have far too many ideas and not enough time, which feels like the right problem to have. If you’re thinking about something similar\nSo, 8 months in, no regrets. Coming back to study was the right call. If you’re a software person thinking about a move into research, or you’ve already made a similar jump — especially into biomedical research — I’d genuinely like to hear from you. And if you’re working at the computing/biology intersection and have thoughts on what useful routes forward look like, even more so."
   },
   {
-    "objectID": "blog/posts/lab-meeting-2026-05-14/",
-    "href": "blog/posts/lab-meeting-2026-05-14/",
-    "title": "Lab meeting: the platelet model, first showing",
+    "objectID": "blog/posts/llm-intro/",
+    "href": "blog/posts/llm-intro/",
+    "title": "How do LLMs work? — a shallow-dive for scientists",
     "section": "",
-    "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
   },
   {
-    "objectID": "blog/",
-    "href": "blog/",
-    "title": "Blog",
+    "objectID": "blog/posts/academic-pptx-template/",
+    "href": "blog/posts/academic-pptx-template/",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
     "section": "",
-    "text": "How do LLMs work? — a shallow-dive for scientists\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
+    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
+  },
+  {
+    "objectID": "blog/posts/academic-pptx-template/#why-this-template",
+    "href": "blog/posts/academic-pptx-template/#why-this-template",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Why this template",
+    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
+  },
+  {
+    "objectID": "blog/posts/academic-pptx-template/#the-quarto-version",
+    "href": "blog/posts/academic-pptx-template/#the-quarto-version",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "The Quarto version",
+    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
+  },
+  {
+    "objectID": "blog/posts/academic-pptx-template/#caveats",
+    "href": "blog/posts/academic-pptx-template/#caveats",
+    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "section": "Caveats",
+    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template."
   },
   {
     "objectID": "about/",
@@ -259,39 +280,39 @@
     "text": "Contact\nThe fastest route is email: ."
   },
   {
-    "objectID": "blog/posts/academic-pptx-template/",
-    "href": "blog/posts/academic-pptx-template/",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
+    "objectID": "blog/",
+    "href": "blog/",
+    "title": "Blog",
     "section": "",
-    "text": "I was never very impressed with the default PowerPoint templates so for lab-meeting deck I actually made my own set of slides (with some help from my friend Claude).\nDownloads"
+    "text": "One year on\n\n\n\ncareer\n\nmres\n\nplatelet\n\n\n\nThe M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.\n\n\n\n\n\nSep 15, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nHow do LLMs work? — a shallow-dive for scientists\n\n\n\nllms\n\nai\n\ndecks\n\nlab\n\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n\n\n\nMay 27, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nAn ‘academic’ deck template, and why it looks the way it does\n\n\n\ndecks\n\ntools\n\n\n\nA simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nThe Story So Far\n\n\n\ncareer\n\nlab\n\nmres\n\n\n\n\n\n\n\n\n\nMay 25, 2026\n\n\nSteve Haigh\n\n\n\n\n\n\n\n\n\n\n\n\nLab meeting: the platelet model, first showing\n\n\n\nplatelet\n\nmodelling\n\nlab\n\n\n\nFirst lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.\n\n\n\n\n\nMay 22, 2026\n\n\nSteve Haigh\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog/posts/academic-pptx-template/#why-this-template",
-    "href": "blog/posts/academic-pptx-template/#why-this-template",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Why this template",
-    "text": "Why this template\nThere are two things I wanted to avoid. The first is the corporate template with too much chrome, a wide logo bar eating the top of every slide, two stripes of branding at the bottom, and you end up with maybe 60% of the page left for the thing the audience came to see. The other is a blank deck where every slide ends up looking slightly different because there’s nothing pulling them together, which is a mistake I’ve made before.\nThe template tries to land somewhere in between. Here’s the rationale (I’m no designer, so this is perhaps a bit amateur-sounding, but I think it works)\nContent fills the slide. No big banner, no side rail. Just a title, a small section breadcrumb above it, a footer line with the talk metadata, and a slide number in the corner. That’s it.\nTwo-column slides are first-class. Some of the slides in the example are some variant of “what I considered” on the left, “what I did” on the right. Forcing this into two columns is a useful constraint as it stops a slide from sprawling.\nSection breadcrumb instead of divider slides. Rather than a full “Section 2: Methods” divider every few minutes, each slide carries a small uppercase label above its title showing which section it belongs to. Same orientation cue for the audience, no break in the flow."
-  },
-  {
-    "objectID": "blog/posts/academic-pptx-template/#the-quarto-version",
-    "href": "blog/posts/academic-pptx-template/#the-quarto-version",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "The Quarto version",
-    "text": "The Quarto version\nI’ve experimented with Quarto and using it to create a PPTX. It didn’t work out so well. I have had success in using Quarto tooling to take an existing PowerPoint deck and create a web-presentable deck and a PDF, and maybe when I get chance I’ll try again using Quarto to write the original PPTX too, but to be honest I’m not sure if that’s worth the effort.\nThe PPTX template above is for when you just want to open a file and edit in PowerPoint."
-  },
-  {
-    "objectID": "blog/posts/academic-pptx-template/#caveats",
-    "href": "blog/posts/academic-pptx-template/#caveats",
-    "title": "An ‘academic’ deck template, and why it looks the way it does",
-    "section": "Caveats",
-    "text": "Caveats\nIt’s not pretty in the way a designed deck is pretty. There’s no illustration system, no animation, no carefully balanced colour palette. If you need any of that, you’ll want a real template from a designer (or BioRender, which has some nice looking templates). This is more of a minimalist template."
-  },
-  {
-    "objectID": "blog/posts/llm-intro/",
-    "href": "blog/posts/llm-intro/",
-    "title": "How do LLMs work? — a shallow-dive for scientists",
+    "objectID": "blog/posts/lab-meeting-2026-05-14/",
+    "href": "blog/posts/lab-meeting-2026-05-14/",
+    "title": "Lab meeting: the platelet model, first showing",
     "section": "",
-    "text": "A few weeks ago I gave a short lab-meeting talk introducing large language models to the group. The audience was scientists, not engineers, so it’s pitched at the “what is this thing actually doing” level rather than the implementation level. I’ve put the deck on the site now in case it’s useful to anyone else looking for the same kind of pitch.\nHow do LLMs work? →\nA few caveats up front. This is not a rigorous machine-learning talk — it’s a shallow-dive on purpose. I deliberately leave out a lot of detail (no maths, no architecture diagrams, no training objectives beyond hand-waving about next-token prediction) to keep it short enough for a lab meeting slot. If you want the proper version, I link to the right people at the end of the deck — Karpathy, 3Blue1Brown, Jay Alammar’s Illustrated Transformer, Raschka’s Build an LLM from Scratch. Those are where to go after this.\nWhat I do try to cover:\n\nWhat an LLM actually is — a giant neural network trained to predict the next token, with everything (words, proteins, images) mapped into a high-dimensional vector space.\nEmbeddings as geometry — the punchline that “meaning is a direction in space”, and why the same trick powers the protein and chemistry models people in the lab will increasingly bump into.\nAttention, briefly — what it does, why it scales, and why “every frontier system today is a transformer” isn’t an exaggeration.\nThe base model vs. the product — the gap between a raw LLM and ChatGPT / Claude / Copilot, and what RLHF actually does (with a thesis-editing analogy).\nA live-ish demo comparing an untuned base model to a tuned one when you ask it something it shouldn’t help with — the kind of thing that’s hard to convey without seeing.\nUsing them well in research — where they actually help (coding, literature triage, data wrangling from PDFs), and where they bite (hallucination, plausibility bias, sycophancy, sampling variance, and the data-leaving-your-machine problem for unpublished or patient data).\n\nThe framing I keep coming back to is: treat the model like a fast but unreliable collaborator. You’d review an RA’s draft before signing your name to it — do the same here.\nThe deck is built with Quarto reveal.js from the same template I wrote up the other day. PDF and PPTX downloads are linked from the Projects & Decks page."
+    "text": "Presented the platelet whole-cell model work at the Dash lab meeting yesterday — first time talking it through end-to-end outside my own head. Lots of good questions and (unexpectedly) a few offers of follow-up collaborations, including what might turn into a small future study for me. More on that once it firms up.\nSlides are here:\nThe feasibility of a whole-cell model of the human platelet →\n(PDF and PPTX downloads are linked from the Projects & Decks page.)"
+  },
+  {
+    "objectID": "blog/posts/one-year-on/",
+    "href": "blog/posts/one-year-on/",
+    "title": "One year on",
+    "section": "",
+    "text": "The M.Res. is done.\nI don’t have the result yet, that’s another month or so away, so 🤞. Whatever the mark turns out to be, the year itself has already been worth it. I enjoyed it more than I expected to, and I learned more than I expected to, which is not always the same thing."
+  },
+  {
+    "objectID": "blog/posts/one-year-on/#the-poster",
+    "href": "blog/posts/one-year-on/#the-poster",
+    "title": "One year on",
+    "section": "The poster",
+    "text": "The poster\nAs I mentioned in my last update, my research project was a computer model of the platelet, the small cell in your blood responsible for clotting. It went well enough that when I presented it to my lab group, someone suggested I put a poster in for the UK Platelet Society conference, which was held last week here in Reading.\n\n\n\n\n\nStanding next to a poster is a strange kind of exam. Nobody hands you the syllabus, and the questions arrive in whatever order the room happens to walk past in.\nThe biologists liked it. Several asked whether they could try the model on their own questions, which is exactly the reaction I wanted, and a good nudge to get on with putting it behind a web page so that using it doesn’t require opening a terminal.\nThe mathematical biologists were a harder audience, and they were right to be. They pointed at parts of the model I hadn’t understood were problems. For a while I was taken aback. I thought the work was good, and I still think the work is good. But when I saw what they actually meant, it turned out to be the most useful feedback I’ve had all year.\nSimply put, I had thrown in a lot of reactions, which makes it look more like a platelet, but the model loses a lot of predictive power because there are too many moving parts.\nThere’s a longer post in this, because the gap between the two reactions is interesting and I want to understand properly why a piece of work can land so differently with two groups of people who are, nominally, in the same field. I’ll write that up once I’ve worked through the details. For now the thing worth noting is that the feedback has been enormously helpful in making me specific about what I want to work on next."
+  },
+  {
+    "objectID": "blog/posts/one-year-on/#what-i-want-to-do-next",
+    "href": "blog/posts/one-year-on/#what-i-want-to-do-next",
+    "title": "One year on",
+    "section": "What I want to do next",
+    "text": "What I want to do next\nI always meant the M.Res. to be a stepping stone to a PhD, and that hasn’t changed. What’s changed is the shape of it. Having built a model and then had it reviewed by people who build models for a living, I want the PhD to sit further towards the mathematics.\nIn one sense that’s just the logical next step from the project. In another it’s a different job, and it means relearning a lot of maths I last used properly in the 1990s, plus a fair amount I never did.\nI taught myself enough biology to get onto this course out of online courses and books, so I know the approach works, and I’m running it again. At the moment that means a lecture course on YouTube and the Strogatz book that goes with it. There’ll be a post about the rest of the reading list in due course.\n\n\n\n\n\nA year ago I couldn’t have told you what a platelet actually does. Last week I presented a model of one, and sat in on several very interesting talks. Better still, a couple of researchers have offered data measuring exactly the parameters I’m trying to model, so there are potential future collaborations forming!\nI just need to get on and find a PhD now, or find funding to carry on with what I’ve started."
   },
   {
     "objectID": "decks/lab-meeting-2026-05-14/#quick-recap",
@@ -375,7 +396,7 @@
     "href": "index.html",
     "title": "Steve Haigh",
     "section": "",
-    "text": "NAMESteve Haigh\n      ROLEComputational biology researcher\n      LABUniversity of Reading · Dr M. Fry\n      MODELHuman platelet / wcEcoli\n      STATUS\n      Dissertation submitted\n      LINKS\n      \n        → GitHub\n        → LinkedIn\n        → Email\n      \n    \n\n    \n      § index\n      Steve Haigh\n      Computational biology, viewed from a 30-year software career.\n      Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the wcEcoli whole-cell framework to the first computational model of a human platelet.\n\n      \n        \n        Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. plot: demo_integrin.py · seed 0 · 600 s\n      \n\n      \n        §01\n        Current focus\n        \n      \n      \n        whole_cell_model\n        Extending wcEcoli to build the first computational model of a human platelet.\n      \n      \n        sim_infra\n        Containerised pipelines and interactive browser-based UIs for high-dimensional output.\n      \n      \n        eng_x_bio\n        Software-engineering discipline brought to computational-biology workflows.\n      \n\n      \n        §02\n        Now — updated Sep 2026\n        \n      \n      The dissertation is submitted. This week I'm presenting a poster on the platelet model at the UK platelet conference in Reading. After that I'm weighing up PhD options, and carrying on with the mathematical biology — including a biochemistry course I started some time ago and intend to finish.\n\n      \n        §03\n        Latest post\n        \n      \n\n\n\n2026-05-27\n\n\n\nHow do LLMs work? — a shallow-dive for scientists\n\n\nA short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.\n\n\n[llms] [ai] [decks] [lab]\n\n\n\nNo matching items\n\n      \n        $ cd ~/life"
+    "text": "NAMESteve Haigh\n      ROLEComputational biology researcher\n      LABUniversity of Reading · Dr M. Fry\n      MODELHuman platelet / wcEcoli\n      STATUS\n      M.Res. submitted, awaiting result\n      LINKS\n      \n        → GitHub\n        → LinkedIn\n        → Email\n      \n    \n\n    \n      § index\n      Steve Haigh\n      Computational biology, viewed from a 30-year software career.\n      Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the wcEcoli whole-cell framework to the first computational model of a human platelet.\n\n      \n        \n        Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. plot: demo_integrin.py · seed 0 · 600 s\n      \n\n      \n        §01\n        Current focus\n        \n      \n      \n        whole_cell_model\n        Extending wcEcoli to build the first computational model of a human platelet.\n      \n      \n        sim_infra\n        Containerised pipelines and interactive browser-based UIs for high-dimensional output.\n      \n      \n        eng_x_bio\n        Software-engineering discipline brought to computational-biology workflows.\n      \n\n      \n        §02\n        Now — updated Sep 2026\n        \n      \n      The dissertation is submitted and the result is a month or so away. I presented a poster on the platelet model at the UK platelet conference in Reading, where the questions from the modellers were harder, and more useful, than the questions from the biologists. Next up: finding a PhD, or funding to carry on with what I have started. In the meantime I am relearning the mathematics, plus a biochemistry course I started some time ago and intend to finish.\n\n      \n        §03\n        Latest post\n        \n      \n\n\n\n2026-09-15\n\n\n\nOne year on\n\n\nThe M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.\n\n\n[career] [mres] [platelet]\n\n\n\nNo matching items\n\n      \n        $ cd ~/life"
   },
   {
     "objectID": "reaction-diffusion/",

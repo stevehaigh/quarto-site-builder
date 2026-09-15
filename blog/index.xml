@@ -10,7 +10,56 @@
 <atom:link href="https://haigh.bio/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on biomedical research, computational modelling, and software.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Wed, 27 May 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 15 Sep 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>One year on</title>
+  <dc:creator>Steve Haigh</dc:creator>
+  <link>https://haigh.bio/blog/posts/one-year-on/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The M.Res. is done.</p>
+<p>I don’t have the result yet, that’s another month or so away, so 🤞. Whatever the mark turns out to be, the year itself has already been worth it. I enjoyed it more than I expected to, and I learned more than I expected to, which is not always the same thing.</p>
+<section id="the-poster" class="level2">
+<h2 class="anchored" data-anchor-id="the-poster">The poster</h2>
+<p>As I mentioned in <a href="../../../blog/posts/the-story-so-far/">my last update</a>, my research project was a computer model of the platelet, the small cell in your blood responsible for clotting. It went well enough that when I presented it to my lab group, someone suggested I put a poster in for the UK Platelet Society conference, which was held last week here in Reading.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="platelet-wcm-poster.pdf"><img src="https://haigh.bio/blog/posts/one-year-on/platelet-wcm-poster.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%" alt="The platelet whole-cell model poster."></a></p>
+</figure>
+</div>
+<p>Standing next to a poster is a strange kind of exam. Nobody hands you the syllabus, and the questions arrive in whatever order the room happens to walk past in.</p>
+<p>The biologists liked it. Several asked whether they could try the model on their own questions, which is exactly the reaction I wanted, and a good nudge to get on with putting it behind a web page so that using it doesn’t require opening a terminal.</p>
+<p>The mathematical biologists were a harder audience, and they were right to be. They pointed at parts of the model I hadn’t understood were problems. For a while I was taken aback. I thought the work was good, and I still think the work is good. But when I saw what they actually meant, it turned out to be the most useful feedback I’ve had all year.</p>
+<p>Simply put, I had thrown in a lot of reactions, which makes it look more like a platelet, but the model loses a lot of predictive power because there are too many moving parts.</p>
+<p>There’s a longer post in this, because the gap between the two reactions is interesting and I want to understand properly why a piece of work can land so differently with two groups of people who are, nominally, in the same field. I’ll write that up once I’ve worked through the details. For now the thing worth noting is that the feedback has been enormously helpful in making me specific about what I want to work on next.</p>
+</section>
+<section id="what-i-want-to-do-next" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-want-to-do-next">What I want to do next</h2>
+<p>I always meant the M.Res. to be a stepping stone to a PhD, and that hasn’t changed. What’s changed is the shape of it. Having built a model and then had it reviewed by people who build models for a living, I want the PhD to sit further towards the mathematics.</p>
+<p>In one sense that’s just the logical next step from the project. In another it’s a different job, and it means relearning a lot of maths I last used properly in the 1990s, plus a fair amount I never did.</p>
+<p>I taught myself enough biology to get onto this course out of online courses and books, so I know the approach works, and I’m running it again. At the moment that means <a href="https://www.youtube.com/watch?v=41P4vFP7RWo&amp;list=PLXsDp0z6VWFQlsNP4tamU-QtSAG77u4T9">a lecture course on YouTube</a> and the <a href="https://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering">Strogatz book</a> that goes with it. There’ll be a post about the rest of the reading list in due course.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering"><img src="https://haigh.bio/blog/posts/one-year-on/strogatz-nonlinear-dynamics.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Cover of Steven Strogatz, Nonlinear Dynamics and Chaos, second edition." width="180"></a></p>
+</figure>
+</div>
+<p>A year ago I couldn’t have told you what a platelet actually does. Last week I presented a model of one, and sat in on several very interesting talks. Better still, a couple of researchers have offered data measuring exactly the parameters I’m trying to model, so there are potential future collaborations forming!</p>
+<p>I just need to get on and find a PhD now, or find funding to carry on with what I’ve started.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>career</category>
+  <category>mres</category>
+  <category>platelet</category>
+  <guid>https://haigh.bio/blog/posts/one-year-on/</guid>
+  <pubDate>Tue, 15 Sep 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How do LLMs work? — a shallow-dive for scientists</title>
   <dc:creator>Steve Haigh</dc:creator>
