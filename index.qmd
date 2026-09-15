@@ -64,9 +64,11 @@ include-in-header:
       <p class="nb-tagline">Computational biology, viewed from a 30-year software career.</p>
       <p class="nb-intro">Software developer of 30 years, now researching biomedical sciences at the University of Reading — extending the <em>wcEcoli</em> whole-cell framework to the first computational model of a human platelet.</p>
 
-      <figure class="nb-fig">
-        <img src="assets/integrin-activation.png" alt="Two stacked line charts from a platelet simulation run over 600 seconds. Top chart: the share of activated integrin receptors — the sticky surface molecules platelets use to clump together and form clots — holds near zero for about 300 seconds, then climbs steeply in an S-shaped curve to a high, steady level; a grey reference line settles slightly higher than the purple main line, and a faint dotted line traces a smaller, short-lived trigger signal that rises then fades. Bottom chart: a molecular brake that normally dampens activation stays flat at its resting level, then temporarily swells to a peak around the 370-second mark before easing back down, plotted against a flat baseline for comparison.">
-        <figcaption>Fig. 1 — Integrin αIIbβ3 activation and its cAMP/PKA brake. <span class="nb-figmeta">plot: demo_integrin.py · seed 0 · 600 s</span></figcaption>
+      <figure class="nb-fig nb-fig-tall">
+        <a href="assets/platelet-wcm-poster.pdf">
+          <img src="assets/platelet-wcm-poster.png" alt="Conference poster titled “Towards a whole-cell model of the human platelet” by Steve Haigh and Dr Mike Fry, School of Biological Sciences, University of Reading. Six sections explain why the platelet is the most tractable human cell to model whole (it has no nucleus, so no transcription or replication), how the wcEcoli bacterial framework was stripped back and rebuilt around the platelet calcium-release pathway, and how the model reproduces the measured calcium transient against published data. Figures show a schematic of the modelled systems, calcium and store traces before and after agonist, a dose-response surface over thrombin and ADP concentrations, and simulations of prostacyclin and clopidogrel. The stated conclusion is that the limit on a more complete model is the availability and consistency of quantitative data, not computation. The full text is in the linked PDF.">
+        </a>
+        <figcaption>Poster — Towards a whole-cell model of the human platelet. <span class="nb-figmeta">UK Platelet Society, Reading · Sep 2026 · click through for the PDF</span></figcaption>
       </figure>
 
       <h2 class="nb-sec">
@@ -75,16 +77,16 @@ include-in-header:
         <span class="nb-sec-rule"></span>
       </h2>
       <div class="nb-row">
-        <div class="nb-key">whole_cell_model</div>
-        <p>Extending <em>wcEcoli</em> to build the first computational model of a human platelet.</p>
+        <div class="nb-key">phd_search</div>
+        <p>Looking for a PhD place, or funding to carry on with the platelet model.</p>
       </div>
       <div class="nb-row">
-        <div class="nb-key">sim_infra</div>
-        <p>Containerised pipelines and interactive browser-based UIs for high-dimensional output.</p>
+        <div class="nb-key">nonlinear_dynamics</div>
+        <p>Relearning the mathematics: Strogatz, and the lecture course that goes with it.</p>
       </div>
       <div class="nb-row">
-        <div class="nb-key">eng_x_bio</div>
-        <p>Software-engineering discipline brought to computational-biology workflows.</p>
+        <div class="nb-key">model_design</div>
+        <p>Going deeper on modelling itself: fewer moving parts, more predictive power.</p>
       </div>
 
       <h2 class="nb-sec">
