@@ -49,7 +49,7 @@ include-in-header:
       <div class="nb-k">LAB</div><div class="nb-v">University of Reading · <span class="nb-nowrap">Dr M. Fry</span></div>
       <div class="nb-k">MODEL</div><div class="nb-v">Human platelet / wcEcoli</div>
       <div class="nb-k">STATUS</div>
-      <div class="nb-v nb-status"><span class="nb-dot"></span>Dissertation submitted</div>
+      <div class="nb-v nb-status"><span class="nb-dot"></span>M.Res. submitted, awaiting result</div>
       <div class="nb-k">LINKS</div>
       <div class="nb-links">
         <a href="https://github.com/stevehaigh">→ GitHub</a>
@@ -92,7 +92,7 @@ include-in-header:
         <span class="nb-sec-label">Now — updated Sep 2026</span>
         <span class="nb-sec-rule"></span>
       </h2>
-      <p class="nb-now">The dissertation is submitted. This week I'm presenting a poster on the platelet model at the UK platelet conference in Reading. After that I'm weighing up PhD options, and carrying on with the mathematical biology — including a biochemistry course I started some time ago and intend to finish.</p>
+      <p class="nb-now">The dissertation is submitted and the result is a month or so away. I presented a poster on the platelet model at the UK platelet conference in Reading, where the questions from the modellers were harder, and more useful, than the questions from the biologists. Next up: finding a PhD, or funding to carry on with what I have started. In the meantime I am relearning the mathematics, plus a biochemistry course I started some time ago and intend to finish.</p>
 
       <h2 class="nb-sec">
         <span class="nb-sec-num">§03</span>
