@@ -5,6 +5,11 @@ project:
     - bin/clean-urls.sh
   resources:
     - "decks/**"
+    # The Hodgkin-Huxley explorer is a built bundle; its page is index.qmd and
+    # these are the assets it loads. Built by `npm run build:site` in the
+    # HodgkinAndHuxley repo and committed here, since CI only runs Quarto.
+    - "hodgkin-huxley/hh.js"
+    - "hodgkin-huxley/hh.css"
     - CNAME
 
 website:
