@@ -30,57 +30,20 @@
 <h2 class="anchored" data-anchor-id="what-hh-fitted-and-what-they-got-for-free">What H&amp;H fitted, and what they got for free</h2>
 <p>Every parameter in the 1952 model comes from one kind of experiment: voltage clamp. Hold the membrane at a fixed potential, watch the sodium and potassium currents, fit rate equations to the curves. Six empirical equations, seven constants, all of it calibrated on clamped membranes that are never allowed to fire.</p>
 <p>Then they let the equations go and asked what a free membrane would do. Out came the action potential, with the right height and the right duration. Out came a threshold, which appears nowhere as a parameter. Out came the refractory period. Out came the conduction velocity of the propagating impulse, which they obtained by guessing a speed, integrating, watching the solution run away to infinity, and guessing again, for about three weeks on a hand-cranked calculator.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Quantity</th>
-<th>My rebuild</th>
-<th>H&amp;H 1952 (computed)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Spike height, 15 mV shock at 6.3 °C</td>
-<td>105.4 mV</td>
-<td>105.4 mV</td>
-</tr>
-<tr class="even">
-<td>Maximum rate of rise</td>
-<td>311 V/sec</td>
-<td>311 V/sec</td>
-</tr>
-<tr class="odd">
-<td>Falling phase</td>
-<td>2.21 msec</td>
-<td>2.21 msec</td>
-</tr>
-<tr class="even">
-<td>Conduction velocity</td>
-<td>18.7 m/sec</td>
-<td>18.8 m/sec</td>
-</tr>
-</tbody>
-</table>
 <p>The measured velocity in the actual fibre was 21.2 m/sec.&nbsp;They were within about 12% of a real squid, from equations fitted to a completely different experiment.</p>
-<p>That is the deduction Baker and colleagues are pointing at. A classifier trained on voltage-clamp recordings would classify voltage-clamp recordings.</p>
+<p>That is the deduction Baker is pointing at. A classifier trained on voltage clamp recordings would classify voltage clamp recordings.</p>
 </section>
 <section id="the-part-that-complicates-the-story" class="level2">
 <h2 class="anchored" data-anchor-id="the-part-that-complicates-the-story">The part that complicates the story</h2>
-<p>Here is what I did not expect. The paradigm case of mechanistic modelling is, by its own authors’ account, not really mechanistic.</p>
-<p>Hodgkin and Huxley are explicit about this in the discussion. The equations are an empirical description of the permeability changes, not a claim about what the membrane is made of. They point out that a very different set of equations would have fitted the same data equally well, and say plainly that the success of their model is no evidence in favour of the physical picture they had in mind while writing it. The ion channel as a protein was still decades off, and they knew they were not describing one.</p>
-<p>The irony is that the picture they disclaimed was better than they were willing to claim. They reasoned from the steepness of the conductance curves that something bearing about six electronic charges must be moving through the field, which is close to what a voltage sensor turned out to be.</p>
-<p>So the <em>m</em>³<em>h</em> and <em>n</em>⁴ that make the model work are not mechanism. They are the smallest powers that gave the right delay before the conductance rises, chosen for the shape of the curve. The paper says as much: a fifth or sixth power would have fitted the potassium data better, and was not judged worth the extra complication. That would have been the equivalent of <em>overfitting</em> in machine learning terms.</p>
-<p>What they established was narrower and stronger than mechanism. It was that permeability changes <em>of roughly this shape</em> are sufficient to account for everything a nerve does.</p>
-<p>What bought Hodgkin and Huxley their deduction was not knowing the mechanism, it was having a model whose variables were separately measurable and whose structure was constrained by physics they did trust: conservation of charge, a capacitor, three conductances in parallel. Worth deciding whether that combination, separately measurable variables plus physics you trust, is what you would demand of a model in your own work.</p>
+<p>Hodgkin and Huxley are explicit that this is not really a mechanistic model. The equations are an empirical description of the permeability changes, not a claim about what the membrane is made of. They point out that a very different set of equations would have fitted the same data equally well, and say plainly that the success of their model is no evidence in favour of the physical picture they had in mind while writing it.</p>
+<p>So the <em>m</em>³<em>h</em> and <em>n</em>⁴ that make the model work are not mechanism. They are the smallest powers that gave the right delay before the conductance rises, chosen for the shape of the curve. The paper says as much: a fifth or sixth power would have fitted the potassium data better, and was not judged worth the extra complication. That would have been the equivalent of <em>over-fitting</em> in machine learning terms.</p>
+<p>What they established was narrower than mechanism but still powerful. It was that permeability changes <em>of roughly this shape</em> are sufficient to account for everything a nerve does.</p>
+<p>What bought Hodgkin and Huxley their deduction was not knowing a mechanism, it was having a model whose variables were separately measurable and whose structure was constrained by physics: conservation of charge, a capacitor, three conductances in parallel.</p>
 </section>
 <section id="where-the-paper-puts-the-limit" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-paper-puts-the-limit">Where the paper puts the limit</h2>
-<p>Baker and colleagues are honest about the challenges. They call it quixotic to try to calibrate Hodgkin–Huxley-type models to every neuron, because new ion channel types are being discovered faster than anyone can parameterise them. Mechanistic models get their deductive power through specificity. Hodgkin and Huxley had one species, one axon, seven constants, and weeks of hand computation per run.</p>
-<p>Their proposed resolution is not one or the other. It is a division of labour: learn the components you cannot parameterise, keep the mechanistic scaffold that does the extrapolating. A machine learning layer over a mechanistic frame, or mechanistically derived quantities fed in as features.</p>
-</section>
-<section id="why-i-bothered-rebuilding-it" class="level2">
-<h2 class="anchored" data-anchor-id="why-i-bothered-rebuilding-it">Why I bothered rebuilding it</h2>
-<p>Reading the equations is not the same as watching their behaviour. The <a href="../../../hodgkin-huxley/">explorer is here</a>: drag the maximum sodium conductance down from its published 120 mS/cm² and the spike shrinks politely until about 47, then stops happening altogether. At 47 you get a 68 mV spike. At 46 you get the stimulus and nothing else. Nothing in the model marks that point as special; it falls out of three differential equations that were fitted to a clamped membrane. That is the argument for mechanistic models in one gesture, and it is more persuasive than the paragraph I just wrote.</p>
+<p>Baker and colleagues are honest about the challenges. They call it quixotic to try to calibrate Hodgkin-Huxley-type models to every neuron, because new ion channel types are being discovered to this day. Mechanistic models get their deductive power through specificity.</p>
+<p>Their proposed resolution is not a one or the other. It is a division of labour: learn the components you cannot parameterise, keep the mechanistic scaffold that does the extrapolating. A machine learning layer over a mechanistic frame, or mechanistically derived quantities fed in as features.</p>
 <hr>
 <p><em>Baker RE, Peña JM, Jayamohan J, Jérusalem A. 2018. Mechanistic models versus machine learning, a fight worth fighting for the biological community? Biol. Lett. 14: 20170660. <a href="https://doi.org/10.1098/rsbl.2017.0660">doi:10.1098/rsbl.2017.0660</a></em></p>
 <p><em>Hodgkin AL, Huxley AF. 1952. A quantitative description of membrane current and its application to conduction and excitation in nerve. J. Physiol. 117: 500–544. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/">PMC1392413</a></em></p>
