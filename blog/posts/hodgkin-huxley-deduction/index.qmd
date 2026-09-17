@@ -19,7 +19,7 @@ Every parameter in the 1952 model comes from one kind of experiment: voltage cla
 
 Then they let the equations go and asked what a free membrane would do. Out came the action potential, with the right height and the right duration. Out came a threshold, which appears nowhere as a parameter. Out came the refractory period. Out came the conduction velocity of the propagating impulse, which they obtained by guessing a speed, integrating, watching the solution run away to infinity, and guessing again, for about three weeks on a hand-cranked calculator.
 
-The measured velocity in the actual fibre was 21.2 m/sec. They were within about 12% of a real squid, from equations fitted to a completely different experiment.
+The velocity they deduced this way was 18.8 m/sec. The velocity measured in the actual fibre was 21.2 m/sec, so they landed within about 11% of a real squid, from equations fitted to a completely different experiment.
 
 That is the deduction Baker is pointing at. A classifier trained on voltage clamp recordings would classify voltage clamp recordings.
 
