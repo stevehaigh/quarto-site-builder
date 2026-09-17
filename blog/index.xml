@@ -30,7 +30,7 @@
 <h2 class="anchored" data-anchor-id="what-hh-fitted-and-what-they-got-for-free">What H&amp;H fitted, and what they got for free</h2>
 <p>Every parameter in the 1952 model comes from one kind of experiment: voltage clamp. Hold the membrane at a fixed potential, watch the sodium and potassium currents, fit rate equations to the curves. Six empirical equations, seven constants, all of it calibrated on clamped membranes that are never allowed to fire.</p>
 <p>Then they let the equations go and asked what a free membrane would do. Out came the action potential, with the right height and the right duration. Out came a threshold, which appears nowhere as a parameter. Out came the refractory period. Out came the conduction velocity of the propagating impulse, which they obtained by guessing a speed, integrating, watching the solution run away to infinity, and guessing again, for about three weeks on a hand-cranked calculator.</p>
-<p>The measured velocity in the actual fibre was 21.2 m/sec.&nbsp;They were within about 12% of a real squid, from equations fitted to a completely different experiment.</p>
+<p>The velocity they deduced this way was 18.8 m/sec.&nbsp;The velocity measured in the actual fibre was 21.2 m/sec, so they landed within about 11% of a real squid, from equations fitted to a completely different experiment.</p>
 <p>That is the deduction Baker is pointing at. A classifier trained on voltage clamp recordings would classify voltage clamp recordings.</p>
 </section>
 <section id="the-part-that-complicates-the-story" class="level2">
