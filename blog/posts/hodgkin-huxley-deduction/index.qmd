@@ -25,19 +25,19 @@ That is the deduction Baker is pointing at. A classifier trained on voltage clam
 
 ## The part that complicates the story
 
-Hodgkin and Huxley are explicit that this is not really a mechanistic model. The equations are an empirical description of the permeability changes, not a claim about what the membrane is made of. They point out that a very different set of equations would have fitted the same data equally well, and say plainly that the success of their model is no evidence in favour of the physical picture they had in mind while writing it. 
+Hodgkin and Huxley are explicit that this is not really a mechanistic model. The equations are an empirical description of the permeability changes, not a claim about what the membrane is made of. They point out that a very different set of equations would have fitted the same data equally well, and say plainly that the success of their model is no evidence in favour of the physical picture they had in mind while writing it.
 
 So the *m*³*h* and *n*⁴ that make the model work are not mechanism. They are the smallest powers that gave the right delay before the conductance rises, chosen for the shape of the curve. The paper says as much: a fifth or sixth power would have fitted the potassium data better, and was not judged worth the extra complication. That would have been the equivalent of *over-fitting* in machine learning terms.
 
 What they established was narrower than mechanism but still powerful. It was that permeability changes *of roughly this shape* are sufficient to account for everything a nerve does.
 
-What bought Hodgkin and Huxley their deduction was not knowing a mechanism, it was having a model whose variables were separately measurable and whose structure was constrained by physics: conservation of charge, a capacitor, three conductances in parallel. 
+What bought Hodgkin and Huxley their deduction was not knowing a mechanism, it was having a model whose variables were separately measurable and whose structure was constrained by physics: conservation of charge, a capacitor, three conductances in parallel.
 
 ## Where the paper puts the limit
 
-Baker and colleagues are honest about the challenges. They call it quixotic to try to calibrate Hodgkin-Huxley-type models to every neuron, because new ion channel types are being discovered to this day. Mechanistic models get their deductive power through specificity. 
+Baker and colleagues are honest about the challenges. They call it quixotic to try to calibrate Hodgkin-Huxley-type models to every neuron, because new ion channel types are being discovered to this day. Mechanistic models get their deductive power through specificity.
 
-Their proposed resolution is not a one or the other. It is a division of labour: learn the components you cannot parameterise, keep the mechanistic scaffold that does the extrapolating. A machine learning layer over a mechanistic frame, or mechanistically derived quantities fed in as features.
+Their proposed resolution is not one or the other. It is a division of labour: learn the components you cannot parameterise, keep the mechanistic scaffold that does the extrapolating. A machine learning layer over a mechanistic frame, or mechanistically derived quantities fed in as features.
 
 ------------------------------------------------------------------------
 
