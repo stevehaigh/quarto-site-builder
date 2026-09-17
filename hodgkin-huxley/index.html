@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Blog – Steve Haigh · Computational Biology</title>
+<title>Hodgkin &amp; Huxley – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -36,8 +36,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -79,35 +77,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Steve Haigh · Blog" href="https://haigh.bio/blog/index.xml">
@@ -115,38 +84,9 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Spectral:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Steve Haigh · Computational Biology" href="index.xml" data-external="1"></head>
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -341,7 +281,7 @@ window.Quarto = {
 <span class="menu-text">~/home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/" aria-current="page"> 
+    <a class="nav-link" href="../blog/"> 
 <span class="menu-text">~/blog</span></a>
   </li>  
   <li class="nav-item">
@@ -373,21 +313,20 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvbG9neQ==">biology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2FyZWVy">career <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGVja3M=">decks <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0aGVtYXRpY3M=">mathematics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bW9kZWxsaW5n">modelling <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bXJlcw==">mres <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGxhdGVsZXQ=">platelet <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVzZWFyY2g=">research <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dG9vbHM=">tools <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Hodgkin &amp; Huxley</h1>
+<p class="subtitle lead">Four equations, a hand-cranked calculator, and how a nerve fires</p>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -399,221 +338,26 @@ window.Quarto = {
 </header>
 
 
+<p>In 1952 Alan Hodgkin and Andrew Huxley published <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/">a series of five papers</a> on the squid giant axon. The last one is the famous one. They had measured how the membrane’s permeability to sodium and potassium changes when you hold it at a fixed voltage, fitted some deliberately empirical equations to those measurements, and then asked whether the equations would produce a nerve impulse on their own. They did. The paper predicts the shape of the action potential, its threshold, its refractory period, and the speed it travels down the fibre, and none of that was put in by hand.</p>
+<p>It is the same year Turing published his <a href="../reaction-diffusion/">morphogenesis paper</a>, which is a coincidence I enjoy more than I should. Both take a handful of local rules and let them run until something structured falls out. The difference is that Turing was arguing a case, and Hodgkin and Huxley were checking their arithmetic against a real animal.</p>
+<p>The arithmetic is the part worth pausing on. They had the equations settled by the spring of 1951 and meant to solve them on the Cambridge computer, then learned it was going off the air for six months for a major rebuild. So Huxley did it by hand, on a Brunsviga, a mechanical calculator you crank, stepping the equations forward in intervals of about a hundredth of a millisecond. One run, five milliseconds of trace, took something like eight hours. The propagated action potential took about three weeks, because the speed of the wave is not something you can solve for directly: you guess it, integrate, watch the answer diverge, and guess again. Everything below recomputes in a few milliseconds, which is a poor tribute but a fast one.</p>
+<p>Nothing here is traced from the figures in the paper. Every curve is integrated from the equations on p.&nbsp;519 using the constants in Table 3, and the result matches what they published to three significant figures. The 15 mV shock at 6.3 °C gives a spike of 105.4 mV against their 105.4 mV, a maximum rate of rise of 311 V/sec against their 311, and a falling phase of 2.21 msec against their 2.21. The conduction velocity is not entered either: the app searches for the one value of the constant <em>K</em> that lets the wave equation settle back to rest instead of running away to infinity, which is exactly what they did by hand, and lands on 18.7 m/sec where they got 18.8. The <strong>Constants &amp; checks</strong> tab shows all of it side by side.</p>
+<p>One thing to know before you start. Hodgkin and Huxley measured potential as a displacement from rest with <strong>depolarization negative</strong>, and treated <strong>inward current as positive</strong>. Both are the opposite of the modern convention, and their rate equations are only correct in it, so the model uses it throughout and plots −V upward the way the paper does. There is a toggle on the first tab if you would rather read absolute membrane potential.</p>
+<p>Start with the action potential and drag the sodium conductance down until the spike fails. Then look at the gating variables underneath: <em>m</em> opens fast, <em>h</em> shuts slowly, <em>n</em> opens slower still, and the whole impulse is that separation of timescales. The <strong>Excitation</strong> tab is the one I find hardest to stop playing with, because the threshold is not a parameter anywhere in the model. It simply appears.</p>
+<link rel="stylesheet" href="hh.css">
+<div id="hh-app" class="hh-app hh-wide"></div>
+<noscript>
+  <p>This one needs JavaScript: the curves are integrated in the browser rather than
+  shipped as images.</p>
+</noscript>
+<script type="module" src="hh.js"></script>
+<p>The model lives in one file, <code>src/model/hh.ts</code>, and every function in it carries the number of the equation it implements, so you can read it alongside the paper. A separate script re-runs the comparison against Tables 1, 2 and 4 and against the conduction velocity on p.&nbsp;528, which is where the numbers above come from.</p>
+<p>A note on the two gaps that verification leaves open, because they are in the paper rather than in the code. The time constant of sodium inactivation in Table 2 settles at 0.67 msec under a large depolarization, while eqn. 24 sends it to 1.00; and the activation time constant at the two smallest depolarizations is off by half. Both come from a single axon, and Figs. 7 and 9 show the smooth curves drawn through a visible scatter of points. Hodgkin and Huxley were fitting something simple enough to compute by hand, not something exact. They said as much: the equations have “no evidence in favour” of the mechanism they had in mind, and the point they considered established was only that permeability changes of this rough shape are enough to account for everything a nerve does.</p>
+<p>If you want the original, the PDF is <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/pdf/jphysiol01442-0106.pdf">here</a>. It is worth reading. For something in the same spirit but discrete, there is <a href="../life/">Conway’s Game of Life</a> on the other page.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bW9kZWxsaW5nJTJDbWF0aGVtYXRpY3MlMkNiaW9sb2d5JTJDcmVzZWFyY2g=" data-listing-date-sort="1789603200000" data-listing-file-modified-sort="1789682123412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1031">
-<div class="thumbnail"><a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">Hodgkin and Huxley simulator</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aGVtYXRpY3M='); return false;">mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvbG9neQ=='); return false;">biology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
-<p>A 1952 model, fitted to one kind of experiment, predicted four things it had never been shown. This is effectively the case for mechanistic modelling.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
-<div class="listing-date">
-Sep 17, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y2FyZWVyJTJDbXJlcyUyQ3BsYXRlbGV0" data-listing-date-sort="1789430400000" data-listing-file-modified-sort="1789682123412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
-<div class="thumbnail"><a href="../blog/posts/one-year-on/" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/one-year-on/platelet-wcm-poster.png" alt="The platelet whole-cell model poster."  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/one-year-on/" class="no-external">One year on</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">career</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXJlcw=='); return false;">mres</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/one-year-on/" class="no-external">
-<p>The M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/one-year-on/" class="no-external">
-<div class="listing-date">
-Sep 15, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1789682123412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="thumbnail"><a href="../blog/posts/llm-intro/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/llm-intro/" class="no-external">
-<p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/llm-intro/" class="no-external">
-<div class="listing-date">
-May 27, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="ZGVja3MlMkN0b29scw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1789682123412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
-<div class="thumbnail"><a href="../blog/posts/academic-pptx-template/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/academic-pptx-template/" class="no-external">An ‘academic’ deck template, and why it looks the way it does</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/academic-pptx-template/" class="no-external">
-<p>A simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/academic-pptx-template/" class="no-external">
-<div class="listing-date">
-May 25, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Y2FyZWVyJTJDbGFiJTJDbXJlcw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1789682123426" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092">
-<div class="thumbnail"><a href="../blog/posts/the-story-so-far/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/the-story-so-far/" class="no-external">The Story So Far</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">career</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXJlcw=='); return false;">mres</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/the-story-so-far/" class="no-external">
-<strong><em>This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already</em></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/the-story-so-far/" class="no-external">
-<div class="listing-date">
-May 25, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="cGxhdGVsZXQlMkNtb2RlbGxpbmclMkNsYWI=" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1789682123412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<div class="thumbnail"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">Lab meeting: the platelet model, first showing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-<p>First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-<div class="listing-date">
-May 22, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

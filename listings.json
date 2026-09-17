@@ -6,6 +6,7 @@
   {
     "listing": "/blog/",
     "items": [
+      "/blog/posts/hodgkin-huxley-deduction/",
       "/blog/posts/one-year-on/",
       "/blog/posts/llm-intro/",
       "/blog/posts/academic-pptx-template/",
@@ -16,6 +17,7 @@
   {
     "listing": "/",
     "items": [
+      "/blog/posts/hodgkin-huxley-deduction/",
       "/blog/posts/one-year-on/",
       "/blog/posts/llm-intro/",
       "/blog/posts/academic-pptx-template/",
