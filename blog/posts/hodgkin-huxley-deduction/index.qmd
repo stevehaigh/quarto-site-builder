@@ -1,6 +1,6 @@
 ---
 title: "Hodgkin and Huxley simulator"
-description: "A 1952 model, fitted to one kind of experiment, predicted four things it had never been shown. This is effectively the case for mechanistic modelling."
+description: "A 1952 model, fitted to one kind of experiment, predicted four things that it had never been shown. This is effectively the case for mechanistic modelling."
 author: "Steve Haigh"
 date: "2026-09-17"
 categories: [modelling, mathematics, biology, research]
