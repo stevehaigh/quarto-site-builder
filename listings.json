@@ -6,6 +6,7 @@
   {
     "listing": "/blog/",
     "items": [
+      "/blog/posts/hodgkin-huxley-rebuilt/",
       "/blog/posts/hodgkin-huxley-deduction/",
       "/blog/posts/one-year-on/",
       "/blog/posts/llm-intro/",
@@ -17,6 +18,7 @@
   {
     "listing": "/",
     "items": [
+      "/blog/posts/hodgkin-huxley-rebuilt/",
       "/blog/posts/hodgkin-huxley-deduction/",
       "/blog/posts/one-year-on/",
       "/blog/posts/llm-intro/",

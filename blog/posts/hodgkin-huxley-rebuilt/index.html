@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Steve Haigh">
+<meta name="dcterms.date" content="2026-09-23">
+<meta name="description" content="I rebuilt Hodgkin and Huxley’s 1952 paper in notebook form.">
 
-<title>Blog – Steve Haigh · Computational Biology</title>
+<title>Hodgkin and Huxley Notebook version – Steve Haigh · Computational Biology</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,29 +32,30 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.svg" rel="icon" type="image/svg+xml">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-84a83039c8fb10572e12fcc81c7dae2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-84a83039c8fb10572e12fcc81c7dae2c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-340c4fa15c6e6366a5d9666293e05048.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,35 +83,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script data-goatcounter="https://stevehaigh.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <link rel="alternate" type="application/rss+xml" title="Steve Haigh · Blog" href="https://haigh.bio/blog/index.xml">
@@ -145,8 +120,8 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="../styles.css">
-<link rel="alternate" type="application/rss+xml" title="Steve Haigh · Computational Biology" href="index.xml" data-external="1"></head>
+<link rel="stylesheet" href="../../../styles.css">
+</head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
@@ -326,7 +301,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../">
+    <a class="navbar-brand" href="../../../">
     <span class="navbar-title">haigh.bio</span>
     </a>
   </div>
@@ -337,23 +312,23 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../"> 
+    <a class="nav-link" href="../../../"> 
 <span class="menu-text">~/home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/" aria-current="page"> 
+    <a class="nav-link" href="../../../blog/"> 
 <span class="menu-text">~/blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../trips/"> 
+    <a class="nav-link" href="../../../trips/"> 
 <span class="menu-text">~/trips</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/"> 
+    <a class="nav-link" href="../../../projects/"> 
 <span class="menu-text">~/projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about/"> 
+    <a class="nav-link" href="../../../about/"> 
 <span class="menu-text">~/about</span></a>
   </li>  
   <li class="nav-item compact">
@@ -370,26 +345,60 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YWk=">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvbG9neQ==">biology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y2FyZWVy">career <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZGVja3M=">decks <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bGFi">lab <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bGxtcw==">llms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWF0aGVtYXRpY3M=">mathematics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bW9kZWxsaW5n">modelling <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bXJlcw==">mres <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGxhdGVsZXQ=">platelet <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmVzZWFyY2g=">research <span class="quarto-category-count">(2)</span></div><div class="category" data-category="dG9vbHM=">tools <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#it-comes-out-right" id="toc-it-comes-out-right" class="nav-link active" data-scroll-target="#it-comes-out-right"><em>It comes out right</em></a></li>
+  <li><a href="#the-number-they-never-had" id="toc-the-number-they-never-had" class="nav-link" data-scroll-target="#the-number-they-never-had"><em>The number they never had</em></a></li>
+  <li><a href="#why-they-couldnt-have-cheated" id="toc-why-they-couldnt-have-cheated" class="nav-link" data-scroll-target="#why-they-couldnt-have-cheated"><em>Why they couldn’t have cheated</em></a></li>
+  <li><a href="#were-they-right-about-their-own-arithmetic" id="toc-were-they-right-about-their-own-arithmetic" class="nav-link" data-scroll-target="#were-they-right-about-their-own-arithmetic"><em>Were they right about their own arithmetic?</em></a></li>
+  <li><a href="#what-i-couldnt-do" id="toc-what-i-couldnt-do" class="nav-link" data-scroll-target="#what-i-couldnt-do"><em>What I couldn’t do</em></a></li>
+  <li><a href="#the-code" id="toc-the-code" class="nav-link" data-scroll-target="#the-code"><em>The code</em></a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Hodgkin and Huxley Notebook version</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">modelling</div>
+    <div class="quarto-category">mathematics</div>
+    <div class="quarto-category">biology</div>
+    <div class="quarto-category">research</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    I rebuilt Hodgkin and Huxley’s 1952 paper in notebook form.
+  </div>
 </div>
 
 
+<div class="quarto-title-meta">
 
-<div class="quarto-title-meta column-page-left">
-
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Steve Haigh </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 23, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -399,257 +408,80 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bW9kZWxsaW5nJTJDbWF0aGVtYXRpY3MlMkNiaW9sb2d5JTJDcmVzZWFyY2g=" data-listing-date-sort="1790121600000" data-listing-file-modified-sort="1790160761764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1516">
-<div class="thumbnail"><a href="../blog/posts/hodgkin-huxley-rebuilt/" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/hodgkin-huxley-rebuilt/threshold.png" alt="Computed membrane action potentials for shocks of 5.5, 6.0, 6.45, 6.6 and 7.5 mV. The three weakest decay back towards rest; the two strongest produce full spikes of about 105 mV."  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/hodgkin-huxley-rebuilt/" class="no-external">Hodgkin and Huxley Notebook version</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aGVtYXRpY3M='); return false;">mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvbG9neQ=='); return false;">biology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
-
+<p>I wrote about the H&amp;H 1952 paper in a previous post and generated some interactive graphs, but really this would be better off as a notebook so I got Claude to rework it. Claude also wrote a rather “click-bait-y” and hyped up blog post, which is quite funny to read. Ths is what Claud thinks, not necessarily what I think:</p>
+<p>–</p>
+<p><em>Hodgkin and Huxley could not have tuned their model to fit, even if they had wanted to. They said so in the paper. Rebuilding the thing from scratch showed me why they were right, and turned up one number they never had.</em></p>
+<p><a href="../../../blog/posts/hodgkin-huxley-deduction/"><em>Last time</em></a> <em>I wrote about their 1952 paper as the standard case for mechanistic modelling: six functions fitted to a nerve held at a fixed voltage, which then correctly predicted a nerve doing what nerves actually do. The obvious objection to that story is the one you would make about any model that predicts well. They had the answers. Squid axons had been poked at for fifteen years, everyone knew roughly what an action potential looked like, and if you fiddle with enough parameters you can hit any target you like.</em></p>
+<p><em>So I rebuilt it. Every constant typed in from the printed page, in their own sign convention where depolarisation is negative and</em> <span class="math inline">\(V_{Na}\)</span> <em>is −115 mV. No refitting, no modern reparameterisation, nothing borrowed from a textbook version. Then I ran it.</em></p>
+<section id="it-comes-out-right" class="level2">
+<h2 class="anchored" data-anchor-id="it-comes-out-right"><em>It comes out right</em></h2>
+<p><em>The headline number is the conduction velocity. Their equation (31) has a constant</em> <span class="math inline">\(K\)</span> <em>in it that depends on how fast the wave travels, which is the thing they were trying to find in the first place. So they guessed. Put in a value, integrate, watch which way the solution blows up, guess again. They landed on</em> <span class="math inline">\(K\)</span> <em>= 10.47 msec⁻¹, giving 18.8 m/sec against a measured 21.2.</em></p>
+<p><em>Bisecting on their own criterion instead of guessing gives</em> <span class="math inline">\(K\)</span> <em>= 10.458 and a velocity of 18.75 m/sec.&nbsp;That is their number to the printed digit, from their constants, on the first attempt. The whole notebook runs in twelve seconds.</em></p>
+<p><em>Twelve seconds is worth sitting with. The caption to their Figure 12 explains that of three computed action potentials, only one is complete, because for the other two “the calculation was not carried beyond the middle of the falling phase because of the labour involved”. They were turning a Brunsviga hand calculator. They stopped early because their arms got tired.</em></p>
+</section>
+<section id="the-number-they-never-had" class="level2">
+<h2 class="anchored" data-anchor-id="the-number-they-never-had"><em>The number they never had</em></h2>
+<p><em>That gap buys something. H&amp;H could only say their model’s firing threshold lay somewhere between 6 and 7 mV. Bracketing it tighter meant computing more curves, and the curves in that paper cost them the best part of three weeks.</em></p>
+<p><em>Bisection puts it at <strong>6.50 mV</strong> at 6.3 °C, for an instantaneous shock. Below that the membrane sags back to rest. Above it you get a full 105 mV spike. The transition is sharp to four decimal places.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="threshold.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Shocks either side of the boundary. 6.45 mV sags back to rest; 6.6 mV gives a full spike. Nothing in the equations contains a threshold."><img src="threshold.png" class="img-fluid figure-img" alt="Computed membrane action potentials for shocks of 5.5, 6.0, 6.45, 6.6 and 7.5 mV. The three weakest decay back towards rest; the two strongest produce full spikes of about 105 mV."></a></p>
+<figcaption><em>Shocks either side of the boundary. 6.45 mV sags back to rest; 6.6 mV gives a full spike. Nothing in the equations contains a threshold.</em></figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="../blog/posts/hodgkin-huxley-rebuilt/" class="no-external">
-<p>I rebuilt Hodgkin and Huxley’s 1952 paper in notebook form.</p>
-</a></div>
+<p><em>I find this the most pleasing thing in the whole exercise, because it is a genuinely new fact about a model that is seventy-four years old, and it took about a second to produce. Everything else a computer buys you here is the same answers arriving faster. This one is an answer they could not get at all.</em></p>
+</section>
+<section id="why-they-couldnt-have-cheated" class="level2">
+<h2 class="anchored" data-anchor-id="why-they-couldnt-have-cheated"><em>Why they couldn’t have cheated</em></h2>
+<p><em>Now the objection. Here is Hodgkin and Huxley, on page 541, heading it off:</em></p>
+<blockquote class="blockquote">
+<p><em>Indeed any such adjustment would be extremely difficult, because in most cases it is impossible to tell in advance what effect a given change in one of the equations will have on the final solution.</em></p>
+</blockquote>
+<p><em>Reading that, I took it as modesty. Having rebuilt it, I think it is a technical statement about the system, and it is the strongest thing in the paper.</em></p>
+<p><em>The propagated action potential is a shooting problem, and an unstable one. Pick</em> <span class="math inline">\(K\)</span> <em>slightly too small and the voltage runs away to</em> <span class="math inline">\(+\infty\)</span><em>. Slightly too large and it runs to</em> <span class="math inline">\(-\infty\)</span><em>. There is no value that stays bounded for ever: the correct one is a separatrix, and what you converge on is the value whose trajectory hugs the true action potential longest before falling off it. Get</em> <span class="math inline">\(K\)</span> <em>wrong in the fourth decimal place and you still diverge, just later.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="shooting.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Trajectories for values of K bracketing the correct one. The closer the guess, the longer the solution tracks the real action potential before it falls off."><img src="shooting.png" class="img-fluid figure-img" alt="Solutions of equation 31 for values of K either side of the critical value. All follow a common rising curve then diverge, some upwards and some downwards; the closest guess follows the action potential furthest."></a></p>
+<figcaption><em>Trajectories for values of</em> <span class="math inline">\(K\)</span> <em>bracketing the correct one. The closer the guess, the longer the solution tracks the real action potential before it falls off.</em></figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="../blog/posts/hodgkin-huxley-rebuilt/" class="no-external">
-<div class="listing-date">
-Sep 23, 2026
+<p><em>Now imagine trying to steer that toward a conduction velocity you already know. You would have to work out what nudging one coefficient in one of the six rate functions, say the 0.125 in</em> <span class="math inline">\(\beta_n\)</span><em>, does to a solution that is exponentially sensitive to its own initial conditions, on a machine you crank by hand. You cannot do it. The system is too stiff to be led anywhere on purpose.</em></p>
+<p><em>That is what makes the agreement mean something. It is not that they were honest, though they were. It is that the machinery of the model closed off the dishonest route.</em></p>
+</section>
+<section id="were-they-right-about-their-own-arithmetic" class="level2">
+<h2 class="anchored" data-anchor-id="were-they-right-about-their-own-arithmetic"><em>Were they right about their own arithmetic?</em></h2>
+<p><em>They also claimed their hand computation was accurate enough: they were “confident that the overall errors are not large enough to be detected in the illustrations of this paper”. That is checkable now, so I checked it, and the first answer I got made them look bad.</em></p>
+<p><em>At their step size, forward Euler is off by 4 to 8 mV. On a spike of 105 mV that is nearly 8%, which would be visible on any graph.</em></p>
+<p><em>It is the wrong measurement. The rising phase of an action potential is close to vertical, so shifting the upstroke by a hundredth of a millisecond registers as several millivolts of difference in what the voltage is at a given instant. Almost all of that 8% is timing. The error in the height of the spike is between 0.26 and 0.52 mV, or half a percent.</em></p>
+<p><em>Their curves were the right height and the right shape, and may have sat a few microseconds off. Nobody drawing on graph paper in 1952 would have seen it. They were also using Hartree’s method rather than Euler, which is better than what I tested them against, so this is an upper bound on their error and not an estimate of it.</em></p>
+<p><em>I nearly published the 8% figure. It took looking at the peak heights separately to see that I had measured the wrong thing, which is a reminder that a number being correct and a number being relevant are different problems.</em></p>
+</section>
+<section id="what-i-couldnt-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-couldnt-do"><em>What I couldn’t do</em></h2>
+<p><em>I had wanted to make this the paper itself: the original text, the equations in proper LaTeX, the figures rebuilt underneath them. That turns out to be illegal.</em></p>
+<p><em>The 1952 paper is under copyright until 2047 in the US and the end of 2082 here, held by The Physiological Society. PMC hosts the page scans free to read, and is explicit that free to read is not free to redistribute. Wiley’s standard academic permission covers three figures or 400 words. The paper is 45 pages, 24 figures and about 16,000 words.</em></p>
+<p><em>So what I built is a reconstruction rather than a reproduction. Equations are facts and appear in full. Short passages are quoted with page numbers. No scanned artwork, and no experimental data: where H&amp;H drew a curve through measured points, only the curve is drawn. If you want the paper verbatim with commentary, Raman and Ferster’s The Annotated Hodgkin and Huxley is the licensed edition and it is very good.</em></p>
+</section>
+<section id="the-code" class="level2">
+<h2 class="anchored" data-anchor-id="the-code"><em>The code</em></h2>
+<p><a href="https://github.com/stevehaigh/hodgkin-huxley-1952"><em>github.com/stevehaigh/hodgkin-huxley-1952</em></a><em>. One notebook that walks the deduction in order, a model file containing nothing but the paper’s constants, and 24 tests that pin the published numbers so the thing fails loudly if I break it. MIT licensed.</em></p>
+<p><em>The refractory period, the threshold, and anode break excitation all fall out of equations that were never shown any of them. Anode break is still my favourite: hold the membrane hyperpolarised, then stop, apply nothing at all, and it fires. Inactivation lifts,</em> <span class="math inline">\(h\)</span> <em>climbs from 0.60 to 0.99, and the nerve walks back into a resting potential it has sat at a thousand times before with a sodium system that is now fully loaded.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="anode-break.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Anode break excitation. The membrane is held hyperpolarised until t = 0 and then simply released. No stimulus is applied at any point."><img src="anode-break.png" class="img-fluid figure-img" alt="A computed action potential following release of a 30 mV hyperpolarisation, with the spike peaking about six milliseconds after release."></a></p>
+<figcaption><em>Anode break excitation. The membrane is held hyperpolarised until</em> <span class="math inline">\(t\)</span> <em>= 0 and then simply released. No stimulus is applied at any point.</em></figcaption>
+</figure>
 </div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bW9kZWxsaW5nJTJDbWF0aGVtYXRpY3MlMkNiaW9sb2d5JTJDcmVzZWFyY2g=" data-listing-date-sort="1789603200000" data-listing-file-modified-sort="1790160761763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="866">
-<div class="thumbnail"><a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
+<p><em>They did not put that in. It was already there.</em></p>
+<p>–</p>
+<hr>
+<p><em>Hodgkin AL, Huxley AF. 1952. A quantitative description of membrane current and its application to conduction and excitation in nerve. J. Physiol. 117: 500–544. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/">PMC1392413</a></em></p>
+<p><em>Raman IM, Ferster DL. 2021. The Annotated Hodgkin and Huxley: A Reader’s Guide. Princeton University Press.</em></p>
 
-<p class="card-img-top"><img loading='lazy' src="posts/hodgkin-huxley-deduction/hh-explorer.png" alt="Three stacked line charts. Top: an action potential rising to about 105 mV, decaying, and undershooting before it returns to rest. Middle: sodium conductance peaking near 33 and falling away while potassium conductance rises more slowly and decays later. Bottom: the m, h and n gating variables crossing over during the impulse."  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">Hodgkin and Huxley simulator</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWF0aGVtYXRpY3M='); return false;">mathematics</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YmlvbG9neQ=='); return false;">biology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzZWFyY2g='); return false;">research</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
-<p>A 1952 model, fitted to one kind of experiment, predicted four things that it had never been shown. This is effectively the case for mechanistic modelling.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/hodgkin-huxley-deduction/" class="no-external">
-<div class="listing-date">
-Sep 17, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y2FyZWVyJTJDbXJlcyUyQ3BsYXRlbGV0" data-listing-date-sort="1789430400000" data-listing-file-modified-sort="1790160761764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="606">
-<div class="thumbnail"><a href="../blog/posts/one-year-on/" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/one-year-on/platelet-wcm-poster.png" alt="The platelet whole-cell model poster."  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/one-year-on/" class="no-external">One year on</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">career</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXJlcw=='); return false;">mres</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/one-year-on/" class="no-external">
-<p>The M.Res. is finished, a poster got picked apart in the most useful way, and the next thing is going to need more maths.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/one-year-on/" class="no-external">
-<div class="listing-date">
-Sep 15, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bGxtcyUyQ2FpJTJDZGVja3MlMkNsYWI=" data-listing-date-sort="1779840000000" data-listing-file-modified-sort="1790160761764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="393">
-<div class="thumbnail"><a href="../blog/posts/llm-intro/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/llm-intro/" class="no-external">How do LLMs work? — a shallow-dive for scientists</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGxtcw=='); return false;">llms</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWk='); return false;">ai</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/llm-intro/" class="no-external">
-<p>A short overview of LLMs I gave at lab meeting — what they are, how they got here, and where they’re useful or dangerous in a research workflow.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/llm-intro/" class="no-external">
-<div class="listing-date">
-May 27, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="ZGVja3MlMkN0b29scw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1790160761763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="417">
-<div class="thumbnail"><a href="../blog/posts/academic-pptx-template/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/academic-pptx-template/" class="no-external">An ‘academic’ deck template, and why it looks the way it does</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVja3M='); return false;">decks</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dG9vbHM='); return false;">tools</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/academic-pptx-template/" class="no-external">
-<p>A simple PPTX template for academic talks, plus the worked example I gave at lab meeting last week.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/academic-pptx-template/" class="no-external">
-<div class="listing-date">
-May 25, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Y2FyZWVyJTJDbGFiJTJDbXJlcw==" data-listing-date-sort="1779667200000" data-listing-file-modified-sort="1790160761777" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1092">
-<div class="thumbnail"><a href="../blog/posts/the-story-so-far/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/the-story-so-far/" class="no-external">The Story So Far</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">career</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bXJlcw=='); return false;">mres</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/the-story-so-far/" class="no-external">
-<strong><em>This post is an amalgamation of a few LinkedIn posts, so if you follow me there you may have seen this already</em></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/the-story-so-far/" class="no-external">
-<div class="listing-date">
-May 25, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="cGxhdGVsZXQlMkNtb2RlbGxpbmclMkNsYWI=" data-listing-date-sort="1779408000000" data-listing-file-modified-sort="1790160761764" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
-<div class="thumbnail"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">Lab meeting: the platelet model, first showing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cGxhdGVsZXQ='); return false;">platelet</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bW9kZWxsaW5n'); return false;">modelling</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bGFi'); return false;">lab</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-<p>First lab-meeting walkthrough of the calibrated platelet Ca²⁺ model — good questions, some surprising offers of follow-up work.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/lab-meeting-2026-05-14/" class="no-external">
-<div class="listing-date">
-May 22, 2026
-</div>
-<div class="listing-author">
-Steve Haigh
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1063,6 +895,38 @@ Steve Haigh
     }
   });
   </script>
+<input type="hidden" id="giscus-base-theme" value="preferred_color_scheme">
+<input type="hidden" id="giscus-alt-theme" value="preferred_color_scheme">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      if (authorPrefersDark) {
+          [baseTheme, altTheme] = [altTheme, baseTheme];
+      }
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "stevehaigh/quarto-site-builder";
+    script.dataset.repoId = "R_kgDOSkFujg";
+    script.dataset.category = "Blog comments";
+    script.dataset.categoryId = "DIC_kwDOSkFujs4C98nP";
+    script.dataset.mapping = "pathname";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -1081,7 +945,7 @@ Steve Haigh
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="../blog/index.xml">
+    <a class="nav-link" href="../../../blog/index.xml">
       <i class="bi bi-rss" role="img">
 </i> 
     </a>
@@ -1105,9 +969,41 @@ Steve Haigh
   }
 })();
 </script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
